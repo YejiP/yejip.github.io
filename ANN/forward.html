@@ -43,7 +43,11 @@ Then, infer the value and based on the errors it can modify its weight.</div>
     <br>To avoid this, Squaring each errors and then add. 
     <br>
     0.2<sup>2</sup>+0.1<sup>2</sup>+0.2<sup>2</sup>+(-0.9)<sup>2</sup>+(0.05)<sup>2</sup>+0.25<sup>2</sup>+0<sup>2</sup>+0.05<sup>2</sup>+0.05<sup>2</sup>+0 <sup>2</sup>= <b>1.01</b>
-    The evaluation function we will use here is 1/2(correct answer-estimated answer)<sup>2</sup>
+    <br>The evaluation function we will use here is 1/2(correct answer-estimated answer)<sup>2</sup>
+    (1/2)*1.01 = 0.505 <b>error for this case</b>
+    <br>
+    <br>Now, we can scale up to every training case.<br></div><br>
+    <div id = pic><img src = "img/scale.PNG" width = 600 px>
     <br>
     <u>So how can we update the weight using evaluation function?</u>
     <br><h2>By using <a href = "back.html">Back-progation</a></a></h2>
