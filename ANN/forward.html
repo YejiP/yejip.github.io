@@ -13,17 +13,24 @@
     #explanation {
         padding-left :10%;
         padding-right :10%;
-    }    
+    }
+    
+    #n {
+        padding-left :0%;
+        padding-right :10%;
+        float:left;
+        text-align:center;
+    } 
 </style>
 
 <div id = title><h1>Forward propagation</h1></div>
-<div id =pic><img src = "img/forward_pat.PNG" width = 800 px> </div>
+<div id =pic><img src = "img/forward_pa.PNG" width = 800 px> </div>
 <div id = title>
 Forward propagation is inferring the value using a model created based on input values and answer.<br>
 Each node in the neral network is called perceptron.
 Input perceptrons affect perceptrons in the next layer, and this perceptrons in the next layer affects perceptrons in its next layer.
 </div><br><br>
-<div id =pic><img src = "img/for_mod.PNG" width = 400 px align = "left"><br><br>Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
+<div id =pic><img src = "img/for_mo.PNG" width = 400 px align = "left"><br><br>Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
 <br>The result of summation then becomes the input of activation function such as sigmoid, ReLu.<br>
 Creating the right model for the problem is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.</div>
 <br><br>
