@@ -53,3 +53,38 @@ eval =1
 eval = 1/(1+3)=0.25
 </div>
 <div id =title ><h3>1. The concept of Genetic Algorithm</h3><br></div>
+
+<div id = text>Genetic algorithm is the way of finding the answer imitating the genetic system.
+All people get their genetic information from their parents, half from mom and half from dad. and sometimes, mutation occurs which can change the genetic information.
+In the Genetic Algorithm , each individual contains the information of answer. It does not have to be right.
+Each individual is now evaluated how much it is close to the correct answer. Depends on the fitness value of individual, it varies the chance of being parents.
+Then, How can we represent this information of courses and the classes for each individual? We can use array.
+Let’s say there are 7 courses. 🡪 create 7 spots for each courses.
+Array which contains “Class” classes	 🡪 Class[7]
+So first spot represents 1st course, second spot 2nd course.
+<img src ='GA/img/ch.PNG' widht = "200px">
+
+Now, we need to initialize population. Population is the group of individuals which contain information in the chromosome.
+<img src = 'GA/img/pop.PNG'  width="200px">
+and based on this, if there is the answer in that population, stop searching and return the answer,
+If there is no answer exists, then It will make another generation by selection, cross over, mutaton.
+
+selection:
+There are some diverse selection methods such as rank order, russian rullette and etc, but I used rank order selection.
+Pick several individuals and pick the best one.
+<img src = 'GA/img/tour.PNG'  width="200px">
+
+<img src = 'GA/img/tour_sel.PNG'  width="200px">
+
+crossover:
+<img src = 'GA/img/crossover.PNG'  width="200px">
+
+
+mutation:
+
+<img src = 'GA/img/mutation.PNG'  width="200px">
+
+<img src = 'GA/img/m_data.PNG'  width="200px">
+
+
+<br></div>
