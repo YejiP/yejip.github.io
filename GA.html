@@ -5,14 +5,24 @@
 
 <style>
     #text {
-            float : left;
+            float : bottom;
             padding-left :10%;
-            text-align:center;
+            padding-right : 10%;
+            text-align:left;
             }
 
     #pic{
+        padding-top: 2%;
             padding-left :10%;
             padding-right:10%;
+            float :bottom;
+        }
+
+    #n {
+            padding-left :10%;
+            padding-right :10%;
+            float:left;
+            text-align:center;
         }
     #title {
             padding-left :10%;
@@ -26,32 +36,36 @@
 <div id =title ><h3>0. Problem description</h3><br></div>
 <div id =title >
 <br>
-<img src = 'GA/img/Course.PNG' width="300px">
-Those are courses we have for comming semester, and we want to match room and time for each courses without any problems.
-<img src = 'GA/img/blank.PNG' width="300px">
+Let's say we need to make schedule for room/time with courses. How are we going to tune?
+It could be easy enough to do by manual way when it is not too much to tune, however, If it is too big to schedule it manually, then it would not be the best way to do it.
+Those are courses we have for comming semester, and we want to match room and time for each courses without any problems. <br></div>
+
+
+<div id = n><img src = 'GA/img/Course.PNG' width="300px"></div>
+<div id = pic><img src = 'GA/img/blank.PNG' width="300px"></div>
 <br>
-One possible solution might be represented as the table below.
-<img src = 'GA/img/possible.PNG' width="300px">
-Then, what should we think when we schedule this task?
-<img src = 'GA/img/violations.PNG' width="300px">
+<div id = text>One possible solution might be represented as the table below.</div>
+<div id = pic><img src = 'GA/img/possible.PNG' width="400px"></div>
+<div id = text>Then, what should we think when we schedule this task?</div>
+<div id = pic><img src = 'GA/img/violations.PNG' width="300px"></div>
 
-<img src = 'GA/img/c1.PNG' width="200px">
-<img src = 'GA/img/c2.PNG' width="200px">
-<img src = 'GA/img/c3.PNG' width="200px">
+<div id = n><img src = 'GA/img/c1.PNG' width="200px"></div>
+<div id = n><img src = 'GA/img/c2.PNG' width="200px"></div>
+<div id = pic><img src = 'GA/img/c3.PNG' width="200px"></div>
 
+<div id = text>
 Constraints
 <br>1. Each Prof, at most 1 class at one period
 <br>2. Each Students group, at most 1 class at one period
 <br>3. Room capacity >= students of course.
 <br>4. Room cannot be double booked.
-<br>
+</div><br>
+
+<div id = text>
 Evaluation function : 1/(1+number of constraints)
 If evaluation function is equal to 1, then it can be possible solution.
-<img src = 'GA/img/possible.PNG' width="200px">
-eval =1
-<img src = 'GA/img/violations.PNG' width="200px">
-eval = 1/(1+3)=0.25
 </div>
+
 <div id =title ><h3>1. The concept of Genetic Algorithm</h3><br></div>
 
 <div id = text>Genetic algorithm is the way of finding the answer imitating the genetic system.
@@ -61,30 +75,33 @@ Each individual is now evaluated how much it is close to the correct answer. Dep
 Then, How can we represent this information of courses and the classes for each individual? We can use array.
 Let’s say there are 7 courses. 🡪 create 7 spots for each courses.
 Array which contains “Class” classes	 🡪 Class[7]
-So first spot represents 1st course, second spot 2nd course.
-<img src ='GA/img/ch.PNG' widht = "200px">
+So first spot represents 1st course, second spot 2nd course.</div>
+<div id = pic><img src ='GA/img/ch.PNG' width = "200px"></div>
 
-Now, we need to initialize population. Population is the group of individuals which contain information in the chromosome.
-<img src = 'GA/img/pop.PNG'  width="200px">
+<div id = text>
+Now, we need to initialize population. Population is the group of individuals which contain information in the chromosome.</div>
+
+<div id = pic><img src = 'GA/img/pop.PNG'  width="200px"></div>
+<div id = text>
 and based on this, if there is the answer in that population, stop searching and return the answer,
 If there is no answer exists, then It will make another generation by selection, cross over, mutaton.
 
 selection:
 There are some diverse selection methods such as rank order, russian rullette and etc, but I used rank order selection.
-Pick several individuals and pick the best one.
-<img src = 'GA/img/tour.PNG'  width="200px">
+Pick several individuals and pick the best one.</div>
+<div id = n><img src = 'GA/img/tour.PNG'  width="300px"></div>
 
-<img src = 'GA/img/tour_sel.PNG'  width="200px">
+<div id = pic><img src = 'GA/img/tour_sel.PNG'  width="300px"></div>
 
 crossover:
-<img src = 'GA/img/crossover.PNG'  width="200px">
+<div id = pic><img src = 'GA/img/crossover.PNG'  width="600px"></div>
 
 
 mutation:
+<br>
+<div id = n><img src = 'GA/img/mutation.PNG'  width="300px"></div>
 
-<img src = 'GA/img/mutation.PNG'  width="200px">
-
-<img src = 'GA/img/m_data.PNG'  width="200px">
+<div id = pic><img src = 'GA/img/m_data.PNG'  width="300px"></div>
 
 
-<br></div>
+<br>
