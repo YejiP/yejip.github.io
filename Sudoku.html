@@ -48,21 +48,13 @@ Easy problem can be solved by only forward checking, but It is not enough to sol
 Then what should we do now?
 </div>
 
-<div id =title ><div align = center><br><h3>2. The concept of backtracking</h3></div></div>
-
-<div id = text>
-</div>
-
-
-<div id =title ><div align = center><br><h3>3. How to solve sudoku using the combination of forward checking and back tracking?</h3><br></div></div>
+<div id =title ><div align = center><br><h3>2. Forward checking with back tracking</h3><br></div></div>
 <div id =text>
 Here is a sudoku, but could not be solved only by forward checking. so now, we need to try out some numbers and then if it can be possible or not.
 The black cells all have answer, but the white cells have several possible elements in its domain.
+Let's assume cell A,B and C. Each has the domain of {1,3,7,8}, {2,6} and {2,7}. All combination of (A,B,C) can be represented as the tree below.
 <br><img src = "sudoku/img/br.PNG" width =200px align = 'left'>
-
-<br>Let's assume cell A,B and C. Each has the domain of {1,3,7,8}, {2,6} and {2,7}. All combination of (A,B,C) can be represented as the tree below.
-<br><br>
-<img src = "sudoku/img/tree.PNG" width =600px>
+<img src = "sudoku/img/tree.PNG" width =600px height = 200px>
 <br> Back tracking starts from assigning possible value to the cell. Let's assume we assign 7 to cell A.
 Since the cell A and cell C interacts, forward check cell C. and then 7 cannot be the value of cell c.<br>
 <div align = center><img src = "sudoku/img/ac.PNG" width = 150px align = left>
