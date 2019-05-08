@@ -16,24 +16,49 @@
           float:bottom;
               }
 </style>
+<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
 
 <br>
 <center><h1>Sudoku solver</h1><h4>(using forward checking and back tracking)</h4></center>
-<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
 <br>
-<div id =title ><h3>0. Problem description</h3><br></div>
+<div id =title ><div align = center><h3>0. Problem description</h3><br></div></div>
 
 <div id = text>
 There are 2 rules in playing the sudoku.<br>
-1. Each line should contain 1 to 9 without repeating itself, vertically and horizontally.
+1. Each line should contain 1 to 9 without repeating itself, vertically and horizontally.<br>
 2. Each block which consists of 3*3 boxes should contain 1 to 9 without repeating itself.
 <br>
 <a href="https://www.instructables.com/id/Sudoku%253asolving-it-for-beginners-and-the-expirience/">more informaiton</a>
+<br><br>Each cell has its domain, which initially {1,2,3,4,5,6,7,8,9} then from the constrains, some elemets can be ruled out.
 
 </div>
+<br>
 
-<div id =title ><h3>1. The concept of forward checking and backtracking</h3><br></div>
+<div id = text><img src = "sudoku/img/domain.PNG" width = 200px align = left><br>For example, cell A cannot have 1,3,4,7,8. There for the possible asnwer domain of cell A is  {2,5,6,9}.<br>
+<br>For the cell B, it cannot be 1,2,3,4,5,6,8,9. so the only one element in domain, {7}. Therefore, the cell B should be 7.<br>
+<br>The main point is that each cell has its domain, so 81 domains. By ruling out some impossible answers from domain of cells, we could find the answer for the cells.
+</div>
+<div id =title ><div align = center><br><h3>1. The concept of forward checking</h3><br></div></div>
 
 <div id = text>
+Previously, we figured out the cell B is 7. We are solving sudoku with computer, so the domain of each cells can be stored in the memory and can be revised.
+<br> We wil delete 7 in the domains of the cell which are in the same row, column and the block. It is called "Domain revision".
+<div align = center><img src = "sudoku/img/7.PNG" width =200px align = left> <img src = "sudoku/img/rev.PNG" width = 200px></div>
+Easy problem can be solved by only forward checking, but It is not enough to solve harder level of sudoku. Let's say, we finished all forward checking, but some cells are not decided yet.
+Then what should we do now?
+</div>
 
+<div id =title ><div align = center><br><h3>2. The concept of backtracking</h3></div></div>
+
+<div id = text>
+</div>
+
+
+<div id =title ><div align = center><br><h3>3. How to solve sudoku using the combination of forward checking and back tracking?</h3><br></div></div>
+<div id =text>
+Here is a sudoku, but could not be solved only by forward checking. so now, we need to try out some numbers and then if it can be possible or not.
+The black cells all have answer, but the white cells have several possible elements in its domain.
+<br><img src = "sudoku/img/br.PNG" width =200px align = 'left'>
+<br>Let's assume cell C,D and E each has the domain of {2,3,6}, {2,3,6} and {2,3,6}. (C,D,E) can be (2,3,6), (2,6,3), (3,2,6), (3,6,2), (6,2,3) and (6,3,2).
+<br>First, try 2 for cell C. since cell C is 2, The domain of D and E will be {3,6}.(forward checking; domain revision.)
 </div>
