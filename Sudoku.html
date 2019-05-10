@@ -19,7 +19,7 @@
       float : left;
       padding-left :10%;
 
-      width : 400px;
+      width : 1000px;
       text-align : right;
     }
 </style>
@@ -60,17 +60,34 @@ Then what should we do now?
 Here is a sudoku, but could not be solved only by forward checking. so now, we need to try out some numbers and then if it can be possible or not.
 Let's focus on cell A,B and C.(Other cells are out of our focus for this explanation.) Each has the domain of {1,3,7,8}, {2,6} and {2,7}. All combination of (A,B,C) can be represented as a tree below.
 <br><img src = "sudoku/img/br.PNG" width =200px align = 'left'><br>
-<img src = "sudoku/img/tree.PNG" width =600px height = 180px ></div>
+<img src = "sudoku/img/tree.PNG" width =600px height = 180px >
 <br>
-<div id = pic>
-<img src = "sudoku/img/ac.PNG" width = 150px align = left><br> Back tracking starts from assigning a possible value to the cell. Let's assume we assign 7 to cell A.
-Since the cell A and cell C interacts, cell C cannot be 7. As soon as A is assigned as 7, the forward checking algorithm checks the domain of other cells which interacts with cell A  and delete 7 from the domain.<br>
+
+Back tracking starts from assigning a possible value to the cell. Let's assume we assign 7 to cell A.
+Since the cell A and cell C interacts, cell C cannot be 7. As soon as A is assigned as 7, the forward checking algorithm checks the domain of other cells which interacts with cell A  and delete 7 from the domain.so regardless of value of cell B, C cannot have 7.(The first picture below)<br>
+Once 7 is removed from the domain, the part of tree can be pruned. In the second picture, When A is 7 and 2, there is no elements left in the domain of cell C, which means A=7 and B=2 together cannot be the answer.
+now, it checks another possible answer for cell B, but cell A is still 7. (The third and fourth pictures below.)<u> This process is called back tracking. </u>
+
 </div>
 <div id = pic>
-<img src = "sudoku/img/2.PNG" width = 170px align = left >
-<img src = "sudoku/img/3.PNG" width = 170px align = left >
-<img src = "sudoku/img/4.PNG" width = 170px align = left ></div>
+<img src = "sudoku/img/ac.PNG" width = 150px height = 150px align = left>
+<img src = "sudoku/img/2.PNG" width = 170px  height = 150px align = left >
+<img src = "sudoku/img/3.PNG" width = 170px height = 150px align = left >
+<img src = "sudoku/img/4.PNG" width = 170px height = 150px align = left ></div>
+<br>
+<div id = text>
+<br>
+The picture below is overall image of what we did before.
+</div>
 <div id = pic>
-<img src = "sudoku/img/5.PNG" width = 500px align = left >
-<img src = "sudoku/img/6.PNG" width = 500px align = left >
+<img src = "sudoku/img/5.PNG" width = 700px  align = left><br>
+
+</div>
+<div id = text>
+<br>
+If there is no possible combination when cell A is 7, then now the value of cell A is changed, also backtracking.
+</div>
+<div id= pic>
+<img src = "sudoku/img/6.PNG" width = 700px align = left ><br>
+
 </div>
