@@ -47,20 +47,20 @@
 <div id =title ><div align = "center"><h3>0. Problem description</h3><br></div></div>
 <div id =title >
 <br>
-Let's say we need to make schedule for room/time with courses. How are we going to tune?
-It could be easy enough to do by manual way when it is not too much to tune, however, If it is too big to schedule it manually, then it would not be the best way to do it.
-Those are courses we have for comming semester, and we want to match room and time for each courses without any problems. <br></div>
+Let's say we need to make schedule for room/time with courses. How can we tune the schedule for all the courses ?
+It could be easy enough to be done by manual way when it is not too much to tune, however, If the scale is too large to schedule it manually, then it would not be the best way to do it manually.
+Those are courses we have for comming semester, and we want to match room and time for each courses without any conflicts.<br></div>
 
 
 <div id = n><img src = 'GA/img/Course.PNG' width="300px"></div>
 <div id = pic><img src = 'GA/img/blank.PNG' width="300px"></div>
 <br><br><br>
-<div id = text>The left picture below is the one possible answer for the scheduling and the right picture below is the wrong answer.</div>
+<div id = text>The left picture below is one of the possible answer for the scheduling and the right picture below is one of the wrong answer.</div>
 <div id = n><img src = 'GA/img/possible.PNG' width="400px"><br>The possible right answer</div>
 <div id = pic><img src = 'GA/img/violations.PNG' width="300px"><br>Wrong answer</div>
 
 <div id = text><br>
-Why can it not be the right answer?<br>
+Why can't it be the right answer?<br>
 </div>
 
 <div id = n><img src = 'GA/img/c1.PNG' width="200px"><br>Prof.A :<br> 2 lectures at the same time.</div>
@@ -82,40 +82,59 @@ If evaluation function is equal to 1, then it can be possible solution.
 
 <div id =title ><div align = center><h3>1. The concept of Genetic Algorithm</h3><br></div></div>
 
-<div id = text>Genetic algorithm is the way of finding the answer imitating the genetic system.
-All people get their genetic information from their parents, half from mom and half from dad. and sometimes, mutation occurs which can change the genetic information.
-In the Genetic Algorithm , each individual contains the information of answer. It does not have to be right.
-Each individual is now evaluated how much it is close to the correct answer. Depends on the fitness value of individual, it varies the chance of being parents.
-Then, How can we represent this information of courses and the classes for each individual? We can use array.
-Let’s say there are 7 courses. 🡪 create 7 spots for each courses.
-Array which contains “Class” classes	 🡪 Class[7]
-So first spot represents 1st course, second spot 2nd course.</div>
+<div id = text>Genetic algorithm uses the idea derived from how the inheritance works to fine a right answer.
+All individual gets their genetic information from their parents, equally from mother and father. Sometimes, mutation occurs and it changes genetic information.
+In the Genetic Algorithm , each individual contains information which is a candidate for answer.(It does not have to be right.)
+Each individual is now evaluated how close it is to the correct answer. Depends on the fitness value of individual, it varies the chance of being parents.
+If fitness value is high, then it has more chance to be picked up as parents. Two individuals are parents, and two offsprings are made from one parents. A simple mixture of parents' information is now information of offspring.<br>
+
+Then, How can we represent course information and the classes at each individual?
+Let’s say there are 7 courses. These 7 courses need class room and specific time. Where and when.
+This can be done by using array.
+
+Each index represent (class room and time) information.
+For example, Array[0] means (Monday_1st period, Room1), Array[1] (Monday_2nd period,Room1) ,....,(Friday_5th period, Room5)
+So whichever course is at the index of 0, this course is held in Monday_1st period and Room 1.
+</div>
 <div id = pic><img src ='GA/img/ch.PNG' width = "600px"></div>
 
 <div id = text>
-Now, we need to initialize population. Population is the group of individuals which contain information in the chromosome.</div>
+Now, we need to initialize population. Population is the group of individuals which contain a candidate for the right schedule.</div>
 
-<div id = pic><img src = 'GA/img/pop.PNG'  width="300px"></div>
+<div id = pic><img src = 'GA/img/pop.PNG'  width="600px" align = center></div>
+<br>
 <div id = text>
-and based on this, if there is the answer in that population, stop searching and return the answer,
-If there is no answer exists, then It will make another generation by selection, cross over, mutaton.
+After setting initial population, all individuals are evaluated with fitness formula. If there is any individual which has fitness value of 1, then it means that individual is the one we are looking for. Therefore, we pick that one as the right answer and terminate our algorithm.
+However, It is not likely to happen.<br>
+If none of them has fitness value of 1, then now we need to make another population replacing previous individuals(parents) to better individuals(offsprings).
+It is possibly done by selcting parents which has high fitness, and mutating some information to avoid being kept in local optima.
+</div>
 
-selection:
-There are some diverse selection methods such as rank order, russian rullette and etc, but I used rank order selection.
-Pick several individuals and pick the best one.</div>
-<div id = n><img src = 'GA/img/tour.PNG'  width="300px"></div>
-
-<div id = pic><img src = 'GA/img/tour_sel.PNG'  width="300px"></div>
-
-crossover:
-<div id = pic><img src = 'GA/img/crossover.PNG'  width="600px"></div>
-
-
-mutation:
+<center><h3>Selection</h3></center>
+<div id = n><img src = 'GA/img/tour.PNG'  width="380px" height = "200px"><br>Three individuals are selected and compared</div>
+<div id = pic><img src = 'GA/img/tour_sel.PNG'  width="380px" height = "200px"><br>The individual with fitness value 0.5 is selected.</div>
+<div id = text><br>
+  There are some diverse selection methods such as rank order, russian rullette and etc, but This algorithm used rank order selection.
+  Pick several(3 in this case) individuals from the population, and compare the fitness value. Pick individual which has the heigst value of fitness value.</div>
+<center><h3>Crossover</h3></center>
+<div id = pic><img src = 'GA/img/crossover.PNG'  width="800px"></div>
 <br>
-<div id = n><img src = 'GA/img/mutation.PNG'  width="300px"></div>
 
+<div id = text>
+Random point(within index) is selected, and from that index, Information from the paretns is exchanged and it became the offspring.
+</div>
+
+<center><h3>Mutation</h3></center>
+<br>
+<div id = pic><img src = 'GA/img/mutation.PNG'  width="600px"></div>
+
+<div id = text>
+Only some individuals are undergoing mutation. Random index is chosen, and the course at the index changes it to new one.
+</div>
 <div id = pic><img src = 'GA/img/m_data.PNG'  width="300px"></div>
-
-
+<div id = text>
+  _________________ add more from here
+before, and after picture..!</div>
 <br>
+
+<center><h3>To the new generation</h3></center>
