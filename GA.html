@@ -13,20 +13,19 @@
 
     #pic{
         padding-top: 2%;
-        padding-left :10%;
         padding-right:10%;
         text-align:center;
         float :bottom;
         }
     #bet {
             float:left;
-            padding-right :10%;
+            padding-right :5%;
             text-align:center;
             padding-top : 2%;
             }
     #n {
         padding-left :10%;
-        padding-right :10%;
+        padding-right :5%;
         float:left;
         text-align:center;
         padding-top : 2%;
@@ -56,7 +55,7 @@ Those are courses we have for comming semester, and we want to match room and ti
 <div id = pic><img src = 'GA/img/blank.PNG' width="300px"></div>
 <br><br><br>
 <div id = text>The left picture below is one of the possible answer for the scheduling and the right picture below is one of the wrong answer.</div>
-<div id = n><img src = 'GA/img/possible.PNG' width="400px"><br>The possible right answer</div>
+<div id = n><img src = 'GA/img/possible.PNG' width="300px"><br>The possible right answer</div>
 <div id = pic><img src = 'GA/img/violations.PNG' width="300px"><br>Wrong answer</div>
 
 <div id = text><br>
@@ -82,12 +81,22 @@ If evaluation function is equal to 1, then it can be possible solution.
 
 <div id =title ><div align = center><h3>1. The concept of Genetic Algorithm</h3><br></div></div>
 
-<div id = text>Genetic algorithm uses the idea derived from how the inheritance works to fine a right answer.
+<div id = text>Genetic algorithm uses the idea derived from inheritance to find a solution for problems.
 All individual gets their genetic information from their parents, equally from mother and father. Sometimes, mutation occurs and it changes genetic information.
 In the Genetic Algorithm , each individual contains information which is a candidate for answer.(It does not have to be right.)
 Each individual is now evaluated how close it is to the correct answer. Depends on the fitness value of individual, it varies the chance of being parents.
 If fitness value is high, then it has more chance to be picked up as parents. Two individuals are parents, and two offsprings are made from one parents. A simple mixture of parents' information is now information of offspring.<br>
+<br>
+The mouse below contains information of schedule. For the explanation, let's say this mouse does not show their information(schedule) but show only the constraints of the schedule they carry.
+</div>
 
+<div id = n><img src ='GA/img/m1.PNG' width = "300px"><br>schedule with three contraints<br>
+<img src ='GA/img/m2.PNG' width = "300px"><br>schedule with one  contraint</div>
+<div = id = pic ><img src ='GA/img/ms.PNG' width = "300px"><br>First population pool<br>Mice of first generation carries solution which was randomly generated.</div>
+<br><br><br><br>
+<div id = n><img src ='GA/img/rep.PNG' width = "600px" align = "left">From the population, Two are chosen and then reproduce their baby by mixing the information they have.</div>
+
+<div id = text>
 Then, How can we represent course information and the classes at each individual?
 Let’s say there are 7 courses. These 7 courses need class room and specific time. Where and when.
 This can be done by using array.
