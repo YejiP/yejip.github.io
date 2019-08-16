@@ -46,11 +46,20 @@
 <div id =title ><div align = "center"><h3>0. Problem description</h3><br></div></div>
 <div id =text>
   In this project, I made a modified checker AI. The rule of a modified checker is like this;<br>
-<rules>
-  This project focused on making AI which can play against human by using mini max tree algirithm.
+*RULES*
+<img src = "Checker/r1.PNG"><img src = "Checker/r2.PNG"><img src = "Checker/r3.PNG"><img src = "Checker/r4.PNG"><img src = "Checker/r5.PNG">
 
+  This project focused on making AI which can play against human by using mini max tree algirithm.
+Score can be the indicator of winning and losing, making an appropriate score system affects overall performance.
+In this algorithm, Zerosum is used. Score is expressed in one score, if Black is winning then score gets postivie value, if not, score gets negative one. If it is equals, then score is 0.
+(my method)If black pawn moves forward, then add 3. If red, subtract 3 from the total score.King worth 30 points. All pawns have a inital value of 10.
+<img src = "Checker/scoring.PNG"><img src = "Checker/e1.PNG"><img src = "Checker/e2.PNG"><img src = "Checker/e3.PNG"><img src = "Checker/gametree.PNG">
 There are some to consider when you choose something to move from the board.
-People usually consider few step forwards. For example, 
+<img src = "Checker/ply1.PNG"><img src = "Checker/ply2.PNG">
+
+* mini-max tree
+
+*alpha beta pruning
 
 
 
