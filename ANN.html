@@ -20,7 +20,7 @@
       float : bottom;
         padding-left :10%;
         padding-right:10%;
-        height: 200px;
+        width : 800px;
     }
     #title {
         padding-left :10%;
@@ -38,6 +38,8 @@
     #explanation {
         padding-left :10%;
         padding-right :10%;
+        width : 1000px;
+
     }
 </style>
 
@@ -48,7 +50,7 @@
 
 
 <div id =title ><h3>0. Problem description</h3><br></div>
-<div id =title >According to given picture which contains one written number among 0 to 9, It will recognize the number from the picture.
+<div id =explanation >According to given picture which contains one written number among 0 to 9, It will recognize the number from the picture.
 <br> <b>Ex)</b> The picture below is the size of 28*28, has 784 pixels. Each pixel contains information of location and the brightness.
 <br>By combining these two information, the picture is determined what number it is. Forwawrd and back propagation are used when the model is made.
 </div>
@@ -56,14 +58,14 @@
 
 
 <div id = title><h1>Forward propagation</h1></div>
-<div id =expic><img src = "ANN/forward.PNG" width = 500 px align = "left">Forward propagation is inferring the value using a model created based on input values and answer.<br>
+<div id =expic><img src = "ANN/forward.PNG" width = 500 px align = "left"><br><br><br>Forward propagation is inferring the value using a model created based on input values and answer.<br>
 Each node in the neral network is called perceptron.
 Input perceptrons affect perceptrons in the next layer, and this perceptrons in the next layer affects perceptrons in its next layer.<br></div>
 <br><br>
 <div id =expic><img src = "ANN/for_mo.PNG" width = 400 px align = "left"><br><br>Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
 <br>The result of summation then becomes the input of activation function such as sigmoid, ReLu, and softmax(only at the last layer, in classification problems).<br>
 Creating the right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.</div>
-<div id = explanation><br><br><br><br>
+<div id = explanation><br><br><br><br><br>
 Evaluating errors is different based on the type of problems. Usually, Regression uses sigmoid function to evaluate erros, and Classification uses reLu and sigmoid function.(이거 좀 뇌피셜..)
 Since we are dealing with the classification problem, we will look how to back propagate ANN that uses ReLu and Softmax function.
 <br>
@@ -75,15 +77,64 @@ However, We cannot find proper weights at one go. The initial weights are random
 
 
 <div id = explanation>
-  In the classification problems, the last output is made by using cross-entropy and softmax function.
-  <br>
-  <img src = "ANN/soft_max.PNG" width = 400 >
+  In the classification problems, the last output is driven by using cross-entropy and softmax function.
+  <br><br>
+  <img src = "ANN/soft_max.PNG" width = 600 align =  left>
+<br><br>
+  Let's assume that we have 4 classes(A,B,C,D), and each outcome is 9, 5, 3, 5 respectively (The outcome is something like a1*w1 + a2*w2 + bias)<br><br>
+  We can simply put this as a probability,
+  (Roughly rounded)<br>
+  A : 9/(9+5+3+5) = 0.4<br>
+  B : 5/(9+5+3+5) = 0.23<br>
+  C : 3/(9+5+3+5) = 0.14<br>
+  D : 5(9+5+3+5) = 0.23<br><br>
 
-  <img src = "ANN/crossentropy.PNG" width = 400 >
-  <br>
+  However, Instead of this, we use Euler's number to present the probability for each class.<br>
+  (The reason for using Euler's number is closely related to the back propagation(makes easier to differentiate), and the cross entropy error function.)<br>
+<br><br>
+  Now, (e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>)  is the denominator for each class, and the numerator is e<sup>9</sup> , e<sup>5</sup> , e<sup>3</sup> , e<sup>5</sup> for each class.<br>
+  A : e<sup>9</sup>/(e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>) = 0.96<br>
+  B : e<sup>5</sup>/(e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>)= 0.017<br>
+  C : e<sup>3</sup>/(e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>) = 0.0023<br>
+  D : e<sup>5</sup>/(e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>) = 0.017<br><br>
+  y= e<sup>x</sup> is a monotone increasing function, so It does not change the magnitude of the relation.
+  (At the end of the day, our purpose is just to pick up the class with the highest probability)
+<br>
+  However, the problem lies when the number gets too big.
+  we need to modify this number.
+  A:9  B:5  C:3  D:5 .<br>
+  First, find the biggiest number which is 9(A) and then subtract 9 for all classes.
+  <br>A: 0  B:-4  C:-6  D:-4<br>
 
+<br>
+  A : e<sup>0</sup>/(e<sup>0</sup> + e<sup>-4</sup> + e<sup>-6</sup> + e<sup>-4</sup>) = 0.96<br>
+  B : e<sup>-4</sup>/(e<sup>0</sup> + e<sup>-4</sup> + e<sup>-6</sup> + e<sup>-4</sup>) = 0.017<br>
+  C : e<sup>-6</sup>/(e<sup>0</sup> + e<sup>-4</sup> + e<sup>-6</sup> + e<sup>-4</sup>)  = 0.0023<br>
+  D : e<sup>-4</sup>/(e<sup>0</sup> + e<sup>-4</sup> + e<sup>-6</sup> + e<sup>-4</sup>) = 0.017<br>
+  (The probability is still the same.)
+<br>
+  Conclusion
+  outcome -- softmax function --> probability <br>
+  We first need to know how much the error this model has. To measure this error, Crossentropy function is often used (in classification problems.)
+  <br> After using softmax function, we could convert each number into possibility of the each class.
+  Now, let's assume that, this picture belongs to class A. Our model was pretty close, as the final outcome was 0.96 for class A.
+  However, if the picture belongs to class B, then the model is significantly wrong because the possibility of belonging in class B is only 0.017.<br>
+  The error is calculated by multiplying two numbers, - ln(The possility of beloning in each class) * Correct answer, and summing up.
+   if the estimation is close enough , then it will get lower costs. if it is not close, then the loss will be high.</div>
+<div id = "expic"><img src = "ANN/crossentropy.PNG" width = 550 ><img src = "ANN/-lnx.PNG" width=200px ><br> If x is close to 0, then the cost will be close to infinity. if it is close to 1, then the cost will be 0.
+<br>
+   <br>
+   let's assume correct answer is (A,B,C,D)= (1,0,0,0)
+   Then,
+   cost for A = 1*(-ln(0.96+0.002)) = 1*(0.0406)= 0.0406 . so the cost is very low.
+   cost for B,C,D = 0*(-ln(...))= 0  (So, In cross entropy error, we only care about how close the correct answer is with estimation, don't care about how correct(wrong) is for BCD.))
 
+   If, the probability of A was not 0.96 but 0, then ?
+   Cost for A = 1*(-ln(0+0.002)) = 1*(6.2146)= 6.2146 . so the cost is very high compared to previous one.
+   also, this is reason why we should add small numbers like 0.002, because -ln0 is infinite.
+</div>
 
+<div id = "explanation">
   <a onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
   (Click more to read) When the last output was from the sigmoid function
   </a><div style="DISPLAY: none">
@@ -125,7 +176,6 @@ However, We cannot find proper weights at one go. The initial weights are random
   <br><img src = "ANN/tot_err.PNG" width=600px>
   <img src = "ANN/e2.PNG" width = 600px><br>
 
-   <img src = "ANN/-lnx.PNG" width=200px>
    <br><img src = "ANN/e1.PNG" height=50px><br>
   <img src = "ANN/wu11.PNG"  width=600px><br>
   <img src = "ANN/e2.PNG" height=50px><br>
