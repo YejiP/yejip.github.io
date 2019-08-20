@@ -20,7 +20,8 @@
       float : bottom;
         padding-left :10%;
         padding-right:10%;
-        width : 1000px;
+        align-items: center;
+        width : 900px;
     }
     #title {
         padding-left :10%;
@@ -38,7 +39,7 @@
     #explanation {
         padding-left :10%;
         padding-right :10%;
-        width : 1000px;
+        width : 900px;
 
     }
 </style>
@@ -62,10 +63,9 @@
 Each node in the neral network is called perceptron.
 Input perceptrons affect perceptrons in the next layer, and this perceptrons in the next layer affects perceptrons in its next layer.<br></div>
 <br><br>
-<div id =expic><img src = "ANN/for_mo.PNG" width = 400 px align = "left"><br><br>Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
+<div id =expic><img src = "ANN/for_mo.PNG" width = 400 px align = "left"><br><br><br><br>Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
 <br>The result of summation then becomes the input of activation function such as sigmoid, ReLu, and softmax(only at the last layer, in classification problems).<br>
-Creating the right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.</div>
-<div id = explanation><br><br><br><br><br>
+Creating the right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.<br><br>
 Evaluating errors is different based on the type of problems. Usually, Regression uses sigmoid function to evaluate erros, and Classification uses reLu and sigmoid function.(이거 좀 뇌피셜..)
 Since we are dealing with the classification problem, we will look how to back propagate ANN that uses ReLu and Softmax function.
 <br>
@@ -80,7 +80,7 @@ However, We cannot find proper weights at one go. The initial weights are random
   In the classification problems, the last output is driven by using cross-entropy and softmax function.
   <br><br>
   <img src = "ANN/soft_max.PNG" width = 600 align =  left>
-<br><br>
+
   Let's assume that we have 4 classes(A,B,C,D), and each outcome is 9, 5, 3, 5 respectively (The outcome is something like a1*w1 + a2*w2 + bias)<br><br>
   We can simply put this as a probability,
   (Roughly rounded)<br>
@@ -190,7 +190,7 @@ so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to
     (B's probability-0)*a2 is the result of d(cost)/d(w21). So, the weight update would be <b>w21 +alpha*(B's probability*a2).</b>
 <br>
     By these two cases, we can generalize the way of updating weights.
-    <h1>weight - alpha*(probability- correct answer)</h1>
+    <h2>weight - alpha*(probability- correct answer)</h2>
 
     <br> +error 쌓이는 과정, 그 전 레이어의 w 업데이트
 </div>
