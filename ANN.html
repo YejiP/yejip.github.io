@@ -132,6 +132,7 @@ However, We cannot find proper weights at one go. The initial weights are random
    If, the probability of A was not 0.96 but 0, then ?
    Cost for A = 1*(-ln(0+0.002)) = 1*(6.2146)= 6.2146 . so the cost is very high compared to previous one.
    also, this is reason why we should add small numbers like 0.002, because -ln0 is infinite.
+   <img src = "ANN/tot_err.PNG" width=600px>
 </div>
 
 <div id = "explanation">
@@ -157,32 +158,39 @@ However, We cannot find proper weights at one go. The initial weights are random
 <div id = title><h1>Back-propagation</h1></div>
 <div id = expic><img src = "ANN/back.PNG" width = 400 px align = "left">Back-propagation is the process of neural network finding right weights.Depending on how much each node contributes to the total error.
     we will focus on <b>1. How much error each node contributes  2. How much weight should be updated</b>
-    <br>Back-propagation starts from the nodes from the output layer. These nodes can be evaluated by seeing how different it is from the right answer, and this differences can represented with one number by using cost function(evaluation function)<br>
-</div>
-
-<br><br> <br> <br>
-<div id = explanation>
-    There is 784 input nodes. The value of each input node represents as number 1 or 0, which is the information of brightness of pixel.
-</div>
-
-<div id = explanation>
+    <br>Back-propagation starts from the nodes from the output layer. These nodes can be evaluated by seeing how different it is from the right answer<br>    <img src = "ANN/e2.PNG" width = 800px><br>
+  Even we do not explicitly see w11 from the equation above, cost function contains w11, as the A contains w11. <img src = "ANN/e1.PNG" height=40px><br> Therefore, we can differentiate the cost function with respective to w11(Weights).<br>
+The equation below is showing the differentiation of the cost function. It also means the moment slope, and derivitives.
   <img src = "ANN/e0.PNG" height = 50px ><br>
-  Moment slope = Deritives.In this case, We want Moment slope to be negative.
-  y = cost function(w11,w12,...w41,w42)<br>
-  purpose : minimize 'y' value<br>
-  There is two posibility, wheter increase the w11 value or decrease.  *delta is very small number. <br>
-  <b>1.cost function(<u>w11 + delta</u>,w12,...w41,w42) 2.cost function(<u>w11 - delta</u>,w12,...w41,w42) <br></b>
-  If the 'y' value of case 1 is less than current value, this is the way to go, or it is more than current value, then the opposite way is what we should take.We can relate this to differentiation.
-  <br><img src = "ANN/tot_err.PNG" width=600px>
-  <img src = "ANN/e2.PNG" width = 600px><br>
-
-   <br><img src = "ANN/e1.PNG" height=50px><br>
-  <img src = "ANN/wu11.PNG"  width=600px><br>
+  purpose is to minimize 'y' value, since y stands for the costs(total errors of all nodes)<br>
+If the value of moment slope is positive, then when w11 goes to positive side, cost increases. If the value of moment slope is negative, then when w11 goes to positive side, cost decreases.
+The former case, w11 should go to negative side and the later case, w11 should go to positive side to decrease overall cost.<br>
+<br>
+Now, Let's elaborate on how to update weights. let's assume specific situation.
+There are 4 classes as output, and let's name it class 1, 2,3 and 4 from the top to the bottom.
+<img src = "ANN/tot_err.PNG" width=600px>
+  <br>The picture belongs to class 1, so the correct answer for each class is 1,0,0,0 respectivley.
+  we can simplify it as the eqation below, since only one is multplied by 1 , and others by 0.<br>
   <img src = "ANN/e2.PNG" height=50px><br>
-<img src = "ANN/tc.PNG" height=50px>
-<img src = "ANN/w11u.PNG" height=200px>
-    <br><br><br>
-    <img src = "ANN/wu21.PNG"  width=600px><br>
-    <img src = "ANN/w21u.PNG" height=200px><br>
+  <img src = "ANN/tc.PNG" height=50px>
+<br> First, we will update w11. To update w11, we first need to calculate the derivities. It can be done by following the chain rule.<br>
+  <img src = "ANN/wu11.PNG"  width=600px><br>
 
+<img src = "ANN/w11u.PNG" height=300px><br>
+-(1- A's probability)*a1 is the result of d(cost)/d(w11). If the derivitive(moment slope) is positive value, then we need to go to the opposite the direction of the value of derivities to reduce the cost, and if it is negative value, also we need to go to the opposite direction of the value of deritivies.
+Either way, it needs to head the opposite direction of the value of derivities.
+so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to multiply appropriate small number called alpha(0.001 to 0.1?) to prevent to miss or skip the point we want to find.
+ <b>w11 -alpha*((A's probability-1)*a1).</b>
+
+    <br><br><br>
+    Now, let's update w21.It is similar but different since the cost function contains w21 only at the denominator. (It is different wiht updating w11, since the cost function contains w11 at the numerator and also at the denominator).
+    So differentiation result is different.<br>
+    <img src = "ANN/wu21.PNG"  width=600px><br>
+    <img src = "ANN/w21u.PNG" height=300px><br>
+    (B's probability-0)*a2 is the result of d(cost)/d(w21). So, the weight update would be <b>w21 +alpha*(B's probability*a2).</b>
+<br>
+    By these two cases, we can generalize the way of updating weights.
+    <h1>weight - alpha*(probability- correct answer)</h1>
+
+    <br> +error 쌓이는 과정, 그 전 레이어의 w 업데이트
 </div>
