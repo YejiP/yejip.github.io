@@ -66,7 +66,7 @@ Input perceptrons affect perceptrons in the next layer, and this perceptrons in 
 <div id =expic><img src = "ANN/for_mo.PNG" width = 400 px align = "left">Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
 <br>The result of summation then becomes the input of activation function such as sigmoid, ReLu, and softmax(only at the last layer, in classification problems).<br>
 Creating the right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.<br><br>
-Evaluating errors is different based on the type of problems. Usually, Regression uses sigmoid function to evaluate erros, and Classification uses reLu and sigmoid function.(이거 좀 뇌피셜..)
+Evaluating errors is different based on the type of problems. Usually, Regression uses sigmoid function to evaluate erros, and Classification uses reLu and sigmoid function.
 Since we are dealing with the classification problem, we will look how to back propagate ANN that uses ReLu and Softmax function.
 <br>
 
@@ -191,6 +191,4 @@ so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to
 <br>
     By these two cases, we can generalize the way of updating weights.
     <h2>weight - alpha*(probability- correct answer)</h2>
-
-    <br> +error 쌓이는 과정, 그 전 레이어의 w 업데이트
 </div>
