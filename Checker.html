@@ -10,7 +10,17 @@
             padding-left :10%;
             padding-right : 10%;
             text-align:left;
+            width : 900px;
             }
+
+      #expic{
+
+            float : bottom;
+            padding-left :10%;
+            padding-right:10%;
+            align-items: center;
+            width : 900px;
+                }
 
     #pic{
         padding-top: 2%;
@@ -48,26 +58,51 @@
 
 </div>
 <div id =text>
+  This project focused on making AI which can play against human by using mini max tree algirithm. Checker is used for demonstrating the algorithm. The following is the rules of modified checker.<br>
+<br>
+<img src = "Checker/r1.PNG" width = 800px>
+<br>*RULES*
+<br>1.
+<br>2.
+<br>3.
+<br>
 
-
-  In this project, I made a modified checker AI. The rule of a modified checker is like this;<br>
-*RULES*
-<img src = "Checker/r1.PNG" width = 200px><img src = "Checker/r2.PNG" width = 200px><img src = "Checker/r3.PNG" width = 200px><img src = "Checker/r4.PNG" width = 200px><img src = "Checker/r5.PNG" width = 200px>
-
-  This project focused on making AI which can play against human by using mini max tree algirithm.
-Score can be the indicator of winning and losing, making an appropriate score system affects overall performance.
+To make a decision, An appropriate indicator is needed to show the status of winning and losing. Indicaetor here is a score. Score is represented as only one number, zerosum, if black is winning then positive number will be shown , if res, then negative number. if it is tie, then it will be 0.<br>
 In this algorithm, Zerosum is used. Score is expressed in one score, if Black is winning then score gets postivie value, if not, score gets negative one. If it is equals, then score is 0.
-(my method)If black pawn moves forward, then add 3. If red, subtract 3 from the total score.King worth 30 points. All pawns have a inital value of 10.
-<img src = "Checker/scoring.PNG" width = 400px><img src = "Checker/e1.PNG"><img src = "Checker/e2.PNG"><img src = "Checker/e3.PNG"><img src = "Checker/gametree.PNG">
-There are some to consider when you choose something to move from the board.
-<img src = "Checker/ply1.PNG"><img src = "Checker/ply2.PNG" width = 400px>
+(my method)If black pawn moves forward, then add 3. If red, subtract 3 from the total score.King worth 30 points. All pawns have a inital value of 10.<br>
+<img src = "Checker/scoring.PNG" width = 400px>
+<br>
+Let's elaborate the situation. Let's say the picture down below is current board , and now, red should make a decision. It has 7 different choice to make. Which choice is the best? Would it be all good choices?
+<br><img src = "Checker/e1.PNG">
+<br>As you can think, two movements which is marked as a black are bad decision to make. The reason why is that, as soon as you move this forward, the opponent will get your pawn and get points.
 
-* mini-max tree
-<img src = "Checker/2ply.PNG"  width = 400px>
+<img src = "Checker/e2.PNG" width =  "800px"></div>
 
-<img src = "Checker/4ply1.PNG" width = 600px><img src = "Checker/4ply2.PNG" width = 900px>
+<div id =expic><br><img src = "Checker/e3.PNG" height = "300px" align = "left"> We can think of this as a tree form. Also, each situation is represented by the score.<br><br>depth 0 represents the current situation,<br><br><br><br><br><br> depth 1 represents one move forward from the current situation,<br><br><br><br><br>depth 2 represetns two moves forward from the current situation.
+<br>
+</div>
+<div id= text>
+  If we complete the tree, it will be like the tree down below.<br>
+  <img src = "Checker/gametree.PNG" width =  "800px">
+<br>
+From here, we can think about a stretagy that can lead us to make a good decision. Generate all the possible situation,  and then evaluate. Let's say we consider the 2 moves forward from the current situation,2ply. (Usually even number ply is used, because it considers the opponent's move). It is called "mini max tree"<br>
+<br><h2>* mini-max tree</h2>
+<br>Now, let's make a decision in real. we are team blue, and we will consider 2 moves forward. + score means blue is winning, - score means red is winning. We need to pick one that brings us the optimal score.
+<br><img src = "Checker/4ply1.PNG" width = 600px>
+<br><br> First, pick a smaller node among sister nodes at the depth 4(leaf), because since it is red's turn, it will pick the smallest value. After that, replace its parent's value as the value we pick.
+<img src = "Checker/4ply2.PNG" width = 900px>
+<br><br> Second, pick a bigger node among sister nodes at the depth 3(leaf), because since it is blue's turn, it will pick the biggest value. After that, replace its parent's value as the value we pick.
 <img src = "Checker/4ply3.PNG" width = 900px>
-<img src = "Checker/4ply4.PNG" width = 900px><img src = "Checker/4ply5.PNG"  width = 600px>
-<img src = "Checker/4ply6.PNG" width = 600px>
-*alpha beta pruning
+<br><br> Second, pick a bigger node among sister nodes at the depth 3(leaf), because since it is blue's turn, it will pick the biggest value. After that, replace its parent's value as the value we pick.
+<img src = "Checker/4ply4.PNG" width = 900px>
+<br><br> Repeaet this process until it gets the root.<br>
+<img src = "Checker/4ply5.PNG"  width = 600px>
+
+<br><br> Now, we can see which node we should pick to make optimal score. Two moves from now, the best score for us is -4.<br>
+
+<img src = "Checker/4ply6.PNG" width = 600px><br><br>
+<h2>*alpha beta pruning*</h2>
+Generating all the possibilities causes time and memory inefficiency. To solve this problem, alpha beta pruning is used.
+
+
 </div>
