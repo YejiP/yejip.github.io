@@ -190,5 +190,10 @@ so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to
     (B's probability-0)*a2 is the result of d(cost)/d(w21). So, the weight update would be <b>w21 +alpha*(B's probability*a2).</b>
 <br>
     By these two cases, we can generalize the way of updating weights.
-    <h2>weight - alpha*(probability- correct answer)</h2>
+    <h2>weight - alpha*(probability- correct answer)*the previous output</h2>
+    <br>we can think (probability- correct answer) as a error of the output node. Now, to change the weights of the parevious layer, we need to know the error of the previous layer's node.
+    Caculation is simple, the right picture below .
+    <br><img src = "ANN/out_err.PNG" width = 400px><img src = "ANN/a1.PNG" width = 300px>
+    <br>This is a basic pattern of machine learning. There are some more contents such as how to initialize good weights,(Xavier, He), regularization, and dropout.
+    this contents will be updated in the future. <br>
 </div>
