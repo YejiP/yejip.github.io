@@ -1,1 +1,1 @@
-# yeji_park.github.io
+# https://yejip.github.io/Portfolio/
