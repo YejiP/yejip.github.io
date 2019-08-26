@@ -6,25 +6,25 @@
 <style>
     #text {
         float : left;
-        padding-left :10%;
+        padding-left :15%;
         text-align:center;
         }
 
     #pic{
-        padding-left :10%;
+        padding-left :15%;
         padding-right:10%;
     }
 
     #expic{
 
       float : bottom;
-        padding-left :10%;
+        padding-left :15%;
         padding-right:10%;
         align-items: center;
         width : 900px;
     }
     #title {
-        padding-left :10%;
+        padding-left :15%;
         padding-right :10%;
         float:bottom;}
 
@@ -37,20 +37,21 @@
 
 
     #explanation {
-        padding-left :10%;
+        padding-left :15%;
         padding-right :10%;
         width : 900px;
 
     }
 </style>
 
-<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
 <center><h1>Character Recognition</h1><h4>(using Artificial Neural Network)</h4></center>
 <br>
 <div align = "center"><div id = title><a href = "http://ec2-15-164-171-208.ap-northeast-2.compute.amazonaws.com:8080/numbers/"><h2>Click to run demo</h2></a></div></div>
 
+<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
 
 <div id =title ><h3>0. Problem description</h3><br></div>
+
 <div id =explanation >According to given picture which contains one written number among 0 to 9, It will recognize the number from the picture.
 <br> <b>Ex)</b> The picture below is the size of 28*28, has 784 pixels. Each pixel contains information of location and the brightness.
 <br>By combining these two information, the picture is determined what number it is. Forwawrd and back propagation are used when the model is made.
@@ -80,7 +81,6 @@ However, We cannot find proper weights at one go. The initial weights are random
   In the classification problems, the last output is driven by using cross-entropy and softmax function.
   <br><br>
   <img src = "ANN/soft_max.PNG" width = 600 align =  left>
-
   Let's assume that we have 4 classes(A,B,C,D), and each outcome is 9, 5, 3, 5 respectively (The outcome is something like a1*w1 + a2*w2 + bias)<br><br>
   We can simply put this as a probability,
   (Roughly rounded)<br>
