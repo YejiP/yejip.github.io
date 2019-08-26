@@ -6,9 +6,10 @@
 <style>
     #text {
             float : bottom;
-            padding-left :10%;
+            padding-left :15%;
             padding-right : 10%;
             text-align:left;
+            width : 900px;
             }
 
     #pic{
@@ -31,7 +32,7 @@
         padding-top : 2%;
         }
     #title {
-            padding-left :10%;
+            padding-left :15%;
             padding-right :10%;
             float:bottom;
           }
@@ -43,29 +44,21 @@
 
 
 <div id =title ><div align = "center"><h3>0. Problem description</h3><br></div></div>
-<div id =title >
+<div id =text >
 <br>
 Let's say we need to make schedule for room/time with courses. How can we tune the schedule for all the courses ?
 It could be easy enough to be done by manual way when it is not too much to tune, however, If the scale is too large to schedule it manually, then it would not be the best way to do it manually.
 Those are courses we have for comming semester, and we want to match room and time for each courses without any conflicts.<br></div>
 
 
-<div id = n><img src = 'GA/img/Course.PNG' width="300px"></div>
-<div id = pic><img src = 'GA/img/blank.PNG' width="300px"></div>
+<div id = text><img src = 'GA/img/Course.PNG' width="900px"></div>
 <br><br><br>
-<div id = text>The left picture below is one of the possible answer for the scheduling and the right picture below is one of the wrong answer.</div>
-<div id = n><img src = 'GA/img/possible.PNG' width="300px"><br>The possible right answer</div>
-<div id = pic><img src = 'GA/img/violations.PNG' width="300px"><br>Wrong answer</div>
-
-<div id = text><br>
+<div id = text>The left picture below is one of the possible answer for the scheduling and the right picture below is one of the wrong answer.
+<br><img src = 'GA/img/possible.PNG' width="800px"><br>
 Why can't it be the right answer?<br>
 </div>
 
-<div id = n><img src = 'GA/img/c1.PNG' width="200px"><br>Prof.A :<br> 2 lectures at the same time.</div>
-<div id = bet><img src = 'GA/img/c2.PNG' width="200px"><br>Third year students :<br> 2 classes at the same time.</div>
-<div id = pic><img src = 'GA/img/c3.PNG' width="200px"><br>Room 1 :<br> at most 20 people.</div>
-
-<div id = text><br>
+<div id = text><img src = 'GA/img/c1.PNG' width="900px">
 <b>Constraints</b>
 <br>1. Each Prof, at most 1 class at one period
 <br>2. Each Students group, at most 1 class at one period
@@ -89,9 +82,7 @@ If fitness value is high, then it has more chance to be picked up as parents. Tw
 The mouse below contains information of schedule. For the explanation, let's say this mouse does not show their information(schedule) but show only the constraints of the schedule they carry.
 </div>
 
-<div id = n><img src ='GA/img/m1.PNG' width = "300px"><br>schedule with three contraints<br>
-<img src ='GA/img/m2.PNG' width = "300px"><br>schedule with one  contraint</div>
-<div = id = pic ><img src ='GA/img/ms.PNG' width = "300px"><br>First population pool<br>Mice of first generation carries solution which was randomly generated.</div>
+<div id = text><img src ='GA/img/ms.PNG' width = "800px"></div>
 <br><br><br><br>
 <div id = n><img src ='GA/img/rep.PNG' width = "600px" align = "left">From the population, Two are chosen and then reproduce their baby by mixing the information they have.</div>
 
