@@ -91,6 +91,25 @@ From here, we can think about a stretagy that can lead us to make a good decisio
 <img src = "Checker/4ply6.PNG" width = 600px><br><br>
 <h2>*alpha beta pruning*</h2>
 Generating all the possibilities causes time and memory inefficiency. To solve this problem, alpha beta pruning is used.
+<br><br>
+Firstly, pick the minimum value among sister nodes at depth 4, which is 3.
+<br><img src = "Checker/minmax1.PNG"  width = 600px><br>
+The temporal max value is 3. Now, we need to pick the smallest nodes again at depth 4.
+<img src = "Checker/minmax2.PNG"  width = 600px><br>
+However, -1 is less than temporal maximum,3. the sister node of 3 would be less than -1, since the smallest node will be picked.
+Therefore, we do not need to see other leaf nodes and can prune it.
+<img src = "Checker/minmax3.PNG"  width = 600px><br>
+
+<img src = "Checker/minmax4.PNG"  width = 800px><br>
+Now, pick the smallest one from the right side's leaf nodes. it is -4.<br>
+<img src = "Checker/minmax5.PNG"  width = 400px><br><br>
+<img src = "Checker/minmax6.PNG"  width = 800px><br>
+Temporal minimum is -4 at the right side of tree, depth 2. However, 3 is going to be always bigger than -4. blue will pick the value 3, left side, regardless of the values of right side of tree. <br>
+<img src = "Checker/minmax7.PNG"  width = 500px><br>
+As a result, two points will be pruned.<br>
+<img src = "Checker/result.PNG"  width = 600px><br>
+Therfore, alpha beta pruning can efficiently lessen the search space.
+<img src = "Checker/result2.PNG"  width = 400px><br>
 
 
 </div></center>
