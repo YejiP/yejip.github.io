@@ -1,7 +1,4 @@
 <!doctype html>
-<br><br><br><br>
-<div align = "center"><img src ="img/me.png" width = 100px></div><br>
-<h5><center>Yeji Park</center></h5>
 
 <style>
 #text {
@@ -9,8 +6,6 @@
         padding-left :15%;
         padding-right : 10%;
         text-align:left;
-        width : 900px;
-
         }
     #title {
           padding-left :15%;
@@ -19,23 +14,19 @@
               }
 
 
-    #sub {
-      float : left;
-      padding-left :15%;
-      padding-right : 10%;
-      text-align:center;
-    }
-
-
     #pic{
       float : left;
       padding-left :15%;
-
-      width : 900px;
-      text-align : right;
     }
+    #cen {
+      min-width: 800px;
+        }
 </style>
 
+<div id =cen>
+  <br><br><br><br>
+  <div align = "center"><img src ="img/me.png" width = 100px></div><br>
+  <h5><center>Yeji Park</center></h5>
 
 <center><h1>Sudoku solver</h1><h4>(using forward checking and back tracking)</h4>
   <h2><a href ="http://ec2-15-164-171-208.ap-northeast-2.compute.amazonaws.com:8080/test/">Sudoku solver Demo</a></h2>
@@ -88,21 +79,16 @@ now, it checks another possible answer for cell B, but cell A is still 7. (The t
 <img src = "sudoku/img/ac.PNG" width = 150px height = 150px align = left>
 <img src = "sudoku/img/2.PNG" width = 170px  height = 150px align = left >
 <img src = "sudoku/img/3.PNG" width = 170px height = 150px align = left >
-<img src = "sudoku/img/4.PNG" width = 170px height = 150px align = left ></div>
-<br>
-<div id = text>
-<br>
-The picture below is overall image of what we did before.
-</div>
-<div id = pic>
-<img src = "sudoku/img/5.PNG" width = 700px  align = left><br>
+<img src = "sudoku/img/4.PNG" width = 170px height = 150px >
 
 </div>
-<div id = text>
-<br>
+
+<div id = pic><br>
+The picture below is overall image of what we did before.
+<br><img src = "sudoku/img/5.PNG" width = 700px  ><br>
 If there is no possible combination when cell A is 7, then now the value of cell A is changed, also backtracking.
 </div>
 <div id= pic>
-<img src = "sudoku/img/6.PNG" width = 700px align = left ><br>
+<img src = "sudoku/img/6.PNG" width = 700px ><br>
 
-</div>
+</div></div>
