@@ -161,7 +161,7 @@ However, We cannot find proper weights at one go. The initial weights are random
 <div id = expic><img src = "ANN/back.PNG" width = 400 px align = "left">Back-propagation is the process of neural network finding right weights.Depending on how much each node contributes to the total error.
     we will focus on <b>1. How much error each node contributes  2. How much weight should be updated</b>
     <br>Back-propagation starts from the nodes from the output layer. These nodes can be evaluated by seeing how different it is from the right answer<br>    <img src = "ANN/e2.PNG" width = 800px><br>
-  Even we do not explicitly see w11 from the equation above, cost function contains w11, as the A contains w11. <img src = "ANN/e1.PNG" height=40px><br> Therefore, we can differentiate the cost function with respective to w11(Weights).<br>
+  Even we do not explicitly see w11 from the equation above, cost function contains w11, as the A contains w11.<br> <img src = "ANN/e1.PNG" height=40px><br> Therefore, we can differentiate the cost function with respective to w11(Weights).<br>
 The equation below is showing the differentiation of the cost function. It also means the moment slope, and derivitives.
   <img src = "ANN/e0.PNG" height = 50px ><br>
   purpose is to minimize 'y' value, since y stands for the costs(total errors of all nodes)<br>
@@ -173,7 +173,7 @@ There are 4 classes as output, and let's name it class 1, 2,3 and 4 from the top
 <img src = "ANN/tot_err.PNG" width=600px>
   <br>The picture belongs to class 1, so the correct answer for each class is 1,0,0,0 respectivley.
   we can simplify it as the eqation below, since only one is multplied by 1 , and others by 0.<br>
-  <img src = "ANN/e2.PNG" height=50px><br>
+  <img src = "ANN/e2.PNG" width=800px><br>
   <img src = "ANN/tc.PNG" height=50px>
 <br> First, we will update w11. To update w11, we first need to calculate the derivities. It can be done by following the chain rule.<br>
   <img src = "ANN/wu11.PNG"  width=600px><br>
@@ -181,7 +181,7 @@ There are 4 classes as output, and let's name it class 1, 2,3 and 4 from the top
 <img src = "ANN/w11u.PNG" height=300px><br>
 -(1- A's probability)*a1 is the result of d(cost)/d(w11). If the derivitive(moment slope) is positive value, then we need to go to the opposite the direction of the value of derivities to reduce the cost, and if it is negative value, also we need to go to the opposite direction of the value of deritivies.
 Either way, it needs to head the opposite direction of the value of derivities.
-so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to multiply appropriate small number called alpha(0.001 to 0.1?) to prevent to miss or skip the point we want to find.
+so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to multiply appropriate small number called alpha(0.001 ,0.1...) to prevent to miss or skip the point we want to find.
  <b>w11 -alpha*((A's probability-1)*a1).</b>
 
     <br><br><br>
