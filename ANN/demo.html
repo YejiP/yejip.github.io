@@ -1,0 +1,20 @@
+
+<style>
+    #text {
+            float : bottom;
+            padding-left :10%;
+            padding-right : 10%;
+            text-align:left;
+            }
+
+</style>
+
+<div id= text>
+<video src = "ANN.mp4" width ="800px" autoplay controls></video><br>
+This is a demo video. Please watch it before you try out the <center><h2><a href = "http://ec2-15-164-171-208.ap-northeast-2.compute.amazonaws.com:8080/numbers/">demo site</a></h2></center>
+<br>The numbers 0 to 9 were tested to see the model can recognize the real handwritting.
+<br>It seems like it cannot recognize well when it comes to number 6 and 8. The reason might be its poor weights about judging number 6 and 8, due to overfitting. (The implementation is lack of regularization method.)
+<br>The accuracy used in this demo was around 0.8.
+<br>The weights were driven by the model that i made, not from keras.
+<br>If the weights were driven from the keras, then it might have shown better performance, however, the purpose of demo was not showing the performance of keras, but the algorithm i implemented and trained.
+<br>It can be improved by adding regularization. <br>
