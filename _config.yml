@@ -19,18 +19,17 @@ baseurl:   ''
 lang:                  en, kr
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:            YejiPark
+title:            Yeji Park
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Best Jekyll Theme by a Mile".
+	Welcome to
   **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
 
 # A shorter description for the sidebar.
 tagline:               >
-  "Best Jekyll Theme by a Mile".
-  Open `_config.yml` to edit this text.
+  Welcome to my page.
 
 # A list of keywords for your blog
 keywords:              []
@@ -49,12 +48,10 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Hydejack
-    url:               /hydejack/
-  - title:             Hyde
-    url:               /hyde/
-  - title:             Documentation
-    url:               /docs/
+  - title:             About me
+    url:               /me/
+  - title:             Portfolio
+    url:               /Portfolio/
   - title:             About
     url:               /about/
 
@@ -326,7 +323,7 @@ relative_links:
 titles_from_headings:
   strip_title:         true
   collections:         true
-  
+
 replace_img:
   re_img:              <img\s*(?<attrs>.*?)\s*/>
   re_ignore:           (re|data)-ignore
