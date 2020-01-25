@@ -1,0 +1,120 @@
+<!doctype html>
+
+
+<style>
+    #text {
+            float : bottom;
+            padding-left :10%;
+            padding-right : 10%;
+            text-align:left;
+            }
+
+      #expic{
+
+            float : bottom;
+            padding-left :10%;
+            padding-right:10%;
+            align-items: center;
+                }
+
+    #pic{
+        padding-top: 2%;
+        padding-right:10%;
+        text-align:center;
+        float :bottom;
+        }
+
+    #title {
+            padding-left :10%;
+            padding-right :10%;
+            float:bottom;
+          }
+          #cen {
+            min-width: 800px;
+            text-size-adjust: none;
+
+              }
+</style>
+<div id = cen>
+<br><br><br><br>
+<div align = "center"><img src ="img/me.png" width = 100px></div><br>
+<h5><center>Yeji Park</center></h5>
+
+<center><h1>Recommendation system</h1><h4>(Clustering Algorithm)</h4></center>
+<center><div id = title><a href = "cluster/result.html"><h2>Click to watch results</h2></a></div>
+<a href = "https://github.com/YejiP/projects/blob/master/Clustering.R">Github repository</a></center><br>
+<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
+
+<div id =title ><div align = "center"><h3>0. Algorithm description</h3><br></div>
+1. K-Means<br>
+- Unsupervised learning<br>
+- It studies data without label.<br>
+- It is often used to find the hidden structure in the data.<br>
+- Unsuvervised learning itself can be the purpose. (news, shopping)<br>
+- It can be the preprocessing step of Unsupervised learning.<br>
+- Clustering itself can be a label.<br>
+
+<h4>K-means clustering</h4>
+- We want to divide the data into k clusters. K is arbitrary number that we chose.<br>
+- Centroid is the center of the each cluster. There are K centroids.<br>
+- Centroid can be chosen randomly in the data which we already have. It is not good to initialize all centroids to the same value.<br>
+- Normalization is needed, since it uses Euclidean distance. (If one variable is way too big then other variable cannot affect the result.)<br>
+-  z normalization : (x-mean(x))/sigma <br>
+-  min max normalization: (x- xmin)/ (x max – x min)<br>
+
+<br>Process<br>
+1. Random 한 값으로 centroid 를 잡아준다.<br>
+2. 각각의 자료 값이 어떤 centroid 에 가까운지 그룹 지어준다.<br>
+3. 그룹끼리 mean 좌표를 다시 잡아준다.<br>
+4. 이 mean 값들과 자료 값들과의 거리를 다시 측정해서, 다시 그룹지어준다.<br>
+5. mean 값들이 변하지 않을 때까지 반복해준다.<br>
+
+
+<h4>2. KNN</h4>
+
+
+<h4>3. recommendation system using KNN</h4>
+ Content based filtering<br>
+-컨텐츠에 기반해서, 사용자가 어떤 것을 좋아하는지 판단하고 추천해주는 시스템이다.<br><br>
+
+한계<br>
+- 컨텐츠마다, 어떤것이 의미있는지 정해줘야한다.<br>
+- 퀄리티 측면에서는 떨어질 수 있다.<br>
+-새롭고 다양한 아이템을 잘 추천하지 않는다.<br>
+<br>
+Collaborative filtering<br>
+-memory based CF/model based  CF 가 있다.<br>
+: 특정한 structure 가지고 있지만, 다 똑같지는 않다.<br>
+<br>
+MEMORY BASED CF:<br>
+아이템에 대해, 사용자의 RATING 을 추측할 때, 비슷한 유저나 아이템의 정보를 이용하는 것이다.<br>
+<br>
+MODEL BASED CF:<br>
+아이템에 대해, 사용자의 RATING 을 추측할 때, 모델을 만들어 그 모델에 의해 추측하는 것이다. (CLUSTERING 같은)
+<br>
+- 신상은 추천 못해준다.<br>
+ cold start problem ( 시작할 때 문제가 생긴다.)<br>
+--> 노출을 시킨다.
+--> 평가단 활용
+<br>
+- 계산이 비싸다.<br>
+knn 이니까, centroid 찾을 때도...
+한번 추천해주는데 계산이 ..
+미리 계산해놓기 어렵. 실시간으로 값이 많이 바뀌기 때문에.<br>
+computationally expensive = not scalable( 데이터가 커져도 할 수 있는 알고리즘이 아니다)
+데이터 커지면, 느려서 못쓴다.<br>
+<br>
+유사도 측정<br>
+<br>
+Item based CF<br>
+
+K =n<br>
+아이템끼리의 유사성을 본다. 가장 유사한 아이템 n개를 정한다.<br>
+그리고, 한 아이템에 대해서, 사용자가 구매한 아이템이 몇 개인지보고, 그거에 대한 상관성을 계산해준다.<br>
+
+</div>
+
+
+
+
+</div>

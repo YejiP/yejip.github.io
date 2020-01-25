@@ -53,7 +53,7 @@ menu:
     url:               /hyde/
   - title:             Metagenomics
     url:               /docs/
-  - title:             About
+  - title:             About me
     url:               /about/
 
 # Add links to the footer.
