@@ -52,7 +52,7 @@ menu:
   - title:             Artificial Intellegence
     url:               /hyde/
   - title:             Metagenomics
-    url:               /docs/
+    url:               /metagenomics/
   - title:             About
     url:               /about/
 
