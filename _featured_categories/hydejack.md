@@ -1,6 +1,9 @@
 ---
+layout: list
 title: About me
 slug: About me
+menu: true
+order: 1
 description: >
   I am currently working for the bio-startup company, HEM(Holzapfel Effective Microbes) as an data analyst(2020.~).
   My major is ICT convergence and Life science and My ultimate vision is to combine those two fields, ICT and Life science, to create a positive impact on the world such as smart healthcare or AI-related bio industry.
@@ -8,7 +11,7 @@ description: >
   This is a list of courses I have taken and that I am currently doing
 ---
 
-##ICT convergence
+## ICT convergence
 Introduction to ICT Convergence
 
 Python: ICT Engineering Mathematics, Data Management and Application, Programming I
@@ -22,7 +25,7 @@ Swift: ICT Application Development
 C++: Programming2
 
 
-##Biology
+## Biology
 
 General Microbiology, Organic Chemistry, Cell Biology
 
@@ -32,5 +35,5 @@ Biochemistry 1, Biochemistry 2, Molecular Biology1
 
 Fundamentals of Pharmacology, Intro to genetics
 
-##Online course
+## Online course
 EDX: Deep Learning Explained(2019.08~)
