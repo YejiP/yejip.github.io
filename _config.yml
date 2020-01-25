@@ -47,11 +47,11 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Hydejack
+  - title:             about me
     url:               /hydejack/
-  - title:             Hyde
+  - title:             AI_projects
     url:               /hyde/
-  - title:             Documentation
+  - title:             Metagenomics
     url:               /docs/
   - title:             About
     url:               /about/
