@@ -1,12 +1,10 @@
 ---
 layout: list
-title: Hydejack
+title: About me
 slug: hydejack
 menu: true
 order: 1
 description: >
-  Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com/) theme, stolen by
-  [@qwtel](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com).
-  You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
-  Open `_featured_tags/hydejack.md` to edit this text.
----
+
+I studied at Handong Global University in the field of School of Global Entrepreneurship and ICT majoring in ICT convergence and Life science. I have also experienced studying abroad at University of Chemistry and Technology in Czechia and The King's University in Canada. My ultimate vision is to combine those two fields, ICT and Life science, to create a positive impact on the world such as smart healthcare or AI-related bio industry. Please have a look at my online profile including the skills I currently have and the projects I have worked on.
+This is a list of courses I have taken and that I am currently doing
