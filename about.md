@@ -10,8 +10,6 @@ description: >
   Please have a look at my online profile including the skills I currently have and the projects I have worked on.
   This is a list of courses I have taken and that I am currently doing
 ---
-## About me
-
 
 ## ICT convergence
 Introduction to ICT Convergence
