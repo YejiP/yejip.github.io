@@ -5,5 +5,7 @@ slug: hydejack
 menu: true
 order: 1
 description: >
-  Projects I have done.
+  This is the projects page,  I have made during my university years.
+   [Proejcts](http://yejip.com/pro.html).
+
 ---
