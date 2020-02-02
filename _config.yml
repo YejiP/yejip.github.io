@@ -51,10 +51,11 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /hydejack/
-  - title:             Artificial Intellegence
-    url:               /hyde/
   - title:             Metagenomics
     url:               /docs/
+  - title:             Artificial Intellegence
+    url:               /hyde/
+
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
