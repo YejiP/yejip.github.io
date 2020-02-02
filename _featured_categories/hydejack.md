@@ -6,6 +6,6 @@ menu: true
 order: 1
 description: >
   This is the projects page,  I have made during my university years.
-  <http://yejip.com/pro.html>
+  projects(http://yejip.com/pro.html)
 
 ---
