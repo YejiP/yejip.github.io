@@ -6,4 +6,3 @@ description: >
   Digit recognition was done by implementing Nerual Network by JAVA, without using tensorflow.   
 excerpt_separator: <!--more-->
 ---
- [Digit Recogtion](http://yejip.com/ANN.html)
