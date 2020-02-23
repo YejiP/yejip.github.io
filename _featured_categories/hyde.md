@@ -1,13 +1,11 @@
 ---
 layout: list
-title: Hyde
+title: Practical concepts to deal with data
 slug: hyde
 menu: true
 order: 2
 description: >
-  Hyde is a brazen two-column Jekyll theme that pairs a prominent sidebar with uncomplicated content.
-  It’s based on Poole, the Jekyll butler.
-  Open `_featured_tags/hyde.md` to edit this text.
+  1) Practical statistics for data scientists
 accent_color: rgb(38,139,210)
 accent_image:
   background: rgb(32,32,32)
