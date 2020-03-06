@@ -51,9 +51,9 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /hydejack/
-  - title:             Metagenomics
+  - title:             docs
     url:               /docs/
-  - title:             Data analysis
+  - title:             Machine learning
     url:               /hyde/
 
 
