@@ -51,7 +51,7 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /hydejack/
-  - title:             docs
+  - title:             Android app
     url:               /docs/
   - title:             Machine learning
     url:               /hyde/
