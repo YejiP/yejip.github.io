@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://yejip.github.io/Portfolio
+url:     https://yejip.github.io/Portfolio
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -24,13 +24,11 @@ title:                 Yeji 'Ellie'
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-     Welcome to my blog
-
+   Welcome to my blog
 
 # A shorter description for the sidebar.
 tagline:               >
-  "Best Jekyll Theme by a Mile".
-  Open `_config.yml` to edit this text.
+  Welcome to my blog
 
 # A list of keywords for your blog
 keywords:              []
@@ -49,14 +47,11 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Hydejack
-    url:               /hydejack/
-  - title:             Hyde
-    url:               /hyde/
-  - title:             Documentation
-    url:               /docs/
-  - title:             About
+  - title:             About me
     url:               /about/
+  - title:             Projects
+    url:               /hydejack/
+
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -87,7 +82,7 @@ accent_color:          rgb(79,177,186)
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(254, 230, 255)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -103,9 +98,9 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
   - scope:
-      path:            hyde
+      path:            hydejack
     values:
-      accent_color:    rgb(38,139,210)
+      accent_color:    rgb(219, 164, 217)
       accent_image:
         background:    rgb(32,32,32)
         overlay:       false
@@ -326,7 +321,7 @@ relative_links:
 titles_from_headings:
   strip_title:         true
   collections:         true
-  
+
 replace_img:
   re_img:              <img\s*(?<attrs>.*?)\s*/>
   re_ignore:           (re|data)-ignore
