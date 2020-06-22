@@ -51,10 +51,6 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /hydejack/
-  - title:             docs
-    url:               /docs/
-  - title:             Machine learning
-    url:               /hyde/
 
 
 # Add links to the footer.
