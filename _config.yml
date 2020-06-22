@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:     https://yejip.github.io/Portfolio
+url:     https://yejip.github.io/Portfolio              
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -51,6 +51,10 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /hydejack/
+  - title:             docs
+    url:               /docs/
+  - title:             Machine learning
+    url:               /hyde/
 
 
 # Add links to the footer.
@@ -98,7 +102,7 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
   - scope:
-      path:            hydejack
+      path:            hyde
     values:
       accent_color:    rgb(219, 164, 217)
       accent_image:
@@ -321,7 +325,7 @@ relative_links:
 titles_from_headings:
   strip_title:         true
   collections:         true
-
+  
 replace_img:
   re_img:              <img\s*(?<attrs>.*?)\s*/>
   re_ignore:           (re|data)-ignore
