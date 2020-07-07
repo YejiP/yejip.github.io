@@ -48,7 +48,7 @@ excerpt_separator: <!--more-->
   윈도우 10이하면 putty 사용해야한다. 나는 윈도10이지만 모르고 푸티를 사용해서 여지껏 하고 있었다. 배움이란 역시 슬프고 즐겁다..
 
   접속은 이렇게 한다. 커맨드 라인에, ssh -i key.pem ec2-user@ip주소 (key 는 ec2 만들 때 내려받을 수 있다.)
-  그.러.나.! 일케 하면 오류뜬다. 'permission error. Unprotected private key file ' 허락해 주시옵소서,,, 즈언하,,, 휴.. (이 블로그는 일방적 소통 방식을 채택하기 때문에 드립이 재미없어도 나무랄수없다.)
+  그.러.나.! 일케 하면 오류뜬다. 'permission error. Unprotected private key file '
   왜냐면, key file을 프로텍트 해줘야한다. 그것은 바로 chmod 0400 key.pem 명령어를 통해 할 수 있다. 일케 해주면 소유자만 읽을 수 있게 되나보다.
 
-  AMI AMAZON LINUX2, free tier에서 간편하게 브라우저로 연결하는 방법이 생겼다. CONNECT가서 클릭하면 된다. 굉장히 편한 매력이 있다. TERMINAL 과 KEY는 필요없지만 쨌든 이 방법도 SSH를 사용하기 때문에 SSH 포트22 룰이 필요하다. 
+  AMI AMAZON LINUX2, free tier에서 간편하게 브라우저로 연결하는 방법이 생겼다. CONNECT가서 클릭하면 된다. 굉장히 편한 매력이 있다. TERMINAL 과 KEY는 필요없지만 쨌든 이 방법도 SSH를 사용하기 때문에 SSH 포트22 룰이 필요하다.
