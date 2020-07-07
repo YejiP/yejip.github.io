@@ -2,11 +2,10 @@
 layout: post
 title: AWS fundamentals IAM + EC2
 description: >
-  AWS CDA 재빠르게 따보기 시작!
+  AWS CDA 빨리 따자
 excerpt_separator: <!--more-->
 ---
 
-##FUNDAMENTALS
 # AWS availability Zone (AZ)
   한 region에 최소 2개에서 6개 까지 존재한다. (평균적으로는 세개)
   예를들어, Sydney:ap-southesast-2 라는 region 을 선택한다면, 이 지역에는 하나 이상(최소 2개에서 6개)의 데이터 센터가 존재하는 것이다. 이 데이터 센터는 물리적으로 떨어져 있다. 그치만, high bandwith ultra-low latency network 로 연결되어 있다.
@@ -20,8 +19,11 @@ excerpt_separator: <!--more-->
   는 무엇인고 하니,,,  'AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스' 라고 나와있다.
   여기에는
   *users* : 사람
+
   *group* : 팀
+
   *roles* : 기계
+
   가 존재한다. 그리고 JSON 파일로 정책 주어진다.
 
   MFA(Multi Factor Authentication) 이 가능하다. (한가지가 아니라 여러가지 관문을 거쳐야만 인증이 완료 되는 것. 보안 강화)
@@ -52,3 +54,11 @@ excerpt_separator: <!--more-->
   왜냐면, key file을 프로텍트 해줘야한다. 그것은 바로 chmod 0400 key.pem 명령어를 통해 할 수 있다. 일케 해주면 소유자만 읽을 수 있게 되나보다.
 
   AMI AMAZON LINUX2, free tier에서 간편하게 브라우저로 연결하는 방법이 생겼다. CONNECT가서 클릭하면 된다. 굉장히 편한 매력이 있다. TERMINAL 과 KEY는 필요없지만 쨌든 이 방법도 SSH를 사용하기 때문에 SSH 포트22 룰이 필요하다.
+
+
+  #Security Groups
+  Ec2 머신에서 어떻게 트래픽이 허용될 것인지 정해준다.
+  firewall 처럼 작용한다.
+  ports, authorize IP(IPv4, IPv6),Inbound/outbound...
+
+  
