@@ -1,11 +1,12 @@
 ---
 layout: list
-title: Practical concepts to deal with data
+title: AWS Certified Developer Associate
 slug: hyde
 menu: true
 order: 2
 description: >
-  1) Practical statistics for data scientists
+  with [udemy course by Stephane Maarek](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/)
+  This section is summarized in Korean
 accent_color: rgb(38,139,210)
 accent_image:
   background: rgb(32,32,32)
