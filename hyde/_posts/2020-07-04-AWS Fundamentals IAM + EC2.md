@@ -6,9 +6,10 @@ description: >
 excerpt_separator: <!--more-->
 ---
 
+
 ## AWS availability Zone (AZ)
   한 region에 최소 2개에서 6개 까지 존재한다. (평균적으로는 세개)
-  예를들어, Sydney:ap-southesast-2 라는 region 을 선택한다면,1` 이 지역에는 하나 이상(최소 2개에서 6개)의 데이터 센터가 존재하는 것이다. 이 데이터 센터는 물리적으로 떨어져 있다. 그치만, high bandwith ultra-low latency network 로 연결되어 있다.
+  예를들어, Sydney:ap-southesast-2 라는 region 을 선택한다면, 이 지역에는 하나 이상(최소 2개에서 6개)의 데이터 센터가 존재하는 것이다. 이 데이터 센터는 물리적으로 떨어져 있다. 그치만, high bandwith ultra-low latency network 로 연결되어 있다.
 
 
 ## Regional 과 Global service
@@ -18,6 +19,7 @@ excerpt_separator: <!--more-->
 # IAM (Identity and Access Management)
   는 무엇인고 하니,,,  'AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스' 라고 나와있다.
   여기에는
+
   *users* : 사람
 
   *group* : 팀
@@ -41,6 +43,7 @@ excerpt_separator: <!--more-->
   4. ASG : 오토 스케일링 그룹
 
 
+
   일단 요기 튜토리얼에서는 EC2 instance를 만들었다. (AMI AMAZON LINUX2, free tier)
   이렇게 EC2 instance를 만들었으면 이제 우리 컴퓨터에서 접속을 해봐야한다.
   SSH 로 한다. SSH 의 포트는 보통 22인가보다. EC2 만들 때 Security group 에서 이미 SSH port 22 규칙이 디폴트로 있었다.
@@ -56,7 +59,7 @@ excerpt_separator: <!--more-->
   AMI AMAZON LINUX2, free tier에서 간편하게 브라우저로 연결하는 방법이 생겼다. CONNECT가서 클릭하면 된다. 굉장히 편한 매력이 있다. TERMINAL 과 KEY는 필요없지만 쨌든 이 방법도 SSH를 사용하기 때문에 SSH 포트22 룰이 필요하다.
 
 
-  # Security Groups
+## Security Groups
   Ec2 머신에서 어떻게 트래픽이 허용될 것인지 정해준다.
   firewall 처럼 작용한다.
   ports, authorize IP(IPv4, IPv6),Inbound/outbound...
@@ -68,7 +71,7 @@ excerpt_separator: <!--more-->
 
 
 
-  # Public  vs  Private  vs Elastic IP
+## Public  vs  Private  vs Elastic IP
   Public IP
     : www로 접근 가능
     : 특별한 주소가 필요하다. 같은 IP는 안된다.
@@ -89,7 +92,7 @@ excerpt_separator: <!--more-->
   EC2는 internal AWS network 에선 private IP 사용한다. 그러나 SSH 시에는 public만 사용 가능.
   private IP 는 stop 해도 변하지 않고, public은 변한다. 그래서 Elastic IP 사용
 
-  # 서버 시작 Command
+## 서버 시작 Command
     sudo su : root로, 권한 문제 없이 모든 command 다 칠 수 있다.
     yum update -y
     tum install -y httpd.x86-64
@@ -99,7 +102,7 @@ excerpt_separator: <!--more-->
     echo "Hello world" > var/www/html/index.html
 
 
-  # EC2 USER DATA
+## EC2 USER DATA
     : Bootstrapping : 머신이 시작될 때의 launching commands 이다. 컴터 시작할 때 마다 자동으로 커맨드 수행되는 것.
     : EC2 만들 때, advanced details 에 user data 있다.
     여기에 명령어 (앞에 sudo 꼭) 적어놓으면 된다.
@@ -114,7 +117,7 @@ excerpt_separator: <!--more-->
 
 
 
-  #EC2 Instance Launch Types:
+## EC2 Instance Launch Types:
     총 다섯가지 있다.
 
     1. on demand instance
@@ -145,7 +148,7 @@ excerpt_separator: <!--more-->
       : No control over Instance placement.
 
 
-    # EC2 Network Interfaces (ENI)
+## EC2 Network Interfaces (ENI)
       : VPC: Vertual Private Cloud
       : ENI는 VPC의 logical component, vertual network card 대표.
       : EC2를 네트워크에 연결해준다.
@@ -153,13 +156,13 @@ excerpt_separator: <!--more-->
       : 하나 이상의 IPv4 ENI 만들기 가능 for failover.
       : ENI 만들고, EC2에 Attach 하면, 한 instance에 두개의 instance가 붙는다. 그리고 ENI 는 옮길 수 있다.
 
-    # EC2 pricing
+## EC2 pricing
       : 시간 당 붙는다.
       : region, type of ec2, os 에 따라 가격이 다르다.
       : billed by the second. 6 초나 60초나 비용이 같다. 0.023/60 달러
       : Instance 가 스탑되면, 그 후 돈이 청구되지 않는다.
 
-    #Custom AMI
+## Custom AMI
     PROS
       : 필요한 패키지를 미리 깔 수 있다.
       : 부트 타임 빠름.
@@ -168,19 +171,18 @@ excerpt_separator: <!--more-->
 
     AMI ARE NOT BUILT FOR A SPECIFIC AWS REGION.
 
-    #Burstable Instances
+## Burstable Instances
       t2 machines
         : 보통은 그럭저럭 괜찮은 cpu이다. 처리할게 갑자기 많아지면, Burst 하면서 처리. Good CPU.
         : Credit을 burst 하면서 동작한다. credit이 다 사라지면, cpu 성능이 나빠진다.
         : 기계가 burst 멈추면, credit 이 시간을 거치며 축적된다.
 
 
-    # T2 unlimited
+## T2 unlimited
       : unlimited burst credit balance.
 
 
-
-  # 이 단원에서 EXAM CHECK LIST!
+# 이 단원에서 EXAM CHECK LIST!
     1. ec2에 ssh로 접속하는 방법.
     2. .pem permission & 에러
     3. security group의 적합한 사용.
