@@ -120,16 +120,16 @@ excerpt_separator: <!--more-->
 
     cf) CLB 는 하나의 SSL cert 만 가능
 
-##ELB (Connection draining - CLB), (Deregistration Delay -  ALB, NLB)
+## ELB (Connection draining - CLB), (Deregistration Delay -  ALB, NLB)
     Instance 가 ok 한 상태가 아닐 때, 정상 instance 에 request 보내는 것.
 
 
-#Autoscaling group
+# Autoscaling group
   scale in : removing , scale out : adding according to load.
   min.max 를 정할 수 있다.
   LB에 자동으로 등록된다.
 
-##ASG scaling policy
+## ASG scaling policy
     1. target tracking scaling : 40% ~
     2. simple/step scaling : cloud watch alarm 이 울리면 2 unit 늘려라.
     3. scheduled actions : 5pm on fridays, increase min capacity.
