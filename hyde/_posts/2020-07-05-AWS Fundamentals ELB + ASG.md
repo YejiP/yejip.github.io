@@ -24,7 +24,7 @@ excerpt_separator: <!--more-->
     High availability : multi AZ 에서 같은 app을 가동 시킨다.
 
 
-## Load Blancing
+# Load Blancing
   Internet 트래픽을 여러개의 서버로 보내주는 서버
     여러 유저가 EC2 instance로 바로 접근하는게 아니라, 하나의 통로인 'load balancer'로 접근한다.
     load balancer는 여러개의 EC2 instance에 연결되어 있고, user를 instance에 보내준다.
@@ -78,5 +78,58 @@ excerpt_separator: <!--more-->
       layer7, url의 path, hostname, query,string,header 에 기반해 route해준다.
       micro service 나 container based app 에 적합하다.
       port mapping feature 있다.
+      ALB는 multiple target group으로 이끌어준다.
+      *target group의 타입*
+        EC2 instance, EC2 tasks, Lambda function, IP address(must be private)
+      Health check는 target group level 에서 진행된다.
+      fixed host hostname
+      client 의 IP를 직접적으로 못본다.  true IP 는 HTTP에 있는 header X-forwarded port에 있다. porto..
+      Listener 에서 rule edit, path, host 등등에 따라 target group 지정이 가능하다.
 
-    
+    3. NLB(Network Load Balancer)
+      layer4(TCP , UDP traffic)
+      초당 백만개의 요청 수행한다.
+      반응속도 빠름. (100ms, cf. ALB : 400ms)
+      하나의 static IP
+      NLB security group은 좀 다르게, CLB에서는 LB에서 오는 트래픽, EC2에서 받았다면
+      NLB에서는 외부 traffic을 Target Group에 전달해주기 때문에 IP가 NLB IP 가 아니라 외부 IP라서
+      Security group rule 에 80 HTTP 0.0.0.0/0 추가해줘야한다. (아니근데 애초에 HTTP안 받는거아님?? 뭐지)
+
+
+
+    *Load Blanacer Stickiness*
+    같은 client 는 항상 같은 instance로 direct되게 하는 것.
+    쿠키 통해 가능하다. user가 session data 를 잃지 ㅇ낳게 해준다.
+    stickiness 기간 지정 가능.
+
+    *Crosszone LB*
+    다른 존에 있는 instance와 연결가능하다.
+    CLB는 기본설정으로 사용 안하고, ALB는 항상 사용, NLB는 기본설정은 안사용하는데 돈 내면 가능...
+
+# SSL/TSL
+  클라이언트 ~ LB 간 정보를 암호화 시킨다. (in-flight encryption)
+  SSL(secure socket layer), TSL(Transport Layer Security)
+  SSL 인증서는 만료일이 있어서 갱신되어야한다.
+
+## SNI(Server Name Indication)
+    여러개의 SSL certificate를 한 웹 서버에서 로딩할 수 있게한다.
+    클라이언트가 호스트 네임을 지명해야한다.
+    서버가 알맞은 cert를 찾아준다.
+    ALB/NLB/Cloudfront 에서 동작.
+    ALB 는 여러개의 SSL certificate에 대해 여러개의 Listner 를 제공한다.
+
+    cf) CLB 는 하나의 SSL cert 만 가능
+
+##ELB (Connection draining - CLB), (Deregistration Delay -  ALB, NLB)
+    Instance 가 ok 한 상태가 아닐 때, 정상 instance 에 request 보내는 것.
+
+
+#Autoscaling group
+  scale in : removing , scale out : adding according to load.
+  min.max 를 정할 수 있다.
+  LB에 자동으로 등록된다.
+
+##ASG scaling policy
+    1. target tracking scaling : 40% ~
+    2. simple/step scaling : cloud watch alarm 이 울리면 2 unit 늘려라.
+    3. scheduled actions : 5pm on fridays, increase min capacity.
