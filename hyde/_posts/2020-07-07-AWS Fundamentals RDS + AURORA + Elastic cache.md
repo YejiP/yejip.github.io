@@ -22,7 +22,7 @@ excerpt_separator: <!--more-->
 
 
 ## RDS read replica
-  ![read replica](/hyde/img/readrepl.png)
+
   :RDS DB 인스턴스 하나에 읽고 쓰기 한다. 그 DB인스턴스를 비동기 복제를 한다. 복제된 인스턴스는 읽기만 가능.
     예를들어, 우리팀이 일하고 있는 DB가 있다. 다른 팀도 그 DB를 이용해서 뭘 하고 싶어한다.
     만약 우리 DB에 직접 연결하게 하면, Instance가 overload될 수도 있다. 따라서 RDS DB를 복제한다.
