@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 EC2 에서 데이터 저장해 놓고, 갑자기 종료되면 데이터도 다 날라간다. 이를 방지하기 위해서 ebs에 따로 저장한다. (Network drive임)
 
 
-#EBS (Elastic Block Store)
+# EBS (Elastic Block Store)
   : AZ에 한정되어 있다.
   : Provision capacity 로 돈을 낸다.
   : Volume type - size, throughtput, IOPS(I/O operations per sec) 에 맞춰 고른다.)
@@ -28,7 +28,7 @@ EC2 에서 데이터 저장해 놓고, 갑자기 종료되면 데이터도 다 �
     이 코드 다시 확인해라
 
 
-##GP2
+## GP2
     대부분의 workload에 추천.
     system boot volume 임.
     1 GiB - 16 TiB
@@ -36,26 +36,26 @@ EC2 에서 데이터 저장해 놓고, 갑자기 종료되면 데이터도 다 �
     small gp2 volumes는 3000 IOPS 까지 burst 가능.
     1GB 당 3 IOPS 가능. <= 16,000 iops. (5,334GB에 맥스다.)
 
-##IO1
+## IO1
     중요한 비지니스 앱(16,000 IOPS per volume 보다 더 사용하는 앱, iops퍼포먼스가 유지되어야하는 앱)에 적합. (성능이 제일 좋아서 그런가부다)
     IOPS 맨첨에 제공된다. MIN 100 - MAX 64,000 (Nitro instances) , MAX 32,000 (other instances)
     provisioned IOPS : 요청된 Volume size (in GiB) =  50:1
     4 GiB - 16 TiB
 
-##ST1
+## ST1
     저렴한 가격에 일관되고 빠른 throughput 이 필요할 때
     시스템 부트 볼륨 불가.
     500 GiB - 16 TiB
     Max IOPS 는 500
 
-##SC1
+## SC1
     자주는 사용하지 않지만 큰 볼륨을 위한 Throughput oriented storage.
     시스템 부트 볼륨 불가. (GP2, IO1만 부트 볼륨 가능)
     500 GiB - 16 TiB
     Max IOPS 는 250 (확실히 ST1 보다 느리다.)
 
 
-##EBS 와 Instance Store
+## EBS 와 Instance Store
     Instance store
       물리적으로 장비에 붙어있다.
       장점 : I/O performance가 ebs보다 낫다. (당연..), 리부트해도 데이타 안 지워진다.
@@ -63,7 +63,7 @@ EC2 에서 데이터 저장해 놓고, 갑자기 종료되면 데이터도 다 �
 
 
 
-#EFS(Elastic File System)
+# EFS(Elastic File System)
   :멀티 AZ 가능. cf) EBS는 한 AZ 안에서만..
   :NFSv4.1 프로토콜 사용. (std way to mount)
   :window 에서는 mount 안됨. Linux 만..
@@ -85,7 +85,7 @@ EC2 에서 데이터 저장해 놓고, 갑자기 종료되면 데이터도 다 �
   life cycle에서 며칠동안 접근 안하면 inf access로 바꾸게 하는 옵션 있다.
 
 
-#EBS/EFS 정리
+# EBS/EFS 정리
 EBS
   1. 한번에 하나의 instance 에 붙는다.
   2. AZ level 에 국한된다.
