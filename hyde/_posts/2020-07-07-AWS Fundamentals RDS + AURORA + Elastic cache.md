@@ -115,4 +115,43 @@ in-memory DB, low latency
 RDS랑 비슷, RDS for Cache
 write/read scaling & multi AZ
 
-USER
+1.
+APPLICATION      Amazon        Amazon
+            (1)  Elastic  (2)    RDS
+                  Cache
+
+    클라이언트가 요청을 하면, (1) Cache를 찾는다.
+    만약 Cache가 있다면, chache hit 이라고 하고, 없으면 cache miss 라고 한다.
+    cachehit이면 그냥 그 정보 반환하면 되고, cache miss면 2의 경로로 가서 정보 가지고 오면 된다. 그리고 RDS 에 쓴다.캐시에도 저장하고..
+
+
+2. Elastic cache - Redis vs Memcached
+
+Redis
+    multi AZ - auto failover
+    Read replicas & HA
+    AOF persistenc=t 덕에 data durability
+    backup 과 restore feature.
+
+Memcached
+    multi-node for partitioning of data
+    Non persistent
+    no locked up/restore
+    multi-threaded architecture
+
+## Caching implement considerations
+  safe? effective? design pattern?
+  1. Lazy loading / cached aside/ lazy population
+    캐쉬를 먼저 찾아보고 없으면 rds에서 가져온다.
+    장점 : 요청된 자료만 캐쉬된다. node failures이 그렇게 치명적이지 않다.
+    단점 : cache miss 일 경우 세번 신호 보내야한다. outdate된 cache 가지고 있을 수 있다.
+
+  2. Write through
+    app에서 write 하면 RDS와 cache에 write 한다.
+    장점 : data가 신선하다. write 하는 건 2번 call 한다. (lazy loading 은 cache miss 때 3번 read해야됐다.)
+    단점 : DB 에 write 하기 전까지 데이터 없다. 그래서 1, 2 같이 사용
+
+  3. cache eviction & Time to live (TTL)
+    유통기한 지난 애 지우기
+    메모리 꽉차면, LRU (Least Recently Used) 최근에 사용 안된거 지우기
+    time to liove 설정하기.
