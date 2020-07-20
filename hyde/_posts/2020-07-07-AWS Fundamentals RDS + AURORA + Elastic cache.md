@@ -114,3 +114,5 @@ encrpyt된 snapshot 에서 DB를 복구한다.
 in-memory DB, low latency
 RDS랑 비슷, RDS for Cache
 write/read scaling & multi AZ
+
+USER
