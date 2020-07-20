@@ -92,7 +92,9 @@ EBS
   3. gp2 : disk 사이즈 증가시 , io 증가한다.
   4. io1 l IO를 독립적으로 증가시킬 수 있다
   5. EBS 볼륨을 다른 AZ로 옮길 시, Snapshot 가져와서 다른 AZ에 복구시킨다.
+
 EFS
+
   1. 100~1000...개 Instance 가능하다.
   2. LINUX에서 돌아간다.
   3. Multi AZ!
