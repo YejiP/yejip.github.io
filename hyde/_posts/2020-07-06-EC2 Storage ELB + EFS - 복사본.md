@@ -15,8 +15,8 @@ EC2 에서 데이터 저장해 놓고, 갑자기 종료되면 데이터도 다 �
   : Volume type - size, throughtput, IOPS(I/O operations per sec) 에 맞춰 고른다.)
     1. GP2(SSD) : 일반적으로 사용됨.
     2. IO1(SSD) : 퍼포먼스가 가장 좋다. (low latency, high throughput)
-    3. STI(HDD) : 저렴, intensive workloads에 적합하다.
-    4. SCI(HDD) : 가장저렴. less frequently accessed workload.
+    3. ST1(HDD) : 저렴, intensive workloads에 적합하다.
+    4. SC1(HDD) : 가장저렴. less frequently accessed workload.
 
   : EC2 만들 때 , Add storage 에서 추가 가능하다.
   : EBS를 EC2 폴더에  mount 하기.
