@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AWS fundamentals IAM + EC2
+comments : true
 description: >
   AWS CDA 빨리 따자
 excerpt_separator: <!--more-->
