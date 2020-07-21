@@ -106,6 +106,12 @@ defaults:
         background:    rgb(32,32,32)
         overlay:       false
 
+defaults:
+  - scope:
+      type: posts
+    values:
+      comments: true
+
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
   - scope:
@@ -134,7 +140,7 @@ defaults:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                <disqus_shortname>
+disqus:                disqus_2z5nFV9YLc
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
