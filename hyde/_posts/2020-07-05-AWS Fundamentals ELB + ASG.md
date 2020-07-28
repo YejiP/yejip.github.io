@@ -5,7 +5,7 @@ description: >
   ELB 와 ASG는 무엇인가..?
 excerpt_separator: <!--more-->
 ---
-# AWS FUNDAMENTALS : ELS + ASG
+# AWS FUNDAMENTALS : ELB + ASG
 
 ## Background Knowledge
 
