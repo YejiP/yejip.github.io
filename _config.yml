@@ -51,6 +51,8 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /hydejack/
+  - title:             WEB
+    url:               /docs/
   - title:             AWS(CDA)
     url:               /hyde/
 
