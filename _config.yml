@@ -52,7 +52,7 @@ menu:
   - title:             Projects
     url:               /hydejack/
   - title:             WEB
-    url:               /docs/
+    url:               /web/
   - title:             AWS(CDA)
     url:               /hyde/
 
