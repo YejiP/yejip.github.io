@@ -1,7 +1,7 @@
 ---
 layout: list
 title: AWS Certified Developer Associate
-slug: hyde
+slug: aws
 menu: true
 order: 2
 description: >

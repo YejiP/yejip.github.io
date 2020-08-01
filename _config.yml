@@ -50,11 +50,11 @@ menu:
   - title:             About me
     url:               /about/
   - title:             Projects
-    url:               /hydejack/
+    url:               /project/
   - title:             WEB
     url:               /web/
   - title:             AWS(CDA)
-    url:               /hyde/
+    url:               /aws/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
