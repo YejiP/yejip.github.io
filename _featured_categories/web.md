@@ -1,7 +1,7 @@
 ---
 layout: list
 title: WEB
-slug: docs
+slug: web
 menu: true
 order: 3
 description: >
