@@ -47,12 +47,14 @@ excerpt_separator: <!--more-->
   :Encryption (At rest, In-flight)
   master가 encrypted 안돼있으면 read replicas 도 안된다.
   1. At rest encryption
+
     처음 만들어질 때만 실행 가능.
     AWS KMS - AES - 256 encryption으로 encrypt.
     launch time 에 encrpytion 이 정의돼야 한다.
     Oracle과 SQL server 에는 Trnasparent data encryption 가능.
 
   2. In flight encryption
+
     SSL certificates.
 
 
@@ -78,17 +80,19 @@ encrpyt된 snapshot 에서 DB를 복구한다.
 # Amazon Aurora
   1. 오픈 소스 아니다.
   2. postgres/mysql 과 호환된다.
-  my sql의 5배의 효율을 자랑, postgres의 3배의 효율
-  storage가 10GB ~ 64TB 까지 많아진다. (점진적)
-  15 replicas 까지 가능
-  failover은 즉시, high Availability
-  RDS보다 20 퍼 비싸지만 효율적이다.
+    my sql의 5배의 효율을 자랑, postgres의 3배의 효율
+    storage가 10GB ~ 64TB 까지 많아진다. (점진적)
+    15 replicas 까지 가능
+    failover은 즉시, high Availability
+    RDS보다 20 퍼 비싸지만 효율적이다.
 
 ## AURORA High Availability & READ Scaling
   3 AZ에 걸쳐 6개의 카피 데이터. (4/6 : for write, 3/6 : for read) -->?
   self healing! 30초 내 failover
   shared storage volume에 master instance가 Write 한다. (read도 당연 가능) 그럼 그 shared volume에서 다른 instance가 read한다.
   replica 는 1~15개
+
+![readrepl](C:\Users\21500\Desktop\Portfolio\aws\img\readrepl.PNG)
 
 ## Aurora security  
   RDS와 같은 엔진을 이용하기 때문에 security가 비슷하다. (IAM token)
@@ -102,6 +106,8 @@ encrpyt된 snapshot 에서 DB를 복구한다.
   간헐적으로 들어오고 예측 불가능한 workload에 사용하기 좋다.
   capacity planning 안해도 된다. (cost efficient)
   proxy fleet
+
+![aurora](C:\Users\21500\Desktop\Portfolio\aws\img\aurora.PNG)
 
 ## Global Aurora
     1. aurora cross region read replicas : Disaster Recovery 에 좋다.
@@ -143,16 +149,20 @@ Memcached
 ## Caching implement considerations
   safe? effective? design pattern?
   1. Lazy loading / cached aside/ lazy population
+
     캐쉬를 먼저 찾아보고 없으면 rds에서 가져온다.
     장점 : 요청된 자료만 캐쉬된다. node failures이 그렇게 치명적이지 않다.
     단점 : cache miss 일 경우 세번 신호 보내야한다. outdate된 cache 가지고 있을 수 있다.
 
   2. Write through
+
     app에서 write 하면 RDS와 cache에 write 한다.
     장점 : data가 신선하다. write 하는 건 2번 call 한다. (lazy loading 은 cache miss 때 3번 read해야됐다.)
     단점 : DB 에 write 하기 전까지 데이터 없다. 그래서 1, 2 같이 사용
 
   3. cache eviction & Time to live (TTL)
+
     유통기한 지난 애 지우기
     메모리 꽉차면, LRU (Least Recently Used) 최근에 사용 안된거 지우기
     time to liove 설정하기.
+
