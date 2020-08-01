@@ -1,11 +1,11 @@
 ---
 layout: list
-title: WEB development
+title: WEB
 slug: docs
 menu: true
-order: 1
+order: 3
 description: >
-왜 안돼
+
 
 
 ---
