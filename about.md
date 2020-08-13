@@ -5,9 +5,7 @@ slug: About me
 menu: true
 order: 1
 description: >
-  My major is ICT convergence and Life science and My ultimate vision is to combine those two fields, ICT and Life science, to create a positive impact on the world such as smart healthcare or AI-related bio industry.
-  Please have a look at my online profile including the skills I currently have and the projects I have worked on.
-  This is a list of courses I have taken and that I am currently doing
+  An IT specialist with fast learning skills and passion, seeking opportunities to contribute to a company and make myself grow. Hands-on knowledge in implementing AI, developing website, and analyzing data. Optimistic and proactive attitude holder when solving problem or debugging and learning new technology. Being good at self-directed learning who knows how to create one’s own portfolio website. ( yejip.com/pro/ ) 
 ---
 
 ## ICT convergence
