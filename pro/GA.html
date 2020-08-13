@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
 <head>
+  <title>Genetic Algorithm for Scheduling</title>
+<meta charset="utf-8">
 <style>
     #text {
             float : bottom;
@@ -42,14 +44,14 @@
 </head>
 <body>
 <div id= cen><br><br><br><br>
-<div align = "center"><img src ="img/me.png" width = 100px></div><br>
+<div align = "center"><img src ="img/me.png" alt =""  width = 100px></div><br>
 <h5><center>Yeji Park</center></h5>
 <center><h1>Scheduling problem</h1><h4>(using Genetic Algorithm)</h4><h2>
 <a href = "GA/vid.html">Click to watch the result</a></h2>
 <a href = "https://github.com/YejiP/projects/tree/master/Genetic_Algorithm">Github repository</a>
 </center>
 <br>
-<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
+<div align = "center"><img src = "img/bar.png" alt =""  width = 82% height = 10 px></div>
 
 
 <div id =title ><div align = "center"><h3>0. Problem description</h3><br></div></div>
@@ -60,14 +62,14 @@ It could be easy enough to be done by manual way when it is not too much to tune
 Those are courses we have for comming semester, and we want to match room and time for each courses without any conflicts.<br></div>
 
 
-<div id = text><img src = 'GA/img/Course.PNG' width="800px"></div>
+<div id = text><img src = 'GA/img/Course.PNG' alt =""  width="800px"></div>
 <br><br><br>
 <div id = text>The left picture below is one of the possible answer for the scheduling and the right picture below is one of the wrong answer.
-<br><img src = 'GA/img/possible.PNG' width="800px"><br>
+<br><img src = 'GA/img/possible.PNG' alt =""  width="800px"><br>
 Why can't it be the right answer?<br>
 </div>
 
-<div id = text><img src = 'GA/img/c1.PNG' width="800px">
+<div id = text><img src = 'GA/img/c1.PNG'  alt ="" width="800px">
 <b>Constraints</b>
 <br>1. Each Prof, at most 1 class at one period
 <br>2. Each Students group, at most 1 class at one period
@@ -91,10 +93,10 @@ If fitness value is high, then it has more chance to be picked up as parents. Tw
 The mouse below contains information of schedule. For the explanation, let's say this mouse does not show their information(schedule) but show only the constraints of the schedule they carry.
 </div>
 
-<div id = text><img src ='GA/img/ms.PNG' width = "800px"></div>
+<div id = text><img src ='GA/img/ms.PNG' alt =""  width = "800px"></div>
 <br><br><br><br>
 <br>
-<div id = text>From the population, Two are chosen and then reproduce their baby by mixing the information they have.<br><img src ='GA/img/rep.PNG' width = "600px"><br></div>
+<div id = text>From the population, Two are chosen and then reproduce their baby by mixing the information they have.<br><img src ='GA/img/rep.PNG' alt =""  width = "600px"><br></div>
 
 <div id = text><br>
 Then, How can we present course information and the classes at each individual?
@@ -105,10 +107,10 @@ Each index represent (class room and time) information.
 For example, Array[0] means (Monday_1st period, Room1), Array[1] (Monday_2nd period,Room1) ,....,(Friday_5th period, Room5)
 So whichever course is at the index of 0, this course is held in Monday_1st period and Room 1.
 </div>
-<div id = text><img src ='GA/img/ch.PNG' width = "600px"><br><br>
+<div id = text><img src ='GA/img/ch.PNG' alt =""  width = "600px"><br><br>
 Now, we need to initialize population. Population is the group of individuals which contain a candidate for the right schedule.</div>
 
-<div id = text><img src = 'GA/img/pop.PNG'  width="600px" align = center></div>
+<div id = text><img src = 'GA/img/pop.PNG'  alt =""  width="600px" align = center></div>
 <br>
 <div id = text>
 After setting initial population, all individuals are evaluated with fitness formula. If there is any individual which has fitness value of 1, then it means that individual is the one we are looking for. Therefore, we pick that one as the right answer and terminate our algorithm.
@@ -118,26 +120,26 @@ It is possibly done by selcting parents which has high fitness, and mutating som
 </div>
 
 <center><h3>Selection</h3></center>
-<div id = text><img src = 'GA/img/tour.PNG' width = "800px" ><br><br>
+<div id = text><img src = 'GA/img/tour.PNG' alt =""  width = "800px" ><br><br>
   There are some diverse selection methods such as rank order, russian rullette and etc, but This algorithm used rank order selection.
   Pick several(3 in this case) individuals from the population, and compare the fitness value. Pick individual which has the heigst value of fitness value.</div>
 <center><h3>Crossover</h3></center>
-<div id = text><img src = 'GA/img/crossover.PNG'  width="800px">
+<div id = text><img src = 'GA/img/crossover.PNG' alt =""   width="800px">
 <br>
 
 Random point(within index) is selected, and from that index, Information from the paretns is exchanged and it became the offspring.
 </div>
 
 <center><h3>Mutation</h3></center>
-<div id = text><img src = 'GA/img/mutation.PNG'  width="600px"><img src = 'GA/img/m_data.PNG'  width="300px" ><br>
+<div id = text><img src = 'GA/img/mutation.PNG' alt =""   width="600px"><img src = 'GA/img/m_data.PNG'  alt =""  width="300px" ><br>
 Only some individuals are undergoing mutation. Random index is chosen, and the course at the index changes it to new one.
 <br> The number next to the generation (iteration number) means the total fitness of the entire individuals.  Generation 4 to 6 shows the effect of mutation. If it were not for mutation, the population's fitness would not have gone up.
 <br>
 
 <center><h3>To new generation</h3>
 First of all, pick two individuals from the population. (In this case, the population is entirely from previous generatoin.) <br>
-<img src = 'GA/img/new_gen1.PNG'  width="600px"><br><br>Then, reproduce the information to make two children and replace it with individuals with lower index number.<br> <img src = 'GA/img/new_gen2.PNG'  width="600px"><br><br>When it is all replaced, it becomes entirely new generation.<br><img src = 'GA/img/new_gen3.PNG'  width="600px"><br>
-<br>After making new generation, pick some individuals which we will be mutated.<br><img src = 'GA/img/new_gen4.PNG'  width="600px"><br><br>
+<img src = 'GA/img/new_gen1.PNG'  alt =""  width="600px"><br><br>Then, reproduce the information to make two children and replace it with individuals with lower index number.<br> <img src = 'GA/img/new_gen2.PNG'  alt =""  width="600px"><br><br>When it is all replaced, it becomes entirely new generation.<br><img src = 'GA/img/new_gen3.PNG'  alt =""  width="600px"><br>
+<br>After making new generation, pick some individuals which we will be mutated.<br><img src = 'GA/img/new_gen4.PNG' alt =""   width="600px"><br><br>
 Then, now, repeat this process over and over again until we find the first individual which has fitness value of 1.<br><br>
 
 </center>
