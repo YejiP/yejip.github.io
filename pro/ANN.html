@@ -40,13 +40,13 @@
 <body>
 <div id = cen>
 <br><br><br><br>
-<div align = "center"><img src ="img/me.png" width = 100px></div><br>
+<div align = "center"><img src ="img/me.png" alt ="" width = 100px></div><br>
 <h5><center>Yeji Park</center></h5>
 
 <center><h1>Character Recognition</h1><h4>(using Artificial Neural Network)</h4></center>
 <center><a href = "ANN/demo.html"><h2>Click to run demo</h2></a>
 <a href= "https://github.com/YejiP/projects/tree/master/Neural_network/src/ann">Github repository</a></center><br>
-<div align = "center"><img src = "img/bar.png" width = 82% height = 10 px></div>
+<div align = "center"><img src = "img/bar.png" alt ="" width = 82% height = 10 px></div>
 
 <center><h3>0. Problem description</h3><br></center>
 
@@ -54,15 +54,15 @@
 <br> <b>Ex)</b> The picture below is the size of 28*28, has 784 pixels. Each pixel contains information of location and the brightness.
 <br>By combining these two information, the picture is determined what number it is. Forwawrd and back propagation are used when the model is made.
 </div>
-<div id =explanation><img src = "ANN/ann_concept.PNG" width = 800 px></div>
+<div id =explanation><img src = "ANN/ann_concept.PNG" alt ="" width = 800 px></div>
 
 
 <div id = title><h1>Forward propagation</h1></div>
-<div id =expic><img src = "ANN/forward.PNG" width = 500 px align = "left"><br><br><br>Forward propagation is inferring the value using a model created based on input values and answer.<br>
+<div id =expic><img src = "ANN/forward.PNG" alt ="" width = 500 px align = "left"><br><br><br>Forward propagation is inferring the value using a model created based on input values and answer.<br>
 Each node in the neral network is called perceptron.
 Input perceptrons affect perceptrons in the next layer, and this perceptrons in the next layer affects perceptrons in its next layer.<br><br><br><br><br></div>
 <br><br>
-<div id =expic><img src = "ANN/for_mo.PNG" width = 400 px align = "left">Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
+<div id =expic><img src = "ANN/for_mo.PNG" alt ="" width = 400 px align = "left">Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
 <br>The result of summation then becomes the input of activation function such as sigmoid, ReLu, and softmax(only at the last layer, in classification problems).<br>
 Creating the right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.<br><br>
 Evaluating errors is different based on the type of problems. Usually, Regression uses sigmoid function to evaluate erros, and Classification uses reLu and sigmoid function.
@@ -78,7 +78,7 @@ However, We cannot find proper weights at one go. The initial weights are random
 <div id = explanation>
   In the classification problems, the last output is driven by using cross-entropy and softmax function.
   <br><br>
-  <img src = "ANN/soft_max.PNG" width = 600 align =  left>
+  <img src = "ANN/soft_max.PNG" alt ="" width = 600 align =  left>
   Let's assume that we have 4 classes(A,B,C,D), and each outcome is 9, 5, 3, 5 respectively (The outcome is something like a1*w1 + a2*w2 + bias)<br><br>
   We can simply put this as a probability,
   (Roughly rounded)<br>
@@ -119,7 +119,7 @@ However, We cannot find proper weights at one go. The initial weights are random
   However, if the picture belongs to class B, then the model is significantly wrong because the possibility of belonging in class B is only 0.017.<br>
   The error is calculated by multiplying two numbers, - ln(The possility of beloning in each class) * Correct answer, and summing up.
    if the estimation is close enough , then it will get lower costs. if it is not close, then the loss will be high.</div>
-<div id = "expic"><img src = "ANN/crossentropy.PNG" width = 550 ><img src = "ANN/-lnx.PNG" width=200px ><br> If x is close to 0, then the cost will be close to infinity. if it is close to 1, then the cost will be 0.
+<div id = "expic"><img src = "ANN/crossentropy.PNG" alt ="" width = 550 ><img src = "ANN/-lnx.PNG" alt ="" width=200px ><br> If x is close to 0, then the cost will be close to infinity. if it is close to 1, then the cost will be 0.
 <br>
    <br>
    let's assume correct answer is (A,B,C,D)= (1,0,0,0)
@@ -130,7 +130,7 @@ However, We cannot find proper weights at one go. The initial weights are random
    If, the probability of A was not 0.96 but 0, then ?
    Cost for A = 1*(-ln(0+0.002)) = 1*(6.2146)= 6.2146 . so the cost is very high compared to previous one.
    also, this is reason why we should add small numbers like 0.002, because -ln0 is infinite.
-   <img src = "ANN/tot_err.PNG" width=600px>
+   <img src = "ANN/tot_err.PNG" alt ="" width=600px>
 </div>
 
 <div id = "explanation">
@@ -143,7 +143,7 @@ However, We cannot find proper weights at one go. The initial weights are random
     the errors is only -0.01. It is becuase some nodes have different sign, so they cancel out each other's errors.<br>
     <br>To avoid this, Squaring each errors and then add.
     <br>
-    <img src = "ANN/sig_err.PNG" width = 800>
+    <img src = "ANN/sig_err.PNG" alt ="" width = 800>
     0.2<sup>2</sup>+0.1<sup>2</sup>+0.2<sup>2</sup>+(-0.9)<sup>2</sup>+(0.05)<sup>2</sup>+0.25<sup>2</sup>+0<sup>2</sup>+0.05<sup>2</sup>+0.05<sup>2</sup>+0 <sup>2</sup>= <b>1.01</b>
     <br>The evaluation function we will use here is 1/2(correct answer-estimated answer)<sup>2</sup>
     (1/2)*1.01 = 0.505 <b>error for this case</b>
@@ -154,27 +154,27 @@ However, We cannot find proper weights at one go. The initial weights are random
 </div>
 
 <div id = title><h1>Back-propagation</h1></div>
-<div id = expic><img src = "ANN/back.PNG" width = 400 px align = "left">Back-propagation is the process of neural network finding right weights.Depending on how much each node contributes to the total error.
+<div id = expic><img src = "ANN/back.PNG" alt ="" width = 400 px align = "left">Back-propagation is the process of neural network finding right weights.Depending on how much each node contributes to the total error.
     we will focus on <b>1. How much error each node contributes  2. How much weight should be updated</b>
-    <br>Back-propagation starts from the nodes from the output layer. These nodes can be evaluated by seeing how different it is from the right answer<br>    <img src = "ANN/e2.PNG" width = 800px><br>
-  Even we do not explicitly see w11 from the equation above, cost function contains w11, as the A contains w11.<br> <img src = "ANN/e1.PNG" height=40px><br> Therefore, we can differentiate the cost function with respective to w11(Weights).<br>
+    <br>Back-propagation starts from the nodes from the output layer. These nodes can be evaluated by seeing how different it is from the right answer<br>    <img src = "ANN/e2.PNG" alt ="" width = 800px><br>
+  Even we do not explicitly see w11 from the equation above, cost function contains w11, as the A contains w11.<br> <img src = "ANN/e1.PNG" alt ="" height=40px><br> Therefore, we can differentiate the cost function with respective to w11(Weights).<br>
 The equation below is showing the differentiation of the cost function. It also means the moment slope, and derivitives.
-  <img src = "ANN/e0.PNG" height = 50px ><br>
+  <img src = "ANN/e0.PNG" alt ="" height = 50px ><br>
   purpose is to minimize 'y' value, since y stands for the costs(total errors of all nodes)<br>
 If the value of moment slope is positive, then when w11 goes to positive side, cost increases. If the value of moment slope is negative, then when w11 goes to positive side, cost decreases.
 The former case, w11 should go to negative side and the later case, w11 should go to positive side to decrease overall cost.<br>
 <br>
 Now, Let's elaborate on how to update weights. let's assume specific situation.
 There are 4 classes as output, and let's name it class 1, 2,3 and 4 from the top to the bottom.<br>
-<img src = "ANN/tot_err.PNG" width=600px>
+<img src = "ANN/tot_err.PNG" alt ="" width=600px>
   <br>The picture belongs to class 1, so the correct answer for each class is 1,0,0,0 respectivley.
   we can simplify it as the eqation below, since only one is multplied by 1 , and others by 0.<br>
-  <img src = "ANN/e2.PNG" width=800px><br>
-  <img src = "ANN/tc.PNG" height=50px>
+  <img src = "ANN/e2.PNG" alt ="" width=800px><br>
+  <img src = "ANN/tc.PNG" alt ="" height=50px>
 <br> First, we will update w11. To update w11, we first need to calculate the derivities. It can be done by following the chain rule.<br>
-  <img src = "ANN/wu11.PNG"  width=600px><br>
+  <img src = "ANN/wu11.PNG" alt ="" width=600px><br>
 
-<img src = "ANN/w11u.PNG" height=300px><br>
+<img src = "ANN/w11u.PNG" alt ="" height=300px><br>
 -(1- A's probability)*a1 is the result of d(cost)/d(w11). If the derivitive(moment slope) is positive value, then we need to go to the opposite the direction of the value of derivities to reduce the cost, and if it is negative value, also we need to go to the opposite direction of the value of deritivies.
 Either way, it needs to head the opposite direction of the value of derivities.
 so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to multiply appropriate small number called alpha(0.001 ,0.1...) to prevent to miss or skip the point we want to find.
@@ -183,15 +183,15 @@ so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to
     <br><br><br>
     Now, let's update w21.It is similar but different since the cost function contains w21 only at the denominator. (It is different wiht updating w11, since the cost function contains w11 at the numerator and also at the denominator).
     So differentiation result is different.<br>
-    <img src = "ANN/wu21.PNG"  width=600px><br>
-    <img src = "ANN/w21u.PNG" height=300px><br>
+    <img src = "ANN/wu21.PNG" alt ="" width=600px><br>
+    <img src = "ANN/w21u.PNG" alt ="" height=300px><br>
     (B's probability-0)*a2 is the result of d(cost)/d(w21). So, the weight update would be <b>w21 +alpha*(B's probability*a2).</b>
 <br>
     By these two cases, we can generalize the way of updating weights.
     <h2>weight - alpha*(probability- correct answer)*the previous output</h2>
     <br>we can think (probability- correct answer) as a error of the output node. Now, to change the weights of the parevious layer, we need to know the error of the previous layer's node.
     Caculation is simple, the right picture below .
-    <br><img src = "ANN/out_err.PNG" width = 400px><img src = "ANN/a1.PNG" width = 300px>
+    <br><img src = "ANN/out_err.PNG" alt ="" width = 400px><img src = "ANN/a1.PNG" alt ="" width = 300px>
     <br>This is a basic pattern of machine learning. There are some more contents such as how to initialize good weights,(Xavier, He), regularization, and dropout.
     this contents will be updated in the future. <br>
 </div>
