@@ -52,8 +52,8 @@
 
 <center><h3>0. Problem description</h3><br></center>
 
-<div id =explanation >According to given picture which contains one written number among 0 to 9, It will recognize the number from the picture.
-<br> <b>Ex)</b> The picture below is the size of 28*28, has 784 pixels. Each pixel contains information of location and the brightness.
+<div id =explanation >According to the given picture which contains one written number among 0 to 9, It can recognize the number in the picture.
+<br> <b>Ex)</b> The picture below is the size of 28*28, which has 784 pixels. Each pixel contains information of location and the brightness.
 <br>By combining these two information, the picture is determined what number it is. Forwawrd and back propagation are used when the model is made.
 </div>
 <div id =explanation><img src = "ANN/ann_concept.PNG" alt ="" width = 800 px></div>
@@ -61,35 +61,36 @@
 
 <div id = title><h1>Forward propagation</h1></div>
 <div id =expic><img src = "ANN/forward.PNG" alt ="" width = 500 px align = "left"><br><br><br>Forward propagation is inferring the value using a model created based on input values and answer.<br>
-Each node in the neral network is called perceptron.
+Each node in the neural network is called perceptron.
 Input perceptrons affect perceptrons in the next layer, and this perceptrons in the next layer affects perceptrons in its next layer.<br><br><br><br><br></div>
 <br><br>
 <div id =expic><img src = "ANN/for_mo.PNG" alt ="" width = 400 px align = "left">Each perceptrons in the input layer are used to make perceptron in the next layer. The values of each perceptron are multiplied by weights and is summed up to make perceptrons in the next layer. <br>
 <br>The result of summation then becomes the input of activation function such as sigmoid, ReLu, and softmax(only at the last layer, in classification problems).<br>
-Creating the right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.<br><br>
-Evaluating errors is different based on the type of problems. Usually, Regression uses sigmoid function to evaluate erros, and Classification uses reLu and sigmoid function.
-Since we are dealing with the classification problem, we will look how to back propagate ANN that uses ReLu and Softmax function.
+Creating a right model is largely related to finding right weights. Input values are given, therefore by changing weights, proper model can be made.<br><br>
+Evaluating errors strategy depends on wheter it is a regression model or a classification model. Usually, a regression model uses sigmoid function, and a classification model uses ReLU and sigmoid function.
+Since what we are doing in this project is a classification model problem, we will look about how to back propagate ANN that uses ReLU and Softmax function.
 <br>
 
-Then, How can we find proper weights? It can be done by evaluating errors of a current model, and changing its weights based on errors.
-Back propagation can conduct this action.
+Firstly, let's think about how we can find proper weights. It can be done by evaluating errors of a current model, and changing its weights based on errors.
+With Back propagation .
 However, We cannot find proper weights at one go. The initial weights are randomized and then it slowly changes over time. </div>
 <br><br>
 
 
 <div id = explanation>
-  In the classification problems, the last output is driven by using cross-entropy and softmax function.
+  In classification problems, the last output is driven by cross-entropy and softmax function.
   <br><br>
   <img src = "ANN/soft_max.PNG" alt ="" width = 600 align =  left>
-  Let's assume that we have 4 classes(A,B,C,D), and each outcome is 9, 5, 3, 5 respectively (The outcome is something like a1*w1 + a2*w2 + bias)<br><br>
-  We can simply put this as a probability,
+  Let's assume that we have 4 classes(A,B,C,D), and each outcome is 9, 5, 3, 5 respectively (These outcome comes from the formula such as a1*w1 + a2*w2 + bias)<br>
+  What we need to do is simply pick a class with the largest number, which means 'the strongest signal'. A(9) in this case. <br>
+  Let's slightly change the format as probability.(Easier to deal with because its lower and upper bound is set.)If we can change it as probability like down below, and the result stays the same.
   (Roughly rounded)<br>
   A : 9/(9+5+3+5) = 0.4<br>
   B : 5/(9+5+3+5) = 0.23<br>
   C : 3/(9+5+3+5) = 0.14<br>
   D : 5(9+5+3+5) = 0.23<br><br>
 
-  However, Instead of this, we use Euler's number to present the probability for each class.<br>
+  But here not only probablity form but also Euler's number to present the probability for each class.<br>
   (The reason for using Euler's number is closely related to the back propagation(makes easier to differentiate), and the cross entropy error function.)<br>
 <br><br>
   Now, (e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>)  is the denominator for each class, and the numerator is e<sup>9</sup> , e<sup>5</sup> , e<sup>3</sup> , e<sup>5</sup> for each class.<br>
@@ -98,10 +99,10 @@ However, We cannot find proper weights at one go. The initial weights are random
   C : e<sup>3</sup>/(e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>) = 0.0023<br>
   D : e<sup>5</sup>/(e<sup>9</sup> + e<sup>5</sup> + e<sup>3</sup> + e<sup>5</sup>) = 0.017<br><br>
   y= e<sup>x</sup> is a monotone increasing function, so It does not change the magnitude of the relation.
-  (At the end of the day, our purpose is just to pick up the class with the highest probability)
+  (At the end of the day, our purpose is to pick up the class with the highest probability)
 <br>
-  However, the problem lies when the number gets too big.
-  we need to modify this number.
+  However, again problem when the number gets too big to be handled on computer.
+  Modificiation like down below can be a good solution.
   A:9  B:5  C:3  D:5 .<br>
   First, find the biggiest number which is 9(A) and then subtract 9 for all classes.
   <br>A: 0  B:-4  C:-6  D:-4<br>
@@ -115,12 +116,12 @@ However, We cannot find proper weights at one go. The initial weights are random
 <br>
   Conclusion
   outcome -- softmax function --> probability <br>
-  We first need to know how much the error this model has. To measure this error, Crossentropy function is often used (in classification problems.)
+  We first need to know how much errors the model has. To evaluate this error, Crossentropy function is often used (in classification problems.)
   <br> After using softmax function, we could convert each number into possibility of the each class.
-  Now, let's assume that, this picture belongs to class A. Our model was pretty close, as the final outcome was 0.96 for class A.
-  However, if the picture belongs to class B, then the model is significantly wrong because the possibility of belonging in class B is only 0.017.<br>
-  The error is calculated by multiplying two numbers, - ln(The possility of beloning in each class) * Correct answer, and summing up.
-   if the estimation is close enough , then it will get lower costs. if it is not close, then the loss will be high.</div>
+  Now, let's assume this picture belongs to class A. This model was pretty close, as the final outcome was 0.96 for class A.
+  However, if the picture belongs to class B, then this model is significantly wrong because the possibility of belonging in class B is only 0.017.<br>
+  The error is calculated by multiplying two numbers, - ln(The possility of beloning in each class) * Correct answer, and summed up.
+   If the estimation is close enough , then it will get lower costs. if it is not close, then the loss will be high.</div>
 <div id = "expic"><img src = "ANN/crossentropy.PNG" alt ="" width = 550 ><img src = "ANN/-lnx.PNG" alt ="" width=200px ><br> If x is close to 0, then the cost will be close to infinity. if it is close to 1, then the cost will be 0.
 <br>
    <br>
@@ -163,7 +164,7 @@ However, We cannot find proper weights at one go. The initial weights are random
 The equation below is showing the differentiation of the cost function. It also means the moment slope, and derivitives.
   <img src = "ANN/e0.PNG" alt ="" height = 50px ><br>
   purpose is to minimize 'y' value, since y stands for the costs(total errors of all nodes)<br>
-If the value of moment slope is positive, then when w11 goes to positive side, cost increases. If the value of moment slope is negative, then when w11 goes to positive side, cost decreases.
+If the moment slope is positive, it means when w11 goes to positive side, cost increases. If the moment slope is negative, then when w11 goes to positive side, cost decreases.
 The former case, w11 should go to negative side and the later case, w11 should go to positive side to decrease overall cost.<br>
 <br>
 Now, Let's elaborate on how to update weights. let's assume specific situation.
@@ -177,7 +178,7 @@ There are 4 classes as output, and let's name it class 1, 2,3 and 4 from the top
   <img src = "ANN/wu11.PNG" alt ="" width=600px><br>
 
 <img src = "ANN/w11u.PNG" alt ="" height=300px><br>
--(1- A's probability)*a1 is the result of d(cost)/d(w11). If the derivitive(moment slope) is positive value, then we need to go to the opposite the direction of the value of derivities to reduce the cost, and if it is negative value, also we need to go to the opposite direction of the value of deritivies.
+-(1- A's probability)*a1 is the result of d(cost)/d(w11). If the derivitive(moment slope) is positive value, then we need to go to the opposite direction of the value of derivities to reduce the cost, and if it is negative value, also we need to go to the opposite direction of the value of deritivies.
 Either way, it needs to head the opposite direction of the value of derivities.
 so,w11 +(1- A's probability)*a1. It is not compelete formula, because we need to multiply appropriate small number called alpha(0.001 ,0.1...) to prevent to miss or skip the point we want to find.
  <b>w11 -alpha*((A's probability-1)*a1).</b>
