@@ -24,7 +24,7 @@ Servlet은 로직 구현시에는 편하지만, HTML을 쓰기엔 좀 불편하�
 
 [![이런식으로](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99E93B335B36F467199443)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99E93B335B36F467199443) 
 
-[출처]([https://starkying.tistory.com/entry/Forward-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Servlet-JSP%EC%9D%98-%EC%97%B0%EB%8F%99](https://starkying.tistory.com/entry/Forward-그리고-Servlet-JSP의-연동))
+[출처](["https://starkying.tistory.com/entry/Forward-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Servlet-JSP%EC%9D%98-%EC%97%B0%EB%8F%99])
 
 
 
@@ -154,8 +154,9 @@ servlet 시작 부분에 @WebServlet("/ml") 가 있다. 이걸로 보아선 acti
 		
 		**** index.html 에서 받은 인풋을 이렇게 nn 에 저장한다.
 		String nn = request.getParameter("key");
-		
-		
+
+
+​		
 		****ann.excute 하면, nn의 값을 인풋으로 훈련된 모델이 output을 계산한다.
 		ann.execute(nn); **************************************************************
 		
