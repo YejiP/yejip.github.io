@@ -106,12 +106,12 @@ excerpt_separator: <!--more-->
     : Bootstrapping : 머신이 시작될 때의 launching commands 이다. 컴터 시작할 때 마다 자동으로 커맨드 수행되는 것.
     : EC2 만들 때, advanced details 에 user data 있다.
     여기에 명령어 (앞에 sudo 꼭) 적어놓으면 된다.
-
+    
     예시)
       #!/bin/bash (이거 첫줄에 써야함. 중요 뽀인또)
       #install httpd (Linux2 버전)
       sudo yum update -y
-
+    
     user data에 있는 커맨드는, intance가 새로 만들어질 때 마다 수행된다.
       ==> 내 홈페이지의 경우, EC2 톰캣 서버 깔기?를 USER DATA 에 넣을 수 있을 것같다. 그러나 JSP 파일은 내가 직접 넣어야할듯..
 
@@ -119,29 +119,29 @@ excerpt_separator: <!--more-->
 
 ## EC2 Instance Launch Types:
     총 다섯가지 있다.
-
+    
     1. on demand instance
       : 사용한 만큼 낸다.
       : 가장 비싸지만, no long term commitment. (오래 계약 안해도 된다.)
-
+    
       : elastic workload 에 적합하다.
-
+    
     2. Reserved Instances
       : 75프로 저렴(on demand 기준)
       : 대신 1년 이상 사용해야한다.
       : 특정 instance type를 예약해야한다.
       : 꾸준한 사용이 필요한 일에 적합하다.
-
+    
     3. EC2 Spot Instances
       : 90프로 저렴(on demand 기준)
       : 현재 사용 예산 > 정해놓은 limit --> instance 사라진다.
       : batch job, data analysis, image porecssing 등에 적합.
-
+    
     4. Dedicated Hosts
       : EC2 instance placement 의 full control 가능.  --> 정확히 이해를 못했다. 그치만 물리적으로..?
       : 복잡한 licensing model 이 있는 SW에 적합함. (왜?)
       : 강한 규제나 제약이 있는 회사.
-
+    
     5. EC2 dedicated Instances
       : 하드웨어가 내꺼
       : 다른 Instance와 하드웨어 공유 가능하지만, 너의 계정에 있는 것들만 가능.
@@ -149,8 +149,8 @@ excerpt_separator: <!--more-->
 
 
 ## EC2 Network Interfaces (ENI)
-      : VPC: Vertual Private Cloud
-      : ENI는 VPC의 logical component, vertual network card 대표.
+      : VPC: Virtual Private Cloud
+      : ENI는 VPC의 logical component, virtual network card 대표.
       : EC2를 네트워크에 연결해준다.
       : Primart private IPv4,
       : 하나 이상의 IPv4 ENI 만들기 가능 for failover.
@@ -168,7 +168,7 @@ excerpt_separator: <!--more-->
       : 부트 타임 빠름.
       : network 안 머신 조종.
       : 유지 보수, 장저밍 많다.
-
+    
     AMI ARE NOT BUILT FOR A SPECIFIC AWS REGION.
 
 ## Burstable Instances
