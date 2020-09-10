@@ -14,7 +14,7 @@ excerpt_separator: <!--more-->
 
 
 
-# JSP & Servlet 연동
+# JSP 와 Servlet 연동
 
 Servlet은 로직 구현시에는 편하지만, HTML을 쓰기엔 좀 불편하다. JSP는 반대로 로직 구현시 불편하지만 HTML은 편하다. 그래서 둘을 연동 시킨다.
 
@@ -160,10 +160,10 @@ servlet 시작 부분에 @WebServlet("/ml") 가 있다. 이걸로 보아선 acti
 ​		****ann.excute 하면, nn의 값을 인풋으로 훈련된 모델이 output을 계산한다.
 ​		ann.execute(nn); **************************************************************
 ​		
-		request.setAttribute("result", ann.result);
-		RequestDispatcher rd = request.getRequestDispatcher("/result.jsp");
-	    rd.forward(request, response);
-	
+​		request.setAttribute("result", ann.result);
+​		RequestDispatcher rd = request.getRequestDispatcher("/result.jsp");
+​	    rd.forward(request, response);
+​	
 	}
 
 
