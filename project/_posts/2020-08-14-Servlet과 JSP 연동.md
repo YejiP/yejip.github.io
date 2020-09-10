@@ -1,5 +1,5 @@
 ---
-ㄴ
+
 layout: post
 
 title : servlet and JSP
@@ -164,7 +164,7 @@ servlet 시작 부분에 @WebServlet("/ml") 가 있다. 이걸로 보아선 acti
 ​		RequestDispatcher rd = request.getRequestDispatcher("/result.jsp");
 ​	    rd.forward(request, response);
 ​	
-	}
+​	}
 
 
 3) output을 request.setAttribute로 저장하고, requestDispatcher을 사용해서 jsp 파일로 포워딩해준다. 
