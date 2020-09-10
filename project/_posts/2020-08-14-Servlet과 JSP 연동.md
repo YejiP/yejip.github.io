@@ -2,11 +2,11 @@
 ㄴ
 layout: post
 
-title : HTML&CSS basic
+title : servlet and JSP
 
 description: >
 
-​	일년만에 servlet과 JSP를 연동해본다. 디자인 또한 중요하다는 것을 깨달았기 때문이다.
+	일년만에 servlet과 JSP를 연동해본다. 디자인 또한 중요하다는 것을 깨달았기 때문이다.
 
 excerpt_separator: <!--more-->
 
@@ -157,9 +157,9 @@ servlet 시작 부분에 @WebServlet("/ml") 가 있다. 이걸로 보아선 acti
 
 
 ​		
-		****ann.excute 하면, nn의 값을 인풋으로 훈련된 모델이 output을 계산한다.
-		ann.execute(nn); **************************************************************
-		
+​		****ann.excute 하면, nn의 값을 인풋으로 훈련된 모델이 output을 계산한다.
+​		ann.execute(nn); **************************************************************
+​		
 		request.setAttribute("result", ann.result);
 		RequestDispatcher rd = request.getRequestDispatcher("/result.jsp");
 	    rd.forward(request, response);
