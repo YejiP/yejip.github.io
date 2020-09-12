@@ -1,3 +1,17 @@
+---
+layout: post
+title : CSS basic
+date:   2020-08-05 05:00:01 -0600 
+description: >
+	HTML/CSS로 코딩은 대충 해봤지만 정확하게는 모르는 나를 위한 공부...
+
+excerpt_separator: <!--more-->
+
+
+---
+
+
+
 # CSS 기초
 
 1. **글자 크기 표현**
@@ -73,7 +87,6 @@ h1 {
 **쉼표로 한번에 스타일 주기**
 
 ```
-
 
 p, div, h1 {
 	color :red;
