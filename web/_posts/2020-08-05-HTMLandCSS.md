@@ -8,8 +8,6 @@ description: >
 excerpt_separator: <!--more-->
 ---
 
-
-
 # CSS 기초
 
 1. **글자 크기 표현**
