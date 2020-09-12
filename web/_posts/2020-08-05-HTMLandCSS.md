@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTMLandCSS 
-date: 2020-08-05 
+date: 2020-08-05
 description: >
 	HTML와 CSS로 코딩은 대충 해봤지만 정확하게는 모르는 나를 위한 공부...
 
