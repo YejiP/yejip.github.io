@@ -2,7 +2,7 @@
 
 layout: post
 
-title : servlet and JSP
+title: servlet and JSP
 
 description: >
 
