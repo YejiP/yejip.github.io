@@ -4,9 +4,7 @@ layout: post
 
 title: servlet and JSP
 
-description: >
-
-	일년만에 servlet과 JSP를 연동해본다. 디자인 또한 중요하다는 것을 깨달았기 때문이다.
+description: > 일년만에 servlet과 JSP를 연동해본다. 디자인 또한 중요하다는 것을 깨달았기 때문이다.
 
 excerpt_separator: <!--more-->
 
