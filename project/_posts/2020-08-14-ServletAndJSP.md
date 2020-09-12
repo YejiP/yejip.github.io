@@ -4,6 +4,8 @@ layout: post
 
 title: servlet and JSP
 
+date: 2020-08-14 12:34:27 +0100
+
 description: > 일년만에 servlet과 JSP를 연동해본다. 디자인 또한 중요하다는 것을 깨달았기 때문이다.
 
 excerpt_separator: <!--more-->
