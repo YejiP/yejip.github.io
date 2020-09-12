@@ -16,8 +16,9 @@ author1:
     path:             /assets/img/me.jpg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            
-      2x:            
+      1x:   https://user-images.githubusercontent.com/37058233/92997734-4ad6c780-f550-11ea-856a-02cc9e161d3b.jpg
+        
+      2x:   https://user-images.githubusercontent.com/37058233/92997734-4ad6c780-f550-11ea-856a-02cc9e161d3b.jpg          
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
