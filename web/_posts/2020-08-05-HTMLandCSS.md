@@ -1,6 +1,6 @@
 ---
 layout: post
-title : CSS basic
+title: CSS basic
 date: 2020-08-05 
 description: >
 	HTML/CSS로 코딩은 대충 해봤지만 정확하게는 모르는 나를 위한 공부...
