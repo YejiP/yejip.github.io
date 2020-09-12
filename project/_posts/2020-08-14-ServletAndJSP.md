@@ -1,19 +1,3 @@
----
-
-layout: post
-
-title: servlet and JSP
-
-date: 2020-08-14 12:34:27 +0100
-
-description: > 일년만에 servlet과 JSP를 연동해본다. 디자인 또한 중요하다는 것을 깨달았기 때문이다.
-
-excerpt_separator: <!--more-->
-
----
-
-
-
 # JSP 와 Servlet 연동
 
 Servlet은 로직 구현시에는 편하지만, HTML을 쓰기엔 좀 불편하다. JSP는 반대로 로직 구현시 불편하지만 HTML은 편하다. 그래서 둘을 연동 시킨다.
