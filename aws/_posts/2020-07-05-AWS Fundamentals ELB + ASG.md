@@ -94,7 +94,7 @@ load balancer에 ec2 직접 추가 가능
 
 ### 2. ALB(Application Load Balancer)
 
-![Application Load Balancer, 가중치 기반 대상 그룹기반 배포 간소화 기능 출시 | Amazon Web  Services 한국 블로그](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2019/10/06/illustration-2.png)
+![Application Load Balancer](https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2019/10/06/illustration-2.png)
 
 layer7, url의 path, hostname, query,string,header 에 기반해 route해준다.
   micro service 나 container based app 에 적합하다.
@@ -120,7 +120,7 @@ EC2 instance, EC2 tasks, Lambda function, IP address(must be private)
 
 ### 3. NLB(Network Load Balancer)
 
-![Amazon API Gateway 기반 VPC Link 활용 방법 | Amazon Web Services 한국 블로그](https://d2908q01vomqb2.cloudfront.net/7b52009b64fd0a2a49e6d8a939753077792b0554/2018/07/02/api-gateway-vpc-link-2.png)
+![Amazon API Gateway 기반 VPC Link 활용 방법](https://d2908q01vomqb2.cloudfront.net/7b52009b64fd0a2a49e6d8a939753077792b0554/2018/07/02/api-gateway-vpc-link-2.png)
 
 layer4(TCP , UDP traffic)
   초당 백만개의 요청 수행한다.
