@@ -183,9 +183,19 @@ Instance 가 ok 한 상태가 아닐 때, 정상 instance 에 request 보내는 
 
 ![Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/ko_kr/autoscaling/ec2/userguide/images/as-basic-diagram.png)
 
-  scale in : removing , scale out : adding according to load.
-  min.max 를 정할 수 있다.
-  LB에 자동으로 등록된다.
+- scale in : removing , scale out : adding according to load.
+-  min.max 를 정할 수 있다.
+- LB에 자동으로 등록된다.
+
+- cloud watch alarm에 scale out, in 조건을 설정해놓으면 알아서 조절한다. 
+- 다음과 같은 속성
+  - A launch configuration(AMI+Instance type, EC2 user data, EBS bolumes, SG, SSH key pair)
+  - Min,max size, Initial Capacity
+  - Network + Subnets Information
+  - Load balancer info
+  - scaling policy
+
+
 
 ## ASG scaling policy
     1. target tracking scaling : 40% ~
