@@ -8,7 +8,7 @@ Servlet은 로직 구현시에는 편하지만, HTML을 쓰기엔 좀 불편하�
 
 [![이런식으로](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99E93B335B36F467199443)](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile22.uf.tistory.com%2Fimage%2F99E93B335B36F467199443) 
 
-[출처](["https://starkying.tistory.com/entry/Forward-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Servlet-JSP%EC%9D%98-%EC%97%B0%EB%8F%99])
+[출처]("https://starkying.tistory.com/entry/Forward-%EA%B7%B8%EB%A6%AC%EA%B3%A0-Servlet-JSP%EC%9D%98-%EC%97%B0%EB%8F%99")
 
 
 

@@ -107,17 +107,6 @@ EC2 instance, EC2 tasks, Lambda function, IP address(must be private)
   client 의 IP를 직접적으로 못본다.  true IP 는 HTTP에 있는 header X-forwarded port에 있다. porto..
   Listener 에서 rule edit, path, host 등등에 따라 target group 지정이 가능하다.
 
-    *Load Blanacer Stickiness*
-    같은 client 는 항상 같은 instance로 direct되게 하는 것.
-    쿠키 통해 가능하다. user가 session data 를 잃지 ㅇ낳게 해준다.
-    stickiness 기간 지정 가능.
-    
-    *Crosszone LB*
-    다른 존에 있는 instance와 연결가능하다.
-    CLB는 기본설정으로 사용 안하고, ALB는 항상 사용, NLB는 기본설정은 안사용하는데 돈 내면 가능...
-
-
-
 ### 3. NLB(Network Load Balancer)
 
 ![Amazon API Gateway 기반 VPC Link 활용 방법](https://d2908q01vomqb2.cloudfront.net/7b52009b64fd0a2a49e6d8a939753077792b0554/2018/07/02/api-gateway-vpc-link-2.png)
@@ -129,6 +118,25 @@ layer4(TCP , UDP traffic)
   NLB security group은 좀 다르게, CLB에서는 LB에서 오는 트래픽, EC2에서 받았다면
   NLB에서는 외부 traffic을 Target Group에 전달해주기 때문에 IP가 NLB IP 가 아니라 외부 IP라서
   Security group rule 에 80 HTTP 0.0.0.0/0 추가해줘야한다. (아니근데 애초에 HTTP안 받는거아님?? 뭐지)
+
+
+
+### Load Blanacer Stickiness
+
+같은 client 는 항상 같은 instance로 direct되게 하는 것.
+쿠키 통해 가능하다. user가 session data 를 잃지 않게 해준다.
+stickiness 기간 지정 가능.
+
+
+
+### Crosszone LB
+
+다른 존에 있는 instance와 연결가능하다.
+**CLB**는 기본설정으로 사용 안하고, 사용해도 돈 안나감
+
+**ALB**는 항상 사용, inter AZ간에는 무료, 비활성화 할 수 가 없다.
+
+**NLB**는 기본설정은 안사용하는데 돈 내면 inter AZ간 가능...
 
 
 
