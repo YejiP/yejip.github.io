@@ -142,26 +142,47 @@ stickiness 기간 지정 가능.
 
 
 
-# SSL/TSL
+# SSL/TLS
 
-  클라이언트 ~ LB 간 정보를 암호화 시킨다. (in-flight encryption)
-  SSL(secure socket layer), TSL(Transport Layer Security)
-  SSL 인증서는 만료일이 있어서 갱신되어야한다.
+**SSL** : Secure Sockets Layer   **TLS** : Transport Layer Security
+
+- TLS가 SSL 보다 새버전이다. 보통 TLS 사용된다.
+
+- SSL 는 clients와 load balancer의 트래픽을 암호화 시킨다. (in-flight encryption)
+
+- SSL 인증서는 만료일이 있어서 갱신되어야한다.
+- load balancer는 X.509사용한다.
+- ACM(AWS Certificate Manager) 이용해 인증서를 관리할 수 있다. 
+- HTTPS listener :
+  - specify a default certificate
+  - add an optional list of certs to support multiple domain
+  - Clients can use SNI
 
 ## SNI(Server Name Indication)
-    여러개의 SSL certificate를 한 웹 서버에서 로딩할 수 있게한다.
-    클라이언트가 호스트 네임을 지명해야한다.
-    서버가 알맞은 cert를 찾아준다.
-    ALB/NLB/Cloudfront 에서 동작.
-    ALB 는 여러개의 SSL certificate에 대해 여러개의 Listner 를 제공한다.
-    
-    cf) CLB 는 하나의 SSL cert 만 가능
+- 여러개의 SSL certificate를 한 웹 서버에서 로딩할 수 있게한다.
 
-## ELB (Connection draining - CLB), (Deregistration Delay -  ALB, NLB)
-    Instance 가 ok 한 상태가 아닐 때, 정상 instance 에 request 보내는 것.
+- 클라이언트가 호스트 네임을 지명해야한다.
+
+- 서버가 알맞은 cert를 찾아준다.
+
+- ALB/NLB/Cloudfront 에서 동작.
+
+- ALB 는 여러개의 SSL certificate에 대해 여러개의 Listner 를 제공한다. NLB 도 여러개의 Listner제공.
+
+  **cf)** CLB 는 하나의 SSL cert 만 가능 
+
+  
+
+**ELB (Connection draining - CLB), (Deregistration Delay -  ALB, NLB)**
+
+Instance 가 ok 한 상태가 아닐 때, 정상 instance 에 request 보내는 것.
+
 
 
 # Autoscaling group
+
+![Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/ko_kr/autoscaling/ec2/userguide/images/as-basic-diagram.png)
+
   scale in : removing , scale out : adding according to load.
   min.max 를 정할 수 있다.
   LB에 자동으로 등록된다.
@@ -170,3 +191,4 @@ stickiness 기간 지정 가능.
     1. target tracking scaling : 40% ~
     2. simple/step scaling : cloud watch alarm 이 울리면 2 unit 늘려라.
     3. scheduled actions : 5pm on fridays, increase min capacity.
+
