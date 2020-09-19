@@ -46,20 +46,16 @@ Biochemistry 1, Biochemistry 2, Molecular Biology1
 
 Fundamentals of Pharmacology, Intro to genetics
 
----
-
 ## Online course
 EDX: Deep Learning Explained(2019.08~)
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
 
----
-
 ## An additional computer science course
 
 JAVA, HTML,CSS,
 
-
+---
 
 #  School/Work Program
 
