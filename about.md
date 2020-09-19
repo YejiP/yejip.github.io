@@ -10,9 +10,12 @@ description: >
 
 # Education
 
-Bachelor in **ICT Convergence and Life Science** from **Handong Global University**
+## Bachelor in ICT Convergence and Life Science from Handong Global University
 
-Mar 2015 – Feb 2020, GPA of 4.06/4.5 (Major : 4.19/4.5)
+```
+Mar 2015 – Feb 2020
+GPA of 4.06/4.5 (Major : 4.19/4.5)
+```
 
 ## ICT convergence
 
@@ -28,7 +31,7 @@ Swift: ICT Application Development
 
 C++: Programming2
 
-### Life Science
+## Life Science
 
 General Microbiology, Organic Chemistry, Cell Biology
 
