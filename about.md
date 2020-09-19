@@ -53,6 +53,8 @@ EDX: Deep Learning Explained(2019.08~)
 
 ## An additional computer science course
 
+ICT intern perparation course (2020.07.31 ~ 2021.01.07)
+
 JAVA, HTML,CSS,
 
 ---
