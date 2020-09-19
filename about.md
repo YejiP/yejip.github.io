@@ -10,12 +10,17 @@ description: >
 
 # Education
 
-## Bachelor in ICT Convergence and Life Science from Handong Global University
+**Bachelor in ICT Convergence and Life Science from Handong Global University**
 
-```
-Mar 2015 – Feb 2020
-GPA of 4.06/4.5 (Major : 4.19/4.5)
-```
+- Mar 2015 – Feb 2020
+- GPA of 4.06/4.5 (Major : 4.19/4.5)
+
+**Exchange program**
+
+- University of Chemistry and Technology ( **Praha, Czechia**, 2016/09/19 ~2017/01/20)
+- The king’s university ( **Edmonton, Canada**, 2019/01/07 ~2019/04/24)
+
+
 
 ## ICT convergence
 
@@ -54,3 +59,32 @@ EDX: Deep Learning Explained(2019.08~)
 
 JAVA, HTML,CSS,
 
+
+
+#  **School/Work Program 
+
+a.
+
+2019.11.02 ~ 2020.01.05 / Hands-on AI experience /Constructed Artificial Neural Network to find relationship between gut microbes and diabetes /Python(TensorFlow), R 
+
+b.
+
+2019.04.12 ~ 2019.05.01 / Genetic algorithm on scheduling program / Made a schedule based on Genetic Algorithm /JAVA, HTML, CSS
+
+c.
+
+2019.03.13 ~ 2019.04.11 / Character recognition / Implemented Artificial Neural Network from scratch / Servlet, JSP, HTML, CSS, AWS EC2, Tomcat Apache
+
+d.
+
+2019.02.15 ~ 2019.03.02 / Sudoku Solver / Solved Sudoku using backtracking and forward checking algorithm / Servlet, JSP, HTML, CSS, AWS EC2, Tomcat Apache
+
+e.
+
+2019.01.15 ~ 2019.02.13 / AI checker game / Made AI which can play modified checker /JAVA, HTML, CSS
+
+f. 
+
+2018.03.28 ~ 2018.06.02 / ev3 robotic arm programming / Applied right functions to make robot recognize objects and move them to the right place/ C++, PuTTY
+
+ 
