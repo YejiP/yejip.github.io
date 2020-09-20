@@ -4,10 +4,13 @@ title: WEB
 slug: web
 menu: true
 order: 3
-description: >
+description: > basic knowledge for web
 ---
 
+# WEB
+
 ## JAVA
+
 * [JAVA basic]{:.heading.flip-title} --- very basic
 * [JAVA thread]{:.heading.flip-title} --- thread
 * [JAVA class]{:.heading.flip-title} --- JAVA class
