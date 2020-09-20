@@ -1,9 +1,10 @@
 ---
+layout: list
 title: WEB
+slug: web
+menu: true
+order: 3
 description: >
-	JAVA, HTML, CSS and lots of other stuffs will be dealt.
-hide_description: true
-permalink: /web/
 ---
 
 ## JAVA
