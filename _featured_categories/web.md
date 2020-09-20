@@ -12,11 +12,12 @@ description: >
 * [JAVA thread]{:.heading.flip-title} --- thread
 * [JAVA class]{:.heading.flip-title} --- JAVA class
 * [JAVA API]{:.heading.flip-title} --- API.
-* 
+
+  
 
 ## HTML & CSS
 * [web basics]{:.heading.flip-title} --- basic of web
-* [HTML and CSS]{:.heading.flip-title} --- basic of web
+* [HTML and CSS]{:.heading.flip-title} --- notes from Webber study
 * [web]{:.heading.flip-title} --- basic of web
 
 
