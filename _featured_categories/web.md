@@ -21,10 +21,10 @@ description: >
 
 
 
-[web basics]: 2020-08-01-WEBbasics.md
-[HTML and CSS]: 2020-08-05-HTMLandCSS.md
-[web]: 2020-08-18-WEBWEB.md
-[JAVA basic]: 2020-08-26-JAVAbasic.md
-[JAVA thread]: 2020-09-02-JAVA_Thread.md
-[JAVA class]: 2020-09-07-JAVA_Class.md
-[JAVA API]: 2020-09-15-API.md
+[web basics]: 2020-08-01-WEBbasics/
+[HTML and CSS]: 2020-08-05-HTMLandCSS/
+[web]: 2020-08-18-WEBWEB/
+[JAVA basic]: 2020-08-26-JAVAbasic/
+[JAVA thread]: 2020-09-02-JAVA_Thread/
+[JAVA class]: 2020-09-07-JAVA_Class/
+[JAVA API]: 2020-09-15-API/
