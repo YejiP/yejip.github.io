@@ -19,6 +19,7 @@ description: >
 * [JAVA class]{:.heading.flip-title} --- JAVA class
 * [JAVA OOP]{:.heading.flip-title} --- Object Oriented Programming
 * [JAVA API]{:.heading.flip-title} --- API
+* [JAVA Collection]{:.heading.flip-title} --- Data structure
 
 
 
@@ -38,3 +39,4 @@ description: >
 [JAVA OOP]: 2020-09-10-JAVA_OOP/
 [JAVA class]: 2020-09-07-JAVA_Class/
 [JAVA API]: 2020-09-15-API/
+[JAVA Collection]: 2020-09-23-JAVAColletion/
