@@ -12,23 +12,15 @@ description: >
 
 
 
-## AI projects
+## AI projects (Result)
 
-### Number Recognition
+**[Number Recognition demo](http://ec2-15-164-129-123.ap-northeast-2.compute.amazonaws.com:8080/numbers/)**
 
-[Number Recognition demo](http://ec2-15-164-129-123.ap-northeast-2.compute.amazonaws.com:8080/numbers/)
+**[Sudoku Solver Demo](http://ec2-15-164-129-123.ap-northeast-2.compute.amazonaws.com:8080/test/)**
 
-### Sudoku Solver
+**[Scheduling Problem Result](https://yejip.com/pro/GA/vid.html)**
 
-[Sudoku Solver Demo](http://ec2-15-164-129-123.ap-northeast-2.compute.amazonaws.com:8080/test/)
-
-### Scheduling Problem 
-
-[Scheduling Problem Result](https://yejip.com/pro/GA/vid.html)
-
-### Checker AI
-
-[Checker AI results](https://yejip.com/pro/Checker/vid.html)
+**[Checker AI results](https://yejip.com/pro/Checker/vid.html)**
 
 
 
@@ -43,3 +35,4 @@ description: >
 
 
 ## Application projects
+

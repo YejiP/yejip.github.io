@@ -14,12 +14,6 @@ accent_image:
 
 # Artificial Intelligence
 
-## 2020
-
-
-
-## 2019
-
 ### [Character recognition](https://yejip.com/pro/ANN.html)
 
 ### [Scheduling](https://yejip.com/pro/GA.html)
