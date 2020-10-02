@@ -15,7 +15,7 @@ description: >
 ## AI projects (Result)
 
 ```
-For additional info about this project, please check "AI" section of this blog. 
+For additional info about this project, please check my project page.
 ```
 
 [Number Recognition demo](http://ec2-15-164-129-123.ap-northeast-2.compute.amazonaws.com:8080/numbers/)

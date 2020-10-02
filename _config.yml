@@ -51,8 +51,6 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /project/
-  - title:             AI
-    url:               /AI/
   - title:             WEB
     url:               /web/
   - title:             AWS(CDA)
