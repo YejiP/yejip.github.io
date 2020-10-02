@@ -51,13 +51,13 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /project/
-  - title:             Artificial Intelligence
-    url:               /pro/
+  - title:             AI
+    url:               /AI/
   - title:             WEB
     url:               /web/
   - title:             AWS(CDA)
     url:               /aws/
-  
+
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
 # legal:
