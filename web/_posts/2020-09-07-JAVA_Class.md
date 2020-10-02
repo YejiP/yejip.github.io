@@ -116,13 +116,21 @@ interface B extends A //인터페이스가 인터페이스 가져올 때는 exte
 
 
 
+### Wrapper Class
+
+기본 자료형을 객체화 시킨 모든 자료형
+
+byte(Byte), short (Short), int(Integer), long(Long)
+
+float(Float), double(Double)
+
+char(Character)
+
+boolean(Boolean), void(Void)
 
 
-## 클래스 다이어그램
 
-클래스 명
 
-변수
 
-메소드
+
 
