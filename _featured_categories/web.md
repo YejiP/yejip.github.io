@@ -19,7 +19,6 @@ description: >
 * [JAVA API]{:.heading.flip-title} --- API
 * [JAVA Collection]{:.heading.flip-title} --- Data structure
 * [JAVA Exception]{:.heading.flip-title} --- Exception 
-
 * [JAVA File I/O]{:.heading.flip-title} --- File input and output
 
 
