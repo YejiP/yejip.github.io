@@ -31,17 +31,20 @@ description: >
 
 * [web]{:.heading.flip-title} --- basic of web
 
-* [DB Basic Exercise]--- Some problems
-
-* [DB Operator]--- DB Operator
-
-* [DB function]--- DB Function
-
   
+
 
 # DB
 
 - [DB Basics]{:.heading.flip-title} --- basic of DB
+
+- [DB Basic Exercise]--- Some problems
+
+- [DB Operator]--- DB Operator
+
+- [DB function]--- DB Function
+
+  
 
 
 
