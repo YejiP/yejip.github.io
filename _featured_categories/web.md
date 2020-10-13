@@ -26,10 +26,18 @@ description: >
 ## HTML & CSS
 
 * [web basics]{:.heading.flip-title} --- basic of web
+
 * [HTML and CSS]{:.heading.flip-title} --- notes from Webber study
+
 * [web]{:.heading.flip-title} --- basic of web
 
+* [DB Basic Exercise]--- Some problems
 
+* [DB Operator]--- DB Operator
+
+* [DB function]--- DB Function
+
+  
 
 # DB
 
@@ -49,3 +57,7 @@ description: >
 [JAVA Exception]: 2020-09-25-JAVA_Exception/
 [JAVA File I/O]: 2020-09-29-JAVA_FileIO/
 [DB Basics]: 2020-10-08-DB_Basics/
+[DB Basic Exercise]: 2020-10-09-DB_기초문제/
+[DB Operator]: 2020-10-10-DB_연산자/
+[DB function]: 2020-10-13-DB_함수/
+
