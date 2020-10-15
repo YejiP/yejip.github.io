@@ -76,6 +76,13 @@ where d.department_id(+) = e.department_id; -- RIGHT JOIN
 
 
 
+```sql
+--department , location, country
+select d.department_name, l.street_address, c.country_name from departments d, locations l , countries c
+where (d.LOCATION_ID = l.LOCATION_ID) and (l.COUNTRY_ID=c.COUNTRY_ID);
+
+```
+
 
 
 ## INNER JOIN
