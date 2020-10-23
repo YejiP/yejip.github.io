@@ -1,6 +1,8 @@
 body{
   margin-left: 10%;
   margin-right: 10%;
+     text-size-adjust: none;
+
 }
 img{
   display: block; margin: 0px auto;
