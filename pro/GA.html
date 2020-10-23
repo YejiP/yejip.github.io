@@ -1,149 +1,95 @@
-<!doctype html>
-<html>
-<head>
-  <title>Genetic Algorithm for Scheduling</title>
-<meta charset="utf-8">
-<style>
-    #text {
-            float : bottom;
-            padding-left :10%;
-            padding-right : 10%;
-            text-align:left;
-            }
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Genetic Algorithm for Scheduling</title>
+    <link rel = "stylesheet" type ="text/css" href ="style.css"></head>
 
-    #pic{
-        padding-top: 2%;
-        padding-right:10%;
-        text-align:center;
-        float :bottom;
-        }
-    #bet {
-            float:left;
-            padding-right :5%;
-            text-align:center;
-            padding-top : 2%;
-            }
-    #n {
-        padding-left :10%;
-        padding-right :5%;
-        float:left;
-        text-align:center;
-        padding-top : 2%;
-        }
-    #title {
-            padding-left :15%;
-            padding-right :10%;
-            float:bottom;
-          }
-          #cen {
-            min-width: 800px;
-            text-size-adjust: none;
 
-              }
-</style>
-</head>
 <body>
-<div id= cen><br><br><br><br>
-<div align = "center"><img src ="img/me.png" alt =""  width = 100px></div><br>
-<h5><center>Yeji Park</center></h5>
-<center><h1>Scheduling problem</h1><h4>(using Genetic Algorithm)</h4><h2>
-<a href = "GA/vid.html">Click to watch the result</a></h2>
-<a href = "https://github.com/YejiP/projects/tree/master/Genetic_Algorithm">Github repository</a>
-</center>
-<br>
-<div align = "center"><img src = "img/bar.png" alt =""  width = 82% height = 10 px></div>
+  <div id = "title">
+  <br><br><br><br>
+  <img src ="img/me.png" alt ="" width = 100px><br><br>
+  <span style ="font-size: 0.8em ; font-weight:bold">Yeji Park</span><br>
+  <h1>Scheduling problem</h1><span style = " font-size:1.2em; font-weight:bold" >(using Genetic Algorithm)<br></span>
+  <a href = "GA/vid.html"><h2>Click to watch the result</h2></a>
+  <a href= "https://github.com/YejiP/projects/tree/master/Genetic_Algorithm">Github repository</a><br><br>
+  <hr style="border: double 5px;"> </div>
 
 
-<div id =title ><div align = "center"><h3>0. Problem description</h3><br></div></div>
-<div id =text >
+<h1>Problem description</h1>
 <br>
-Let's say we need to make schedule for room/time with courses. How can we tune the schedule for all the courses ?
+<p class = "explanation" >
+Let's say we need to make schedule for room/time with courses. How can we tune the schedule for all the courses?
 It could be easy enough to be done by manual way when it is not too much to tune, however, If the scale is too large to schedule it manually, then it would not be the best way to do it manually.
-Those are courses we have for comming semester, and we want to match room and time for each courses without any conflicts.<br></div>
+Those are courses we have for coming semester, and we want to match room and time for each courses without any conflicts.<br></p>
 
 
-<div id = text><img src = 'GA/img/Course.PNG' alt =""  width="800px"></div>
-<br><br><br>
-<div id = text>The left picture below is one of the possible answer for the scheduling and the right picture below is one of the wrong answer.
+<img src = 'GA/img/Course.PNG' alt =""  width="800px">
+<br><br><br>The left picture below is one of the possible answers for the scheduling and the right picture below is one of the wrong answer.
 <br><img src = 'GA/img/possible.PNG' alt =""  width="800px"><br>
-Why can't it be the right answer?<br>
-</div>
-
-<div id = text><img src = 'GA/img/c1.PNG'  alt ="" width="800px">
-<b>Constraints</b>
-<br>1. Each Prof, at most 1 class at one period
+<div class = "center" style="font-size : 1.5em ; color : red">Why can't it be the right answer?<br></div>
+<img src = 'GA/img/c1.PNG'  alt ="" width="800px">
+<fieldset>
+  <legend style = "weight : bold; text-align : center">Constraints</legend>
+<div class = "center">
+1. Each Prof, at most 1 class at one period
 <br>2. Each Students group, at most 1 class at one period
 <br>3. Room capacity >= students of course.
-<br>4. Room cannot be double booked.
-</div><br>
-
-<div id = text>
-Evaluation function : 1/(1+number of constraints)<br>
+<br>4. Room cannot be double booked.</div>
+</fieldset>
+<br>Evaluation function: 1/(1+number of constraints)<br>
 If evaluation function is equal to 1, then it can be possible solution.
-</div>
 
-<div id =title ><div align = center><h3>1. The concept of Genetic Algorithm</h3><br></div></div>
-
-<div id = text>Genetic algorithm uses the idea derived from inheritance to find a solution for problems.
-All individual gets their genetic information from their parents, equally from mother and father. Sometimes, mutation occurs and it changes genetic information.
-In the Genetic Algorithm , each individual contains information which is a candidate for answer.(It does not have to be right.)
+<h1>The concept of Genetic Algorithm</h1>
+<p class = "explanation">
+Genetic algorithm uses the idea derived from inheritance to find a solution for problems.
+All individual gets their genetic information from their parents, equally from mother and father. Sometimes, mutation occurs, and it changes genetic information.
+In the Genetic Algorithm, each individual contains information which is a candidate for answer. (It does not have to be right.)
 Each individual is now evaluated how close it is to the correct answer. Depends on the fitness value of individual, it varies the chance of being parents.
-If fitness value is high, then it has more chance to be picked up as parents. Two individuals are parents, and two offsprings are made from one parents. A simple mixture of parents' information is now information of offspring.<br>
+If fitness value is high, then it has more chance to be picked up as parents. Two individuals are parents, and two offspring are made from one parent. A simple mixture of parents' information is now information of offspring. <br>
 <br>
-The mouse below contains information of schedule. For the explanation, let's say this mouse does not show their information(schedule) but show only the constraints of the schedule they carry.
-</div>
+The mouse below contains information of schedule. For the explanation, let's say this mouse does not show their information(schedule) but show only the constraints of the schedule they carry. </p>
 
-<div id = text><img src ='GA/img/ms.PNG' alt =""  width = "800px"></div>
+<img src ='GA/img/ms.PNG' alt =""  width = "800px">
 <br><br><br><br>
 <br>
-<div id = text>From the population, Two are chosen and then reproduce their baby by mixing the information they have.<br><img src ='GA/img/rep.PNG' alt =""  width = "600px"><br></div>
-
-<div id = text><br>
-Then, How can we present course information and the classes at each individual?
-Let’s say there are 7 courses. These 7 courses need class room and specific time. Where and when.
+<p class = "explanation">From the population, Two are chosen and then reproduce their baby by mixing the information they have.<br><img src ='GA/img/rep.PNG' alt =""  width = "600px"><br>
+<br>
+Then, how can we present course information and the classes at each individual?
+Let’s say there are 7 courses. These 7 courses need classroom and specific time. Where and when.
 This can be done by using array.<br>
 
-Each index represent (class room and time) information.
+Each index represents (classroom and time) information.
 For example, Array[0] means (Monday_1st period, Room1), Array[1] (Monday_2nd period,Room1) ,....,(Friday_5th period, Room5)
 So whichever course is at the index of 0, this course is held in Monday_1st period and Room 1.
-</div>
-<div id = text><img src ='GA/img/ch.PNG' alt =""  width = "600px"><br><br>
-Now, we need to initialize population. Population is the group of individuals which contain a candidate for the right schedule.</div>
-
-<div id = text><img src = 'GA/img/pop.PNG'  alt =""  width="600px" align = center></div>
+<img src ='GA/img/ch.PNG' alt =""  width = "600px"><br><br>
+Now, we need to initialize population. Population is the group of individuals which contain a candidate for the right schedule.
+<img src = 'GA/img/pop.PNG'  alt =""  width="600px">
 <br>
-<div id = text>
 After setting initial population, all individuals are evaluated with fitness formula. If there is any individual which has fitness value of 1, then it means that individual is the one we are looking for. Therefore, we pick that one as the right answer and terminate our algorithm.
-However, It is not likely to happen.<br>
+However, It is not likely to happen. <br>
 If none of them has fitness value of 1, then now we need to make another population replacing previous individuals(parents) to better individuals(offsprings).
-It is possibly done by selcting parents which has high fitness, and mutating some information to avoid being kept in local optima.
-</div>
-
-<center><h3>Selection</h3></center>
-<div id = text><img src = 'GA/img/tour.PNG' alt =""  width = "800px" ><br><br>
-  There are some diverse selection methods such as rank order, russian rullette and etc, but This algorithm used rank order selection.
-  Pick several(3 in this case) individuals from the population, and compare the fitness value. Pick individual which has the heigst value of fitness value.</div>
-<center><h3>Crossover</h3></center>
-<div id = text><img src = 'GA/img/crossover.PNG' alt =""   width="800px">
+It is possibly done by selcting parents which has high fitness and mutating some information to avoid being kept in local optima. </p>
+<h2>Selection</h2>
+<img src = 'GA/img/tour.PNG' alt =""  width = "800px" ><br><br>
+<div class = "center">
+  There are some diverse selection methods such as rank order, Russian roulette etc., but This algorithm used rank order selection.
+  Pick several (3 in this case) individuals from the population and compare the fitness value. Pick individual which has the highest value of fitness value.
+<h2>Crossover</h2>
+<img src = 'GA/img/crossover.PNG' alt ="" width="800px">
 <br>
+Random point(within index) is selected, and from that index, Information from the parents is exchanged and it became the offspring.
+<h2>Mutation</h2>
+<img src = 'GA/img/mutation.PNG' alt =""   width="600px"><img src = 'GA/img/m_data.PNG'  alt =""  width="300px"><br>
 
-Random point(within index) is selected, and from that index, Information from the paretns is exchanged and it became the offspring.
-</div>
-
-<center><h3>Mutation</h3></center>
-<div id = text><img src = 'GA/img/mutation.PNG' alt =""   width="600px"><img src = 'GA/img/m_data.PNG'  alt =""  width="300px" ><br>
 Only some individuals are undergoing mutation. Random index is chosen, and the course at the index changes it to new one.
 <br> The number next to the generation (iteration number) means the total fitness of the entire individuals.  Generation 4 to 6 shows the effect of mutation. If it were not for mutation, the population's fitness would not have gone up.
 <br>
-
-<center><h3>To new generation</h3>
-First of all, pick two individuals from the population. (In this case, the population is entirely from previous generatoin.) <br>
+<h2>To new generation</h2>
+First of all, pick two individuals from the population. (In this case, the population is entirely from previous generation.) <br>
 <img src = 'GA/img/new_gen1.PNG'  alt =""  width="600px"><br><br>Then, reproduce the information to make two children and replace it with individuals with lower index number.<br> <img src = 'GA/img/new_gen2.PNG'  alt =""  width="600px"><br><br>When it is all replaced, it becomes entirely new generation.<br><img src = 'GA/img/new_gen3.PNG'  alt =""  width="600px"><br>
 <br>After making new generation, pick some individuals which we will be mutated.<br><img src = 'GA/img/new_gen4.PNG' alt =""   width="600px"><br><br>
-Then, now, repeat this process over and over again until we find the first individual which has fitness value of 1.<br><br>
-
-</center>
-</div>
-</div>
+Then, now, repeat this process over and over again until we find the first individual which has fitness value of 1.<br><br></div>
 </body>
 </html>
