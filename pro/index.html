@@ -1,75 +1,45 @@
- <!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
   <title>Project page</title>
   <meta charset="utf-8">
+  <link rel = "stylesheet" type ="text/css" href ="style.css">
+  <style>
+ul li { list-style-type: none; display: inline;padding-right: 8%}
 
-<style>
-    #text_a {
-        float : left;
-      margin-left: 19%;}
-
-    #item_r {
-      padding-left: 15%;
-      padding-right: 15%;
-      float: bottom;
-      width: 700px;
-      height: 150px;
-      text-align: left;
-
-    }
-    #item_l {
-      padding-left: 15%;
-      padding-right: 15%;
-      float: bottom;
-      width: 700px;
-      height: 150px;
-      text-align: right;
-
-    }
-    #cen {
-      min-width: 800px;
-      text-size-adjust: none;
-
-        }
-    #exp {
-      margin-top: 5%;
-      margin-left: 15%;
-      margin-right: 15%;
-      text-align:center;
-      float : bottom;
-    }
-    hr.one{color:red; width : 700px;}
-    </style>
-</head>
+.item_l {
+   float: bottom;
+   min-width: 400px;
+   height: 150px;
+   text-align: right;
+ }
+  </style></head>
 <body>
-    <br><br><br><br>
-    <div id = cen><center><img src ="img/me.png" alt =""  width = 100px><br>
-    <h5>Yeji Park</h5>
-    <img src = "img/bar.png"  alt ="" width = 82% height = 10 px></center>
-    <br>
-    <div id = text_a><a href ="http://yejip.com/about"><h2>About me</h2></a></div>
-    <div id = text_a><a href ="skills.html"><h2>Skills</h2></a></div>
-    <div id = text_a><b><h2>Projects</h2></b></div>
-    <div id = 'exp'>
-      <br><br>This is a list of the projects I’ve worked on during my degree.<br><br>Click on the icon or heading to read more.</div>
-<br><br><br>
-<div align ='center'>
-    <hr class ="one">
-    <div id = 'item_l'><a href= "ANN.html"><img src = "img/m.png" alt="Number regonition" width = 150 align ="left"><br>Character recognition </a><br><br>Language : R, Python, JAVA <br><br> Machine Learning</div>
-    <hr class ="one">
+  <div id = "title">
+  <br><br><br><br>
+  <img src ="img/me.png" alt ="" width = 100px><br><br>
+  <span style ="font-size: 2em ; font-weight:bold">Yeji Park</span><br>
+    <hr style="border: double 5px;"> </div>
+<ul style="margin-left:0px">
+<h2><li><a href ="http://yejip.com/about">About me</a></li>
+<li><a href ="skills.html">Skills</a></li>
+<li><b>Projects</b></li></h2>
+</ul>
+<div class = "center">
+<br><br>This is a list of the projects I’ve worked on during my degree.<br><br>Click on the icon or heading to read more.<br><br>◈</div>
 
-    <div id = 'item_r'><a href = "GA.html"><img src = "img/schedule.png"  alt="Genetic algorithm for scheduling problem" width = 150 align = "right"><br>Scheduling</a><br><br>Language : JAVA <br><br> Genetic Algorithm</div>
-    <hr class ="one">
+<br>
+<div style="width = 500px; margin-left:10%;margin-right:15%">
+    <hr style="border: solid 1px; width 50%; ">
+    <div class = "item_l"><a href= "ANN.html"><img src = "img/m.png" alt="Number regonition" width = 150 align ="left"><br>Character recognition </a><br><br>Language : R, Python, JAVA <br><br> Machine Learning<br><br>
+    <hr style="border: solid 1px; width 50%; "></div><br>
 
-    <div id = 'item_l'><a href = "Sudoku.html"><img src = "img/Sudoku.jpg" alt="Sudoku solver" width = 150 align = "left" ><br>Sudoku solver</a><br><br>Language : JAVA <br> <br>Backtracking + AC3</div>
-    <hr class ="one">
-
-    <div id = 'item_r'><a href = "Checker.html"><img src = "img/checker.jpg" alt="Checker AI" width = 150 align = "right"><br>Checker AI</a><br><br>Language : JAVA <br><br> Minimax Tree</div>
-    <hr class ="one">
-
-    <div id = 'item_l'><a href = "recommend.html"><img src = "img/recommend.png" alt="Clustering Algorithm" width = 150 align = "left"><br>Clustering Algorithm </a><br><br>Language : R <br><br> K-Means, KNN,</div>
-    <hr class ="one">
-
-</div></div></body>
+    <a href = "GA.html"><img src = "img/schedule.png"  alt="Genetic algorithm for scheduling problem" width = 150 align = "right"><br>Scheduling</a><br><br>Language : JAVA <br><br> Genetic Algorithm<br><br>
+    <hr style="border: solid 1px; width 50%; ">
+    <div class = "item_l"><a href = "Sudoku.html"><img src = "img/Sudoku.jpg" alt="Sudoku solver" width = 150 align = "left" ><br>Sudoku solver</a><br><br>Language : JAVA <br> <br>Backtracking + AC3<br><br>
+    <hr style="border: solid 1px; width 50%; "></div><br>
+      <a href = "Checker.html"><img src = "img/checker.jpg" alt="Checker AI" width = 150 align = "right"><br>Checker AI</a><br><br>Language : JAVA <br><br> Minimax Tree<br><br>
+      <hr style="border: solid 1px; width 50%; ">
+      <div class = "item_l"><a href = "recommend.html"><img src = "img/recommend.png" alt="Clustering Algorithm" width = 150 align = "left"><br>Clustering Algorithm </a><br><br>Language : R <br><br> K-Means, KNN,
+    <hr style="border: solid 1px; width 50%; "></div></div></body>
 </html>
