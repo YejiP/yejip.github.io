@@ -25,11 +25,11 @@ description: >
 
 ## HTML & CSS
 
-* [web basics]{:.heading.flip-title} --- basic of web
+* [HTML TAGS]{:.heading.flip-title} --- HTML basic
 
-* [HTML and CSS]{:.heading.flip-title} --- notes from Webber study
+* [HTML FORM]{:.heading.flip-title} ---  HTML form and input
 
-* [web]{:.heading.flip-title} --- basic of web
+* [CSS BASICS]{:.heading.flip-title} --- CSS
 
   
 
@@ -48,9 +48,9 @@ description: >
 
 
 
-[web basics]: 2020-08-01-WEBbasics/
-[HTML and CSS]: 2020-08-05-HTMLandCSS/
-[web]: 2020-08-18-WEBWEB/
+[HTML TAGS]: 2020-10-20-HTML_tag/
+[HTML FORM]: 2020-10-21-HTML_formInput/
+[CSS BASICS]: 2020-10-22-css/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
 [JAVA OOP]: 2020-09-10-JAVA_OOP/
