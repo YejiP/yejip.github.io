@@ -1,80 +1,46 @@
 <!doctype html>
 <html>
 <head>
-  <title>Skills</title>
-<meta charset="utf-8">
-<style>
-    #text {
-        float : left;
-        padding-left :19%;
-        }
-        #cen {
-          min-width: 800px;
-          text-size-adjust: none;
+  <title>Project page</title>
+  <meta charset="utf-8">
+  <link rel = "stylesheet" type ="text/css" href ="style.css">
+  <style>
 
-            }
-    #pic {
-        float : left;
-        padding-left:19%;
-        padding-top :5%;
-        padding-bottom:5%;
-    }
-    #item_r {
-      padding-left: 15%;
-      padding-right: 15%;
-      float: bottom;
-      width: 700px;
-      height: 150px;
-      text-align: left;
+  ul li { list-style: none; float: left; width: 33%; }
+  a:link {color:orange;}
 
-    }
-    #item_l {
-      padding-left: 15%;
-      padding-right: 15%;
-      float: bottom;
-      width: 700px;
-      height: 150px;
-      text-align: right;
-
-    }
-    #exp {
-      margin-top: 5%;
-      margin-left: 15%;
-      margin-right: 15%;
-      text-align:center;
-      float : bottom;
-    }
-    hr.one{color:red; width : 700px;}
-    </style>
-
-  </head>
+.item_l {
+   float: bottom;
+   min-width: 400px;
+   height: 150px;
+   text-align: right;
+ }
+  </style></head>
   <body>
+    <div id = "title">
+    <br><br><br><br>
+    <img src ="img/me.png" alt ="" width = 100px><br>
+    <span style =" font-weight:bold">Yeji Park</span><br><br>
+    <hr style="border: double 5px;"></div>
 
-
-<br><br><br><br>
-<div id = cen><center><img src ="img/me.png" alt =""  width = 100px><br>
-<h5>Yeji Park</h5>
-<img src = "img/bar.png" alt =""  width = 82% height = 10 px></center><br>
-<div id = text><a href ="index.html"><h2>About me</h2></a></div>
-<div id = text><b><h2>Skills</h2></b></div>
-<div id = text><a href ="http://yejip.com/pro/"><h2>Projects</h2></a></div>
+    <ul style="margin-left:0px">
+      <h2><li><a href ="index.html">About me</a></li>
+      <li>Skills</li>
+      <li><a href ="http://yejip.com/pro/">Projects</h2></a></li>
+    </ul>
 <br>
-<br>
-<div align ='center'>
-    <hr class ="one">
-    <div id = 'item_l'><br><br><img src = "img/python.png" alt =""  height = 100 align = left><br>Python</a><br><br><br><br> </div>
-    <hr class ="one">
-
-    <div id = 'item_r'><br><br><img src = "img/r.jpg" alt =""  height = 100 align =right ><br>R</a><br><br><br><br></div>
-    <hr class ="one">
+    <div class = 'item_l'><br><br><img src = "img/python.png" alt =""  height = 100 align = left><br>Python</a><br><br><br><br> </div>
+    <hr style="border: solid 1px; width 50%; ">
+<p>
+   <br><br><img src = "img/r.jpg" alt =""  height = 100 align =right ><br>R</a><br><br><br><br></p>
+   <hr style="border: solid 1px; width 50%; ">
 
     <div id = 'item_l'><br><br><img src = "img/swift.png" alt =""  height = 100 align = left><br>Swift</a><br><br><br><br></div>
-    <hr class ="one">
+  <hr style="border: solid 1px; width 50%; ">
 
-    <div id = 'item_r'><br><br><img src = "img/c++.png" alt =""  height = 100 align = right><br>C++</a><br><br><br><br></div>
-    <hr class ="one">
+    <p><br><br><img src = "img/c++.png" alt =""  height = 100 align = right><br>C++</a><br><br><br><br></p>
+    <hr style="border: solid 1px; width 50%; ">
 
     <div id = 'item_l'><br><br><img src = "img/java.PNG" alt =""  height = 100 align = left><br>JAVA </a><br><br><br><br></div>
-</div></div>
 </body>
 </html>
