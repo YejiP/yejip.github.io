@@ -8,6 +8,7 @@ description: >
 
 ---
 
+<<<<<<< HEAD:_featured_categories/web.html
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -59,6 +60,9 @@ description: >
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
 
 
+=======
+# WEB
+>>>>>>> parent of 5e33e61... 실험:_featured_categories/web.md
 
 ## JAVA
 
@@ -73,7 +77,12 @@ description: >
 
 
 
+## HTML & CSS
 
+* [HTML TAGS]{:.heading.flip-title} --- HTML basic
+* [HTML FORM]{:.heading.flip-title} ---  HTML form and input
+* [CSS BASICS]{:.heading.flip-title} --- CSS
+* [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
 
 
 
