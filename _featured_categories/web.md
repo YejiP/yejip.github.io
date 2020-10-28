@@ -7,17 +7,14 @@ order: 3
 description: >
 
 ---
+# WEB
+
 ## HTML & CSS
 
 * [HTML TAGS]{:.heading.flip-title} --- HTML basic
 * [HTML FORM]{:.heading.flip-title} ---  HTML form and input
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
-
-
-=======
-# WEB
->>>>>>> parent of 5e33e61... 실험:_featured_categories/web.md
 
 ## JAVA
 
@@ -31,18 +28,7 @@ description: >
 * [JAVA File I/O]{:.heading.flip-title} --- File input and output
 
 
-
-## HTML & CSS
-
-* [HTML TAGS]{:.heading.flip-title} --- HTML basic
-* [HTML FORM]{:.heading.flip-title} ---  HTML form and input
-* [CSS BASICS]{:.heading.flip-title} --- CSS
-* [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
-
-
-
-
-# DB
+## DB
 
 - [DB Basics]{:.heading.flip-title} --- basic of DB
 
