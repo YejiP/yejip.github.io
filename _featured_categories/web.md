@@ -7,51 +7,6 @@ order: 3
 description: >
 
 ---
-
-<<<<<<< HEAD:_featured_categories/web.html
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style media="screen">
-
-    div.block{
-      margin: 0 auto;
-      width: 800px;
-      height: 200px;
-      text-align: right;
-
-    }
-    div.left{
-      text-align: left;
-    }
-    </style>
-  </head>
-  <body>
-    <div class="block">
-      HTML CSS
-
-    </div>
-    <hr style="border: solid 1px;width: 800px;">
-        </div>
-
-
-    <div class="block left">
-      JAVA
-
-    </div>
-    <hr style="border: solid 1px;width: 800px;">
-<div class="block">
-  DB
-
-</div>
-
-  </body>
-</html>
-
-
-
 ## HTML & CSS
 
 * [HTML TAGS]{:.heading.flip-title} --- HTML basic
