@@ -15,6 +15,7 @@ description: >
 * [HTML FORM]{:.heading.flip-title} ---  HTML form and input
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
+* [CSS BLOCK]{:.heading.flip-title} --- CSS 블록 속성
 
 ## JAVA
 
@@ -45,6 +46,7 @@ description: >
 [HTML TAGS]: 2020-10-20-HTML_tag/
 [HTML FORM]: 2020-10-21-HTML_formInput/
 [CSS BASICS]: 2020-10-22-CSS기초/
+[CSS BLOCK]: 2020-10-27-CSS_블록/
 [CSS TEXT]: 2020-10-24-CSS_텍스트
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/

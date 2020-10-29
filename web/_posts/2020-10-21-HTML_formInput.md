@@ -1,10 +1,71 @@
 
 
-## Form
+# Form and Input
 
-- 사용자로부터 데이터를 입력받기 위한 모든 요소들. (버튼, id, 비밀번호, 전화번호) 
+##  form 관련 태그들 
 
-- input, select, form 태그
+- 사용자로부터 데이터를 입력받기 위한 모든 요소들. (버튼, id, 7비밀번호, 전화번호) 
+
+- 폼과 관련된 대부분의 작업은 데이터베이스를 기반으로 한 정보를 저장, 검색, 수정하는 일이다. 입력된 정보는 ASP, PHP, JSP 같은 서버 프로그래밍을 이용한다.
+
+  ```html
+  <form action="register.php"> <!--[속성 = "속성값"]-->
+      <input type ="text" title ="검색">  <!--폼 요소 -->
+  </form>
+  ```
+
+- form 태그 속성은 method, name, action, target 이 있다. 
+
+  - method : 사용자가 입력한 내용을 어떻게 넘겨줄지 지정. GET과 POST 방식
+  - name : 폼의 이름을 지정한다.
+  - action : form 태그 안의 내용들을 처리해 줄 서버사으이 프로그램을 지정한다.
+  - target : action 속성에서 지정한 스크립트 파일을 현재창이 아닌 다른 위치에 열도록 지정.
+
+- autocomplete 속성은 기본값이 on 이다. 끄기 위해서 다음과 같이 하면 된다.
+
+  ```html
+  <form autocomplete = "off"></form>
+  ```
+
+- label 태그는 폼요소에 레이블을 붙일 때 사용한다. 두가지 방법이 있다.
+
+  - label 태그 안에 input 태그를 넣는 법.
+
+    ```html
+    <label>아이디<input ..></label>
+    ```
+
+  - label for 과 input id를 사용해 하나로 묶는 방법
+
+    ```html
+    <label for ="user-id">아이디</label>
+    
+    <input type = "text" id="user-id">
+    ```
+
+- fieldset 과 legend는 폼 요소를 그룹으로 만들 때 사용된다. 
+
+  ```html
+  <fieldset>
+      <legend>name</legend>
+      <form>
+          <input >
+      </form>
+  </fieldset>
+  ```
+
+
+
+## input 태그
+
+- 아래와 같은 형식으로 사용된다.
+
+```html
+<input type = "타입명" name = "이름" value = "서버로 넘길 값">
+```
+
+- 굉장히 여러가지 type 이 있다. hidden, text, search, tel, url, email, password, range, radio , checkbox... 등등
+  - radio는 하나만 선택할 수 있으므로, 선택지 input의 name이 다 같은 이름이다. 
 
 - input tag는 type 옵션이 무엇이냐에 따라 다양한 input 이 존재
 
