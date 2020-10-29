@@ -136,7 +136,7 @@
 
 6. **기타** : 색, 첨부파일
 
-![기타](C:\Users\21500\AppData\Roaming\Typora\typora-user-images\image-20201029234113544.png)
+![기타](https://user-images.githubusercontent.com/37058233/97595856-756cd900-1a47-11eb-906c-14faae7110b8.PNG)
 
 ```html
 색을 정해주세요: <input type = "color" value="#00ff00">
