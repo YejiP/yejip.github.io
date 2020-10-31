@@ -1,3 +1,5 @@
+
+
 # Form and Input
 
 ##  form 관련 태그들 
@@ -64,7 +66,7 @@
 
 - 굉장히 여러가지 type 이 있다. hidden, text, search, tel, url, email, password, range, radio , checkbox... 등등
 
-  1. **hidden :** 
+  - **hidden :** 
 
   ```
   <input type="hidden" name ="이름"  value = "서버로 넘길 값">
@@ -84,7 +86,7 @@
   <label>tel 타입 : <input type="telephone" ></label>
   ```
 
-  2. **number** 
+  - **number** 
 
   ![number](https://user-images.githubusercontent.com/37058233/97587438-bb716f00-1a3e-11eb-9ad0-5fc176fbddf3.PNG)
 
@@ -93,9 +95,9 @@
   <label>range 타입  하 중 상: <input type="range" min ="1" max = "3" value="1" ></label><br>
   ```
 
-  3. **radio checkbox** : radio는 하나만 선택할 수 있으므로, 선택지 input의 name이 다 같은 이름이다. 
+  - **radio checkbox** : radio는 하나만 선택할 수 있으므로, 선택지 input의 name이 다 같은 이름이다. 
 
-     ![radio](https://user-images.githubusercontent.com/37058233/97582934-b1993d00-1a39-11eb-98df-fa30f9cab522.PNG)
+  ![radio](https://user-images.githubusercontent.com/37058233/97582934-b1993d00-1a39-11eb-98df-fa30f9cab522.PNG)
 
   ```html
   Radio
@@ -112,7 +114,7 @@
   
   ```
 
-  4. **날짜와 시간** 
+  - **날짜와 시간** 
 
   ![date](https://user-images.githubusercontent.com/37058233/97585810-e5c22d00-1a3c-11eb-81c7-e97d5ba5cbf6.PNG)
 
@@ -130,11 +132,13 @@
   date time local 타입: <input type="datetime-local" value="2016-09-09T09:00">
   ```
 
-5. **버튼** : submit , reset, image, button  은 클릭하면 js 로 넘어간다.
+  - **버튼** : submit , reset, image, button  은 클릭하면 js 로 넘어간다.
 
-![button](https://user-images.githubusercontent.com/37058233/97586160-4a7d8780-1a3d-11eb-8bcc-d2fba6eeedd9.PNG)
+  ![button](https://user-images.githubusercontent.com/37058233/97586160-4a7d8780-1a3d-11eb-8bcc-d2fba6eeedd9.PNG)
 
-6. **기타** : 색, 첨부파일
+  - **기타** : 색, 첨부파일
+
+​	
 
 ![기타](https://user-images.githubusercontent.com/37058233/97595856-756cd900-1a47-11eb-906c-14faae7110b8.PNG)
 
@@ -144,9 +148,88 @@
 첨부파일: <input type="file">
 ```
 
-- 실습
+
+
+## input 태그 속성
+
+- **autofocus :** 원하는 폼 요소에 마우스 커서 표시할 수 있다.
+- **placeholder :** 힌트를 표시한다.
+- **readonly :** readonly = "readonly", readonly. 이렇게 넣으면 read는 되지만 write안되는 input 이 만들어진다.
+- **required :** required ="required" , required. 이렇게 넣으면 필수로 채워야하는 폼이 된다.
+- **min, max, step :** number input 타입에서 사용. min max는 최댓값과 최솟값을 지정한다. spin 박스를 누르면 step 만큼 커진다.
+- **size, minlength , maxlength :** text input 타입에서 사용. size는 input 박스 길이, min maxlength 는 최소 최대 글씨 갯수
+
+
+
+## 여러 데이터 나열하기 
+
+- **select, optgroup, option :** 드롭다운 목록 만들기
+
+![select](https://user-images.githubusercontent.com/37058233/97775440-fa6d0500-1ba3-11eb-9089-2772c908b979.PNG)
+
+
+
+<select id = "class">
+  <optgroup label = "에피타이저">
+    <option value = soup >스프</option>
+    <option value = salad >샐러드</option>
+    <option value = bread >빵</option></optgroup>
+  <optgroup label ="본식">
+    <option value = "steak">스테이크</option>
+    <option value = "pasta">파스타</option>
+  </optgroup>
+</select>
+
+```html
+select, option, optgroup 실습<br>
+<select id = "class">
+  <optgroup label = "에피타이저">
+    <option value = soup >스프</option>
+    <option value = salad >샐러드</option>
+    <option value = bread >빵</option></optgroup>
+  <optgroup label ="본식">
+    <option value = "steak">스테이크</option>
+    <option value = "pasta">파스타</option>
+  </optgroup>
+</select>
+```
+
+- **datalist, option :** datalist는 text field와 함께 사용이된다. 사용자가 데이터를 입력하면, 데이터 목록에 저장된 값이 뜬다. 그 값으로 선택 가능. 
+
+  ![datalist](https://user-images.githubusercontent.com/37058233/97775847-39e92080-1ba7-11eb-8f3f-9269eece4647.PNG)
+
+  ```html
+  datalist, option 태그
+  <input type = "text" list = "dlist">
+  <datalist id = "dlist">
+      <option value= "math" label="수학"></option>
+      <option value= "science" label="과학"></option>
+      <option value= "english" label="영어"></option>
+  </datalist>
+  ```
+
+- **textarea :** 여러 줄 입력 텍스트
+
+  ![textarea](https://user-images.githubusercontent.com/37058233/97775939-e75c3400-1ba7-11eb-9728-5b960abe37ec.PNG)
+
+  ```html
+  <textarea name="name" rows="3" cols="30"></textarea>
+  ```
+
+
+## 기타 폼 요소
+
+- button <button type="submit">전송하기</button> ,타입 submit, reset, button 이 있다.  input type ="button"과 다른 점은, 낭독기에서버튼이 있다는 것을
+
+  ```html
+  <button type="submit">전송하기</button>
+  ```
+
+
 
 ![form](https://user-images.githubusercontent.com/37058233/97106564-daea5e00-1705-11eb-8916-4007cbae3dfc.PNG)
+
+
 
 ```html
 <!DOCTYPE html>
@@ -220,3 +303,4 @@
 name 이란 속성은 하나로 묶을 때 사용한다.
 
 post 쓸 때 : 보이면안되거나, 양이 많거나, 파일첨부할 때
+
