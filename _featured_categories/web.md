@@ -12,7 +12,8 @@ description: >
 ## HTML & CSS
 
 * [HTML TAGS]{:.heading.flip-title} --- HTML basic
-* [HTML FORM]{:.heading.flip-title} ---  HTML form and input
+* [HTML FORM]{:.heading.flip-title} ---  HTML form input tags
+* [HTML FORM2]{:.heading.flip-title} ---  HTML input attributes , etc
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
 * [CSS BLOCK]{:.heading.flip-title} --- CSS 블록 속성
@@ -32,11 +33,8 @@ description: >
 ## DB
 
 - [DB Basics]{:.heading.flip-title} --- basic of DB
-
 - [DB Basic Exercise]--- Some problems
-
 - [DB Operator]--- DB Operator
-
 - [DB function]--- DB Function
 
 
@@ -44,6 +42,8 @@ description: >
 
 
 [HTML TAGS]: 2020-10-20-HTML_tag/
+[HTML FORM]: 2020-10-21-HTML_formInput/
+[HTML FORM2]: 2020-10-21-HTML_formInput2/
 [HTML FORM]: 2020-10-21-HTML_formInput/
 [CSS BASICS]: 2020-10-22-CSS기초/
 [CSS BLOCK]: 2020-10-27-CSS_블록/
