@@ -58,93 +58,95 @@
 
 # input 태그
 
+
+
 - 아래와 같은 형식으로 사용된다.
 
-```html
-<input type = "타입명" name = "이름" value = "서버로 넘길 값">
+  ```html
+  <input type = "타입명" name = "이름" value = "서버로 넘길 값">
+  ```
+
+  굉장히 여러가지 type 이 있다. hidden, text, search, tel, url, email, password, range, radio , checkbox... 등등
+
+## **hidden**
+
+```
+<input type="hidden" name ="이름"  value = "서버로 넘길 값">
 ```
 
-- 굉장히 여러가지 type 이 있다. hidden, text, search, tel, url, email, password, range, radio , checkbox... 등등
+## **text type **
 
-  - ## **hidden**
+text, password, search, url , email, telephone등이 있다. 
 
-  ```
-  <input type="hidden" name ="이름"  value = "서버로 넘길 값">
-  ```
+![text](https://user-images.githubusercontent.com/37058233/97587009-46059e80-1a3e-11eb-94a0-7e41dc387d1c.png)
 
-  - ## **text type **
+```html
+<input type="hidden" name ="이름"  value = "서버로 넘길 값">
+<label>텍스트 타입 : <input type="text" name = "user-id" size = "10" value = "type" maxlength="10" ></label><br>
+<label>패스워드 타입 : <input type="password" name = "user-pw" maxlength="10"></label><br>
+<label>search 타입 : <input type="search"></label><br>
+<label>url 타입 : <input type="url" ></label><br>
+<label>email 타입 : <input type="email" ></label><br>
+<label>tel 타입 : <input type="telephone" ></label>
+```
 
-    text, password, search, url , email, telephone등이 있다. 
+## **number** 
 
-  ![text](https://user-images.githubusercontent.com/37058233/97587009-46059e80-1a3e-11eb-94a0-7e41dc387d1c.png)
+![number](https://user-images.githubusercontent.com/37058233/97587438-bb716f00-1a3e-11eb-9ad0-5fc176fbddf3.PNG)
 
-  ```html
-  <input type="hidden" name ="이름"  value = "서버로 넘길 값">
-  <label>텍스트 타입 : <input type="text" name = "user-id" size = "10" value = "type" maxlength="10" ></label><br>
-  <label>패스워드 타입 : <input type="password" name = "user-pw" maxlength="10"></label><br>
-  <label>search 타입 : <input type="search"></label><br>
-  <label>url 타입 : <input type="url" ></label><br>
-  <label>email 타입 : <input type="email" ></label><br>
-  <label>tel 타입 : <input type="telephone" ></label>
-  ```
+```html
+<label>number 타입 : <input type="number" min ="1" max = "5" value="1" ></label><br>
+<label>range 타입  하 중 상: <input type="range" min ="1" max = "3" value="1" ></label><br>
+```
 
-  - ## **number** 
+## **radio checkbox** 
 
-  ![number](https://user-images.githubusercontent.com/37058233/97587438-bb716f00-1a3e-11eb-9ad0-5fc176fbddf3.PNG)
+radio는 하나만 선택할 수 있으므로, 선택지 input의 name이 다 같은 이름이다. 
 
-  ```html
-  <label>number 타입 : <input type="number" min ="1" max = "5" value="1" ></label><br>
-  <label>range 타입  하 중 상: <input type="range" min ="1" max = "3" value="1" ></label><br>
-  ```
+![radio](https://user-images.githubusercontent.com/37058233/97582934-b1993d00-1a39-11eb-98df-fa30f9cab522.PNG)
 
-  - ## **radio checkbox** 
+```html
+Radio
+<label><input type="checkbox" name = "menu1" value = "타코">타코</label>
+<label><input type="checkbox" name = "menu2" value = "샐러드">샐러드</label>
+<label><input type="checkbox" name = "menu3" value = "샐러드">탄산수</label>
 
-    radio는 하나만 선택할 수 있으므로, 선택지 input의 name이 다 같은 이름이다. 
+<!-- radio는 하나만 고를 수 있어서 같은 name을 준다. -->
+Checkbox
+<label><input type="radio" name = "menu1" value = "타코">타코</label>
+<label><input type="radio" name = "menu1" value = "샐러드">샐러드</label>
+<label><input type="radio" name = "menu1" value = "샐러드">탄산수</label>
+<br>
 
-  ![radio](https://user-images.githubusercontent.com/37058233/97582934-b1993d00-1a39-11eb-98df-fa30f9cab522.PNG)
+```
 
-  ```html
-  Radio
-  <label><input type="checkbox" name = "menu1" value = "타코">타코</label>
-  <label><input type="checkbox" name = "menu2" value = "샐러드">샐러드</label>
-  <label><input type="checkbox" name = "menu3" value = "샐러드">탄산수</label>
-  
-  <!-- radio는 하나만 고를 수 있어서 같은 name을 준다. -->
-  Checkbox
-  <label><input type="radio" name = "menu1" value = "타코">타코</label>
-  <label><input type="radio" name = "menu1" value = "샐러드">샐러드</label>
-  <label><input type="radio" name = "menu1" value = "샐러드">탄산수</label>
-  <br>
-  
-  ```
+## **날짜와 시간** 
 
-  - ## **날짜와 시간** 
+![date](https://user-images.githubusercontent.com/37058233/97585810-e5c22d00-1a3c-11eb-81c7-e97d5ba5cbf6.PNG)
 
-  ![date](https://user-images.githubusercontent.com/37058233/97585810-e5c22d00-1a3c-11eb-81c7-e97d5ba5cbf6.PNG)
+```html
+date 타입: <input type="date">
+<br><br>
+month 타입: <input type="month">
+<br><br>
+year 타입: <input type="year">
 
-  ```html
-  date 타입: <input type="date">
-  <br><br>
-  month 타입: <input type="month">
-  <br><br>
-  year 타입: <input type="year">
-  
-  <br><br>time 타입: <input type="time" value="09:00">
-  <br><br>
-  date time 타입: <input type="datetime" value="2016-09-09T09:00">
-  <br><br>
-  date time local 타입: <input type="datetime-local" value="2016-09-09T09:00">
-  ```
+<br><br>time 타입: <input type="time" value="09:00">
+<br><br>
+date time 타입: <input type="datetime" value="2016-09-09T09:00">
+<br><br>
+date time local 타입: <input type="datetime-local" value="2016-09-09T09:00">
+```
 
-  - ## **버튼** 
+## **버튼** 
 
-    submit , reset, image, button  은 클릭하면 js 로 넘어간다.
+submit , reset, image, button  은 클릭하면 js 로 넘어간다.
 
-  ![button](https://user-images.githubusercontent.com/37058233/97586160-4a7d8780-1a3d-11eb-8bcc-d2fba6eeedd9.PNG)
+![button](https://user-images.githubusercontent.com/37058233/97586160-4a7d8780-1a3d-11eb-8bcc-d2fba6eeedd9.PNG)
 
-  - ## **기타** : 
+## **기타** : 
 
-    색, 첨부파일
+색, 첨부파일
 
 ​	
 
