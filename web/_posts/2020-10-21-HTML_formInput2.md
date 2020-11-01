@@ -1,4 +1,4 @@
-# Form and Input - 태그 속성 , 기타
+# HTML FORM2
 
 #  input 태그 속성
 
@@ -15,7 +15,7 @@
 
 # 여러 데이터 나열하기 
 
-## **select, optgroup, option :** 
+## select, optgroup, option :
 
 - 드롭다운 목록 만들기
 
@@ -48,7 +48,7 @@ select, option, optgroup 실습<br>
 </select>
 ```
 
-## **datalist, option :** 
+## datalist, option :
 
 - datalist는 text field와 함께 사용이된다. 사용자가 데이터를 입력하면, 데이터 목록에 저장된 값이 뜬다. 그 값으로 선택 가능. 
 
@@ -64,7 +64,7 @@ datalist, option 태그
 </datalist>
 ```
 
-## **textarea :** 
+## textarea : 
 
 - 여러 줄 입력 텍스트
 
