@@ -17,6 +17,7 @@ description: >
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
 * [CSS BLOCK]{:.heading.flip-title} --- CSS 블록 속성
+* [CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
 
 ## JAVA
 
@@ -47,7 +48,8 @@ description: >
 [HTML FORM]: 2020-10-21-HTML_formInput/
 [CSS BASICS]: 2020-10-22-CSS기초/
 [CSS BLOCK]: 2020-10-27-CSS_블록/
-[CSS TEXT]: 2020-10-24-CSS_텍스트
+[CSS TEXT]: 2020-10-24-CSS_텍스트/
+[CSS POPUP]: 2020-10-28-CSS_모달창/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
 [JAVA OOP]: 2020-09-10-JAVA_OOP/
@@ -60,3 +62,4 @@ description: >
 [DB Basic Exercise]: 2020-10-09-DB_기초문제/
 [DB Operator]: 2020-10-10-DB_연산자/
 [DB function]: 2020-10-13-DB_함수/
+
