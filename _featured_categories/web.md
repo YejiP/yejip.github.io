@@ -19,6 +19,10 @@ description: >
 * [CSS BLOCK]{:.heading.flip-title} --- CSS 블록 속성
 * [CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
 
+## JAVASCRIPT
+
+- [JS BASICS]{:.heading.flip-title} --- Javascript 자료형, 기본문법
+
 ## JAVA
 
 * [JAVA basic]{:.heading.flip-title} --- very basic
@@ -50,6 +54,7 @@ description: >
 [CSS BLOCK]: 2020-10-27-CSS_블록/
 [CSS TEXT]: 2020-10-24-CSS_텍스트/
 [CSS POPUP]: 2020-10-28-CSS_모달창/
+[JS BASICS]: 2020-11-02-JS_BASICS/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
 [JAVA OOP]: 2020-09-10-JAVA_OOP/
