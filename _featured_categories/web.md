@@ -12,6 +12,7 @@ description: >
 ## HTML & CSS
 
 * [HTML TAGS]{:.heading.flip-title} --- HTML basic
+* [HTML IMAGEMAP]{:.heading.flip-title} --- 이미지 맵 간단 실습
 * [HTML FORM]{:.heading.flip-title} ---  HTML form input tags
 * [HTML FORM2]{:.heading.flip-title} ---  HTML input attributes , etc
 * [CSS BASICS]{:.heading.flip-title} --- CSS
@@ -47,6 +48,7 @@ description: >
 
 
 [HTML TAGS]: 2020-10-20-HTML_tag/
+[HTML IMAGEMAP]: 2020-10-20-HTML_이미지맵/
 [HTML FORM]: 2020-10-21-HTML_formInput/
 [HTML FORM2]: 2020-10-21-HTML_formInput2/
 [HTML FORM]: 2020-10-21-HTML_formInput/
@@ -54,6 +56,9 @@ description: >
 [CSS BLOCK]: 2020-10-27-CSS_블록/
 [CSS TEXT]: 2020-10-24-CSS_텍스트/
 [CSS POPUP]: 2020-10-28-CSS_모달창/
+
+
+
 [JS BASICS]: 2020-11-02-JS_BASICS/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
