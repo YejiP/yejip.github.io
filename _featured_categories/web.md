@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: WEB
 slug: web
 menu: true
