@@ -23,6 +23,7 @@ description: >
 ## JAVASCRIPT
 
 - [JS BASICS]{:.heading.flip-title} --- Javascript 자료형, 기본문법
+- [JS FUNCTIONS]{:.heading.flip-title} --- Javascript 함수 
 
 ## JAVA
 
@@ -57,9 +58,8 @@ description: >
 [CSS TEXT]: 2020-10-24-CSS_텍스트/
 [CSS POPUP]: 2020-10-28-CSS_모달창/
 
-
-
 [JS BASICS]: 2020-11-02-JS_BASICS/
+[JS FUNCTIONS]: 2020-11-03-JS_FUNC/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
 [JAVA OOP]: 2020-09-10-JAVA_OOP/
