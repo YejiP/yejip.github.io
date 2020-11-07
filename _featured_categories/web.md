@@ -17,7 +17,7 @@ description: >
 * [HTML FORM2]{:.heading.flip-title} ---  HTML input attributes , etc
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
-* [CSS Layout]{:.heading.flip-title} --- CSS 레이아웃
+* [CSS LAYOUT]{:.heading.flip-title} --- CSS 레이아웃 float, position
 * [CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
 
 ## JAVASCRIPT
@@ -55,7 +55,7 @@ description: >
 [HTML FORM2]: 2020-10-21-HTML_formInput2/
 [HTML FORM]: 2020-10-21-HTML_formInput/
 [CSS BASICS]: 2020-10-22-CSS기초/
-[CSS Layout]: 2020-10-27-CSS_레이아웃/
+[CSS LAYOUT]: 2020-10-27-CSS_레이아웃/
 [CSS TEXT]: 2020-10-24-CSS_텍스트/
 [CSS POPUP]: 2020-10-28-CSS_모달창/
 
