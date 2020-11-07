@@ -17,7 +17,6 @@ description: >
 * [HTML FORM2]{:.heading.flip-title} ---  HTML input attributes , etc
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
-* [CSS LAYOUT1]{:.heading.flip-title} --- CSS 포지셔닝과 속성들
 * [CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
 
 ## JAVASCRIPT
