@@ -9,8 +9,6 @@ description: >
 ---
 # WEB
 
-?
-
 ## HTML & CSS
 
 * [HTML TAGS]{:.heading.flip-title} --- HTML basic
