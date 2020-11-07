@@ -13,11 +13,12 @@ description: >
 
 * [HTML TAGS]{:.heading.flip-title} --- HTML basic
 * [HTML IMAGEMAP]{:.heading.flip-title} --- 이미지 맵 간단 실습
-* [HTML FORM]{:.heading.flip-title} ---  HTML form input tags
+* [HTML FORM1]{:.heading.flip-title} ---  HTML form input tags
 * [HTML FORM2]{:.heading.flip-title} ---  HTML input attributes , etc
 * [CSS BASICS]{:.heading.flip-title} --- CSS
 * [CSS TEXT]{:.heading.flip-title} --- CSS font와 text 속성
 * [CSS LAYOUT1]{:.heading.flip-title} --- CSS 포지셔닝과 속성들 
+* [CSS LAYOUT2]{:.heading.flip-title} --- CSS 다단과 테이블 
 * [CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
 
 ## JAVASCRIPT
@@ -51,10 +52,11 @@ description: >
 
 [HTML TAGS]: 2020-10-20-HTML_tag/
 [HTML IMAGEMAP]: 2020-10-20-HTML_이미지맵/
-[HTML FORM]: 2020-10-21-HTML_formInput/
+[HTML FORM1]: 2020-10-21-HTML_formInput/
 [HTML FORM2]: 2020-10-21-HTML_formInput2/
 [CSS BASICS]: 2020-10-22-CSS기초/
 [CSS LAYOUT1]: 2020-10-27-CSS_layout1/
+[CSS LAYOUT2]: 2020-10-27-CSS_layout2/
 [CSS TEXT]: 2020-10-24-CSS_텍스트/
 [CSS POPUP]: 2020-10-28-CSS_모달창/
 
