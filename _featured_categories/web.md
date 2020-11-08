@@ -25,7 +25,8 @@ description: >
 ## JAVASCRIPT
 
 - [JS BASICS]{:.heading.flip-title} --- Javascript 자료형, 기본문법
-- [JS FUNCTIONS]{:.heading.flip-title} --- Javascript 함수 
+- [JS FUNCTIONS]{:.heading.flip-title} --- JS 함수 기초내용
+- [JS FUNCTIONS2]{:.heading.flip-title} --- JS 내장 함수 (타이머 hands-on)
 - [JS ACCESS]{:.heading.flip-title} --- JS에서 html과 css 접근하기
 - [JS handsOn1]{:.heading.flip-title} --- 입력 데이터 출력 실습 
 
@@ -65,6 +66,7 @@ description: >
 
 [JS BASICS]: 2020-11-02-JS_BASICS/
 [JS FUNCTIONS]: 2020-11-03-JS_FUNC/
+[JS FUNCTIONS2]: 2020-11-03-JS_FUNC2/
 [JS ACCESS]: 2020-11-04-JS문서접근/
 [JS handsOn1]: 2020-11-04-JS_간단실습/
 [JAVA basic]: 2020-08-26-JAVAbasic/
