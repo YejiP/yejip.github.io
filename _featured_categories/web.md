@@ -15,9 +15,9 @@ description: >
 * [HTML IMAGEMAP]{:.heading.flip-title} --- 이미지 맵 간단 실습
 * [HTML FORM1]{:.heading.flip-title} ---  HTML form input tags
 * [HTML FORM2]{:.heading.flip-title} ---  HTML input attributes , etc
-* [CSS BASICS]{:.heading.flip-title} --- Display 속성, 테두리 속성
+* [CSS BASICS]{:.heading.flip-title} --- CSS 기초
 * [CSS TEXT]{:.heading.flip-title} --- font와 text 속성
-* [CSS BLOCK]{:.heading.flip-title} --- font와 text 속성
+* [CSS BLOCK]{:.heading.flip-title} --- Display 속성, 테두리 속성
 * [CSS LAYOUT1]{:.heading.flip-title} --- 포지셔닝과 속성들 
 * [CSS LAYOUT2]{:.heading.flip-title} --- 다단과 테이블 
 * [CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
