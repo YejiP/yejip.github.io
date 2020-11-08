@@ -30,7 +30,7 @@ description: >
 - [JS ACCESS]{:.heading.flip-title} --- JS에서 html과 css 접근하기
 - [JS handsOn1]{:.heading.flip-title} --- 입력 데이터 출력 실습 
 - [JS handsOn2]{:.heading.flip-title} --- n초 마다 사진 바꾸기
-- [JS handsOn3]{:.heading.flip-title} --- 페이지 간 interaction
+- [JS handsOn3]{:.heading.flip-title} --- 버튼위에 마우스 올려 사진 바꾸기
 
 ## JAVA
 
