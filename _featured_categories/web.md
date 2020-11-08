@@ -71,7 +71,7 @@ description: >
 [JS FUNCTIONS2]: 2020-11-03-JS_FUNC2/
 [JS ACCESS]: 2020-11-04-JS문서접근/
 [JS handsOn1]: 2020-11-04-JS_HO1/
-[JS handsOn2]: 2020-11-05-JS_HO2/
+[JS handsOn2]: 2020-11-06-JS_HO2/
 [JS handsOn3]: 2020-11-07-JS_HO3/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
