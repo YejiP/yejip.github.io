@@ -50,9 +50,9 @@ menu:
   - title:             About me
     url:               /about/
   - title:             Projects
-    url:               /project/index.html
+    url:               /project/
   - title:             WEB
-    url:               /web/
+    url:               /web/index2.html
   - title:             AWS(CDA)
     url:               /aws/
 
