@@ -52,7 +52,7 @@ menu:
   - title:             Projects
     url:               /project/
   - title:             WEB
-    url:               /web/index2.html
+    url:               /web/
   - title:             AWS(CDA)
     url:               /aws/
 
