@@ -55,28 +55,9 @@
                </script> <!--[if gt IE 8]><!---->
                <script>
 
-               window.onpageshow = function (event)
+               window.onpageshow = jsMain;
 
-               {
 
-               	if ( event.persisted || (window.performance && window.performance.navigation.type == 2))
-
-               	{
-
-               		alert('뒤로가기 클릭');
-                  jsMain();
-
-               	}
-
-               	else {
-
-               		alert('새로 열린 페이지');
-                  jsMain();
-
-               	}
-
-               }
-}
 function jsMain(){
   document.getElementById("html").style.display="block";
   document.getElementById("js").style.display="block";
