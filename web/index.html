@@ -59,7 +59,6 @@
           -moz-column-span : all;
           -ms-column-span : all;
           -o-column-span : all;}
-
       hr{
             -webkit-column-span : all;;
             -moz-column-span : all;
@@ -69,7 +68,6 @@
             width: 600px;
           }
       </style>
-
     <script>
   window.onload = function(){
     document.getElementById("html").style.display="block";
@@ -88,48 +86,38 @@
           document.getElementById("subject").innerHTML="ALL";
 
         }
-
         if(this.innerHTML=="JAVASCRIPT"){
           document.getElementById("java").style.display="none";
           document.getElementById("html").style.display="none";
           document.getElementById("db").style.display="none";
           document.getElementById("js").style.display="block";
           document.getElementById("subject").innerHTML="JAVASCRIPT";
-
         }
-
         if(this.innerHTML=="JAVA"){
           document.getElementById("java").style.display="block";
           document.getElementById("html").style.display="none";
           document.getElementById("db").style.display="none";
           document.getElementById("js").style.display="none";
           document.getElementById("subject").innerHTML="JAVA";
-
         }
-
         if(this.innerHTML=="DB"){
           document.getElementById("java").style.display="none";
           document.getElementById("html").style.display="none";
           document.getElementById("db").style.display="block";
           document.getElementById("js").style.display="none";
           document.getElementById("subject").innerHTML="DB";
-
         }
         if(this.innerHTML=="HTML&amp;CSS"){
           document.getElementById("java").style.display="none";
           document.getElementById("html").style.display="block";
           document.getElementById("db").style.display="none";
           document.getElementById("js").style.display="none";
-          document.getElementById("subject").innerHTML="HTML&CSS";
-
         }
+        document.getElementById("subject").innerHTML="HTML&CSS";
             }
     }
-
   }
-
 </script>
-
   </head>
   <body>
       <div class="wrapper">
@@ -145,7 +133,6 @@ ALL
 <a href="#"><div class="title">JAVA</div></a>
 <a href="#"><div class="title">DB</div></a>
 <a href="#"><div class="title">ALL</div></a>
-
 </div>
 <div class="rightCol">
 <div class="contents"  id="html">
