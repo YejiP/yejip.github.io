@@ -13,43 +13,69 @@ description: >
 # HTML & CSS
 
 •	[HTML TAGS]{:.heading.flip-title} --- HTML basic
+
 •	[HTML IMAGEMAP]{:.heading.flip-title} --- 이미지 맵 간단 실습
+
 •	[HTML FORM1]{:.heading.flip-title} --- HTML form input tags
+
 •	[HTML FORM2]{:.heading.flip-title} --- HTML input attributes , etc
+
 •	[CSS BASICS]{:.heading.flip-title} --- CSS 기초
+
 •	[CSS TEXT]{:.heading.flip-title} --- font와 text 속성
+
 •	[CSS BLOCK]{:.heading.flip-title} --- Display 속성, 테두리 속성
+
 •	[CSS LAYOUT1]{:.heading.flip-title} --- 포지셔닝과 속성들 
+
 •	[CSS LAYOUT2]{:.heading.flip-title} --- 다단과 테이블 
+
 •	[CSS POPUP]{:.heading.flip-title} --- POPUP(모달창) 실습
 
 # JAVASCRIPT
 
 •	[JS BASICS]{:.heading.flip-title} --- Javascript 자료형, 기본문법
+
 •	[JS FUNCTIONS]{:.heading.flip-title} --- JS 함수 기초내용
+
 •	[JS FUNCTIONS2]{:.heading.flip-title} --- JS 내장 함수 (타이머 hands-on)
+
 •	[JS ACCESS]{:.heading.flip-title} --- JS에서 html과 css 접근하기
+
 •	[JS handsOn1]{:.heading.flip-title} --- 입력 데이터 출력 실습 
+
 •	[JS handsOn2]{:.heading.flip-title} --- n초 마다 사진 바꾸기
+
 •	[JS handsOn3]{:.heading.flip-title} --- 버튼위에 마우스 올려 사진 바꾸기
+
 •	[JS handsOn4]{:.heading.flip-title} --- 버튼위에 마우스 올려 사진 바꾸기2
 
 # JAVA
 
 •	[JAVA basic]{:.heading.flip-title} --- very basic
+
 •	[JAVA thread]{:.heading.flip-title} --- thread
+
 •	[JAVA class]{:.heading.flip-title} --- JAVA class
+
 •	[JAVA OOP]{:.heading.flip-title} --- Object Oriented Programming
+
 •	[JAVA API]{:.heading.flip-title} --- API
+
 •	[JAVA Collection]{:.heading.flip-title} --- Data structure
+
 •	[JAVA Exception]{:.heading.flip-title} --- Exception
+
 •	[JAVA File I/O]{:.heading.flip-title} --- File input and output
 
 # DB
 
 •	[DB Basics]{:.heading.flip-title} --- basic of DB
+
 •	[DB Basic Exercise]--- Some problems
+
 •	[DB Operator]--- DB Operator
+
 •	[DB function]--- DB Function
 
 
