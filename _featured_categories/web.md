@@ -8,8 +8,8 @@ order: 3
 description: >
 
 ---
-<!DOCTYPE html>
 <html lang="ko" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>Web study</title>
@@ -185,6 +185,7 @@ ALL
 </div>
 </body>
 </html>
+
 
 [HTML TAGS]:/2020-10-20-HTML_tag.md">
 [HTML IMAGEMAP]: 2020-10-20-HTML_이미지맵.md">
