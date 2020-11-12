@@ -31,6 +31,7 @@ description: >
 - [JS handsOn1]{:.heading.flip-title} --- 입력 데이터 출력 실습 
 - [JS handsOn2]{:.heading.flip-title} --- n초 마다 사진 바꾸기
 - [JS handsOn3]{:.heading.flip-title} --- 버튼위에 마우스 올려 사진 바꾸기
+- [JS handsOn4]{:.heading.flip-title} --- 버튼위에 마우스 올려 사진 바꾸기2
 
 ## JAVA
 
@@ -73,6 +74,7 @@ description: >
 [JS handsOn1]: 2020-11-04-JS_HO1/
 [JS handsOn2]: 2020-11-06-JS_HO2/
 [JS handsOn3]: 2020-11-07-JS_HO3/
+[JS handsOn4]: 2020-11-07-JS_HO4/
 [JAVA basic]: 2020-08-26-JAVAbasic/
 [JAVA thread]: 2020-09-02-JAVA_Thread/
 [JAVA OOP]: 2020-09-10-JAVA_OOP/

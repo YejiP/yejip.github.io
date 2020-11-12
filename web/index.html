@@ -1,1 +1,253 @@
-되누?
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web study</title>
+
+    <style>
+    body{
+      background-color : #fff;
+    }
+
+      div.wrapper{
+        -webkit-colum-count : 2;
+        -moz-column-count:2;
+        -o-column-count :2;
+        column-count: 2;
+        padding : 30px;
+        width: 500px;
+      }
+
+      div.title{
+        width : 200px;
+        height : 70px;
+        margin : 10px;
+        font-size : 1.2em;
+        font-weight : bold;
+      }
+      div.contents{
+        display : none;
+        font-size: 1.2em;
+        line-height: 3;
+        font-weight: bold;
+        color :#161109;
+      }
+      a:link{
+        color : #7477bc;
+      }
+
+      a:hover{
+        color : #f0e4d8;
+      }
+      a:visited{
+        color : gray;
+      }
+
+      div.leftCol{
+        break-after : column;
+        -webkit-break-after : column;
+        -moz-break-after : column;
+        -ms-break-after : column;
+        -o-break-after : column;}
+
+        div#subject{
+          margin: 0 auto;
+          width: 600px;
+          height: 180px;
+          color :#3d314e ;
+          column-span : all;
+          font-size: 4em;
+          line-height: 2em;
+          font-weight: bolder;
+          text-align: center;
+          -webkit-column-span : all;;
+          -moz-column-span : all;
+          -ms-column-span : all;
+          -o-column-span : all;}
+
+          hr{
+            -webkit-column-span : all;;
+            -moz-column-span : all;
+            -ms-column-span : all;
+            -o-column-span : all;
+            border : 1px double #3d314e;
+            width: 600px;
+          }
+
+
+
+      </style>
+
+    <script>
+  window.onload = function(){
+    document.getElementById("html").style.display="block";
+    document.getElementById("js").style.display="block";
+    document.getElementById("java").style.display="block";
+    document.getElementById("db").style.display="block";
+    document.getElementById("subject").innerHTML="ALL";
+    var checked = document.getElementsByClassName("title")
+    for( var j =0;j<checked.length;j++){
+      checked[j].onmouseover= function(){
+        if(this.innerHTML=="ALL"){
+          document.getElementById("html").style.display="block";
+          document.getElementById("js").style.display="block";
+          document.getElementById("java").style.display="block";
+          document.getElementById("db").style.display="block";
+          document.getElementById("subject").innerHTML="ALL";
+
+        }
+
+        if(this.innerHTML=="JAVASCRIPT"){
+          document.getElementById("java").style.display="none";
+          document.getElementById("html").style.display="none";
+          document.getElementById("db").style.display="none";
+          document.getElementById("js").style.display="block";
+          document.getElementById("subject").innerHTML="JAVASCRIPT";
+
+        }
+
+        if(this.innerHTML=="JAVA"){
+          document.getElementById("java").style.display="block";
+          document.getElementById("html").style.display="none";
+          document.getElementById("db").style.display="none";
+          document.getElementById("js").style.display="none";
+          document.getElementById("subject").innerHTML="JAVA";
+
+        }
+
+        if(this.innerHTML=="DB"){
+          document.getElementById("java").style.display="none";
+          document.getElementById("html").style.display="none";
+          document.getElementById("db").style.display="block";
+          document.getElementById("js").style.display="none";
+          document.getElementById("subject").innerHTML="DB";
+
+        }
+        if(this.innerHTML=="HTML&amp;CSS"){
+          document.getElementById("java").style.display="none";
+          document.getElementById("html").style.display="block";
+          document.getElementById("db").style.display="none";
+          document.getElementById("js").style.display="none";
+          document.getElementById("subject").innerHTML="HTML&CSS";
+
+        }
+            }
+    }
+
+  }
+
+</script>
+
+  </head>
+  <body>
+      <div class="wrapper">
+    <div id="subject">
+ALL
+    </div> <hr>
+
+
+<div class="leftCol">
+  <br>
+<a href="#"><div class="title">HTML&CSS</div></a>
+<a href="#"><div class="title">JAVASCRIPT</div></a>
+<a href="#"><div class="title">JAVA</div></a>
+<a href="#"><div class="title">DB</div></a>
+<a href="#"><div class="title">ALL</div></a>
+
+</div>
+<div class="rightCol">
+<div class="contents"  id="html">
+  <pre>
+  * [HTML TAGS] HTML basic
+  * [HTML IMAGEMAP] 이미지 맵 간단 실습
+  * [HTML FORM1]  HTML form input tags
+  * [HTML FORM2]  HTML input attributes , etc
+  * [CSS BASICS] CSS 기초
+  * [CSS TEXT] font와 text 속성
+  * [CSS BLOCK] Display 속성, 테두리 속성
+  * [CSS LAYOUT1] 포지셔닝과 속성들
+  * [CSS LAYOUT2] 다단과 테이블
+  * [CSS POPUP] POPUP(모달창) 실습
+  </pre>
+</div>
+<div class="contents"  id="js">
+<pre>
+- [JS BASICS] Javascript 자료형, 기본문법
+- [JS FUNCTIONS] JS 함수 기초내용
+- [JS FUNCTIONS2] JS 내장 함수 (타이머 hands-on)
+- [JS ACCESS] JS에서 html과 css 접근하기
+- [JS handsOn1] 입력 데이터 출력 실습
+- [JS handsOn2] n초 마다 사진 바꾸기
+- [JS handsOn3] 버튼위에 마우스 올려 사진 바꾸기
+</pre></div>
+
+
+
+
+
+<div class="contents"  id="java">
+<pre>
+* [JAVA basic] very basic
+* [JAVA thread] thread
+* [JAVA class] JAVA class
+* [JAVA OOP] Object Oriented Programming
+* [JAVA API] API
+* [JAVA Collection] Data structure
+* [JAVA Exception] Exception
+* [JAVA File I/O] File input and output
+</pre>
+
+</div>
+
+
+<div class="contents" data-id = "db" id="db">
+<pre>
+- [DB Basics] basic of DB
+- [DB Basic Exercise]--- Some problems
+- [DB Operator]--- DB Operator
+- [DB function]--- DB Function
+</pre></div>
+
+
+
+
+<div class="block">
+  <div class="contents">
+  <pre>
+[HTML TAGS]:/2020-10-20-HTML_tag.md">
+[HTML IMAGEMAP]: 2020-10-20-HTML_이미지맵.md">
+[HTML FORM1]: 2020-10-21-HTML_formInput.md">
+[HTML FORM2]: 2020-10-21-HTML_formInput2.md">
+[CSS BASICS]: 2020-10-22-CSS기초.md">
+[CSS BLOCK]: 2020-10-26-CSS_블록.md">
+[CSS LAYOUT1]: 2020-10-27-CSS_layout1.md">
+[CSS LAYOUT2]: 2020-10-27-CSS_layout2.md">
+[CSS TEXT]: 2020-10-24-CSS_텍스트.md">
+[CSS POPUP]: 2020-10-28-CSS_모달창.md">
+
+[JS BASICS]: 2020-11-02-JS_BASICS.md">
+[JS FUNCTIONS]: 2020-11-03-JS_FUNC.md">
+[JS FUNCTIONS2]: 2020-11-03-JS_FUNC2.md">
+[JS ACCESS]: 2020-11-04-JS문서접근.md">
+[JS handsOn1]: 2020-11-04-JS_HO1.md">
+[JS handsOn2]: 2020-11-06-JS_HO2.md">
+[JS handsOn3]: 2020-11-07-JS_HO3.md">
+[JAVA basic]: 2020-08-26-JAVAbasic.md">
+[JAVA thread]: 2020-09-02-JAVA_Thread.md">
+[JAVA OOP]: 2020-09-10-JAVA_OOP.md">
+[JAVA class]: 2020-09-07-JAVA_Class.md">
+[JAVA API]: 2020-09-15-JAVA_API.md">
+[JAVA Collection]: 2020-09-23-JAVA_Colletion.md">
+[JAVA Exception]: 2020-09-25-JAVA_Exception.md">
+[JAVA File I.md">O]: 2020-09-29-JAVA_FileIO.md">
+[DB Basics]: 2020-10-08-DB_Basics.md">
+[DB Basic Exercise]: 2020-10-09-DB_기초문제.md">
+[DB Operator]: 2020-10-10-DB_연산자.md">
+[DB function]: 2020-10-13-DB_함수.md">
+</pre></div>
+
+</div>
+  </div>
+</div>
+</body>
+</html>
