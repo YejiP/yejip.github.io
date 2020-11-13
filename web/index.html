@@ -52,8 +52,6 @@
       <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS">
       <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
       <link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
-      <link rel="preload" href="webInd.css?ver=1" as="style" />
-      <script src="webInd.js?ver=1" rel="preload"></script>
 
       <script> ! function(e, t) {
     "use strict";
@@ -831,8 +829,9 @@ div#subject{
 </style>
       <link rel="preload" as="style" href="/assets/css/hydejack-8.5.2.css" id="_stylePreload">
       <link rel="preload" as="style" href="/assets/icomoon/style.css" id="_iconsPreload">
+      <link rel="preload" as="style" href="webInd.css?ver=1" id="_webPreload">
       <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
-      <script>setRel('_stylePreload');setRel('_iconsPreload');/**/setRel('_fontsPreload');/**/</script>
+      <script>setRel('_stylePreload');setRel('_iconsPreload');/**/setRel('_fontsPreload');setRel('_webPreload');/**/</script>
       <noscript>
          <link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css">
          <link rel="stylesheet" href="/assets/icomoon/style.css">
@@ -961,7 +960,7 @@ div#subject{
          </hy-drawer>
          <hr class="sr-only" hidden />
       </hy-push-state>
-      <!--[if gt IE 10]><!----> <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}(); </script> <script type="module" src="/assets/js/hydejack-8.5.2.js"></script> <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script> <script>!function(w, d) { w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; /**/ ga('create', 'UA-182113325-1', 'auto'); /**/ var pushStateEl = d.getElementsByTagName('hy-push-state')[0]; var timeoutId; pushStateEl.addEventListener('hy-push-state-load', function() { w.clearTimeout(timeoutId); timeoutId = w.setTimeout(function() { ga('set', 'page', w.location.pathname); ga('send', 'pageview'); }, 500); }); d.addEventListener('hy--cookies-ok', function () { w.ga(function(tracker) { w.ga("set", "anonymizeIp", undefined); localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId")); }); }); w.loadJSDeferred('https://www.google-analytics.com/analytics.js'); }(window, document);</script> <!--<![endif]-->
+      <!--[if gt IE 10]><!----> <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}(); </script> <script type="module" src="/assets/js/hydejack-8.5.2.js"></script><script  src ="webInd.js"></script> <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script> <script>!function(w, d) { w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; /**/ ga('create', 'UA-182113325-1', 'auto'); /**/ var pushStateEl = d.getElementsByTagName('hy-push-state')[0]; var timeoutId; pushStateEl.addEventListener('hy-push-state-load', function() { w.clearTimeout(timeoutId); timeoutId = w.setTimeout(function() { ga('set', 'page', w.location.pathname); ga('send', 'pageview'); }, 500); }); d.addEventListener('hy--cookies-ok', function () { w.ga(function(tracker) { w.ga("set", "anonymizeIp", undefined); localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId")); }); }); w.loadJSDeferred('https://www.google-analytics.com/analytics.js'); }(window, document);</script> <!--<![endif]-->
       <h2 class="sr-only" hidden>Templates (for web app):</h2>
       <template id="_animation-template" hidden>
          <div class="animation-main fixed-top">
