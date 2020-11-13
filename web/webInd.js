@@ -2,14 +2,11 @@ window.addEventListener('load', function(){
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
   jsMain(); });
 
-window.onpageshow = function(event) {
 
-   if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-       jsMain();
+  window.addEventListener('onpageshow', function(){
+    document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
+    jsMain(); });
 
-   }
-
-};
 
 
 
