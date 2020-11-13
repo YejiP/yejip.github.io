@@ -29,17 +29,14 @@
       <meta property="og:site_name" content="Yeji ‘Charlene’" />
       <script type="application/ld+json"> {"description":"Welcome to my blog","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://yejip.github.io/Portfolio/assets/icons/icon.png"},"name":"<firstname> <lastname>"},"headline":"WEB","author":{"@type":"Person","name":"<firstname> <lastname>"},"url":"https://yejip.github.io/Portfolio/web/","@context":"https://schema.org"}</script>
         <script>
-        window.addEventListener('DOMContentLoaded', function(){
+        window.addEventListener('load', function(){
           document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
           jsMain(); });
 
         window.onpageshow = function(event) {
 
            if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-
-               alert("돼?")
                jsMain();
-
 
            }
 
