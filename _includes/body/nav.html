@@ -9,6 +9,7 @@
           href="{% include smart-url.txt url=url %}"
           class="sidebar-nav-item{% if page.url contains url %} active{% endif %}"
           {% if node.rel %}rel="{{ node.rel }}"{% endif %}
+          onClick="window.location.reload()"
         >
           {{ node.name | default:node.title }}
         </a>
