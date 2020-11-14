@@ -1,12 +1,11 @@
-window.addEventListener('load', function(){
+window.addEventListener('DOMContentLoaded', function(){
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
   jsMain(); });
 
-
-  window.addEventListener('onpageshow', function(){
-    document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
-    jsMain(); });
-
+    window.addEventListener('pageshow', function(event) {
+      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
+      jsMain();
+    });
 
 
 
