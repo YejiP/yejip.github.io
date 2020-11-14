@@ -17,9 +17,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta http-equiv="Expires" content="-1">
-      <meta http-equiv="Pragma" content="no-cache">
-      <meta http-equiv="Cache-Control" content="No-Cache">
+
       <title>WEB | Yeji ‘Charlene’</title>
       <meta name="generator" content="Jekyll v3.9.0" />
       <meta property="og:title" content="WEB" />
@@ -56,18 +54,8 @@
       <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
       <link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
       <script>
-      window.addEventListener('DOMContentLoaded', function(){
-        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
-        jsMain(); });
-
-          window.addEventListener('pageshow', function(event) {
-            document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
-            jsMain();
-          });
-
-
-
       function jsMain(){
+        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
       document.getElementById("html").style.display="block";
       document.getElementById("js").style.display="block";
       document.getElementById("java").style.display="block";
@@ -920,7 +908,7 @@ div#subject{
 
       </style>
       <!--<![endif]-->
-   <body class="no-color-transition">
+   <body onpageshow="jsMain()" class="no-color-transition">
 
 
       <div id="_navbar" class="navbar fixed-top">
