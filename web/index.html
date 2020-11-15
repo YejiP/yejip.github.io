@@ -862,8 +862,11 @@ div#subject{
 
       </style>
       <!--<![endif]-->
-   <body class="no-color-transition" onload="onall()">
+   <body class="no-color-transition">
      <script language="javascript">
+     window.onpageshow = function(event){
+     onall();
+   }
      function onhtml(){
        document.getElementById("java").style.display="none";
        document.getElementById("html").style.display="block";
@@ -901,36 +904,7 @@ div#subject{
        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
      }
 
-     function jsMain(){
-     window.onload = function(event){
-     document.getElementById("html").style.display="block";
-     document.getElementById("js").style.display="block";
-     document.getElementById("java").style.display="block";
-     document.getElementById("db").style.display="block";
-     document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
-     var checked = document.getElementsByClassName("title")
-     for( var j =0;j<checked.length; j++){
-     checked[j].onmouseover= function(){
-     if(this.innerHTML=="ALL"){
-       onall();
-     }
-     if(this.innerHTML=="JAVASCRIPT"){
-       onjs();
 
-     }
-     if(this.innerHTML=="JAVA"){
-     onjava();
-     }
-     if(this.innerHTML=="DB"){
-     ondb();
-     }
-     if(this.innerHTML=="HTML&amp;CSS"){
-       onhtml();
-     }
-     }
-     }
-}
- }
 </script>
 
       <div id="_navbar" class="navbar fixed-top">
