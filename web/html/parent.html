@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<style>
+div.wrapper {
+   width : 800px;
+   height : 600px;
+   margin : 0 auto;
+   text-align: center;
+}
+input[type=text]{
+  background-color : pink
+}
+table{
+  margin : 0 auto;
+}
+</style>
+
+<script>
+window.onload = function(){
+  document.getElementById("newwin").onclick = function(){
+    window.open("child.html","","width=600px,height=400px,top=200px;");
+  }
+
+};
+</script>
+  </head>
+  <body>
+    <div class="wrapper">
+<div id="target"><br>
+  <h1>부모창</h1>
+  <table>
+    <tr>
+      <td><label>아이디: </td>
+        <td><input type="text" id="userid" name="" value="" readonly></label></td>
+    </tr>
+    <tr>
+      <td><label>이름 : </td>
+        <td><input type="text" id="username" name="" value="" readonly></label></td>
+    </tr>
+  </table><br>
+  <input id="newwin" type="button" name="" value="새창열기">
+  <input type="button" name="" value="인쇄"  onclick="window.print();">
+</div>
+    </div>
+  </body>
+</html>
