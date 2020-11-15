@@ -58,8 +58,7 @@
       <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
       <link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
       <script>
-      window.onhaschange = jsMain();
-
+      window.onpageshow(jsMain());
       function jsMain(){
       window.onload = function(event){
       document.getElementById("html").style.display="block";
@@ -914,7 +913,7 @@ div#subject{
 
       </style>
       <!--<![endif]-->
-   <body class="no-color-transition">
+   <body class="no-color-transition"  onhashchange="setTimeout(window.location.reload.bind(window.location), 2);">
 
 
       <div id="_navbar" class="navbar fixed-top">
