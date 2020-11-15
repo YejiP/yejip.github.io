@@ -867,6 +867,10 @@ div#subject{
      window.onpageshow = function(event){
      onall();
    }
+   if(document.getElementById("subject")=="&nbsp;&nbsp;Subject?"){
+     onall();
+   }
+
      function onhtml(){
        document.getElementById("java").style.display="none";
        document.getElementById("html").style.display="block";
@@ -917,8 +921,7 @@ div#subject{
          <main id="_main" class="content fade-in layout-page" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(254, 230, 255)" data-image="/assets/img/sidebar-bg.jpg" data-overlay >
 
             <article class="page" role="article">
-              <div id="subject">
-              &nbsp;&nbsp;Subject?</div><hr>
+              <div id="subject">&nbsp;&nbsp;Subject?</div><hr>
               <div class="wrapper">
 
 
