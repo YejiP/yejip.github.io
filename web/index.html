@@ -862,9 +862,8 @@ div#subject{
 
       </style>
       <!--<![endif]-->
-   <body class="no-color-transition"  onhashchange="window.location.reload.bind(window.location);">
+   <body class="no-color-transition" onload="onall()">
      <script language="javascript">
-     window.onpageshow(jsMain());
      function onhtml(){
        document.getElementById("java").style.display="none";
        document.getElementById("html").style.display="block";
