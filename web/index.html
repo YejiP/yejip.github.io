@@ -58,10 +58,9 @@
       <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
       <link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
       <script>
-      window.onpageshow = jsMain();
+      window.onhaschange = jsMain();
 
       function jsMain(){
-        console.log("done")
       window.onload = function(event){
       document.getElementById("html").style.display="block";
       document.getElementById("js").style.display="block";
