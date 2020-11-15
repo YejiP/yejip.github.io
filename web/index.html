@@ -59,55 +59,43 @@
       <link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
       <script>
       window.onpageshow(jsMain());
-      function jsMain(){
-      window.onload = function(event){
-      document.getElementById("html").style.display="block";
-      document.getElementById("js").style.display="block";
-      document.getElementById("java").style.display="block";
-      document.getElementById("db").style.display="block";
-      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
-      var checked = document.getElementsByClassName("title")
-      for( var j =0;j<checked.length; j++){
-      checked[j].onmouseover= function(){
-      if(this.innerHTML=="ALL"){
-      document.getElementById("html").style.display="block";
-      document.getElementById("js").style.display="block";
-      document.getElementById("java").style.display="block";
-      document.getElementById("db").style.display="block";
-      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
+      function onhtml(){
+        document.getElementById("java").style.display="none";
+        document.getElementById("html").style.display="block";
+        document.getElementById("db").style.display="none";
+        document.getElementById("js").style.display="none";
+        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;HTML&CSS";
+      }
+      function onjs(){
+        document.getElementById("java").style.display="none";
+        document.getElementById("html").style.display="none";
+        document.getElementById("db").style.display="none";
+        document.getElementById("js").style.display="block";
+        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVASCRIPT";
+      }
+      function onjava(){
+        document.getElementById("java").style.display="block";
+        document.getElementById("html").style.display="none";
+        document.getElementById("db").style.display="none";
+        document.getElementById("js").style.display="none";
+        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVA";
+      }
+      function ondb(){
+        document.getElementById("java").style.display="none";
+        document.getElementById("html").style.display="none";
+        document.getElementById("db").style.display="block";
+        document.getElementById("js").style.display="none";
+        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;DB";
+      }
 
+      function onall(){
+        document.getElementById("html").style.display="block";
+        document.getElementById("js").style.display="block";
+        document.getElementById("java").style.display="block";
+        document.getElementById("db").style.display="block";
+        document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
       }
-      if(this.innerHTML=="JAVASCRIPT"){
-      document.getElementById("java").style.display="none";
-      document.getElementById("html").style.display="none";
-      document.getElementById("db").style.display="none";
-      document.getElementById("js").style.display="block";
-      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVASCRIPT";
-      }
-      if(this.innerHTML=="JAVA"){
-      document.getElementById("java").style.display="block";
-      document.getElementById("html").style.display="none";
-      document.getElementById("db").style.display="none";
-      document.getElementById("js").style.display="none";
-      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVA";
-      }
-      if(this.innerHTML=="DB"){
-      document.getElementById("java").style.display="none";
-      document.getElementById("html").style.display="none";
-      document.getElementById("db").style.display="block";
-      document.getElementById("js").style.display="none";
-      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;DB";
-      }
-      if(this.innerHTML=="HTML&amp;CSS"){
-      document.getElementById("java").style.display="none";
-      document.getElementById("html").style.display="block";
-      document.getElementById("db").style.display="none";
-      document.getElementById("js").style.display="none";
-      document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;HTML&CSS";}
-      }
-      }
-}
-  }
+
       </script>
 
       <script> ! function(e, t) {
@@ -932,11 +920,11 @@ div#subject{
 
 
                <div class="leftCol">
-                 <a href = #html><div class="title">HTML&CSS</div></a>
-                 <a href = #js><div class="title">JAVASCRIPT</div></a>
-                 <a href = #java><div class="title">JAVA</div></a>
-                 <a href = #db><div class="title">DB</div></a>
-                 <a  href = #all><div class="title">ALL</div></a></div>
+                 <a onmouseover="onhtml()" ><div class="title">HTML&CSS</div></a>
+                 <a onmouseover="onjs()" ><div class="title">JAVASCRIPT</div></a>
+                 <a onmouseover="onjava()" ><div class="title">JAVA</div></a>
+                 <a onmouseover ="ondb()"><div class="title">DB</div></a>
+                 <a onmouseover="onall()" ><div class="title">ALL</div></a></div>
 
 
 <div class="rightCol">
