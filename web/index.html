@@ -58,9 +58,8 @@
       <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
       <link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
       <script>
-      window.onpopstate = jsMain;
+      window.onpopstate = setTimeout(jsMain, 2);
       function jsMain(){
-      window.onload = function(){
       document.getElementById("html").style.display="block";
       document.getElementById("js").style.display="block";
       document.getElementById("java").style.display="block";
@@ -106,7 +105,8 @@
       document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;HTML&CSS";}
       }
       }
-    }}
+
+  }
       </script>
 
       <script> ! function(e, t) {
