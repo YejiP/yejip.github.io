@@ -47,9 +47,9 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 - **guestbookDao.java** : DB에 저장될 데이터를 처리할 함수 이름이 있는 interface다.
 
-- **guestbookMapper.java** : interface를 .class로 가져와 그것의 함수를 사용해 
+- **guestbookMapper.java** : @Repository 객체다. interface를 .class로 가져와 그것의 함수를 사용한다.
 
-- **guestbookController.java** : guestbookMapper를 객체로 만들어 이용한다. 
+- **guestbookController.java** : @Controller 객체다.  guestbookMapper를 객체로 만들어 이용한다. 
 
 - **guestBookVO.java** : DB에 저장될 데이터를 value object로 표현한 것이다.
 
@@ -81,7 +81,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 ![javaflow](https://user-images.githubusercontent.com/37058233/99527958-eec17100-29e0-11eb-9698-9ff87f103993.PNG)
 
-- **guestbookMapper** 에서 **guestbookDao** 인터페이스를 사용한 함수를 만들어 데이터를 전달한다. 
+- **guestbookMapper**인 repository 객체 에서 **guestbookDao** 인터페이스를 사용한 함수를 만들어 데이터를 전달한다. 
 
   ```java
   @Autowired
