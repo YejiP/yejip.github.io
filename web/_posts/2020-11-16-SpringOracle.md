@@ -61,7 +61,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 ## **Oracle SQL 정보를 root-context.xml에 넘김**
 
-- db.properites 에 oracle SQL 에 접근할 수 있는 정보가 들어있다. 이 파일을 root-context.xml에 넣어주면 spring 프로젝트에서 oracle SQL에 접근할 수 있다.
+- **db.properites** 에 oracle SQL 에 접근할 수 있는 정보가 들어있다. 이 파일을 **root-context.xml**에 넣어주면 spring 프로젝트에서 oracle SQL에 접근할 수 있다.
 
 ![dbflow](https://user-images.githubusercontent.com/37058233/99527963-f08b3480-29e0-11eb-92e1-2102fda5b247.PNG)
 
@@ -71,9 +71,9 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 - mybatis는 java 객체와 SQL 객체가 자동매핑할 수 있게 도와주는 프레임워크다.
 
-- 이때 guestbookDao.java 가 인터페이스로 중요한 역할을 한다. 
+- 이때 **guestbookDao.java** 가 인터페이스로 중요한 역할을 한다. 
 
-- guestbookDao.java 파일의 함수가 호출되면 이 함수와 매치되는 guestbook.xml의 쿼리문이 실행되는 느낌이다. 따라서 SQL에 접근할 수 있게 된다.
+- **guestbookDao.java** 파일의 함수가 호출되면 이 함수와 매치되는 **guestbook.xml**의 쿼리문이 실행되는 느낌이다. 따라서 SQL에 접근할 수 있게 된다.
 
   ![daoGuestbook](https://user-images.githubusercontent.com/37058233/99536221-69908900-29ed-11eb-874b-c2b0b99f222f.PNG)
 
@@ -81,7 +81,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 ![javaflow](https://user-images.githubusercontent.com/37058233/99527958-eec17100-29e0-11eb-9698-9ff87f103993.PNG)
 
-- guestbookMapper.java 에서 guestbookDao의 인터페이스를 사용한 함수를 만들어 데이터를 전달한다. 
+- **guestbookMapper** 에서 **guestbookDao** 인터페이스를 사용한 함수를 만들어 데이터를 전달한다. 
 
   ```java
   @Autowired
@@ -93,7 +93,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
   }
   ```
 
-- GuestbookController에서 guestbookMapper의 객체를 만들어 데이터를 저장하고 읽는 등의 행위를 한다.
+- **GuestbookController**에서 **guestbookMapper**의 객체를 만들어 데이터를 저장하고 읽는 등의 행위를 한다.
 
   ```java
   @Autowired
