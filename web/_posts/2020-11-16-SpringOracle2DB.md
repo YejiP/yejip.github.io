@@ -1,5 +1,13 @@
 # Spring과 Oracle db 연결 - DB 설정
 
+## **1. tomcat server.xml 의 포트를 바꿔준다. (oracle db랑 포트 번호가 겹쳐서)**
+
+tomcat server.xml의 port 번호 바꿔준다. 기본 : 8080 => 사용자 설정 : 8089...
+
+oracle이 8080(외부에서 접근)과 1521(내부에서 테이블 접근)를 사용하기 때문에 
+
+
+
 # 인터페이스(.java)
 
 - src/main/java에 package sesco.intern.guestbook2.dao
@@ -75,3 +83,21 @@ public class GuestbookMapper{
     }
 }
 ```
+
+
+
+interface 와 mapper 파일, or
+
+마이바티스를 사용하기 위한 기본적인 자바 인터페이스는 SqlSession이다. 이 인터페이스를 통해 명령어를 실행하고 매퍼를 얻으며 트랜잭션을 관리 할 수 있다
+
+5. **interface**에서 insertGuest 함수 만들어 param으로 타입 명시. (구현은 안한다. 그게 인터페이스니까.)
+
+6. . (spring 프로그램 말고 잠시 oracle로)
+
+7. GuestbookMapper.java 에서 interface를 .class로 받아서 (implements가 아니라) sessionsqlSession으로 정보를 넘긴다. 
+
+인터페이스를 
+
+- @Controller에서 받은 데이터를 mybatis와 연결해주는 클래스인 @Repository를 통해 전달한다.
+
+- mybatis는 그럼 oracle db와 정보를 주고 받는다. 연동해주는 클래스는 sqlSession이다.

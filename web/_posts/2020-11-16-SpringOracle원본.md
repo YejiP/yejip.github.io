@@ -235,30 +235,6 @@ public interface GuestbookDao{
 
 DAO: Database Access Object
 
-# sql테이블 - Oracle SQL
-
-- Oracle sql에 접속해 아래와 같이 테이블을 생성한다. 스프링에서는 insert update delete한다.
-
-- 참고로 쿼리 문들은 증거물로 남겨놓는게 좋다.
-
-```
-drop table guestbook;
-drop sequence guestbook_seq;
-
-create table guestbook 
-(
-	seqno number constraint guestbook_no_pk primary key, 
-	username varchar2(30) constraint guestbook_name_nn not null, 
-	password varchar2(30),
-	"content" varchar2(3000),
-	regdate date default sysdate
-);
-
-create sequence guestbook_seq;
-
-);
-```
-
 # GuestbookMapper.java
 
 - sesoc.intern.guestbook2.dao 패키지
