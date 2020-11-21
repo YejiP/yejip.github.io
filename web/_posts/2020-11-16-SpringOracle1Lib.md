@@ -1,10 +1,58 @@
-# Spring과 Oracle db 연결 - library 추가
+# Spring과 Oracle DB 연결 - library 추가
 
-이 글에선 아래 빨간 박스안에 있는 파일들을 어떻게 설정하고 만드는지를 볼 것이다.설정을 먼저 할 것이다. 
+- 이 글에선 아래 빨간 박스안에 있는 파일들을 어떻게 설정하고 만드는지를 볼 것이다.설정을 먼저 할 것이다. 
 
 ![flow](https://user-images.githubusercontent.com/37058233/99798001-95d61200-2b73-11eb-811d-e63f5b08efeb.PNG)
 
-# 1. db.properties 파일 생성
+
+
+# 1. sql테이블 - Oracle SQL
+
+- 방명록은 아래와 같은 구성을 가지고 있다. 
+
+  ![guestbook](https://user-images.githubusercontent.com/37058233/99865796-98764d00-2bef-11eb-81e7-f86060ccd86b.PNG)
+
+- 수정은 pw를 입력하면 할 수 있게 한다.
+
+
+![guestbookPw](https://user-images.githubusercontent.com/37058233/99865734-39183d00-2bef-11eb-8f16-0ae3201815ff.PNG)
+
+- 위와 같은 정보를 저장할 수 있는 sql 테이블은 다음과 같다.
+
+  <img width="441" alt="1116sp11" src="https://user-images.githubusercontent.com/37058233/99865540-d1152700-2bed-11eb-9a04-6c54af0267ad.PNG">
+
+- ## **테이블 생성**
+
+- Oracle sql에 접속해 아래와 같이 테이블을 생성한다.
+
+- 참고로 쿼리 문들은 증거물로 남겨놓는게 좋다. (main/resource에 guestbook.sql)
+
+```sqlite
+drop table guestbook;
+drop sequence guestbook_seq;
+
+create table guestbook 
+(
+	seqno number constraint guestbook_no_pk primary key, 
+	username varchar2(30) constraint guestbook_name_nn not null, 
+	password varchar2(30),
+	"content" varchar2(3000),
+	regdate date default sysdate
+);
+create sequence guestbook_seq;
+);
+rollback();
+```
+
+- ## **tomcat server.xml 포트 바꾸기**
+
+- oracle db랑 포트 번호가 겹친다. 8080(외부에서 접근)과 1521(내부에서 테이블 접근)를 사용
+
+-  tomcat server.xml의 port 번호 바꿔준다. 기본 : 8080 => 사용자 설정 : 8089(사용되고 있지 않은 아무 포트)
+
+<img width="211" alt="1116sp13" src="https://user-images.githubusercontent.com/37058233/99865993-08390780-2bf1-11eb-9772-0e5d7df18309.PNG"><img width="484" alt="1116sp14" src="https://user-images.githubusercontent.com/37058233/99865992-07a07100-2bf1-11eb-979b-b39fe80684d5.PNG">
+
+# 2. db.properties 파일 생성
 
 - db.properties는 java 에서 Oracle db에 접속/로그인 할 수 있는 정보가 있는 파일이다.
 
@@ -24,7 +72,7 @@
 - jdbc:oracle:thin: 오라클에 접속할 수 있는 주소 @도메인:포트번호
 - user과 pw에는 오라클 db에서 설정한 id와 pw 넣으면 된다.
 
-# 2. xml 파일에 라이브러리를 추가
+# 3. xml 파일에 라이브러리를 추가
 
 - 다음 네가지 라이브러리를 추가하려고 한다. 넷 중 ojbc6.jar 만 살짝 다르고 나머지 셋은 거의 똑같은 방법으로 추가할 수 있다.
 
@@ -54,11 +102,11 @@ ojdbc6.jar, mybatis.jar(3.4.6), mabatis-spring.jar(1.3.2), spring-jdbc.jar (4.3.
 
 ## **mybatis.jar(3.4.6) 추가**
 
-1.   (https://mvnrepository.com/artifact/org.mybatis/mybatis/3.4.6)[https://mvnrepository.com/artifact/org.mybatis/mybatis/3.4.6]여기서 mybatis.jar 3.4.6버전을 검색해 들어가  maven 버전 코드를 복사한다.
+1 . (https://mvnrepository.com/artifact/org.mybatis/mybatis/3.4.6)[https://mvnrepository.com/artifact/org.mybatis/mybatis/3.4.6]여기서 mybatis.jar 3.4.6버전을 검색해 들어가  maven 버전 코드를 복사한다.
 
 <img width="492" alt="1116sp9" src="https://user-images.githubusercontent.com/37058233/99802883-d174da00-2b7b-11eb-893d-ed77269e4e7f.PNG">
 
-2. pom.xml 파일 	&lt;dependencies> 아래에 붙여넣기한다.
+2 . pom.xml 파일 	&lt;dependencies> 아래에 붙여넣기한다.
 
 <img width="408" alt="1116sp8" src="https://user-images.githubusercontent.com/37058233/99802690-76db7e00-2b7b-11eb-80f0-cea37bf5a75c.PNG">
 
@@ -99,7 +147,7 @@ ojdbc6.jar, mybatis.jar(3.4.6), mabatis-spring.jar(1.3.2), spring-jdbc.jar (4.3.
 </dependency>
 ```
 
-# 3.세개의 xml 파일 만든다
+# 4.세개의 xml 파일 만든다
 
 ```
 mybatis-config.xml : mybatis에게 guestbook.xml이 mapper라는 정보를 준다.  
@@ -130,28 +178,8 @@ guestbook.xml : 쿼리문이 들어간 mapper 파일로서, java interface의 �
 ## **guestbook.xml**
 
 - 바로 위에서 mapper resource로 지목됐다. 
-
 - 실제 쿼리문이 들어가는 것이 매퍼이다. 이건 설정 파일이지 실제로 쿼리문이 실행되는 것이 아니다.
-
-```xml
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="sesoc.intern.guestbook2.dao.GuestbookDao">
-    <insert id="insertGuest" resultType="sesoc.intern.guestbook2.vo.GuestBookVO">
-        INSERT INTO GUESTBOOK
-        (seqno, username, password, content)
-        VALUES
-        (guestbook_seq.nextval,#{username},#{password},#{content})
-        </select>
-</mapper>
-```
-
-- 매퍼에다가 java interface 클래스명을 namespace에 넣는다.
-- 매퍼 안에는 태그가 있다. insert, select, update, delete.
-- insert id에는 interface에 있는 메소드명을 적어주고, resultType에는 처리하는 데이터의 타입명을 써준다(풀네임).
-- #{}는 게터 호출하는 것이다.
+- 일단 파일만 만들어 놓고, 내용은 다음 시간에 interface와 vo 클래스를 구현한 후에 넣기로 한다.
 
 ## **root-context.xml**
 
@@ -170,6 +198,9 @@ guestbook.xml : 쿼리문이 들어간 mapper 파일로서, java interface의 �
 
 
 
+
+- mybatis를 사용하기 위한 기본적인 자바 인터페이스는 SqlSession이다. 이 인터페이스를 통해 명령어를 실행하고 매퍼를 얻으며 트랜잭션을 관리 할 수 있다
+- 
 
 ```xml
 
@@ -214,4 +245,6 @@ guestbook.xml : 쿼리문이 들어간 mapper 파일로서, java interface의 �
 </beans>
 ```
 
-다음 시간엔 DB와 더 직접적으로 연관된 부분을 보도록 할 것이다. 그럼 이만..
+
+
+다음 시간엔 설정 보다는 코드 부분을 보도록 할 것이다. 그럼 이만..

@@ -1,10 +1,15 @@
-# Spring과 Oracle db 연결 - 흐름
+# Spring과 Oracle DB 연결 - 흐름
 
 ```
 목표 : Mybatis 프레임을 통해 spring과 Oracle DB를 연결한다.
 ```
 
-어렵지는 않은데 복잡하다. 할 수 있 다 는 뜻이다. 어쨌든 이 글에서 방명록 spring 프로젝트와 db를 어떻게 연결해야하는지에 대한 간단한 흐름을 알아보도록 할 것이다.
+- 어렵지는 않은데 복잡하다. 할 수 있 다 는 뜻이다. 어쨌든 이 글에서 방명록 spring 프로젝트와 db를 어떻게 연결해야하는지에  알아보도록 할 것이다.
+- 전체적인 그림은 다음과 같다. 앞으로 자세하게 알아보도록 한다.
+
+
+
+![flow](https://user-images.githubusercontent.com/37058233/99527961-eff29e00-29e0-11eb-9c54-795f075f4518.PNG)
 
 # Intro
 
@@ -53,11 +58,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 - **guestBookVO.java** : DB에 저장될 데이터를 value object로 표현한 것이다.
 
-# 전체적인 그림
-
-![flow](https://user-images.githubusercontent.com/37058233/99527961-eff29e00-29e0-11eb-9c54-795f075f4518.PNG)
-
-
+# flow
 
 ## **Oracle SQL 정보를 root-context.xml에 넘김**
 
