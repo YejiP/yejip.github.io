@@ -57,7 +57,7 @@ public interface GuestbookDao {
 
 - insert id에는 interface에 있는 메소드명을 적어주고, resultType에는 처리하는 데이터의 타입명을 써준다(풀네임).
 
-- #{}는 게터 호출하는 것이다.
+- **#{}는 게터 호출하는 것**이다. mapper파일에서는 ${}이렇게 불러오는게 아니라 #{}이렇게 불러온다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>

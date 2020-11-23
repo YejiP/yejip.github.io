@@ -101,4 +101,5 @@ public class GuestbookController {
     }
 ```
 
-다음 시간에는 guestbook을 spring으로 구현하는 시간을 가질 것이다. 핀이가 코골고 자서 귀엽다. -끝-
+다음 시간에는 guestbook을 spring으로 구현하는 시간을 가질 것이다. -끝-
+
