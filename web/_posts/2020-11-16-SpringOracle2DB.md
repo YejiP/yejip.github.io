@@ -59,6 +59,8 @@ public interface GuestbookDao {
 
 - **#{}는 게터 호출하는 것**이다. mapper파일에서는 ${}이렇게 불러오는게 아니라 #{}이렇게 불러온다.
 
+- commit은 my batis가 자동으로 해서 넣지 않아줘도 된다.
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
