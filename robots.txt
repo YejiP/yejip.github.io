@@ -1,0 +1,4 @@
+
+User-agent: * 
+Allow:/ 
+Sitemap: http://yejip.com/sitemap.xml
