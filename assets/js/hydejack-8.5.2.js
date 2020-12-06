@@ -162,11 +162,14 @@ var xe=function(t,e){return(xe=Object.setPrototypeOf||{__proto__:[]}instanceof A
 
 
 window.onerror = function(){
-  window.location.reload(); 
+  window.location.reload();
+
 }
 window.onshow = function (){
-if (window.location.href.indexOf("web") > -1) {
-
+  window.location.href.split("/").pop();
+  var lastPart =window.location.href.split("/").pop();
+  console(lastPart);
+  if(lastPart = "web"){
   function onhtml(){
     document.getElementById("java").style.display="none";
     document.getElementById("html").style.display="block";
@@ -218,4 +221,5 @@ if (window.location.href.indexOf("web") > -1) {
   }
 
     }
+  }
 }
