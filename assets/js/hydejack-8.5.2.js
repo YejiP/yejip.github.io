@@ -168,7 +168,7 @@ window.onerror = function(){
 window.onshow = function (){
   window.location.href.split("/").pop();
   var lastPart =window.location.href.split("/").pop();
-  console(lastPart);
+  console.log(lastPart);
   if(lastPart = "web"){
   function onhtml(){
     document.getElementById("java").style.display="none";
