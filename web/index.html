@@ -863,6 +863,8 @@ function onhtml(){
   document.getElementById("db").style.display="none";
   document.getElementById("js").style.display="none";
   document.getElementById("sp").style.display="none";
+  document.getElementById("jq").style.display="none";
+
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;HTML&CSS";
 }
 
@@ -872,6 +874,8 @@ function onjs(){
   document.getElementById("db").style.display="none";
   document.getElementById("js").style.display="block";
   document.getElementById("sp").style.display="none";
+  document.getElementById("jq").style.display="none";
+
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVASCRIPT";
 }
 function onjava(){
@@ -880,6 +884,8 @@ function onjava(){
   document.getElementById("db").style.display="none";
   document.getElementById("js").style.display="none";
   document.getElementById("sp").style.display="none";
+  document.getElementById("jq").style.display="none";
+
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVA";
 }
 function ondb(){
@@ -888,6 +894,8 @@ function ondb(){
   document.getElementById("db").style.display="block";
   document.getElementById("js").style.display="none";
   document.getElementById("sp").style.display="none";
+  document.getElementById("jq").style.display="none";
+
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;DB";
 }
 function onsp(){
@@ -896,7 +904,18 @@ function onsp(){
   document.getElementById("db").style.display="none";
   document.getElementById("js").style.display="none";
   document.getElementById("sp").style.display="block";
+  document.getElementById("jq").style.display="none";
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;SPRING";
+}
+
+function onjq(){
+  document.getElementById("java").style.display="none";
+  document.getElementById("html").style.display="none";
+  document.getElementById("db").style.display="none";
+  document.getElementById("js").style.display="none";
+  document.getElementById("sp").style.display="none";
+  document.getElementById("jq").style.display="block";
+  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JQUERY";
 }
 function onall(){
   document.getElementById("html").style.display="block";
@@ -904,10 +923,10 @@ function onall(){
   document.getElementById("java").style.display="block";
   document.getElementById("db").style.display="block";
   document.getElementById("sp").style.display="block";
+  document.getElementById("jq").style.display="block";
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
 }
 function nothing(){
-
 }
 </script>
 
@@ -925,12 +944,13 @@ function nothing(){
      <main id="_main" class="content fade-in layout-page" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(254, 230, 255)" data-image="/assets/img/sidebar-bg.jpg" data-overlay >
 
         <article class="page" role="article" >
-          <div onclick="nothing()" id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;Subject?</div><hr>
+          <div  id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;Subject?</div><hr>
           <div class="wrapper">
            <div class="leftCol">
              <a onmouseover="onhtml()"><div class="title">HTML&CSS</div></a>
              <a onmouseover="onjs()"><div class="title">JAVASCRIPT</div></a>
              <a onmouseover="onsp()"><div class="title">SPRING</div></a>
+             <a onmouseover="onjq()"><div class="title">JQUERY</div></a>
              <a onmouseover="onjava()"><div class="title">JAVA</div></a>
              <a onmouseover ="ondb()"><div class="title">DB</div></a>
              <a onmouseover="onall()"><div class="title">ALL</div></a></div>
@@ -995,6 +1015,10 @@ function nothing(){
             <br>• <a href="2020-12-06-게시판12/" class="heading flip-title">게시판12) MIME 타입</a>
             <br>• <a href="2020-12-07-게시판13/" class="heading flip-title">게시판13) 글 수정시 파일 변경</a>
           </p></div>
+          <div class="contents"  id="jq">
+            <p>• <a href="2020-12-08-jquery/" class="heading flip-title">JQUERY 다운로드</a>
+            <br>• <a href="2020-12-08-jquery선택자/" class="heading flip-title">JQUERY 기본문법과 선택자</a>
+</p></div>
 
           <div class="contents"  id="java">
            <p>• <a href="2020-08-26-JAVAbasic" class="heading flip-title">JAVA basic</a> — very basic
