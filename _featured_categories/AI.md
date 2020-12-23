@@ -13,7 +13,7 @@ description: >
 
 # Artificial Intelligence Projects
 
-[Machine Learning - Character recognition](https://yejip.com/pro/ANN.html)
+[Deep Learning - Character recognition](https://yejip.com/pro/ANN.html)
 
 [Reinforcement Learning - Scheduling](https://yejip.com/pro/GA.html)
 
