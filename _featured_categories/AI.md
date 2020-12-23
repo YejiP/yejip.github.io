@@ -9,6 +9,8 @@ description: >
 
 ---
 
+# Artificial Intelligence
+
 # Artificial Intelligence Projects
 
 [Machine Learning - Character recognition](https://yejip.com/pro/ANN.html)
