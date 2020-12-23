@@ -53,6 +53,8 @@ menu:
     url:               /project/
   - title:             WEB
     url:               /web/
+  - title:             AI
+    url:               /ai/
   - title:             AWS(CDA)
     url:               /aws/
 
