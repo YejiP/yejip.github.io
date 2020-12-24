@@ -9,7 +9,6 @@
           href="{% include smart-url.txt url=url %}"
           class="sidebar-nav-item{% if page.url contains url %} active{% endif %}"
           {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-          onclick="setTimeout(window.location.reload.bind(window.location), 2)";
 >
           {{ node.name | default:node.title }}
         </a>
