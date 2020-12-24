@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Web Development
 slug: web
 menu: true
