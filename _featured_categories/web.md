@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_noTitle
 slug: web
 menu: true
 order: 3
