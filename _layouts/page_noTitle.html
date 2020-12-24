@@ -16,3 +16,10 @@
 
 layout: base
 ---
+
+<article class="page" role="article">
+  <header>
+    {% include components/message.html text=page.description hide=page.hide_description %}
+  </header>
+  {{ content }}
+</article>
