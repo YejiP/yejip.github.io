@@ -6,5 +6,5 @@ order: 3
 description: >
 ---
 
-<iframe src="webInd.html" width="700px" height ="1000px"  frameborder="0"></iframe>
+<iframe src="webInd.html"  height ="1000px"  frameborder="0"></iframe>
 
