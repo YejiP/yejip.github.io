@@ -1,10 +1,10 @@
 ---
 layout: list
-title: AWS Certified Developer Associate
+title: Web Development
 slug: web
 menu: true
 order: 3
 description: >
 ---
 
-<iframe src="index.html"></iframe>
+<iframe src="webInd.html"></iframe>
