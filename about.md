@@ -36,8 +36,9 @@ C++: Programming2
 **Life Science**
 
 ```
-General Microbiology, Organic Chemistry, Cell Biology, Laboratory Safety, Seminar 1 , Seminar 2 , Biochemical Calculations, Biochemistry 1, Biochemistry 2, Molecular Biology1
-Fundamentals of Pharmacology, Intro to genetics
+General Microbiology, Organic Chemistry, Cell Biology, Laboratory Safety,
+Seminar 1 , Seminar 2 , Biochemical Calculations, Biochemistry 1, Biochemistry 2,
+Molecular Biology1, Fundamentals of Pharmacology, Intro to genetics
 ```
 
 ## 2. KITA ICT Intern Preparation Course 
