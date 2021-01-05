@@ -5,12 +5,14 @@ slug: About me
 menu: true
 order: 1
 description: >
-  An IT specialist with fast learning skills and passion, seeking opportunities to contribute to a company and make myself grow. Hands-on knowledge in implementing AI, developing website, and analyzing data. Optimistic and proactive attitude holder when solving problem or debugging and learning new technology. Being good at self-directed learning who knows how to create one’s own portfolio website. ( yejip.com/pro/ ) 
+  An IT generalist with fast learning skills and passion, seeking opportunities to contribute to a company and make myself grow. Hands-on knowledge in implementing AI, developing website, and analyzing data. Optimistic and proactive attitude holder when solving problem or debugging and learning new technology. Being good at self-directed learning.
 ---
 
 # Education
 
-**Bachelor in ICT Convergence and Life Science from Handong Global University**
+## 1. Handong Global University
+
+**Bachelor in ICT Convergence and Life Science**
 
 - Mar 2015 – Feb 2020
 - GPA of 4.06/4.5 (Major : 4.19/4.5)
@@ -20,9 +22,7 @@ description: >
 - University of Chemistry and Technology ( **Praha, Czechia**, 2016/09/19 ~2017/01/20)
 - The king’s university ( **Edmonton, Canada**, 2019/01/07 ~2019/04/24)
 
-
-
-## ICT convergence
+**ICT convergence**
 
 Introduction to ICT Convergence
 
@@ -36,7 +36,7 @@ Swift: ICT Application Development
 
 C++: Programming2
 
-## Life Science
+**Life Science**
 
 General Microbiology, Organic Chemistry, Cell Biology
 
@@ -46,20 +46,26 @@ Biochemistry 1, Biochemistry 2, Molecular Biology1
 
 Fundamentals of Pharmacology, Intro to genetics
 
-## Online course
-EDX: Deep Learning Explained(2019.08~)
+## 2. KITA ICT Intern Preparation Course 
+
+- Jul 2020 ~ Jan 2021
+
+- **JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY, Ajax**
+- learned basic knowledge in developing website using Spring
+
+## 3. Online course
+
+EDX: Deep Learning Explained(2019.08~2019.10) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
-
-## An additional computer science course
-
-ICT intern perparation course (2020.07.31 ~ 2021.01.07)
-
-JAVA, HTML,CSS,
 
 ---
 
 #  School/Work Program
+
+```
+Please check 'Projects' section in the menu
+```
 
 **a. Hands-on AI experience**
 
