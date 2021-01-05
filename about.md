@@ -24,27 +24,21 @@ description: >
 
 **ICT convergence**
 
+```
 Introduction to ICT Convergence
-
 Python: ICT Engineering Mathematics, Data Management and Application, Programming I
-
 R: Special Topic of ICT Convergence, Introduction to Data Science
-
 JAVA: Intro to AI
-
 Swift: ICT Application Development
-
 C++: Programming2
+```
 
 **Life Science**
 
-General Microbiology, Organic Chemistry, Cell Biology
-
-Laboratory Safety, Seminar 1 , Seminar 2 , Biochemical Calculations
-
-Biochemistry 1, Biochemistry 2, Molecular Biology1
-
+```
+General Microbiology, Organic Chemistry, Cell Biology, Laboratory Safety, Seminar 1 , Seminar 2 , Biochemical Calculations, Biochemistry 1, Biochemistry 2, Molecular Biology1
 Fundamentals of Pharmacology, Intro to genetics
+```
 
 ## 2. KITA ICT Intern Preparation Course 
 
