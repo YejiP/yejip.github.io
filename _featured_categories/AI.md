@@ -5,8 +5,6 @@ slug: ai
 menu: true
 order: 4
 description: >
-  2021년 전까지 과거에 만든 AI 정리 노트 웹에 업뎃 예정!
-
 ---
 
 # Artificial Intelligence

@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: About me
 slug: About me
 menu: true
