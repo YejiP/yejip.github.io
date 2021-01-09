@@ -53,7 +53,7 @@ menu:
     url:               /project/
   - title:             WEB
     url:               /web/
-  - title:             Algorithm 
+  - title:             Algorithms
     url:               /algo/
   - title:             AI
     url:               /ai/
