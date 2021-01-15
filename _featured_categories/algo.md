@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page
 title: Algorithm Study
 slug: algo
 menu: true
