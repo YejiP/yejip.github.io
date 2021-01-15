@@ -51,14 +51,14 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /project/
-  - title:             WEB
-    url:               /web/
   - title:             Algorithms
     url:               /algo/
-  - title:             AI
-    url:               /ai/
+  - title:             WEB
+    url:               /web/
   - title:             AWS(CDA)
     url:               /aws/
+  - title:             AI
+    url:               /ai/
   - title:             ETC
     url:               /etc/
 
