@@ -5,9 +5,7 @@ slug: About me
 menu: true
 order: 1
 description: >
-  An IT generalist that’s fast learning and passionate, currently working as a network and system engineer. Optimistic and proactive when solving problem or debugging and learning new technologies. Strong at self-directed learning. My goal is to become a full stack developer. 
-									
-									Please feel free to contact me! ppyeji@gmail.com
+  An IT generalist that’s fast learning and passionate, currently working as a network and system engineer. Optimistic and proactive when solving problem or debugging and learning new technologies. Strong at self-directed learning. My goal is to become a full stack developer.	Please feel free to contact me! ppyeji@gmail.com
 ---
 
 # Work Experience
