@@ -5,8 +5,14 @@ slug: About me
 menu: true
 order: 1
 description: >
-  An IT generalist with fast learning skills and passion, seeking opportunities to contribute to a company and make myself grow. Hands-on knowledge in implementing AI, developing website, and analyzing data. Optimistic and proactive attitude holder when solving problem or debugging and learning new technology. Being good at self-directed learning.
+  An IT generalist that’s fast learning and passionate, currently working as a network and system engineer. Optimistic and proactive when solving problem or debugging and learning new technologies. Strong at self-directed learning. My goal is to become a full stack developer. 
+									
+									Please feel free to contact me! ppyeji@gmail.com
 ---
+
+# Work Experience
+
+- **System/Network Engineer intern** at Gravity Interactive (2021.03.01 ~ now)
 
 # Education
 
