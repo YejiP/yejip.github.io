@@ -1,7 +1,7 @@
 ---
 layout: list
 title: System Administration
-slug: algo
+slug: sys
 menu: true
 order: 3
 description: >
