@@ -55,7 +55,7 @@ menu:
     url:               /sys/
   - title:             Algorithms
     url:               /algo/
-  - title:             WEB
+  - title:             Web
     url:               /web/
   - title:             AWS(CDA)
     url:               /aws/
