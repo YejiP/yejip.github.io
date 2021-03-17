@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a computer
-description: > This page will keep updated.
+description: This page will keep updated.
 excerpt_separator: <!--more-->
 ---
 
