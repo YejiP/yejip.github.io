@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Building a computer
-description: > This page will keep updated! 
+description: > This page will keep updated.
 excerpt_separator: <!--more-->
 ---
 
-Resources :
+# Building a computer
+
+**Resources :**
 
 1. [First Person View PC BUILD Guide!(POV)- Linus Tech Tips](https://www.youtube.com/watch?v=v7MYOpFONCU)
 2. [https://www.wired.com/story/how-to-build-a-pc/](https://www.wired.com/story/how-to-build-a-pc/)
