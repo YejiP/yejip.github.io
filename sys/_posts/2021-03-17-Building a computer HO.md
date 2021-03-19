@@ -95,7 +95,7 @@ excerpt_separator: <!--more-->
 
 - Install the graphic care do PCI express slot.
 
-![image-20210318181023976](C:\Users\21500\AppData\Roaming\Typora\typora-user-images\image-20210318181023976.png)
+![image](https://user-images.githubusercontent.com/37058233/111720951-2b309c80-881c-11eb-82c7-9964cfc9f150.png)
 
 ## **8. Install power supply, and connect to the mother board**
 
