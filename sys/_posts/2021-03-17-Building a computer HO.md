@@ -11,7 +11,7 @@ excerpt_separator: <!--more-->
 
 - My supervisor, kindly enough, put all the sets of components inside the case.
 
-<img src="https://user-images.githubusercontent.com/37058233/111690106-091e2680-87ea-11eb-8bb0-f6e93d3888dd.png" width = 400><img src="https://user-images.githubusercontent.com/37058233/111690134-10453480-87ea-11eb-9c0b-1f5d832430ca.png" width = 400>
+![image](https://user-images.githubusercontent.com/37058233/111716885-2ec02580-8814-11eb-8780-ce7dad124843.png)
 
 - These are the components!
   - The case
@@ -21,9 +21,9 @@ excerpt_separator: <!--more-->
   - RAM
   - Graphic card
   - Power supply
-  - +ifixit kit
+  - +ifixit kit![image](https://user-images.githubusercontent.com/37058233/111717052-8a8aae80-8814-11eb-890b-6b4e814c2395.png)
 
-<img src="https://user-images.githubusercontent.com/37058233/111690203-22bf6e00-87ea-11eb-9627-2b0dacddeddc.png" width = 400> <img src = "https://user-images.githubusercontent.com/37058233/111704386-47244600-87fc-11eb-91cd-6d6ec228f4b2.JPG" width = 350px>
+
 
 ## **2. Wear anti-static strap on and start!**
 
@@ -39,13 +39,13 @@ excerpt_separator: <!--more-->
 
 - put CPU into a motherboard. match the orientation. 
 
-<img src="https://user-images.githubusercontent.com/37058233/111690255-323eb700-87ea-11eb-9a4c-4e406e48be8b.png" width = 300>![image](https://user-images.githubusercontent.com/37058233/111707470-55289580-8801-11eb-902e-fb5698314ea1.png)
+   <img src="https://user-images.githubusercontent.com/37058233/111717141-b443d580-8814-11eb-8540-4e047f33a07e.png" width =600>
 
 - and put fan on the CPU. 
   - The heat compounds will be placed on the CPU to convey heats from CPU to Metal blades.
   - Metal is highly conductive, so metal blades are useful strategy to remove heat from the CPU.
 
-<img src="https://user-images.githubusercontent.com/37058233/111708859-dbde7200-8803-11eb-9cc1-cca3946e0e45.png" width = 300><img src="https://user-images.githubusercontent.com/37058233/111708897-ee58ab80-8803-11eb-9fba-ad636be580cb.png" width = 300>
+![image](https://user-images.githubusercontent.com/37058233/111717219-e05f5680-8814-11eb-9d3b-abe0aaffb42b.png)
 
 - Make sure to have enough space between fan and wire, or the fan will hit the wire and makes noise!
 
@@ -79,29 +79,27 @@ excerpt_separator: <!--more-->
 
 - like this!
 
-<img src="https://user-images.githubusercontent.com/37058233/111714287-95dadb80-880e-11eb-9da7-60988386bf21.png" width = 300><img src="https://user-images.githubusercontent.com/37058233/111714066-151bdf80-880e-11eb-9710-405de9fcf98d.png" width = 400>
+![image](https://user-images.githubusercontent.com/37058233/111717272-f66d1700-8814-11eb-8ff9-4bbe9a6184e6.png)
 
 ## **6. Connect fan, I/O cables to the motherboard**
 
 - Connect CPU fan and PC cover fan to the motherboard.
 
-<img src="https://user-images.githubusercontent.com/37058233/111690502-7f228d80-87ea-11eb-809c-e882e5b638b4.png" width = 300><img src="https://user-images.githubusercontent.com/37058233/111690517-85186e80-87ea-11eb-8345-8981439d1698.png" width = 300>
+<img src="https://user-images.githubusercontent.com/37058233/111717300-04229c80-8815-11eb-86cb-b3f361965a8d.png" width=600>
 
 - Put cables behind the cover for space management and connect to the motherboard. 
 
-<img src="https://user-images.githubusercontent.com/37058233/111714849-cff8ad00-880f-11eb-90f6-9aee79c2d4d6.png" width = 300><img src="https://user-images.githubusercontent.com/37058233/111690553-92355d80-87ea-11eb-8eb3-0290d9aa1bea.png" width = 400>
+![image](https://user-images.githubusercontent.com/37058233/111717344-1a305d00-8815-11eb-8376-d7e985749bb2.png)
 
 ## **7. Install graphic card to the motherboard**
 
 - Install the graphic care do PCI express slot.
 
-<img src="https://user-images.githubusercontent.com/37058233/111715360-e3584800-8810-11eb-8ae5-c223a2c64cfe.png" width = 300>![image](https://user-images.githubusercontent.com/37058233/111715421-03880700-8811-11eb-96b8-7a296db1dd00.png)
+![image-20210318181023976](C:\Users\21500\AppData\Roaming\Typora\typora-user-images\image-20210318181023976.png)
 
 ## **8. Install power supply, and connect to the mother board**
 
-- Cable management is a must!
-
-<img src="https://user-images.githubusercontent.com/37058233/111715496-287c7a00-8811-11eb-89cc-951e1052b679.png" width =200> 
+- Cable management is a must!     <img src="https://user-images.githubusercontent.com/37058233/111715496-287c7a00-8811-11eb-89cc-951e1052b679.png" width =200> 
 
 - Thankfully, we are NVME SSD. so few cables are used.
 
