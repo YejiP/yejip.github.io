@@ -104,3 +104,4 @@ Most computer components only require a size 2 Philips-head screwdriver to insta
 ** Overclocking : Overclocking is the action of increasing a component’s clock rate, **running it at a higher speed than it was designed to run**. This is usually applies to the CPU or GPU, but other components can also be overclocked. [source](https://www.howtogeek.com/165064/what-is-overclocking-the-absolute-beginners-guide-to-understanding-how-geeks-speed-up-their-pcs/)
 
 
+
