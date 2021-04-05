@@ -5,7 +5,7 @@ slug: project
 menu: true
 order: 1
 description: >
-  This is the [projects page](https://yejip.com/pro/),  I have made during my university years.
+  This is the [projects page](https://yejip.com/pro/),  I made during my university years.
 ---
 
 # Projects
@@ -37,6 +37,4 @@ For additional info about this project, please check my project page.
 [webRenewal]: 2020-08-14-ServletAndJSP/
 
 
-
-## Application projects
 
