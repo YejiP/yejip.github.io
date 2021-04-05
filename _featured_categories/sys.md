@@ -1,11 +1,9 @@
 ---
 layout: list
-title: System Administration
 slug: sys
 menu: true
 order: 3
 description: >
-  study notes as a System Administrator Intern
 
 accent_color: rgb(38,139,210)
 accent_image:
