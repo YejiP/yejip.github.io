@@ -1,5 +1,5 @@
 ---
-layout: list
+layout: page_noTitle
 slug: sys
 menu: true
 order: 3
