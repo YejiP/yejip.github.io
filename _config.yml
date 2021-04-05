@@ -51,14 +51,14 @@ menu:
     url:               /about/
   - title:             Projects
     url:               /project/
-  - title:             Sysadmin
+  - title:             Sys Net
     url:               /sys/
-  - title:             Algorithms
-    url:               /algo/
-  - title:             Web
-    url:               /web/
   - title:             AWS(CDA)
     url:               /aws/
+  - title:             Web Dev
+    url:               /web/
+  - title:             Algorithms
+    url:               /algo/
   - title:             AI
     url:               /ai/
   - title:             ETC
