@@ -7,7 +7,7 @@ description: >
 
 accent_color: rgb(38,139,210)
 accent_image:
-  background: rgb(222,249,250)
+  background: rgb(247,202,201)
   overlay:    false
 
 ---

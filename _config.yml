@@ -113,7 +113,7 @@ defaults:
     values:
       accent_color:    rgb(219, 164, 217)
       accent_image:
-        background:    rgb(99,172,229)
+        background:    rgb(146,168,209)
         overlay:       false
 
 
