@@ -1,9 +1,7 @@
 ---
-layout: list
-title: Algorithm Study
+layout: page_noTitle
 slug: algo
 menu: true
-order: 3
 description: >
 Studying algorithm by solving some leetcode problems.
 

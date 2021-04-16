@@ -100,7 +100,8 @@ hr{
 <body class="no-color-transition" >
 
         <article class="page" role="article" >
-          <div  id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;Subject?</div><hr>
+          <div  id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;All</div><hr>
+
           <div class="wrapper">
            <div class="leftCol">
              <a><div class="title algos">Integer</div></a>
@@ -129,36 +130,49 @@ hr{
 </p></div>
 
 <div class="contents"  id="String">
+  <div>&nbsp;</div>
 
 </div>
 
 <div class="contents"  id="Array">
+  <div>&nbsp;</div>
+
 </div>
 
 <div class="contents"  id="Two pointer">
+  <div>&nbsp;</div>
+
 </div>
 
 <div class="contents"  id="Sorting Algorithm">
-  <p>• <a href="2021-01-15-1선택정렬/" class="heading flip-title">Selcection sort</a>
- <br><br>• <a href="2021-01-16-2삽입정렬/" class="heading flip-title">Insertion sort</a>
- <br><br>• <a href="2021-01-17-3합병정렬/" class="heading flip-title">Merge sort</a>
- <br><br>• <a href="2021-01-18-4힙정렬/" class="heading flip-title">Heap sort</a>
- <br><br>• <a href="2021-01-19-5퀵정렬/" class="heading flip-title">Quick sort</a>
- <br><br>• <a href="2021-01-20-6계수정렬/" class="heading flip-title">Counting sort</a>
- <br><br>• <a href="2021-01-20-7기수정렬/" class="heading flip-title">Radix sort</a>
+  <p>• <a href="2021-01-15-1선택정렬/" class="heading flip-title">Concept) Selcection sort</a>
+ <br><br>• <a href="2021-01-16-2삽입정렬/" class="heading flip-title">Concept) Insertion sort</a>
+ <br><br>• <a href="2021-01-17-3합병정렬/" class="heading flip-title">Concept) Merge sort</a>
+ <br><br>• <a href="2021-01-18-4힙정렬/" class="heading flip-title">Concept) Heap sort</a>
+ <br><br>• <a href="2021-01-19-5퀵정렬/" class="heading flip-title">Concept) Quick sort</a>
+ <br><br>• <a href="2021-01-20-6계수정렬/" class="heading flip-title">Concept) Counting sort</a>
+ <br><br>• <a href="2021-01-20-7기수정렬/" class="heading flip-title">Concept) Radix sort</a>
 
 </p></div>
 
 <div class="contents"  id="Matrix">
+  <div>&nbsp;</div>
+
 </div>
 
 <div class="contents"  id="Linked List">
+  <div>&nbsp;</div>
+
 </div>
 
 <div class="contents"  id="Tree/Stack/Queue">
+  <div>&nbsp;</div>
+
 </div>
 
 <div class="contents"  id="Graph">
+  <div>&nbsp;</div>
+
 </div>
 
 
@@ -167,7 +181,14 @@ hr{
 <script type="text/javascript">
 var algolist;
 algolist = document.getElementsByClassName("algos")
+
+for(var j=0; j < algolist.length; j++){
+  var choice = algolist[j].innerHTML.replace(/&nbsp;/g,' ');
+
+  document.getElementById("rightCol").innerHTML += document.getElementById(choice).innerHTML;}
+
 confirmEvent();
+
 
 function confirmEvent(){
     for(var j=0; j < algolist.length; j++){
