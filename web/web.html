@@ -4,170 +4,7 @@
     <meta charset="utf-8">
 <base target="_parent">
     <title>WEB</title>
-
-
-<style>
-div.wrapper{
-min-width: 300px;
-padding-top: 70px;
--webkit-colum-count : 2;
--moz-column-count:2;
--o-column-count :2;
-column-count: 2;
-column-gap: 2px;
-width: 100%;
-}
-div.title{
-width : 20%;
-height : 70px;
-margin : 10px;
-font-size : 1.3em;
-font-weight : bold;
-}
-div.contents{
-display : none;
-font-size: 1em;
-line-height: 2;
-width: 100%;
-}
-
-div.leftCol{
-break-after : column;
--webkit-break-after : column;
--moz-break-after : column;
--ms-break-after : column;
--o-break-after : column;
-width: 20%;
-max-width: 10px;
-margin-right: 1px;
-display: block;
-}
-
-div.rightCol{
-  width: 100%;
-  height : 100%;
-}
-div#subject{
-margin: 0 auto;
-color: white;
-width:100%;
-height: 70px;
-padding-left: 10px;
-
-  background-color :#7DA0DB ;
-  column-span : all;
-  font-size: 3em;
-  font-weight: bolder;
-  text-align: left;
-  -webkit-column-span : all;;
-  -moz-column-span : all;
-  -ms-column-span : all;
-  -o-column-span : all;
-z-index: 10;}
-hr{
-    -webkit-column-span : all;;
-    -moz-column-span : all;
-    -ms-column-span : all;
-    -o-column-span : all;
-    border : 1px double #3d314e;
-    width: 100%;
-  }
-
-    .leftCol > a{
-        color : #7477bc;
-      }
-    .leftCol > a:hover{
-        color : #f0e4d8;
-      }
-    .leftCol > a:visited{
-        color : gray;
-      }
-      p > a:link{
-        color :#203d63;
-        }
-      p > a:hover{
-          color : #f0e4d8;
-        }
-      a {
-        target='_blank'
-      }
-  </style>
-<script>
-
-
-function onhtml(){
-  document.getElementById("java").style.display="none";
-  document.getElementById("html").style.display="block";
-  document.getElementById("db").style.display="none";
-  document.getElementById("js").style.display="none";
-  document.getElementById("sp").style.display="none";
-  document.getElementById("jq").style.display="none";
-
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;HTML&CSS";
-}
-
-function onjs(){
-  document.getElementById("java").style.display="none";
-  document.getElementById("html").style.display="none";
-  document.getElementById("db").style.display="none";
-  document.getElementById("js").style.display="block";
-  document.getElementById("sp").style.display="none";
-  document.getElementById("jq").style.display="none";
-
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVASCRIPT";
-}
-function onjava(){
-  document.getElementById("java").style.display="block";
-  document.getElementById("html").style.display="none";
-  document.getElementById("db").style.display="none";
-  document.getElementById("js").style.display="none";
-  document.getElementById("sp").style.display="none";
-  document.getElementById("jq").style.display="none";
-
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JAVA";
-}
-function ondb(){
-  document.getElementById("java").style.display="none";
-  document.getElementById("html").style.display="none";
-  document.getElementById("db").style.display="block";
-  document.getElementById("js").style.display="none";
-  document.getElementById("sp").style.display="none";
-  document.getElementById("jq").style.display="none";
-
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;DB";
-}
-function onsp(){
-  document.getElementById("java").style.display="none";
-  document.getElementById("html").style.display="none";
-  document.getElementById("db").style.display="none";
-  document.getElementById("js").style.display="none";
-  document.getElementById("sp").style.display="block";
-  document.getElementById("jq").style.display="none";
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;SPRING";
-}
-
-function onjq(){
-  document.getElementById("java").style.display="none";
-  document.getElementById("html").style.display="none";
-  document.getElementById("db").style.display="none";
-  document.getElementById("js").style.display="none";
-  document.getElementById("sp").style.display="none";
-  document.getElementById("jq").style.display="block";
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;JQUERY";
-}
-function onall(){
-  document.getElementById("html").style.display="block";
-  document.getElementById("js").style.display="block";
-  document.getElementById("java").style.display="block";
-  document.getElementById("db").style.display="block";
-  document.getElementById("sp").style.display="block";
-  document.getElementById("jq").style.display="block";
-  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;ALL";
-}
-function nothing(){
-}
-</script>
-
+  <link rel="stylesheet" href="myStyle.css">
 </head>
   <!--<![endif]-->
 <body class="no-color-transition" >
@@ -176,117 +13,153 @@ function nothing(){
           <div  id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;Subject?</div><hr>
           <div class="wrapper">
            <div class="leftCol">
-             <a onmouseover="onhtml()"><div class="title">HTML&CSS</div></a>
-             <a onmouseover="onjs()"><div class="title">JAVASCRIPT</div></a>
-             <a onmouseover="onsp()"><div class="title">SPRING</div></a>
-             <a onmouseover="onjq()"><div class="title">JQUERY/AJAX</div></a>
-             <a onmouseover="onjava()"><div class="title">JAVA</div></a>
-             <a onmouseover ="ondb()"><div class="title">DB</div></a>
-             <a onmouseover="onall()"><div class="title">ALL</div></a></div>
+             <a><div class="title web">HTML/CSS</div></a>
+             <a><div class="title web">JAVASCRIPT</div></a>
+             <a><div class="title web">SPRING</div></a>
+             <a><div class="title web">JQUERY/AJAX</div></a>
+             <a><div class="title web">JAVA</div></a>
+             <a><div class="title web">DB</div></a>
+             <a><div class="title" id="ALL">ALL</div></a></div>
 
 
-<div class="rightCol">
-  <div>&nbsp;</div>
-<div class="contents"  id="html">
-           <p>• <a href="2020-10-20-HTML_tag/" class="heading flip-title">HTML TAGS</a>
-           <br>• <a href="2020-10-20-HTML_이미지맵/" class="heading flip-title">Image map 간단 실습</a>
-           <br>• <a href="2020-10-21-HTML_formInput/" class="heading flip-title">HTML form input tags</a>
-           <br>• <a href="2020-10-21-HTML_formInput2/" class="heading flip-title">HTML input attributes, etc</a>
-           <br>• <a href="2020-10-22-CSS기초/" class="heading flip-title">CSS 기초</a>
-           <br>• <a href="2020-10-24-CSS_텍스트/" class="heading flip-title">font와 text 속성</a>
-           <br>• <a href="2020-10-26-CSS_블록/" class="heading flip-title">Display 속성, 테두리 속성</a>
-           <br>• <a href="2020-10-27-CSS_layout1/" class="heading flip-title">포지셔닝과 속성들</a>
-           <br>• <a href="2020-10-27-CSS_layout2/" class="heading flip-title">다단과 테이블</a>
-           <br>• <a href="2020-10-28-CSS_모달창/" class="heading flip-title">POPUP(모달창) 실습</a></p>
-           </div>
-           <div class="contents"  id="js">
-           <p>• <a href="2020-11-02-JS_BASICS/" class="heading flip-title">Javascript 자료형, 기본문법</a>
-           <br>• <a href="2020-11-03-JS_FUNC/" class="heading flip-title">JS 함수 기초내용</a>
-           <br>• <a href="2020-11-03-JS_FUNC2/" class="heading flip-title">JS 내장 함수 (타이머 hands-on)</a>
-           <br>• <a href="2020-11-04-JS문서접근/" class="heading flip-title">JS에서 html과 css 접근하기</a>
-           <br>• <a href="2020-11-04-JS_HO1" class="heading flip-title">입력 데이터 출력 실습</a>
-           <br>• <a href="2020-11-06-JS_HO2" class="heading flip-title">n초 마다 사진 바꾸기</a>
-           <br>• <a href="2020-11-07-JS_HO3" class="heading flip-title">버튼위에 마우스 올려 사진 바꾸기</a>
-           <br>• <a href="2020-11-07-JS_HO4/" class="heading flip-title">버튼위에 마우스 올려 사진 바꾸기2</a>
-           <br>• <a href="2020-11-07-JS_HO5/" class="heading flip-title">자식창에서 부모창 정보 수정 하기</a>
-           <br>• <a href="2020-11-09-JS_HO6/" class="heading flip-title">야식 주문 프로그램 만들기</a></p>
-           </div>
+<div id="rightCol">
+  <div>&nbsp;</div></div>
 
-            <div class="contents" id="sp">
-            &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">데이터 주고 받기</span>
-            <p>• <a href="2020-11-11-spring1/" class="heading flip-title">JSP에서 서버로 데이터 전송 - intro</a>
-            <br>• <a href="2020-11-11-spring2/" class="heading flip-title">JSP에서 서버로 데이터 전송 - HTML</a>
-            <br>• <a href="2020-11-11-spring3/" class="heading flip-title">JSP에서 서버로 데이터 전송 - JS</a>
-            <br>• <a href="2020-11-12-spring4/" class="heading flip-title">서버에서 JSP로 데이터 전송</a></p>
-            &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">Spring 과 Oracle DB 연결</span>
-            <p>• <a href="2020-11-16-SpringOracle/" class="heading flip-title">Spring과 Oracle DB 연결 - 흐름</a>
-            <br>• <a href="2020-11-16-SpringOracle1Lib/" class="heading flip-title">Spring과 Oracle DB 연결 - library 추가</a>
-            <br>• <a href="2020-11-16-SpringOracle2DB/" class="heading flip-title">Spring과 Oracle DB 연결 - 구현</a>
-            <br>• <a href="2020-11-16-SpringOracle3Cont/" class="heading flip-title">Spring과 Oracle DB 연결 - JSP,Controller</a>
-            <br>• <a href="2020-11-17-한글설정" class="heading flip-title">Spring 한글 인코딩</a>
-            <br>• <a href="2020-11-18-lombok/" class="heading flip-title">인생이 편해지는 lombok library</a></p>
-            &nbsp;&nbsp;<span style="font-size:1.2em; font-weight : bold">JSTL library</span>
-            <p>• <a href="2020-11-19-jstl1기본설정/" class="heading flip-title">JSTL 설정</a>
-            <br>• <a href="2020-11-19-jstl2core/" class="heading flip-title">JSTL core 문법</a>
-            <br>• <a href="2020-11-19-jstl3format/" class="heading flip-title">JSTL format 문법</a>
-            <br>• <a href="2020-11-19-jstl4func/" class="heading flip-title">JSTL function 문법</a></p>
-            &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">게시판 만들기</span>
-            <p>• <a href="2020-11-24-게시판1/" class="heading flip-title">게시판1) Spring 과 DB 연결</a>
-            <br>• <a href="2020-11-25-게시판2/" class="heading flip-title">게시판2) 회원가입 페이지</a>
-            <br>• <a href="2020-11-26-게시판3/" class="heading flip-title">게시판3) ID 중복확인</a>
-            <br>• <a href="2020-11-27-게시판4/" class="heading flip-title">게시판4) 로그인 페이지</a>
-            <br>• <a href="2020-11-28-게시판5/" class="heading flip-title">게시판5) 게시판 화면 구성</a>
-            <br>• <a href="2020-11-29-게시판6/" class="heading flip-title">게시판6) 글쓰기</a>
-            <br>• <a href="2020-11-30-게시판7/" class="heading flip-title">게시판7) 글확인</a>
-            <br>• <a href="2020-12-01-게시판8/" class="heading flip-title">게시판8) 글수정</a>
-            <br>• <a href="2020-12-02-게시판9/" class="heading flip-title">게시판9) 게시판 페이징</a>
-            <br>• <a href="2020-12-03-게시판10/" class="heading flip-title">게시판10) 파일 첨부</a>
-            <br>• <a href="2020-12-04-게시판11/" class="heading flip-title">게시판11) 파일 다운</a>
-            <br>• <a href="2020-12-06-게시판12/" class="heading flip-title">게시판12) MIME 타입</a>
-            <br>• <a href="2020-12-07-게시판13/" class="heading flip-title">게시판13) 글 수정시 파일 변경</a>
-          </p></div>
-          <div class="contents"  id="jq">
-            &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">jQuery 기초</span>
-            <p>• <a href="2020-12-08-jquery/" class="heading flip-title">JQUERY 다운로드</a>
-            <br>• <a href="2020-12-08-jquery선택자/" class="heading flip-title">JQUERY 기본문법과 선택자</a>
-            <br>• <a href="2020-12-09-어레이/" class="heading flip-title">배열 관리와 객체 확장</a>
-            <br>• <a href="2020-12-10-func/" class="heading flip-title">문서 객체 선택과 탐색</a>
-            <br>• <a href="2020-12-11-attr/" class="heading flip-title">함수 정리</a></p>
-            &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">jQuery 실습</span>
-            <p>• <a href="2020-12-12-jquery실습1/" class="heading flip-title">이미지 한칸씩 앞당기기 실습</a>
-            <br>• <a href="2020-12-12-jquery실습2/" class="heading flip-title">멤버 등록 프로그램 실습</a>
-            <br>• <a href="2020-12-13-jquery실습3/" class="heading flip-title">마우스 on/off 실습</a>
-            <br>• <a href="2020-12-13-jquery실습4/" class="heading flip-title">글자수 세기 실습</a></p>
-            &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">ajax 기초 & 실습</span>
-            <p>• <a href="2020-12-14-ajax1/" class="heading flip-title">ajax 데이터 주고받기</a>
-            <br>• <a href="2020-12-15-게시판ajax1/" class="heading flip-title">게시판 회원가입 중복확인하기</a>
-            <br>• <a href="2020-12-17-게시판ajax2/" class="heading flip-title">게시판 댓글 리스트 가져오기</a>
-            <br>• <a href="2020-12-19-게시판ajax3/" class="heading flip-title">게시판 댓글 추가, 삭제하기</a></p>
+      <div class="contents"  id="HTML/CSS">
+                 <p>• <a href="2020-10-20-HTML_tag/" class="heading flip-title">HTML TAGS</a>
+                 <br>• <a href="2020-10-20-HTML_이미지맵/" class="heading flip-title">Image map 간단 실습</a>
+                 <br>• <a href="2020-10-21-HTML_formInput/" class="heading flip-title">HTML form input tags</a>
+                 <br>• <a href="2020-10-21-HTML_formInput2/" class="heading flip-title">HTML input attributes, etc</a>
+                 <br>• <a href="2020-10-22-CSS기초/" class="heading flip-title">CSS 기초</a>
+                 <br>• <a href="2020-10-24-CSS_텍스트/" class="heading flip-title">font와 text 속성</a>
+                 <br>• <a href="2020-10-26-CSS_블록/" class="heading flip-title">Display 속성, 테두리 속성</a>
+                 <br>• <a href="2020-10-27-CSS_layout1/" class="heading flip-title">포지셔닝과 속성들</a>
+                 <br>• <a href="2020-10-27-CSS_layout2/" class="heading flip-title">다단과 테이블</a>
+                 <br>• <a href="2020-10-28-CSS_모달창/" class="heading flip-title">POPUP(모달창) 실습</a></p>
+                 </div>
+                 <div class="contents"  id="JAVASCRIPT">
+                 <p>• <a href="2020-11-02-JS_BASICS/" class="heading flip-title">Javascript 자료형, 기본문법</a>
+                 <br>• <a href="2020-11-03-JS_FUNC/" class="heading flip-title">JS 함수 기초내용</a>
+                 <br>• <a href="2020-11-03-JS_FUNC2/" class="heading flip-title">JS 내장 함수 (타이머 hands-on)</a>
+                 <br>• <a href="2020-11-04-JS문서접근/" class="heading flip-title">JS에서 html과 css 접근하기</a>
+                 <br>• <a href="2020-11-04-JS_HO1" class="heading flip-title">입력 데이터 출력 실습</a>
+                 <br>• <a href="2020-11-06-JS_HO2" class="heading flip-title">n초 마다 사진 바꾸기</a>
+                 <br>• <a href="2020-11-07-JS_HO3" class="heading flip-title">버튼위에 마우스 올려 사진 바꾸기</a>
+                 <br>• <a href="2020-11-07-JS_HO4/" class="heading flip-title">버튼위에 마우스 올려 사진 바꾸기2</a>
+                 <br>• <a href="2020-11-07-JS_HO5/" class="heading flip-title">자식창에서 부모창 정보 수정 하기</a>
+                 <br>• <a href="2020-11-09-JS_HO6/" class="heading flip-title">야식 주문 프로그램 만들기</a></p>
+                 </div>
 
-
-</p></div>
-
-          <div class="contents"  id="java">
-           <p>• <a href="2020-08-26-JAVAbasic" class="heading flip-title">JAVA basic</a> — very basic
-           <br>• <a href="2020-09-02-JAVA_Thread" class="heading flip-title">JAVA thread</a> — thread
-           <br>• <a href="2020-09-07-JAVA_Class" class="heading flip-title">JAVA class</a> — JAVA class
-           <br>• <a href="2020-09-10-JAVA_OOP" class="heading flip-title">JAVA OOP</a> — Object Oriented Programming
-           <br>• <a href="2020-09-15-JAVA_API" class="heading flip-title">JAVA API</a> — API
-           <br>• <a href="2020-09-23-JAVA_Colletion/" class="heading flip-title">JAVA Collection</a> — Data structure
-           <br>• <a href="2020-09-25-JAVA_Exception/" class="heading flip-title">JAVA Exception</a> — Exception
-           <br>• <a href="2020-09-29-JAVA_FileIO/" class="heading flip-title">JAVA File I/O</a> — File input and output</p>
-           </div>
+                  <div class="contents" id="SPRING">
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">데이터 주고 받기</span>
+                  <p>• <a href="2020-11-11-spring1/" class="heading flip-title">JSP에서 서버로 데이터 전송 - intro</a>
+                  <br>• <a href="2020-11-11-spring2/" class="heading flip-title">JSP에서 서버로 데이터 전송 - HTML</a>
+                  <br>• <a href="2020-11-11-spring3/" class="heading flip-title">JSP에서 서버로 데이터 전송 - JS</a>
+                  <br>• <a href="2020-11-12-spring4/" class="heading flip-title">서버에서 JSP로 데이터 전송</a></p>
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">Spring 과 Oracle DB 연결</span>
+                  <p>• <a href="2020-11-16-SpringOracle/" class="heading flip-title">Spring과 Oracle DB 연결 - 흐름</a>
+                  <br>• <a href="2020-11-16-SpringOracle1Lib/" class="heading flip-title">Spring과 Oracle DB 연결 - library 추가</a>
+                  <br>• <a href="2020-11-16-SpringOracle2DB/" class="heading flip-title">Spring과 Oracle DB 연결 - 구현</a>
+                  <br>• <a href="2020-11-16-SpringOracle3Cont/" class="heading flip-title">Spring과 Oracle DB 연결 - JSP,Controller</a>
+                  <br>• <a href="2020-11-17-한글설정" class="heading flip-title">Spring 한글 인코딩</a>
+                  <br>• <a href="2020-11-18-lombok/" class="heading flip-title">인생이 편해지는 lombok library</a></p>
+                  &nbsp;&nbsp;<span style="font-size:1.2em; font-weight : bold">JSTL library</span>
+                  <p>• <a href="2020-11-19-jstl1기본설정/" class="heading flip-title">JSTL 설정</a>
+                  <br>• <a href="2020-11-19-jstl2core/" class="heading flip-title">JSTL core 문법</a>
+                  <br>• <a href="2020-11-19-jstl3format/" class="heading flip-title">JSTL format 문법</a>
+                  <br>• <a href="2020-11-19-jstl4func/" class="heading flip-title">JSTL function 문법</a></p>
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">게시판 만들기</span>
+                  <p>• <a href="2020-11-24-게시판1/" class="heading flip-title">게시판1) Spring 과 DB 연결</a>
+                  <br>• <a href="2020-11-25-게시판2/" class="heading flip-title">게시판2) 회원가입 페이지</a>
+                  <br>• <a href="2020-11-26-게시판3/" class="heading flip-title">게시판3) ID 중복확인</a>
+                  <br>• <a href="2020-11-27-게시판4/" class="heading flip-title">게시판4) 로그인 페이지</a>
+                  <br>• <a href="2020-11-28-게시판5/" class="heading flip-title">게시판5) 게시판 화면 구성</a>
+                  <br>• <a href="2020-11-29-게시판6/" class="heading flip-title">게시판6) 글쓰기</a>
+                  <br>• <a href="2020-11-30-게시판7/" class="heading flip-title">게시판7) 글확인</a>
+                  <br>• <a href="2020-12-01-게시판8/" class="heading flip-title">게시판8) 글수정</a>
+                  <br>• <a href="2020-12-02-게시판9/" class="heading flip-title">게시판9) 게시판 페이징</a>
+                  <br>• <a href="2020-12-03-게시판10/" class="heading flip-title">게시판10) 파일 첨부</a>
+                  <br>• <a href="2020-12-04-게시판11/" class="heading flip-title">게시판11) 파일 다운</a>
+                  <br>• <a href="2020-12-06-게시판12/" class="heading flip-title">게시판12) MIME 타입</a>
+                  <br>• <a href="2020-12-07-게시판13/" class="heading flip-title">게시판13) 글 수정시 파일 변경</a>
+                </p></div>
+                <div class="contents"  id="JQUERY/AJAX">
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">jQuery 기초</span>
+                  <p>• <a href="2020-12-08-jquery/" class="heading flip-title">JQUERY 다운로드</a>
+                  <br>• <a href="2020-12-08-jquery선택자/" class="heading flip-title">JQUERY 기본문법과 선택자</a>
+                  <br>• <a href="2020-12-09-어레이/" class="heading flip-title">배열 관리와 객체 확장</a>
+                  <br>• <a href="2020-12-10-func/" class="heading flip-title">문서 객체 선택과 탐색</a>
+                  <br>• <a href="2020-12-11-attr/" class="heading flip-title">함수 정리</a></p>
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">jQuery 실습</span>
+                  <p>• <a href="2020-12-12-jquery실습1/" class="heading flip-title">이미지 한칸씩 앞당기기 실습</a>
+                  <br>• <a href="2020-12-12-jquery실습2/" class="heading flip-title">멤버 등록 프로그램 실습</a>
+                  <br>• <a href="2020-12-13-jquery실습3/" class="heading flip-title">마우스 on/off 실습</a>
+                  <br>• <a href="2020-12-13-jquery실습4/" class="heading flip-title">글자수 세기 실습</a></p>
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">ajax 기초 & 실습</span>
+                  <p>• <a href="2020-12-14-ajax1/" class="heading flip-title">ajax 데이터 주고받기</a>
+                  <br>• <a href="2020-12-15-게시판ajax1/" class="heading flip-title">게시판 회원가입 중복확인하기</a>
+                  <br>• <a href="2020-12-17-게시판ajax2/" class="heading flip-title">게시판 댓글 리스트 가져오기</a>
+                  <br>• <a href="2020-12-19-게시판ajax3/" class="heading flip-title">게시판 댓글 추가, 삭제하기</a></p>
 
 
-             <div class="contents" id="db">
-           <p>• <a href="2020-10-08-DB_Basics/" class="heading flip-title">DB Basics</a> — basic of DB
-           <br>• <a href="2020-10-09-DB_기초문제/">DB Basic Exercise</a>— Some problems
-           <br>• <a href="2020-10-10-DB_연산자/">DB Operator</a>— DB Operator
-           <br>• <a href="2020-10-13-DB_함수/">DB function</a>— DB Function</p>
-</div>
+      </p></div>
+
+                <div class="contents"  id="JAVA">
+                 <p>• <a href="2020-08-26-JAVAbasic" class="heading flip-title">JAVA basic</a> — very basic
+                 <br>• <a href="2020-09-02-JAVA_Thread" class="heading flip-title">JAVA thread</a> — thread
+                 <br>• <a href="2020-09-07-JAVA_Class" class="heading flip-title">JAVA class</a> — JAVA class
+                 <br>• <a href="2020-09-10-JAVA_OOP" class="heading flip-title">JAVA OOP</a> — Object Oriented Programming
+                 <br>• <a href="2020-09-15-JAVA_API" class="heading flip-title">JAVA API</a> — API
+                 <br>• <a href="2020-09-23-JAVA_Colletion/" class="heading flip-title">JAVA Collection</a> — Data structure
+                 <br>• <a href="2020-09-25-JAVA_Exception/" class="heading flip-title">JAVA Exception</a> — Exception
+                 <br>• <a href="2020-09-29-JAVA_FileIO/" class="heading flip-title">JAVA File I/O</a> — File input and output</p>
+                 </div>
+
+
+                   <div class="contents" id="DB">
+                 <p>• <a href="2020-10-08-DB_Basics/" class="heading flip-title">DB Basics</a> — basic of DB
+                 <br>• <a href="2020-10-09-DB_기초문제/">DB Basic Exercise</a>— Some problems
+                 <br>• <a href="2020-10-10-DB_연산자/">DB Operator</a>— DB Operator
+                 <br>• <a href="2020-10-13-DB_함수/">DB function</a>— DB Function</p>
       </div>
 </div>
-</article></body>
+
+</article>
+<script type="text/javascript">
+var weblist;
+weblist = document.getElementsByClassName("web")
+
+
+
+document.getElementById("subject").innerHTML="ALL";
+for(var j=0; j < weblist.length; j++){
+  document.getElementById("rightCol").innerHTML += document.getElementById(weblist[j].innerHTML).innerHTML;
+}
+function All(){
+    document.getElementById("ALL").onmouseover = function(){
+      document.getElementById("subject").innerHTML="ALL";
+      for(var j=0; j < weblist.length; j++){
+        document.getElementById("rightCol").innerHTML += document.getElementById(weblist[j].innerHTML).innerHTML;
+      }
+}
+};
+confirmEvent();
+All();
+function confirmEvent(){
+    for(var j=0; j < weblist.length; j++){
+        weblist[j].onmouseover = function(){
+          choice = this.innerHTML;
+        document.getElementById("subject").innerHTML=choice;
+        document.getElementById("rightCol").innerHTML= document.getElementById(choice).innerHTML;
+        }; //메뉴를 바꿨을 때 일어나는 이벤트
+    }
+
+
+  }
+
+</script>
+
+</body>
 
 
 </html>
