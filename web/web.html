@@ -2,17 +2,54 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
 <base target="_parent">
     <title>WEB</title>
   <link rel="stylesheet" href="myStyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
 </head>
   <!--<![endif]-->
-<body class="no-color-transition" >
-
+<body class="no-color-transition"  data-spy="scroll" data-target="#myNav" data-offset="0">
         <article class="page" role="article" >
+                  <nav id="myNav" class="navbar navbar-expand-lg navbar-light bg-faded sticky-top" >
+                    <div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                      <span id="where" class="navbar-brand">Web Development</span>
+                    </button></div>
+
+                    <div class="navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav" >
+                          <li class="nav-item">
+                            <a class="nav-link " href="#HTML/CSS">HTML/CSS</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#JAVASCRIPT">JavaScript</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link " href="#SPRING">SPRING</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#JQUERY/AJAX">JQUERY/AJAX</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#JAVA">JAVA</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#DB">DB</a>
+                          </li>
+                        </ul></div>
+                    </nav>
+
           <div  id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;Subject?</div><hr>
           <div class="wrapper">
-           <div class="leftCol">
+           <div class="leftCol" id="left">
              <a><div class="title web">HTML/CSS</div></a>
              <a><div class="title web">JAVASCRIPT</div></a>
              <a><div class="title web">SPRING</div></a>
@@ -23,9 +60,12 @@
 
 
 <div id="rightCol">
-  <div>&nbsp;</div></div>
+  <div>&nbsp;
+  </div></div>
 
+  <div id="mobile">
       <div class="contents"  id="HTML/CSS">
+        &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">HTML/CSS 기초</span>
                  <p>• <a href="2020-10-20-HTML_tag/" class="heading flip-title">HTML TAGS</a>
                  <br>• <a href="2020-10-20-HTML_이미지맵/" class="heading flip-title">Image map 간단 실습</a>
                  <br>• <a href="2020-10-21-HTML_formInput/" class="heading flip-title">HTML form input tags</a>
@@ -38,10 +78,12 @@
                  <br>• <a href="2020-10-28-CSS_모달창/" class="heading flip-title">POPUP(모달창) 실습</a></p>
                  </div>
                  <div class="contents"  id="JAVASCRIPT">
+                   &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">JavaScript 개념</span>
                  <p>• <a href="2020-11-02-JS_BASICS/" class="heading flip-title">Javascript 자료형, 기본문법</a>
                  <br>• <a href="2020-11-03-JS_FUNC/" class="heading flip-title">JS 함수 기초내용</a>
                  <br>• <a href="2020-11-03-JS_FUNC2/" class="heading flip-title">JS 내장 함수 (타이머 hands-on)</a>
-                 <br>• <a href="2020-11-04-JS문서접근/" class="heading flip-title">JS에서 html과 css 접근하기</a>
+                 <br>• <a href="2020-11-04-JS문서접근/" class="heading flip-title">JS에서 html과 css 접근하기</a></p>
+                 <p>&nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">JavaScript 실습</span>
                  <br>• <a href="2020-11-04-JS_HO1" class="heading flip-title">입력 데이터 출력 실습</a>
                  <br>• <a href="2020-11-06-JS_HO2" class="heading flip-title">n초 마다 사진 바꾸기</a>
                  <br>• <a href="2020-11-07-JS_HO3" class="heading flip-title">버튼위에 마우스 올려 사진 바꾸기</a>
@@ -96,7 +138,9 @@
                   <p>• <a href="2020-12-12-jquery실습1/" class="heading flip-title">이미지 한칸씩 앞당기기 실습</a>
                   <br>• <a href="2020-12-12-jquery실습2/" class="heading flip-title">멤버 등록 프로그램 실습</a>
                   <br>• <a href="2020-12-13-jquery실습3/" class="heading flip-title">마우스 on/off 실습</a>
-                  <br>• <a href="2020-12-13-jquery실습4/" class="heading flip-title">글자수 세기 실습</a></p>
+                  <br>• <a href="2020-12-13-jquery실습4/" class="heading flip-title">글자수 세기 실습</a>
+                  <br>• <a href="2021-04-24-jQuery_CodePlayer/" class="heading flip-title">jQuery CodePlayer 실습</a></p>
+
                   &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">ajax 기초 & 실습</span>
                   <p>• <a href="2021-04-21-ajax1/" class="heading flip-title">ajax 기초</a>
                   <br>• <a href="2020-12-14-ajax1/" class="heading flip-title">jsp에서 ajax 데이터 주고받기</a>
@@ -108,6 +152,7 @@
       </p></div>
 
                 <div class="contents"  id="JAVA">
+                  &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">JAVA 기초 개념</span>
                  <p>• <a href="2020-08-26-JAVAbasic" class="heading flip-title">JAVA basic</a> — very basic
                  <br>• <a href="2020-09-02-JAVA_Thread" class="heading flip-title">JAVA thread</a> — thread
                  <br>• <a href="2020-09-07-JAVA_Class" class="heading flip-title">JAVA class</a> — JAVA class
@@ -120,11 +165,13 @@
 
 
                    <div class="contents" id="DB">
+                     &nbsp;&nbsp;<span style="font-size: 1.2em; font-weight : bold">DB 기초 - Oracle SQL</span>
                  <p>• <a href="2020-10-08-DB_Basics/" class="heading flip-title">DB Basics</a> — basic of DB
                  <br>• <a href="2020-10-09-DB_기초문제/">DB Basic Exercise</a>— Some problems
                  <br>• <a href="2020-10-10-DB_연산자/">DB Operator</a>— DB Operator
                  <br>• <a href="2020-10-13-DB_함수/">DB function</a>— DB Function</p>
       </div>
+    </div>
 </div>
 
 </article>
@@ -159,6 +206,19 @@ function confirmEvent(){
 
 
   }
+
+  $(function(){
+    $(".nav-link").click(function(){
+      $("#where").text($(this).text());
+      $(".navbar-toggler").click()
+    })
+
+    $(window).on('scroll', function() {
+      if($(".nav-link").hasClass("active") == true) {
+        $("#where").html(($(".active").html()));
+}
+});
+  })
 
 </script>
 
