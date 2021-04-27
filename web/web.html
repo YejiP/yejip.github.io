@@ -188,6 +188,7 @@ for(var j=0; j < weblist.length; j++){
 function All(){
     document.getElementById("ALL").onmouseover = function(){
       document.getElementById("subject").innerHTML="ALL";
+      document.getElementById("rightCol").innerHTML ="";
       for(var j=0; j < weblist.length; j++){
         document.getElementById("rightCol").innerHTML += document.getElementById(weblist[j].innerHTML).innerHTML;
       }
