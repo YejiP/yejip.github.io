@@ -6,7 +6,7 @@
 
 - 아래에서 체험!
 
-<iframe src="../html/210424jQueryCodePlayer.html" width=800px; height=500px;></iframe>
+<iframe src="../html/210424jQueryCodePlayer.html"  width = "100%" height ="1000px"></iframe>
 
 ## 토글 버튼으로 화면에 추가/제거 하기
 
