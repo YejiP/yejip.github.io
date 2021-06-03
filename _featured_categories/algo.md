@@ -12,7 +12,7 @@ accent_image:
 
 ---
 
-<iframe src="algo.html"  width = "100%" height ="1000px"  frameborder="0"></iframe>
+<iframe src="algo.html"  width = "100%" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';" frameborder="0"></iframe>
 
 ​		
 
