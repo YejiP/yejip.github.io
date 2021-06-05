@@ -26,25 +26,6 @@ description: >
 - University of Chemistry and Technology ( **Praha, Czechia**, 2016/09/19 ~2017/01/20)
 - The king’s university ( **Edmonton, Canada**, 2019/01/07 ~2019/04/24)
 
-**ICT convergence**
-
-```
-Introduction to ICT Convergence
-Python: ICT Engineering Mathematics, Data Management and Application, Programming I
-R: Special Topic of ICT Convergence, Introduction to Data Science
-JAVA: Intro to AI
-Swift: ICT Application Development
-C++: Programming2
-```
-
-**Life Science**
-
-```
-General Microbiology, Organic Chemistry, Cell Biology, Laboratory Safety,
-Seminar 1 , Seminar 2 , Biochemical Calculations, Biochemistry 1, Biochemistry 2,
-Molecular Biology1, Fundamentals of Pharmacology, Intro to genetics
-```
-
 ## 2. KITA ICT Intern Preparation Course 
 
 - Jul 2020 ~ Jan 2021
