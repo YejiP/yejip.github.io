@@ -8,9 +8,10 @@ description: >
   An IT generalist who has fast learning skills. Currently working as a network and system engineer. Optimistic and proactive when solving problem or debugging and learning new technologies. Strong at self-directed learning. My goal is to become a full stack developer.	Please feel free to contact me! ppyeji@gmail.com
 ---
 
-# Work Experience
+# Experience
 
-- **System/Network Engineer intern** at Gravity Interactive (2021.03.01 ~ now)
+- [**Full stack Coding Bootcamp**](#2.-KITA-ICT-Course)  JUL 2020 ~ JAN 2021
+- **System/Network Engineer intern** **at Gravity Interactive** MAR 2021 ~ Current
 
 # Education
 
@@ -26,7 +27,7 @@ description: >
 - University of Chemistry and Technology ( **Praha, Czechia**, 2016/09/19 ~2017/01/20)
 - The king’s university ( **Edmonton, Canada**, 2019/01/07 ~2019/04/24)
 
-## 2. KITA ICT Intern Preparation Course 
+## 2. KITA ICT Course
 
 - Jul 2020 ~ Jan 2021
 
@@ -35,17 +36,19 @@ description: >
 
 ## 3. Online course
 
-EDX: Deep Learning Explained(2019.08~2019.10) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
+**EDX** : Deep Learning Explained(2019.08~2019.10) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
+
+**BoostCourse** : [Full Stack Web Programming](https://www.boostcourse.org/web316/joinLectures/12943) 
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+
+
 
 ---
 
 #  School/Work Program
 
-```
-Please check 'Projects' section in the menu
-```
+Please check [Projects](https://yejip.com/pro/) page
 
 **a. Hands-on AI experience**
 
