@@ -40,7 +40,7 @@ description: >
 
 **EDX** : Deep Learning Explained(2019.08~2019.10) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
 
-**BoostCourse** : [Full Stack Web Programming](https://www.boostcourse.org/web316/joinLectures/12943) 
+**BoostCourse** : [Full Stack Web Programming](https://www.boostcourse.org/web316/) 
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
 
