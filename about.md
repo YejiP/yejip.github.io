@@ -10,8 +10,10 @@ description: >
 
 # Experience
 
-- [**Full stack Coding Bootcamp**](#2.-KITA-ICT-Course)  JUL 2020 ~ JAN 2021
 - **System/Network Engineer intern** **at Gravity Interactive** MAR 2021 ~ Current
+
+- [**Full stack Coding Bootcamp**](#2-kita-ict-course)  JUL 2020 ~ JAN 2021
+- [**Projects**](#schoolwork-program) Mar 2018 ~ Current
 
 # Education
 
