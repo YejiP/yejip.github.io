@@ -92,7 +92,7 @@ hr{
       display:none;
     }
 
-  @media (max-width: 400px) {
+  @media (max-width: 400px){
     #myNav{
       display:block;
     }
