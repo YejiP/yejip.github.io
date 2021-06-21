@@ -106,6 +106,7 @@ hr{
     div.wrapper{
     min-width: 250px;
     padding-left: 30px;
+    padding-top :0px;
     -webkit-colum-count : 1;
     -moz-column-count:1;
     -o-column-count :1;

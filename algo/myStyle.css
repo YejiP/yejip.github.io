@@ -83,3 +83,31 @@ hr{
       a {
         target='_blank'
       }
+
+
+    #myNav{
+      display:none;
+    }
+
+  @media (max-width: 400px){
+    #myNav{
+      display:block;
+    }
+    #left ,#rightCol, #subject{
+      display: none;
+    }
+    #mobile > *{
+      display:block;
+    }
+
+    div.wrapper{
+    min-width: 250px;
+padding-top: 0px;
+    padding-left: 30px;
+    -webkit-colum-count : 1;
+    -moz-column-count:1;
+    -o-column-count :1;
+    column-count: 1;
+    width: 100%;
+    }
+   };
