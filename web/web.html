@@ -240,6 +240,7 @@ function confirmEvent(){
   $(function(){
     $(".nav-link").click(function(){
       $("#where").text($(this).text());
+      $(".nav-item").addClass("collapse");
     })
 
     $(".navbar-toggler").click(function(){

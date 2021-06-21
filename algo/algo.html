@@ -155,7 +155,6 @@
   <br>•<a href="2021-06-05-LeetcodeMat1288/" class="heading flip-title">Leetcode 1288) Remove Covered Intervals</a>
   <br>•<a href="2021-06-09-LeetcodeMat1572/" class="heading flip-title">Leetcode 1572) Matrix Diagonal Sum</a>
 </p></div>
-
 <div class="contents"  id="LinkedList">
   <p><b>LINKED LIST</b>
     <br>•<a href="2021-06-15-LeetcodeLinked21/" class="heading flip-title">Leetcode 21) Merge Two Sorted Lists</a>
@@ -208,20 +207,30 @@ function confirmEvent(){
   }
   $(".nav-item").addClass("collapse");
 
+  var fromNav=false;
+
   $(function(){
     $(".nav-link").click(function(){
       $("#where").text($(this).text());
+      $(".nav-item").addClass("collapse");
+      fromNav=true;
+
     })
+
 
     $(".navbar-toggler").click(function(){
       $(".nav-item").removeClass("collapse");
+
     })
 
 
     $(window).on('scroll', function() {
-      if($(".nav-link").hasClass("active") == true) {
+      if($(".nav-link").hasClass("active") == true && !fromNav) {
         $("#where").html(($(".active").html()));
+        <!--nav에서 클릭하는 경우에도, 이 함수도 실행돼서 결국엔 이름이 이상해진다. 위에 boolean 값으로 set해서 이름 넣어준다.-->
 }
+  fromNav=false;
+
 });
   })
 
