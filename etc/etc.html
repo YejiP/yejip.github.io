@@ -4,8 +4,6 @@
     <meta charset="utf-8">
 <base target="_parent">
     <title>etc</title>
-
-
 <style>
 div.wrapper{
 min-width: 300px;
@@ -99,6 +97,8 @@ function onex(){
   document.getElementById("ex").style.display="block";
   document.getElementById("ga").style.display="none";
   document.getElementById("mg").style.display="none";
+  document.getElementById("git").style.display="none";
+  document.getElementById("linux").style.display="none";
 
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;EXCEL";
 }
@@ -107,7 +107,8 @@ function onga(){
   document.getElementById("ex").style.display="none";
   document.getElementById("ga").style.display="block";
   document.getElementById("mg").style.display="none";
-
+  document.getElementById("git").style.display="none";
+  document.getElementById("linux").style.display="none";
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;GoogleAnalytics";
 }
 
@@ -115,8 +116,29 @@ function onmg(){
   document.getElementById("ex").style.display="none";
   document.getElementById("ga").style.display="none";
   document.getElementById("mg").style.display="block";
+  document.getElementById("git").style.display="none";
+  document.getElementById("linux").style.display="none";
 
   document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;My Goals";
+}
+
+function ongit(){
+  document.getElementById("ex").style.display="none";
+  document.getElementById("ga").style.display="none";
+  document.getElementById("mg").style.display="none";
+  document.getElementById("git").style.display="block";
+  document.getElementById("linux").style.display="none";
+
+  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;Github";
+}
+function onlinux(){
+  document.getElementById("ex").style.display="none";
+  document.getElementById("ga").style.display="none";
+  document.getElementById("mg").style.display="none";
+  document.getElementById("git").style.display="none";
+  document.getElementById("linux").style.display="block";
+
+  document.getElementById("subject").innerHTML="&nbsp;&nbsp;&nbsp;Linux";
 }
 
 </script>
@@ -130,6 +152,8 @@ function onmg(){
           <div  id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;Hello!</div><hr>
           <div class="wrapper">
            <div class="leftCol">
+             <a onmouseover="onlinux()"><div class="title">Linux</div></a>
+             <a onmouseover="ongit()"><div class="title">Github</div></a>
              <a onmouseover="onex()"><div class="title">Excel</div></a>
              <a onmouseover="onga()"><div class="title">GoogleAnalytics</div></a>
              <a onmouseover="onmg()"><div class="title">Goals</div></a></div>
@@ -151,10 +175,22 @@ function onmg(){
              </p>
 </div>
 
+<div class="contents"  id="linux">
+             <p>
+             </p>
+</div>
+
+<div class="contents"  id="git">
+             <p>
+             </p>
+</div>
+
 <div class="contents"  id="mg">
              <p>
                <a href= "https://docs.google.com/spreadsheets/d/e/2PACX-1vQSdENumiE0aSkoktCxhewit679ScYkS0_8A6y953U_BKiAwTGLv8V06kMUl2TexdSRM-GGESS995WK/pubhtml?gid=25503007&single=true" class="heading flip-title"> April 2021 Goals</a>
                <br><a href= "https://docs.google.com/spreadsheets/d/e/2PACX-1vQSdENumiE0aSkoktCxhewit679ScYkS0_8A6y953U_BKiAwTGLv8V06kMUl2TexdSRM-GGESS995WK/pubhtml?gid=269589325&single=true" class="heading flip-title"> May 2021 Goals</a>
+               <br><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQSdENumiE0aSkoktCxhewit679ScYkS0_8A6y953U_BKiAwTGLv8V06kMUl2TexdSRM-GGESS995WK/pubhtml?gid=15647830&single=true"class="heading flip-title"> June 2021 Goals</a>
+
              </p>
 </div>
       </div>
