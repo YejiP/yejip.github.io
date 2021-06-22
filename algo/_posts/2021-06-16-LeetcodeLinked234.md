@@ -55,6 +55,10 @@ class Solution {
 
 # 다른 답안
 
+- slow, fast 포인터 테크닉을 사용해서 
+  - fast가 끝에 닿을 때, slow는 중간에 닿는다.
+  - 처음부터 중간까지의 리스트를 reverse하면서 순회한다.
+
 ```java
 /**
  * Definition for singly-linked list.
@@ -70,33 +74,26 @@ class Solution {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
-        ListNode pre  = null;
-        ListNode prepre  = null;
-        
-        while (fast != null && fast.next != null) {
-            pre = slow;
-            slow = slow.next;
+        ListNode prev = null;
+        while(fast!=null && fast.next!=null){
             fast = fast.next.next;
-            pre.next = prepre;
-            prepre = pre;
+            ListNode temp = slow;
+            slow = slow.next;
+            temp.next = prev;
+            prev = temp;
         }
-        
-        if (fast != null) {
+        if(fast!=null){
             slow = slow.next;
         }
-        
-        while (pre != null && slow != null) {
-            if (pre.val != slow.val) {
+        while(slow!=null && prev!=null){
+            if(slow.val!=prev.val){
                 return false;
             }
-            pre = pre.next;
             slow = slow.next;
+            prev = prev.next;
         }
         return true;
     }
 }
-
-
-
 ```
 

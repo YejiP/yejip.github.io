@@ -57,6 +57,10 @@ class Solution {
 
 # 다른 답안
 
+- ListNode를 map에 저장,
+  -  (key : value) 가  (original : copied) 가 되게 해서 저장한다.
+- 그 후, 두번째 순회에서 random과 next를 설정해준다.
+
 ```java
 /*
 // Definition for a Node.
@@ -76,15 +80,12 @@ class Node {
 class Solution {
     public Node copyRandomList(Node head) {
         if(head == null)return null;
-
         Map<Node,Node> map = new HashMap<>();
-
         Node iter = head;
         while (iter !=null){
             map.put(iter, new Node(iter.val));
             iter =iter.next;
         }
-
         iter = head;
 
         while(iter != null){

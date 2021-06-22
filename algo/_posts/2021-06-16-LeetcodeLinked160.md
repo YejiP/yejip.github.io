@@ -4,6 +4,8 @@
 
 # 내 풀이
 
+- 스택에 담아서 풀었다.
+
 ```java
 /**
  * Definition for singly-linked list.
