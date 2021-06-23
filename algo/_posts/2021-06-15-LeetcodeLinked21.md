@@ -43,6 +43,7 @@ class Solution {
             }
             tmp=tmp.next;
         }
+        //여기서 while문 쓸 필요 없이, 나머지를 그냥 연결해주면 된다. 
         while(l1!=null){
             tmp.next=l1;
             l1=l1.next;
@@ -108,6 +109,61 @@ class Solution {
             curr.next = l2;
         
         return head;
+    }
+}
+```
+
+# 오답노트
+
+- 이 코드가 왜 틀렸을까? : ptr 업뎃 안해줌.. ㅂㅂ..
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2){
+        if(l1 == null) return l2;
+        if(l2 == null) return l1;
+        
+        ListNode res=null;
+        ListNode res_dummy=null;
+        
+        if(l1.val > l2.val){
+            res=l2;
+            l2=l2.next;
+        }else{
+            res=l1;
+            l1=l1.next;
+        }
+        res_dummy=res;
+        //여기선 l1.next가 아니라 l1을 사용함.
+        while(l1!=null && l2!=null){
+            if(l1.val > l2.val){
+                res_dummy.next=l2;
+                l2=l2.next;
+            }else{
+                res_dummy.next=l1;
+                l1=l1.next;
+            }
+        }
+        
+        if(l1!=null){
+            res_dummy.next=l1;
+        }
+        
+        if(l2!=null){
+            res_dummy.next=l2;
+        }
+        
+        return res;
     }
 }
 ```

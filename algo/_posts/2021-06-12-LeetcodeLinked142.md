@@ -81,3 +81,38 @@ public class Solution {
 }
 ```
 
+```java
+/**
+* Definition for singly-linked list.
+* class ListNode {
+*     int val;
+*     ListNode next;
+*     ListNode(int x) {
+*         val = x;
+*         next = null;
+*     }
+* }
+*/
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        if(head==null)return head;
+        ListNode fast = head;
+        ListNode slow = head;
+        ListNode res = head;
+        //조건들, 안에 명령문들에 null ptr 에러 안 뜨게 방지하는 역할
+        while(fast!=null && fast.next!=null && slow!=null){
+            fast= fast.next.next;
+            slow = slow.next;
+            if(fast==slow){
+                while(res!=slow){
+                    res = res.next;
+                    slow = slow.next;
+                }
+                return res;
+            }
+        }
+        return null;
+    }
+}
+```
+
