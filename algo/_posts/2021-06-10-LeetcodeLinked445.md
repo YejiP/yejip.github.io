@@ -76,6 +76,8 @@ class Solution {
 
 # 다른 답안
 
+- 스택 사용해서
+
 ```java
 /**
  * Definition for singly-linked list.
@@ -115,6 +117,67 @@ class Solution {
     }
 }
 ```
+
+- 공간 더 사용하지 말라면, 아마 이렇게 reverse해서 계산하면 좋을 듯
+
+```java
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverse(ListNode node) {
+        ListNode pre = null;
+        while(node != null) {
+            ListNode next = node.next;
+            node.next = pre;
+            pre = node;
+            node = next;
+        }
+        return pre;
+    }
+
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        l1 = reverse(l1);
+        l2 = reverse(l2);
+        ListNode res = new ListNode(0);
+        ListNode pre = res;
+        int carry = 0;
+
+        while(l1 != null || l2 != null) {
+            int sum = carry;
+            if(l1 != null) {
+                sum += l1.val;
+                l1 = l1.next;
+            }
+
+            if(l2 != null) {
+                sum += l2.val;
+                l2 = l2.next;
+            }
+
+            res.next = new ListNode(sum%10);
+            res = res.next;
+            carry = sum/10;
+
+        }
+
+        if(carry != 0) {
+            res.next = new ListNode(carry);    
+        }
+
+        return reverse(pre.next);
+    }
+}
+```
+
+
 
 # 오답노트
 

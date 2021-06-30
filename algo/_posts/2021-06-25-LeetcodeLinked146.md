@@ -56,6 +56,88 @@ class LRUCache {
  */
 ```
 
+- double linked list로 다시 풀어봄
+
+  ```java
+  class LRUCache {
+      class Node {
+          int key; int val;
+          Node(int key,int val){
+              this.key = key;
+              this.val = val;
+          }
+          Node(){}
+          Node next = null;
+          Node prev = null;
+      }
+  
+      int capacity;
+      Map<Integer, Node> cache;
+      Node head;Node tail;
+  
+      public LRUCache(int capacity) {
+          this.capacity=capacity;
+          //key와 노드
+          cache = new HashMap<>();
+          head = new Node();
+          tail = new Node();
+          head.next= tail;
+          tail.prev=head;
+      }
+  
+      public int get(int key){
+          if(cache.containsKey(key)){
+              moveBack(cache.get(key));
+              return cache.get(key).val;
+          }else{
+              return -1;
+          }
+      }
+  
+      public void put(int key, int value) {
+          if(cache.containsKey(key)){
+              cache.get(key).val =value;
+              moveBack(cache.get(key));
+          }else{
+              if(capacity<=cache.size()){
+                  //      System.out.println("remove what? " + head.next.key);
+                  cache.remove(head.next.key);
+                  head.next=head.next.next;
+                  head.next.prev=head;
+              }
+              Node a = new Node(key, value);
+              tail.prev.next= a;
+              a.prev=tail.prev;
+              tail.prev=a;
+              a.next=tail;
+              cache.put(key, a);
+          }
+      }
+      public void moveBack(Node cur){
+          //  System.out.println("move what? " + cur.key);
+  
+          cur.prev.next =cur.next;
+          cur.next.prev=cur.prev;
+          tail.prev.next=cur;
+          cur.prev=tail.prev;
+          tail.prev=cur;
+          cur.next=tail;
+          //  System.out.println("head? " + head.next.key);
+  
+          // System.out.println("tail? " + tail.prev.key);
+  
+      }
+  }
+  /**
+   * Your LRUCache object will be instantiated and called as such:
+   * LRUCache obj = new LRUCache(capacity);
+   * int param_1 = obj.get(key);
+   * obj.put(key,value);
+   */
+  ```
+
+  
+
 #  다른 답안
 
 ```java
@@ -148,6 +230,8 @@ class LRUCache {
 # 오답노트
 
 - head랑 tail을 dummy로 해서 위치를 지켜주면 exception 신경쓸게준다...!! 
+
+  - 원소가 하나일때, 다 사라졌을 때 등등 이럴때 if문으로 head tail 다시 설정 안해줘도 되니까 생각해야하는 경우의 수가 줄어든다.
 
   ```java
   //이렇게 head인 노드를 직접 가리키기보다는

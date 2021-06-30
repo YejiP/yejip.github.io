@@ -89,3 +89,42 @@ class Solution {
 }
 ```
 
+# 다시 풀었을 때
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public void flatten(TreeNode root) {
+        TreeNode tn = root;
+        if(root==null)return;
+        while(tn.left!=null || tn.right!=null){
+            if(tn.left!=null){
+                TreeNode tmp=tn.left;
+                while(tmp.right!=null){
+                    tmp=tmp.right;
+                }
+                tmp.right=tn.right;
+                tn.right=tn.left;
+                tn.left=null;
+            }
+            tn=tn.right;
+        }
+
+    }
+}
+```
+
