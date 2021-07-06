@@ -33,8 +33,7 @@ class Solution {
         invert(tm.right);
         TreeNode tmp= tm.left;
         tm.left=tm.right;
-        tm.right=tmp;        
-        
+        tm.right=tmp;
     }
 }
 ```

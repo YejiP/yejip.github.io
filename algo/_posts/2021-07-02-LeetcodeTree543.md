@@ -44,7 +44,6 @@ class Solution {
             return ++d_left;
         }
         return ++d_right; 
-
     }
 }
 ```
