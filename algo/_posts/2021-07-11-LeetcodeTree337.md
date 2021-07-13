@@ -1,6 +1,6 @@
 # Leetcode 337) House Robber III
 
-![image](https://user-images.githubusercontent.com/37058233/125367544-2ba1f580-e32d-11eb-9fc4-2ca6cee70c28.png)
+![W](https://user-images.githubusercontent.com/37058233/125367544-2ba1f580-e32d-11eb-9fc4-2ca6cee70c28.png)
 
 # 내 답안
 
@@ -40,17 +40,13 @@ class Solution {
         int unchecked=0;
         //행복회로 : 선택됐을 때
         checked=left[1]+right[1]+tn.val;
-        //행복회로2 : 선택 안됐을 때 세가지의 경우의 수의 합
-
-        unchecked = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
-
-        /*
+        //행복회로2 : 선택 안됐을 때 네가지의 경우의 수의 합
         int a= left[1]+right[0];
         int b= left[0]+right[1]; 
         int c= left[0]+right[0]; 
         int d= left[1]+right[1];
-        unchecked= Math.max(Math.max(a,b),Math.max(b,d));
-        */
+        unchecked= Math.max(Math.max(a,b),Math.max(c,d));
+        
         res[0]=checked;
         res[1]=unchecked;
         return res;
@@ -125,7 +121,6 @@ class Solution {
 
         return max;
     }
-    public int[] tree(TreeNode tn){
         //0번 원소는 현재 원소가 선택됐을때 max
         //1번 원소는 현재 원소가 선택 되지 않았을 때 max
         //2번 원소는 checked면 1 아니면 0
@@ -159,12 +154,9 @@ class Solution {
 }
 ```
 
-- 오 soltion 이랑 코드 비슷하다. 그런데 저 형광펜 친 부분이 다름. 
+- 오답이랑 solution code랑 비슷하다.
 
   - 아아아ㅏ...! **left[1]+right[1]** 이것 포함 해줘야한다....아예 선택 안 했을 때 
   - **left[1]+right[1]+tn.val** 는 당연하게 1,1밖에 선택 못하구, 현재꺼 선택 안하고 저번것도 선택 안하는 옵션도 체크해줘야한다.
 
-  근데 얘네는 왜 다르냐
-
-![image](https://user-images.githubusercontent.com/37058233/125370830-36ac5400-e334-11eb-931f-3564e8b9bced.png)
 
