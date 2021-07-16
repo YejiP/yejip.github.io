@@ -18,7 +18,9 @@ Description에 사용자 이름 추가한다.
 
 cmd admin 권한으로 열고 gpupdate /force 한다.
 
-mmc에서 사용자 이름의 로컬 어드민 계정 추가하고, 디폴트로 있는 Administrater account를 비활성화 한다 (보안상 그게 좋다.) 
+mmc에서 사용자 
+
+이름의 로컬 어드민 계정 추가하고, 디폴트로 있는 Administrater account를 비활성화 한다 (보안상 그게 좋다.) 
 
 mmc => Add Remove Snap-in => Local Users and Groups(Local) => ok 하면 console root 아래에 Local Users and Groups(Local)이 뜬다.
 
