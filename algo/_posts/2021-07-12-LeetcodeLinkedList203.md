@@ -42,6 +42,8 @@ class Solution {
 
 #  다른 답안
 
+- 재귀로 간단하게 처리
+
 ```java
 /**
  * Definition for singly-linked list.
@@ -69,6 +71,8 @@ class Solution {
 ```
 
 # 오답
+
+- 주의, 삭제한 후에는 포인터 move하면 안된다.
 
 ```java
 /**

@@ -35,28 +35,39 @@ class Solution {
 
 # 다른 답안
 
+- head 앞에 
+
 ```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ *     ListNode(int x) { val = x; }
  * }
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        
-        if(head == null || head.next == null) return head;
-        // (1->2->3<-4<-5<-6) 
-        ListNode finalHead = reverseList(head.next); //Return 6 everytime (6->5->4->3->null)
-        head.next.next = head;  // head is 2 node (6->5->4->3->2)
-        head.next = null;   //(6->5->4->3->2->null)
-    
-        return finalHead;
+        if (head == null) {
+            return head;
+        }
+        ListNode currentHead = head;
+        while (head.next != null) {
+            ListNode p = head.next;
+            head.next = p.next;
+            p.next = currentHead;
+            currentHead = p;
+        }
+        return currentHead;
     }
 }
 ```
+
+빨간색은 내 풀이
+
+파란색은 다른 풀이
+
+- 뒤에랑 끊기지 않는다. 
+
+![image](https://user-images.githubusercontent.com/37058233/125843045-51be84be-582b-4161-8a89-b8abb67a2153.png)
 

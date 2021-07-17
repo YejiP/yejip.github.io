@@ -8,12 +8,20 @@
 
       - while문 안에 .next.next가 들어갈 경우는 조건에서 무조건 fast.next!=null 줘야한다.
       - while문을 빠져나간 후에 변수에 null값이 들어가있다.
+      - 조건은 fast에 맞춰있다. (당연) fast!=null && fast.next!=null
+      - slow는 대충 중간으로나오는데, 만약에 palindrome 문제라면, 중앙 값을 한번 뛰어 넘어주고싶다. 
+
+      ![image](https://user-images.githubusercontent.com/37058233/126019068-06086997-abd8-41ab-8e49-046d8e777086.png)
+
+      1. fast가 null이면 짝수, fast.next가 null이면 홀수
 
       ```java
-      while(slow!=null || fast!=null){
+      while(fast!=null && fast.next!=null){
           slow = slow.next;
           fast= fast.next.next;
       }
+      //여기서 fast가 null : 짝수
+      //fast.next 가 null : 홀수
       ```
 
    2. **while(head!=null)**
