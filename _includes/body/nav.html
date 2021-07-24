@@ -11,6 +11,8 @@
           {% if node.rel %}rel="{{ node.rel }}"{% endif %}
 >
           {{ node.name | default:node.title }}
+          {{node.size}}
+
         </a>
       </li>
     {% endfor %}
