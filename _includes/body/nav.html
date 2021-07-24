@@ -30,8 +30,8 @@
             class="sidebar-nav-item{% if page.url contains node.url %} active{% endif %}"
             {% if node.rel %}rel="{{ node.rel }}"{% endif %}
             >
-            {{ node.title }}
-          </a>
+            <span class="badge">{{ category | last | size }}</span>
+        </a>
         </li>
       {% else %}
         <li>
