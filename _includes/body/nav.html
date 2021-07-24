@@ -11,7 +11,7 @@
           {% if node.rel %}rel="{{ node.rel }}"{% endif %}
 >
           {{ node.name | default:node.title }}
-          <span class="badge">{{ node | last | size }}</span>
+          {{ node.size }}
 
         </a>
       </li>
@@ -34,7 +34,7 @@
         </li>
       {% else %}
         <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title }}<span class="badge">{{ node | last | size }}</span></a>
+          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title }}{{ node.size }}</a>
 
         </li>
       {% endunless %}
