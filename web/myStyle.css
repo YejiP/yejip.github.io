@@ -20,7 +20,9 @@ font-size: 1em;
 line-height: 2;
 width: 100%;
 }
-
+div.search{
+margin-top:70px;
+}
 div.leftCol{
 break-after : column;
 -webkit-break-after : column;
@@ -101,7 +103,9 @@ hr{
     #mobile > *{
       display:block;
     }
-
+div.search{
+margin-top:0px;
+}
     div.wrapper{
     min-width: 250px;
     padding-left: 30px;
