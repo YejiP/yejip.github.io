@@ -3,6 +3,7 @@
   {% if site.menu %}
     {% for node in site.menu %}
       {% assign url = node.url | default: node.href %}
+      {% comment %} page build시에 이 부분 코드가 실행된다. {% endcomment %}.
       <li>
         <a
           {% if forloop.first %}id="_navigation"{% endif %}
@@ -12,12 +13,19 @@
 >
           {{ node.name | default:node.title }}
         </a>
-
-        <span>{{ site.categories['web'] | size }}</span>
-        {% if node.title == 'Web Dev' %}
-        ss
+        {% comment %} node.name이 아니라, node.title이 사용됨! {% endcomment %}
+        {% if node.title == 'AWS(CDA)' %}
+        <span>{{ site.categories['aws'] | size }}</span>
         {% endif %}
-
+        {% if node.title == 'Web Dev' %}
+        <span>{{ site.categories['web'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'Algorithms' %}
+        <span>{{ site.categories['algo'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'AI' %}
+        <span>{{ site.categories['ai'] | size }}</span>
+        {% endif %}
       </li>
     {% endfor %}
   {% else %}
@@ -38,7 +46,7 @@
         </li>
       {% else %}
         <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title}} 1</a>
+          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title}}</a>
         </li>
       {% endunless %}
     {% endfor %}
