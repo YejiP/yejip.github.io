@@ -4,9 +4,9 @@ title: About me
 slug: About me
 menu: true
 order: 1
-description: >
-  An IT generalist who has fast learning skills. Currently working as a network and system engineer. Optimistic and proactive when solving problem or debugging and learning new technologies. Strong at self-directed learning. My goal is to become a full stack developer.	Please feel free to contact me! ppyeji@gmail.com
 ---
+
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="yeji" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">YEJI  'Callie' P.</a></div>
 
 # Experience
 
@@ -26,8 +26,8 @@ description: >
 
 **Exchange program**
 
-- University of Chemistry and Technology ( **Praha, Czechia**, 2016/09/19 ~2017/01/20)
-- The king’s university ( **Edmonton, Canada**, 2019/01/07 ~2019/04/24)
+- University of Chemistry and Technology ( **Praha, Czechia**, Sep  2016 ~ Jan 2017)
+- The king’s university ( **Edmonton, Canada**, Jan 2019 ~ Apr 2019)
 
 ## 2. KITA ICT Course
 
@@ -38,7 +38,7 @@ description: >
 
 ## 3. Online course
 
-**EDX** : Deep Learning Explained(2019.08~2019.10) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
+**EDX** : Deep Learning Explained( Aug 2019~ Oct 2019) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
 
 **BoostCourse** : [Full Stack Web Programming](https://www.boostcourse.org/web316/) 
 
