@@ -12,11 +12,10 @@
 >
           {{ node.name | default:node.title }}
         </a>
-        {% if node.name == 'Web Dev' %}
+
         <span>{{ site.categories['web'] | size }}</span>
-        {% endif %}
-        {% if node.name  == 'Web Dev' %}
-        <span>{{ site.categories['web'] | size }}</span>
+        {% if node.title == 'Web Dev' %}
+        ss
         {% endif %}
 
       </li>
@@ -39,13 +38,7 @@
         </li>
       {% else %}
         <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title}}</a>
-          {% if node.name == 'Web Dev' %}
-          <span>{{ site.categories['web'] | size }}</span>
-          {% endif %}
-          {% if node.name  == 'Web Dev' %}
-          <span>{{ site.categories['web'] | size }}</span>
-          {% endif %}
+          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title}} 1</a>
         </li>
       {% endunless %}
     {% endfor %}
