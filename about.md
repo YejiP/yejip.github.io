@@ -6,7 +6,9 @@ menu: true
 order: 1
 ---
 
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="yeji" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">YEJI  'Callie' P.</a></div>
+An IT generalist who understand the flow of developing software from the system side to backend, and backend to frontend.  Currently I am working at  Gravity Interactive as a system admin intern and looking for a software developer position for the next year.
+
+Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin.</a>! 
 
 # Experience
 
