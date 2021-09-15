@@ -3,7 +3,7 @@
   {% if site.menu %}
     {% for node in site.menu %}
       {% assign url = node.url | default: node.href %}
-      {% comment %} page build시에 이 부분 코드가 실행된다. {% endcomment %}.
+      {% comment %} page build시에 이 부분 코드가 실행된다. {% endcomment %}
       <li>
         <a
           {% if forloop.first %}id="_navigation"{% endif %}
@@ -14,6 +14,9 @@
           {{ node.name | default:node.title }}
         </a>
         {% comment %} node.name이 아니라, node.title이 사용됨! {% endcomment %}
+        {% if node.title == 'Sys Net' %}
+        <span>{{ site.categories['sys'] | size }}</span>
+        {% endif %}
         {% if node.title == 'AWS(CDA)' %}
         <span>{{ site.categories['aws'] | size }}</span>
         {% endif %}
