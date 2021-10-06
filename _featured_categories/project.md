@@ -1,6 +1,5 @@
 ---
 layout: page_noTitle
-title: Projects
 slug: project
 menu: true
 order: 1
