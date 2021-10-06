@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <style media="screen">
+    a{
+      text-align: center;
+    }
+    </style>
+
+    <title>HTML CSS JS</title>
+  </head>
+  <body class="container">
+    <div class="list-group">
+      <a href="https://yejip.com/web/html/210424jQueryCodePlayer.html" class="list-group-item">Code Player</a>
+      <a href="https://yejip.com/web/html/js_simple.html" class="list-group-item">Score Sheet</a>
+      <a href="https://yejip.com/web/html/yasik.html" class="list-group-item">Food Order</a>
+    </div>
+
+</div>
+<iframe id="myframe" src="https://yejip.com/web/html/yasik.html" frameborder="0" style="display:block; width:100%; height: 100vh">
+</iframe>
+
+  </body>
+<script type="text/javascript">
+var a = document.querySelector(".list-group");
+a.addEventListener('mouseover', function(e){
+  document.querySelector("#myframe").src=e.target;
+})
+
+
+</script>
+
+</html>
