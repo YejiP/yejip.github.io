@@ -6,10 +6,7 @@ menu: true
 order: 1
 ---
 
-```
-An IT generalist who understands the flow of developing software from the system side to backend, and backend to frontend.  
-Currently I am working at  Gravity Interactive as a system admin intern and looking for a software developer position to start next year.
-```
+An IT generalist who understands the flow of developing software from the system side to backend, and backend to frontend.  Currently I am working at  Gravity Interactive as a system admin intern and looking for a software developer position to start next year.
 
 **Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>**
 
