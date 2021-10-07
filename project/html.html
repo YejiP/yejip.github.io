@@ -17,9 +17,9 @@
   </head>
   <body class="container">
     <div class="list-group">
-      <a href="https://yejip.com/web/html/210424jQueryCodePlayer.html" class="list-group-item">Code Player</a>
-      <a href="https://yejip.com/web/html/js_simple.html" class="list-group-item">Score Sheet</a>
-      <a href="https://yejip.com/web/html/yasik.html" class="list-group-item">Food Order</a>
+      <a href="https://yejip.com/web/html/210424jQueryCodePlayer.html" class="list-group-item"><span>Code Player</span></a>
+      <a href="https://yejip.com/web/html/js_simple.html" class="list-group-item"><span>Score Sheet</span></a>
+      <a href="https://yejip.com/web/html/yasik.html" class="list-group-item"><span>Food Order</span></a>
     </div>
 
 </div>
@@ -30,7 +30,10 @@
 <script type="text/javascript">
 var a = document.querySelector(".list-group");
 a.addEventListener('mouseover', function(e){
-  document.querySelector("#myframe").src=e.target;
+  if(e.target.tagName == 'SPAN'){
+    document.querySelector("#myframe").src=e.target;
+  }
+
 })
 
 
