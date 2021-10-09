@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -16,11 +15,27 @@
       display: inline;
       float: left;
     }
+
+    .tab-content {
+position: relative;
+padding-bottom: 56.25%; /* 16:9 비율인 경우 */
+/* padding-bottom값은 4:3 비율인 경우 75%로 설정합니다 */
+padding-top: 25px;
+height: 0;
+}
+
+.videowrapper iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
     </style>
 
     <title>HTML CSS JS</title>
   </head>
-  <body class="container">
+  <body class="container" style =>
     <!-- Nav tabs -->
 <ul class="nav nav-tabs">
   <li class="nav-item">
