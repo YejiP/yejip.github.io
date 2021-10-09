@@ -52,7 +52,7 @@ An IT generalist who understands the flow of developing software from the system
 
 #  School/Work Program
 
-Please check [Projects](https://yejip.com/pro/) page
+Please check [Projects](https://yejip.com/project/) page
 
 **a. Hands-on AI experience**
 
