@@ -94,32 +94,30 @@ class Solution {
 }
 ```
 
-```java
-import java.util.*;
+- Sliding Window
 
+```java
 class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        
-        int n = s.length();
-        int maxCount = 0;
-        Integer[] chars = new Integer[128];
-        
-        int left = 0;
-        int right = 0;
-        
-        while(right < n){
-            char rightChar = s.charAt(right);
-            Integer index = chars[rightChar];
-            if(index != null && index >= left && index < right){
-                left = index + 1;
-            }  
-            chars[rightChar] = right;
-            maxCount = Math.max(maxCount, right - left + 1);
-            right++;
+    public int lengthOfLongestSubstring(String s){
+        int left =0; int right=0;
+        Map<Character,Integer> chars = new HashMap<>();
+        int max = 0;
+
+        while( right < s.length()){
+            char currentChar = s.charAt(right);
+            if(!chars.containsKey(currentChar)){
+                chars.put(currentChar,1);
+                right++;
+                max= Math.max(max,right-left);
+            }else{
+                //chars.remove(currentChar);
+                chars.remove(s.charAt(left));
+                left++;
+            }
         }
-        return maxCount;
-        
+        return max;
     }
 }
+
 ```
 

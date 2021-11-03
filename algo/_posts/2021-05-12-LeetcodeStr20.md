@@ -10,45 +10,35 @@
   - 이걸 내가 다 고려해서 넣어줬다.  ==> 안 좋은 코드가 확실함..
 
 ```java
-import java.util.*;
 class Solution {
     public boolean isValid(String s) {
-        if(s.length()%2==1){
-            return false;
-        }
-
-        char[] par= s.toCharArray();
-        boolean ok=false;
-        char[] asump = new char[s.length()];
-        int cnt=-1;
-
-        for(int i =0;i<s.length();i++){
-            if(par[i]=='(' ||par[i]=='[' ||par[i]=='{'){
-                cnt++;
-                if(par[i]=='('  ){
-                    asump[cnt]=')';
-                }else if(par[i]=='[' ){
-                    asump[cnt]=']';
-                }else if(par[i]=='{'){
-                    asump[cnt]='}';
-                }
-            }else{
-                ok=true;
-                if(cnt==-1){
-                    return false;
-                }
-                if(par[i]==asump[cnt]){
-                    cnt--;
-                }else{
-                    return false;
-                }        
+        Stack<Character> st = new Stack<>();
+        for(int i=0;i<s.length();i++){
+            switch(s.charAt(i)){
+                case '(':
+                    st.push(')');
+                    continue;
+                case '{':
+                    st.push('}');
+                    continue;
+                case '[' :
+                    st.push(']');
+                    continue;
             }
-
+            if(st.isEmpty()){
+                return false;
+            }
+            
+            char suppose = st.pop();
+            if(suppose!=s.charAt(i)){
+                return false;
+            }       
         }
-        if(cnt!=-1){
+        
+        if(!st.empty()){
             return false;
         }
-        return ok;
+        return true;
     }
 }
 ```
