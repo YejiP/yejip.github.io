@@ -1,4 +1,4 @@
-# Leetcode 30)  Longest Substring with At Most K Distinct Characters
+# Leetcode 30) Substring with Concatenation of All Words
 
 ![image](https://user-images.githubusercontent.com/37058233/140168359-d6d2e65d-0d14-4a4f-978a-88f506fc1f76.png)
 
