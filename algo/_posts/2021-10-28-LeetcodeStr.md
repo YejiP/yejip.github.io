@@ -2,15 +2,21 @@
 
 In this post, would like to talk about several good strategies that you might be able to use for typical string problems. (Only two .. right now.. )
 
+```
+1. Sliding Window
+2. Palindrome
+```
+
+## Overview
+
 1. **Contiguous Substring** - Sliding Window
 
    - Use left and right pointer to expand/trim the window. 
 
-     [Detail](#1. **Contiguous Substring** - Sliding Window)
-
+   
    ![ABDCSDFACAXC](https://user-images.githubusercontent.com/37058233/140412014-f8954eb1-17e7-48ec-856d-45f9e916e42a.gif)
-
-2. **Palindromic** - Middle out algorithm
+   
+2. **Palindrome** - Middle out algorithm
 
    - Use mid pointer to investigate whether the string is palindromic or not. 
 
