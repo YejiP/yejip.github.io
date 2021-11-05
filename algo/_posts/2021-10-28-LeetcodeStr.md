@@ -1,6 +1,6 @@
 # String Problem Strategy
 
-In this post, would like to talk about several good strategies that you might be able to use for typical string problems. (Only two .. right now.. )
+In this post, I would like to talk about several good strategies that you might be able to use for typical string problems. (Only two .. right now.. )
 
 ```
 1. Sliding Window
@@ -28,8 +28,16 @@ In this post, would like to talk about several good strategies that you might be
   - Use two pointer.
     - Slide your right pointer to the right if the condition is satisfied
     - Slide your left pointer till the condition is satisfied.
-  - Template uses double while loop. Move right pointer from outer while loop, and move left pointer from the inner while loop.![ABDCSDFACAXC11](https://user-images.githubusercontent.com/37058233/140412128-5a010c9a-54ec-42dd-a67b-e474a9cde3dd.gif)
-  
+    
+  - Template uses double while loop. Move right pointer from outer while loop, and move left pointer from the inner while loop.
+
+  - The condition for this example : 
+
+    - Redundant character should not be in a substring.
+    - Find maximum length of substring
+
+    ![ABDCSDFACAXC11](https://user-images.githubusercontent.com/37058233/140412128-5a010c9a-54ec-42dd-a67b-e474a9cde3dd.gif)
+
 - **Template**
 
   ```java
