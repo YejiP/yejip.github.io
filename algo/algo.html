@@ -50,13 +50,15 @@
 <div class ="search"><div class="gcse-search"></div></div>
           <div class="wrapper">
            <div class="leftCol" id="left">
-             <a><div class="title algos">Integer/String</div></a><a><div class="title algos">Array/Matrix</div></a><a><div class="title algos">Sorting/Search</div></a><a><div class="title algos">LinkedList</div></a><a><div class="title algos">Tree</div></a><a><div class="title algos">ETC</div></a>
+             <a><div class="title algos">Integer/String</div></a><a><div class="title algos">Array/Matrix</div></a><a><div class="title algos">Sorting/Search</div></a><a><div class="title algos">LinkedList</div></a><a><div class="title algos">Tree</div></a>
+             <a><div class="title algos">ETC</div></a>
            </div>
 
 <div id = "rightCol">
   <div>&nbsp;</div>
   <!--this &nbsp; block keeps rightcol exist in the page. so it does count as right column from the beginning.-->
       </div>
+
 <div id="mobile">
 <div class="contents"  id="Integer/String">
         <p><b>INTEGER</b><br>•<a href="2021-04-13-LeetcodeInt9/" class="heading flip-title">Leetcode9) Palindrome Number</a>
@@ -331,15 +333,18 @@ algolist = document.getElementsByClassName("algos")
 for(var j=0; j < algolist.length; j++){
   var choice = algolist[j].innerHTML.replace(/&nbsp;/g,' ');
 
-  document.getElementById("rightCol").innerHTML += document.getElementById(choice).innerHTML;}
+//  document.getElementById("rightCol").innerHTML += document.getElementById(choice).innerHTML;
+}
+
 
 confirmEvent();
-
 
 function confirmEvent(){
     for(var j=0; j < algolist.length; j++){
         algolist[j].onmouseover = function(){
-        var choice = this.innerHTML.replace(/&nbsp;/g,' ');
+//        var choice = this.innerHTML.replace(/&nbsp;/g,' ');
+        choice = this.innerHTML;
+
         document.getElementById("subject").innerHTML=choice;
         document.getElementById("rightCol").innerHTML= document.getElementById(choice).innerHTML;
         }; //메뉴를 바꿨을 때 일어나는 이벤트
@@ -354,7 +359,6 @@ function confirmEvent(){
       $("#where").text($(this).text());
       $(".nav-item").addClass("collapse");
       fromNav=true;
-
     })
 
 
