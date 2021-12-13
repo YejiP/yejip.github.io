@@ -14,12 +14,12 @@ order: 1
 
 ## 1. Handong Global University
 
-**Bachelor of Science, Information and Communication Technology  2020, GPA of 4.06/4.5 **
+Bachelor of Science, Information and Communication Technology  2020, GPA of 4.06/4.5 
 
 **Exchange program**
 
-- University of Chemistry and Technology ( **Praha, Czechia**, Sep  2016 ~ Jan 2017)
-- The king’s university ( **Edmonton, Canada**, Jan 2019 ~ Apr 2019)
+- University of Chemistry and Technology ( Praha, Czechia, Sep  2016 ~ Jan 2017)
+- The king’s university ( Edmonton, Canada, Jan 2019 ~ Apr 2019)
 
 # **Skills**
 
@@ -61,10 +61,10 @@ Made human versus AI checkers game in Java using JFrame for GUI. Used minimax tr
 
   ·    Assisted in upgrading hardware for game servers during maintenance
 
-- **Full stack Coding Bootcamp **Jul 2020 ~ Jan 2021 (5 months)
+- **Full stack Coding Bootcamp,** KITA(Seoul, Korea) Jul 2020 ~ Jan 2021 (5 months)
 
-  - Jul 2020 ~ Jan 2021
-  - Learned basic knowledge in developing website using Spring,  JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
+  - Learned developing website using Spring,  JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
+  - US Internship related program
 
 - **Data Analyst Internship,** HEM Pharma (Gwanggyo, Korea)
 
