@@ -6,9 +6,7 @@ menu: true
 order: 1
 ---
 
-*Curious motivated software engineer. Passion for learning especially in software development and have created several projects in Java. Currently coding internal tools using Java as system administrator intern. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration.* 
-
-**Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>**
+*Curious motivated software engineer. Passion for learning especially in software development and have created several projects in Java. Currently coding internal tools using Java as system administrator intern. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration.* Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>
 
 # Education
 
@@ -16,16 +14,11 @@ order: 1
 
 Bachelor of Science, Information and Communication Technology  2020, GPA of 4.06/4.5 
 
-**Exchange program**
-
-- University of Chemistry and Technology ( Praha, Czechia, Sep  2016 ~ Jan 2017)
-- The king’s university ( Edmonton, Canada, Jan 2019 ~ Apr 2019)
-
 # **Skills**
 
  • Java  •  Spring Framework  •  MySQL  •  OracleSQL •  HTML5  •  CSS3  •  JavaScript  • Python   • Git  • REST API • MVC • OOP
 
-# Project
+# Projects
 
 Please check [Projects](https://yejip.com/project/) page
 
