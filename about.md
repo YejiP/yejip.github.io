@@ -6,76 +6,74 @@ menu: true
 order: 1
 ---
 
-An IT generalist who understands the flow of developing software from the system side to backend, and backend to frontend.  Currently I am working at  Gravity Interactive as a system admin intern and looking for a software developer position to start next year.
+*Curious motivated software engineer. Passion for learning especially in software development and have created several projects in Java. Currently coding internal tools using Java as system administrator intern. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration.* 
 
 **Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>**
-
-# Experience
-
-- **System/Network Engineer intern** **at Gravity Interactive** MAR 2021 ~ Current
-
-- [**Full stack Coding Bootcamp**](#2-kita-ict-course)  JUL 2020 ~ JAN 2021
-- [**Projects**](#schoolwork-program) Mar 2018 ~ Current
 
 # Education
 
 ## 1. Handong Global University
 
-**Bachelor in ICT Convergence and Life Science**
-
-- Mar 2015 – Feb 2020
-- GPA of 4.06/4.5 (Major : 4.19/4.5)
+**Bachelor of Science, Information and Communication Technology  2020, GPA of 4.06/4.5 **
 
 **Exchange program**
 
 - University of Chemistry and Technology ( **Praha, Czechia**, Sep  2016 ~ Jan 2017)
 - The king’s university ( **Edmonton, Canada**, Jan 2019 ~ Apr 2019)
 
-## 2. KITA ICT Course
+# **Skills**
 
-- Jul 2020 ~ Jan 2021
+ • Java  •  Spring Framework  •  MySQL  •  OracleSQL •  HTML5  •  CSS3  •  JavaScript  • Python   • Git  • REST API • MVC • OOP
 
-- **JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY, Ajax**
-- learned basic knowledge in developing website using Spring
-
-## 3. Online course
-
-**EDX** : Deep Learning Explained( Aug 2019~ Oct 2019) [Certificate](https://courses.edx.org/certificates/6730d44bc8834c76ad94442d0b22250b)
-
-**BoostCourse** : [Full Stack Web Programming](https://www.boostcourse.org/web316/) 
-
-*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
-
-
-
----
-
-#  School/Work Program
+# Project
 
 Please check [Projects](https://yejip.com/project/) page
 
-**a. Hands-on AI experience**
+**Number recognition** - https://yejip.com/pro/ANN.html
 
-2019.11.02 ~ 2020.01.05 / Constructed Artificial Neural Network to find relationship between gut microbes and diabetes /Python(TensorFlow), R 
+Created Java web application using HTML/CSS/JavaScript for frontend, and Java servlet for backend. Implemented two-layered artificial neural network from scratch without using AI library. Identifies integers from 0 to 9 based on pixels 
 
-**b. Genetic algorithm on scheduling program**
+drawn to canvas by user.
 
-2019.04.12 ~ 2019.05.01 / Made a schedule based on Genetic Algorithm /JAVA, HTML, CSS
+**Task Manager**   - https://task-manager-simple.herokuapp.com/
 
-**c. Character recognition**
+Developed CRUD web application for task management using Java, Servlet, JSP, Maven, and MVC pattern. Built API backend with MYSQL database and frontend using HTML, CSS, JavaScript, Ajax, and Bootstrap. 
 
-2019.03.13 ~ 2019.04.11 / Implemented Artificial Neural Network from scratch / Servlet, JSP, HTML, CSS, AWS EC2, Tomcat Apache
+**Scheduler** - https://yejip.com/pro/GA.html
 
-**d. Sudoku Solver**
+Built scheduler inspired by personal interest in biology using Java and OOP. Takes educational courses as inputs and uses algorithm influenced by theory of evolution by natural selection. Balances constraints of variables such as class size, professors, etc. to schedule all courses without conflicts.
 
-2019.02.15 ~ 2019.03.02 / Solved Sudoku using backtracking and forward checking algorithm / Servlet, JSP, HTML, CSS, AWS EC2, Tomcat Apache
+**Checker AI** - https://yejip.com/pro/Checker.html
 
-**e. AI checker game**
+Made human versus AI checkers game in Java using JFrame for GUI. Used minimax tree algorithm for AI decisions and alpha-beta pruning to reduce number of options involved in making decisions.
 
-2019.01.15 ~ 2019.02.13 / Made AI which can play modified checker /JAVA, HTML, CSS
+# Experience
 
-**f. ev3 robotic arm programming**
+- **System Administrator Internship,** Gravity Interactive, Inc. (Buena Park, CA)
 
-2018.03.28 ~ 2018.06.02 / Applied right functions to make robot recognize objects and move them to the right place/ C++, PuTTY
+  Mar 2021 - Present (8 months+) 
 
- 
+  ·    Assembled workstations and supporting users with hardware issue
+
+  ·    Installed operating system for workstations and other software
+
+  ·    Managed employee accounts using Active Directory
+
+  ·    Assisted in upgrading hardware for game servers during maintenance
+
+- **Full stack Coding Bootcamp **Jul 2020 ~ Jan 2021 (5 months)
+
+  - Jul 2020 ~ Jan 2021
+  - Learned basic knowledge in developing website using Spring,  JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
+
+- **Data Analyst Internship,** HEM Pharma (Gwanggyo, Korea)
+
+  Oct 2019 - Feb 2020 (5 months)
+
+  ·    Preprocessed raw csv data using Python, numpy, and sklearn libraries
+
+  ·    Used above data to create artificial neural network model using keras and tensorflow
+
+  ·    Visualized data with matplotlib for correlation analysis between diabetes and gut microbiome
+
+*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
