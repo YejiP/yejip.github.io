@@ -8,39 +8,43 @@ order: 1
 
 *Curious motivated software engineer. Passion for learning especially in software development and have created several projects in Java. Currently coding internal tools using Java as system administrator intern. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration.* Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>
 
-# Education
+## Education
 
-## 1. Handong Global University
+**Handong Global University**
 
 Bachelor of Science, Information and Communication Technology  2020, GPA of 4.06/4.5 
 
-# **Skills**
+**Exchange Student Program**
+
+University of Chemistry and Technology ( Praha, Czechia, Sep  2016 ~ Jan 2017)
+
+The king’s university ( Edmonton, Canada, Jan 2019 ~ Apr 2019)
+
+## Skills
 
  • Java  •  Spring Framework  •  MySQL  •  OracleSQL •  HTML5  •  CSS3  •  JavaScript  • Python   • Git  • REST API • MVC • OOP
 
-# Projects
+## Projects
 
-Please check [Projects](https://yejip.com/project/) page
+Please check [Projects](https://yejip.com/project/) page for more.
 
-**Number recognition** - https://yejip.com/pro/ANN.html
+**Checker AI** [Demo](https://yejip.com/pro/Checker/checkerAI_demo.html)
 
-Created Java web application using HTML/CSS/JavaScript for frontend, and Java servlet for backend. Implemented two-layered artificial neural network from scratch without using AI library. Identifies integers from 0 to 9 based on pixels 
+Made human versus AI checkers game in Java using JFrame for GUI. Used minimax tree algorithm for AI decisions and alpha-beta pruning to reduce number of options involved in making decisions. [More](https://yejip.com/pro/Checker.html)
 
-drawn to canvas by user.
+**Number recognition** 
 
-**Task Manager**   - https://task-manager-simple.herokuapp.com/
+Created Java web application using HTML/CSS/JavaScript for frontend, and Java servlet for backend. Implemented two-layered artificial neural network from scratch without using AI library. Identifies integers from 0 to 9 based on pixels drawn to canvas by user. [More]( [https://yejip.com/pro/ANN.html])
 
-Developed CRUD web application for task management using Java, Servlet, JSP, Maven, and MVC pattern. Built API backend with MYSQL database and frontend using HTML, CSS, JavaScript, Ajax, and Bootstrap. 
+**Task Manager** [Demo](https://task-manager-simple.herokuapp.com/)
 
-**Scheduler** - https://yejip.com/pro/GA.html
+Developed CRUD web application for task management using Java, Servlet, JSP, Maven, and MVC pattern. Built API backend with MYSQL database and frontend using HTML, CSS, JavaScript, Ajax, and Bootstrap. [More](https://yejip.com/project/spring.html)
 
-Built scheduler inspired by personal interest in biology using Java and OOP. Takes educational courses as inputs and uses algorithm influenced by theory of evolution by natural selection. Balances constraints of variables such as class size, professors, etc. to schedule all courses without conflicts.
+**Scheduler**
 
-**Checker AI** - https://yejip.com/pro/Checker.html
+Built scheduler inspired by personal interest in biology using Java and OOP. Takes educational courses as inputs and uses algorithm influenced by theory of evolution by natural selection. Balances constraints of variables such as class size, professors, etc. to schedule all courses without conflicts. [More](https://yejip.com/pro/GA.html)
 
-Made human versus AI checkers game in Java using JFrame for GUI. Used minimax tree algorithm for AI decisions and alpha-beta pruning to reduce number of options involved in making decisions.
-
-# Experience
+## Experience
 
 - **System Administrator Internship,** Gravity Interactive, Inc. (Buena Park, CA)
 
