@@ -6,7 +6,7 @@ menu: true
 order: 1
 ---
 
-*Curious motivated software engineer. Passion for learning especially in software development and have created several projects in Java. Currently coding internal tools using Java as system administrator intern. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration.* Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>
+*Curious motivated software engineer with passion for learning having created several projects in Java. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration. Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>*
 
 ## Education
 
@@ -22,7 +22,7 @@ The king’s university ( Edmonton, Canada, Jan 2019 ~ Apr 2019)
 
 ## Skills
 
- • Java  •  Spring Framework  •  MySQL  •  OracleSQL •  HTML5  •  CSS3  •  JavaScript  • Python   • Git  • REST API • MVC • OOP
+Java, Spring Framework, REST API, MVC, OOP, MySQL, OracleSQL, Git, HTML5, CSS3, JavaScript, Python
 
 ## Projects
 
@@ -60,8 +60,9 @@ Built scheduler inspired by personal interest in biology using Java and OOP. Tak
 
 - **Full stack Coding Bootcamp,** KITA(Seoul, Korea) Jul 2020 ~ Jan 2021 (5 months)
 
-  - Learned developing website using Spring,  JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
-  - US Internship related program
+   ·	Learned developing website using Spring,  JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
+
+   ·	US Internship related program
 
 - **Data Analyst Internship,** HEM Pharma (Gwanggyo, Korea)
 
@@ -74,3 +75,4 @@ Built scheduler inspired by personal interest in biology using Java and OOP. Tak
   ·    Visualized data with matplotlib for correlation analysis between diabetes and gut microbiome
 
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+
