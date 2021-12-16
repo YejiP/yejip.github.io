@@ -6,7 +6,7 @@ menu: true
 order: 1
 ---
 
-*Curious motivated software engineer with passion for learning having created several projects in Java. Understands software lifecycle from development to deployment. Recognizes importance of team communication and collaboration. Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>*
+*Aspiring software engineer passionate in learning and improving as a developer. Appreciates team collaboration and sharing knowledge. Built several personal projects and always looking to gain new skills. Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>*
 
 ## Education
 
@@ -26,13 +26,11 @@ Java, Spring Framework, REST API, MVC, OOP, MySQL, OracleSQL, Git, HTML5, CSS3, 
 
 ## Projects
 
-Please check [Projects](https://yejip.com/project/) page for more.
-
 **Checker AI** [Demo](https://yejip.com/pro/Checker/checkerAI_demo.html)
 
 Made human versus AI checkers game in Java using JFrame for GUI. Used minimax tree algorithm for AI decisions and alpha-beta pruning to reduce number of options involved in making decisions. [More](https://yejip.com/pro/Checker.html)
 
-**Number recognition** 
+**Number recognition** [Demo](https://characterrecognition.herokuapp.com/)
 
 Created Java web application using HTML/CSS/JavaScript for frontend, and Java servlet for backend. Implemented two-layered artificial neural network from scratch without using AI library. Identifies integers from 0 to 9 based on pixels drawn to canvas by user. [More]( [https://yejip.com/pro/ANN.html])
 
@@ -43,6 +41,8 @@ Developed CRUD web application for task management using Java, Servlet, JSP, Mav
 **Scheduler**
 
 Built scheduler inspired by personal interest in biology using Java and OOP. Takes educational courses as inputs and uses algorithm influenced by theory of evolution by natural selection. Balances constraints of variables such as class size, professors, etc. to schedule all courses without conflicts. [More](https://yejip.com/pro/GA.html)
+
+**Please check [Projects](https://yejip.com/project/) page for more.**
 
 ## Experience
 
