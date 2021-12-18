@@ -82,18 +82,18 @@
         var menuqty = document.getElementsByClassName("cnt");
         for(var j=0;j<menulist.length;j++){
           if(menuqty[j].value !="" || menuqty[j].value !=0){
-            orderList += "\n"+menulist[j].value.split(" ")[0] + " " + menuqty[j].value + "인분"
+            orderList += "\n"+menulist[j].value.split(" ")[0] + " cnt : " + menuqty[j].value ;
             check = true;
           }
         }
-        bill +="* 주문시간 :" + orderTime + "\n";
-        bill +="* 주문자 :" + name + "\n";
-        bill +="* 주문 메뉴 :" + orderList + "\n";
-        bill +="* 폰 :" + phone + "\n";
-        bill +="* 주소 :" + address + "\n";
-        bill +="* 세금 :" + tax + "\n";
-        bill +="* 봉사료 :" + tip + "\n";
-        bill +="* 총 결제금액 :" + total + "\n";
+        bill +="* Order time :" + orderTime + "\n";
+        bill +="* Name :" + name + "\n";
+        bill +="* Menus :" + orderList + "\n";
+        bill +="* Phone :" + phone + "\n";
+        bill +="* Address :" + address + "\n";
+        bill +="* Tax :" + tax + "\n";
+        bill +="* Tip :" + tip + "\n";
+        bill +="* Total :" + total + "\n";
 
 
         if(!check){
@@ -110,7 +110,7 @@
         var hr = today.getHours();
         var min = today.getMinutes();
         var sec = today.getSeconds();
-        var text = hr+"시"+min +"분" + sec+"초";
+        var text = hr+":"+min +":" + sec;
         var time = document.getElementById("time");
         time.placeholder= text;
     }
@@ -143,9 +143,9 @@
         var ea = menuqty[j].value; //수량 가져오기
         totalPrice += price*ea;
       }
-      tax.value= totalPrice*0.02;
-      tip.value = totalPrice*0.05;
-      total.value = totalPrice + totalPrice*0.02 +totalPrice*0.05;
+      tax.value= totalPrice*0.1;
+      tip.value = totalPrice*0.2;
+      total.value = totalPrice + totalPrice*0.1 +totalPrice*0.2;
     }
 
     function confirmInput(){
@@ -154,17 +154,17 @@
       var address =document.getElementById("address");
 
       if(name.value.trim().length ==0){
-        alert("주문자 이름을 입력해주세요")
+        alert("Check your name")
           name.focus();
           return;
         }
-        if(isNaN(phone.value) || phone.value.trim().length!=11){
-          alert("제대로 입력하세요 번호")
+        if(phone.value.length == 0 || isNaN(phone.value) ){
+          alert("Check your phone number")
           name.focus();
           return;
         }
       if(address.value.trim().length ==0){
-        alert("주문자 주소를 입력해주세요")
+        alert("Check the address")
           name.focus();
           return;
         }
@@ -175,37 +175,38 @@
   </head>
 
   <body>
-<h1>[야식, 먹지말고 개발에 양보하세요]</h1>
+<h1>[Let's Order Night Snack]</h1>
 <div class="wrapper">
 <img id= "pic" src = "돈가스.jpg">
 <div class="inp">
   <form id ="inputForm" class="" action="" method="get" >
   <table>
 <tr><th>
-  <label>현재 시간 :</th><td><input id="time" type="text" placeholder="time" readonly></label></td></tr>
-  <tr><th><label>이 름 :</th><td><input id="name" type="text" value="" ></label></tr>
-  <tr><th rowspan="3">야 식 메 뉴 :</th><td><select class = "menu">
-    <option value = '돈 7000' >돈가스 1인분 7000원</option>
-    <option value = '샐 6000' >샐러드 1인분 6000원</option>
-    <option value = '빵 5000' >빵 10조각 5000원</option></select>
-    <input type="number" class= "cnt" name="" value="">개
+  <label>Current time :</th><td><input id="time" type="text" placeholder="time" readonly></label></td></tr>
+  <tr><th><label>Name :</th><td><input id="name" type="text" value="" ></label></tr>
+  <tr><th rowspan="3">Night Snack :</th><td><select class = "menu">
+    <option value = 'Katsu 7' >Katsu $7</option>
+    <option value = 'Salad 5' >Salad $5</option>
+    <option value = 'Bread 3' >Bread $3</option></select>
+    <input type="number" class= "cnt" name="" value="">cnt
   </td></tr><tr><td><select class="menu">
-    <option value = '돈 7000' >돈가스 1인분 7000원</option>
-    <option value = '샐 6000'>샐러드 1인분 6000원</option>
-    <option value = '빵 5000' >빵 10조각 5000원</option></select></select>&nbsp;<input class= "cnt" type="number" name="" value="">개
+    <option value = 'Salad 5' >Salad $5</option>
+    <option value = 'Katsu 7' >Katsu $7</option>
+    <option value = 'Bread 3' >Bread $3</option></select>&nbsp;<input class= "cnt" type="number" name="" value="">cnt
   </td></tr><tr><td><select class="menu">
-    <option value = '돈 7000 '>돈가스 1인분 7000원</option>
-    <option value = '샐 6000' >샐러드 1인분 6000원</option>
-    <option value = '빵 5000' >빵 10조각 5000원</option></select>&nbsp;<input class= "cnt" type="number" name="" value="">개</td>
+    <option value = 'Bread 3' >Bread $3</option>
+    <option value = 'Katsu 7' >Katsu $7</option>
+    <option value = 'Salad 5' >Salad $5</option>
+    </select>&nbsp;<input class= "cnt" type="number" name="" value="">cnt</td>
   </tr>
 
-  <tr><th><label>주 소 :</th><td><input id = "address" type="text" value="" ></label><br></tr>
-  <tr><th><label>전 화 번 호 :</th><td><input type="text" id = "phone" value="" placeholder="01012345678"> </label><br></tr>
-  <tr><th><label>세 금 :</th><td><input id = "tax" type="number" value="0" disabled>원</label><br></tr>
-  <tr><th><label>봉 사 료:</th><td><input id="tip" type="number" value="0" disabled>원</label><br></tr>
-    <tr><th><label>총 합 계:</th><td><input id="sum" type="number" value="0" disabled>원</label><br></tr>
-    <tr><td colspan="2"><input type="button" id="done" name="" value="주문 완료">
-      <input type="button" name="" value="취소"><td></tr>
+  <tr><th><label>Address:</th><td><input id = "address" type="text" value="" ></label><br></tr>
+  <tr><th><label>Phone Number :</th><td><input type="text" id = "phone" value="" placeholder="01012345678"> </label><br></tr>
+  <tr><th><label>Tax : $</th><td><input id = "tax" type="number" value="0" disabled></label><br></tr>
+  <tr><th><label>Tip: $</th><td><input id="tip" type="number" value="0" disabled></label><br></tr>
+    <tr><th><label>Total: $</th><td><input id="sum" type="number" value="0" disabled></label><br></tr>
+    <tr><td colspan="2"><input type="button" id="done" name="" value="Submit">
+      <input type="button" name="" value="Cancel"><td></tr>
 </table>
 
 </form>
