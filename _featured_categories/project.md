@@ -10,5 +10,5 @@ accent_image:
   overlay:    false
 ---
 
-<iframe src="project.html"  frameborder="0" style="width:80%; height: 1200px"></iframe>
+<iframe src="project.html"  frameborder="0" style="width:900px; height: 1200px"></iframe>
 
