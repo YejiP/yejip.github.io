@@ -54,37 +54,16 @@ class Solution {
 ```java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int p=0,q=0;
-        boolean flag=false;
-        int[] result=new int[2];
-        for(int i=0;i<nums.length;i++)
-        {
-            for(int j=nums.length-1;j>=0;j--)
-            {
-                if(j==i)
-                {
-                    break;
-                }
-                else
-                {
-                    if(nums[i]+nums[j]==target)
-                    {
-                        p=i;
-                        q=j;
-                        flag=true;
-                        break;
-                    }
-                }
+        //int[] rtn = new int[2];
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int i = 0; i < nums.length; i++){
+            if(map.containsKey(nums[i])){
+                //int[] rtn = {};
+                return new int[]{i,map.get(nums[i])};
             }
-            if(flag==true)
-            {
-                break;
-            }
+            map.put(target-nums[i], i);
         }
-        result[0]=p;
-        result[1]=q;
-        return result;
-
+        return null;
     }
 }
 ```
