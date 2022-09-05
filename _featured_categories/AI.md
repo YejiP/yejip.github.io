@@ -11,13 +11,12 @@ description: >
 
 # Artificial Intelligence Projects
 
-[Deep Learning - Character recognition](https://yejip.com/pro/ANN.html)
+[Deep Learning - Character recognition](https://yejip.com/project/number-recognition.html)
 
-[Reinforcement Learning - Scheduling](https://yejip.com/pro/GA.html)
+[Reinforcement Learning - Scheduling](https://yejip.com/project/GA.html)
 
-[Supervised + Reinforcement Learning - Checker AI](https://yejip.com/pro/Checker.html)
+[Supervised + Reinforcement Learning - Checker AI](https://yejip.com/project/checkers.html)
 
-[Sudoku solver](https://yejip.com/pro/Sudoku.html)
+[Sudoku solver](https://yejip.com/project/Sudoku.html)
 
 # Artificial Intelligence reviews
-
