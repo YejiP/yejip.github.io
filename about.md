@@ -22,9 +22,13 @@ The king’s university ( Edmonton, Canada, Jan 2019 ~ Apr 2019)
 
 ## Skills
 
-Python, Java, Spring Framework, REST API, MVC, OOP, MySQL, OracleSQL, Git, HTML5, CSS3, JavaScript
+Python, Django, Flask, Java, Spring, HTML5, CSS3, JavaScript, REST API, MVC, OOP, MySQL, PostgreSQL, RabbitMQ, Git
 
 ## Projects
+
+**Sticky Notes With Friends** - [Github](https://github.com/YejiP/letter_box/blob/heroku/readme.md), [Demo](https://stickies-box.herokuapp.com/)
+
+Django application using PostgreSQL, HTML, CSS, and JavaScript. Enables users to search and add friends. Users can send, receive, and store messages from friends in an online letter box.
 
 **Checker AI** [Demo](https://yejip.com/project/Checker/checkerAI_demo.html)
 
