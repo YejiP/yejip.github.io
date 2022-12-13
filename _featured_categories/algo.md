@@ -1,7 +1,7 @@
 ---
 layout: page_noTitle
 slug: algo
-menu: true
+sidebar: true
 order: 3
 description: >
 
@@ -14,5 +14,4 @@ accent_image:
 
 <iframe src="algo.html" style="display:block; width:100%; height: 100vh"  frameborder="0"></iframe>
 
-​		
-
+​

@@ -1,3 +1,10 @@
+---
+layout: post
+title: "JAVA File I/O"
+category: web
+tags: java
+---
+
 # File I/O
 
 **스트림 :** 파일로 부터 데이터를 입력받고 출력받는 동작.
@@ -13,19 +20,19 @@ public class input {
 		int ch;
 		System.out.println("문자 입력: ");
 		while(true) {
-            
+
             //입력버퍼 메모리에 저장된다. 입력버퍼가 비기 전까지 입력 요청x
-			ch = System.in.read();  
-            
+			ch = System.in.read();
+
             //java에서 엔터키는 \r\n 을 사용한다.
 			if(ch=='\r')break;
-            
-            // unicode라서 숫자로 반환. (char) 이용시 숫자에 대응되는 char로 나옴	
+
+            // unicode라서 숫자로 반환. (char) 이용시 숫자에 대응되는 char로 나옴
 			System.out.println("입력문자 : " + (char)ch);
 		}
 		System.out.println("The end");
 	}
-}	
+}
 ```
 
 
@@ -64,7 +71,7 @@ try{
 	e.printStackTrace();
 } finally{
 			//Exception 이 발생 하건 안하건 꼭 돌아가는 코드
-		try{ 
+		try{
  			if(fis!=null)fis.close();
 			}catch(IOException e){
 			e.printStackTrace();}
@@ -92,7 +99,7 @@ try{
 	fos = new FileOutputStream("target.txt");
 	System.out.println("복사 시작!");
 	int data = 0;
-	while(true){	
+	while(true){
 		data = fis.read();
 		//EOF(End Of File)에 도달하면 -1로하자
 		if(data==-1)break;
@@ -161,7 +168,7 @@ public class OutputTest {
 
 		try {
 			String a = "작은 것들이 큰 변화를 불러온다";
-            //FileOutputStream 은 문자를 저장하는 메소드가 존재하지 않기 때문에, 이렇게 outputStreamWriter 안에 넣어줘야한다. 
+            //FileOutputStream 은 문자를 저장하는 메소드가 존재하지 않기 때문에, 이렇게 outputStreamWriter 안에 넣어줘야한다.
 			OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("Poem.dat"));
 			osw.write(a,3,4);
 			osw.close();
@@ -175,25 +182,25 @@ public class OutputTest {
 
 
 
-## FileReader / FileWriter 
+## FileReader / FileWriter
 
 - 문자 기반 스트림이다. 입출력 단위가 문자임.
 
 ```java
-//main 
+//main
 FileReader fr = null;
 FileWriter fw = null;
 try{
 	fr = new FileReader("score.txt");
-	
+
 	System.out.println("복사시작!!");
-	
+
 	int data =0;
 	while(true){
 		data = fr.read();
 		if(data==-1)break;
         fw.write((char)data);
-		
+
 	}
 	System.out.print("복사완료!");
 	} catch (Exception e){
@@ -213,7 +220,7 @@ try{
 
 ## BufferedInputStream/ BufferedOutputStream
 
-- 이전까지는 기계장치인 디스크에 접근해서 데이터를 처리했다. 그런데 하드 디스크는 기계적인 동작을 하므로, 전기적인 처리를 하는 메모리보다 처리 속도가 느리다. 그래서 디스크에 저장된 파일의 크기가 크면 클수록 하드 디스크에 접근하는 횟수가 많아지고, 그래서 오버해드가 발생하게 된다. 
+- 이전까지는 기계장치인 디스크에 접근해서 데이터를 처리했다. 그런데 하드 디스크는 기계적인 동작을 하므로, 전기적인 처리를 하는 메모리보다 처리 속도가 느리다. 그래서 디스크에 저장된 파일의 크기가 크면 클수록 하드 디스크에 접근하는 횟수가 많아지고, 그래서 오버해드가 발생하게 된다.
 - 버퍼를 사용하면 버퍼라는 이름의 메모리 영역에서 데이터를 찾아 처리하고 버퍼에 데이터가 없을 경우에만 기계장치에 접근해 데이터를 버퍼에 다시 채우는 형식으로 동작한다.
 - 기본생성자는 제공하지 않고, 다른 스트림 클래스와 연결하여 기능을 확장하는 방식으로 이용.
 
@@ -232,7 +239,7 @@ try{
         bos.write(data);
     }
 }catch(Exception e){
-		e.printStacTrace();   
+		e.printStacTrace();
 }finally{
     try{
     	if(bis!=null){bis.close();}
@@ -254,7 +261,7 @@ try{
 	br = new BufferedReader(new FileReader("score.txt"));
 	bw = new BufferedWriter(new FileWriter("result.txt"));
 	System.out.println("복사시작!!");
-	
+
 	String data ="";
 	while(true){
 		data = br.readLine();
@@ -265,7 +272,7 @@ try{
 			int kor = Integer.parseInt(stk.nextToken());
 			int eng = Integer.parseInt(stk.nextToken());
 			int mat = Integer.parseInt(stk.nextToken());
-			int total = kor + eng + mat;				
+			int total = kor + eng + mat;
 			double avg = total/3.0;
 			String w=String.format("%s %d %d %d %d %.2f\n",name,kor,eng,total,avg);
 			bw.write(w);
@@ -289,7 +296,7 @@ try{
 
 # 객체 직렬화
 
-- 객체를 읽거나 쓰는 것은 byte 기반의 stream 클래스이다. 
+- 객체를 읽거나 쓰는 것은 byte 기반의 stream 클래스이다.
 
 ```java
 ObjectOutputStream oos = null;
@@ -315,7 +322,7 @@ ObjectInputStream ois= null;
 try{
 	ois = new ObjectInputStream(new FileInputStream("object.dat"));
 	String obj=null;
-	
+
 	while(true){
 		try{
 			obj = (String) ois.readObject();
@@ -337,7 +344,7 @@ try{
 
 
 
-- 객체를 파일에 저장시, 객체의 멤버데이터를 파일로 내보낼 수 있도록 순차적인 데이터로 바꾸는 작업, 직렬화라고 한다.  그냥 클래스를 정의할 때 implements Serializable 을 해주면 된다. 
+- 객체를 파일에 저장시, 객체의 멤버데이터를 파일로 내보낼 수 있도록 순차적인 데이터로 바꾸는 작업, 직렬화라고 한다.  그냥 클래스를 정의할 때 implements Serializable 을 해주면 된다.
 
 ```java
 public class Friend implements Serializable{
@@ -345,7 +352,7 @@ public class Friend implements Serializable{
 }
 ```
 
-- 
+-
 
 ```java
 ObjectOutputStream oos = null;
@@ -363,8 +370,3 @@ try{
 	}
 }
 ```
-
-
-
-
-

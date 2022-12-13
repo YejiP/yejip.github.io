@@ -2,7 +2,7 @@
 layout: list
 title: AWS Certified Developer Associate
 slug: aws
-menu: true
+sidebar: true
 order: 2
 description: >
   with [udemy course by Stephane Maarek](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/)

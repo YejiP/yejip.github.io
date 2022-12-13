@@ -1,7 +1,7 @@
 ---
 layout: page_noTitle
 slug: project
-menu: true
+sidebar: true
 order: 1
 
 accent_color: rgb(38,139,210)
@@ -11,4 +11,3 @@ accent_image:
 ---
 
 <iframe src="project.html"  frameborder="0" style="width:100%; height: 1200px"></iframe>
-

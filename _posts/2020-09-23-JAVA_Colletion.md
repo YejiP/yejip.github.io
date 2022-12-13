@@ -1,10 +1,16 @@
+---
+layout: post
+title: "JAVA Collection"
+category: web
+tags: java
+---
 # 	JAVA Collection
 
 Collection :** 자료구조. (**arraylist, hashmap**, hashset, stack, deque...)
 
 **배열의 단점 : **
 
-처음 선언시에 배열의 크기를 알려줘야해서 불편, 
+처음 선언시에 배열의 크기를 알려줘야해서 불편,
 
 중간 삭제 삽입이 어려움.
 
@@ -140,19 +146,17 @@ Set<String> set = map.keySet();
   set.clear();
   set.cotains(object O);
   set.isEmpty();
-  
+
   Iterator<String> iter = set.iterator();
-  
+
   ```
 
 - 조회
 
   ```
   	Iterator<String> iter= set.iterator();
-  		
+
   		while(iter.hasNext()) {
   			System.out.println(iter.next());
   		}
   ```
-
-

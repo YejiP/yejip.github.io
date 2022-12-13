@@ -1,4 +1,11 @@
+---
+layout: post
+title: "JAVA class"
+category: web
+tags: java
+---
 # JAVA class
+
 
 ## 클래스 형식
 
@@ -8,7 +15,7 @@
 
 [접근지정자] [keyword] 리턴타입 메소드명(매개변수선언,.....)
 
-public 			static			void		main		String args[] 
+public 			static			void		main		String args[]
 
 keyword: static
 
@@ -16,7 +23,7 @@ keyword: static
 
 ## 패키지
 
-**package**: 
+**package**:
 
 - 폴더의 개념, 자바에서 프로그래밍시 파일 관리의 효율을 위해 패키지라는 이름 도입
 
@@ -27,7 +34,7 @@ keyword: static
 
 
 
-**구분자** 
+**구분자**
 
 - 윈도우 : \가 구분자
 
@@ -41,15 +48,15 @@ keyword: static
 
 **1) 어떻게 프로그래밍을 하느냐** : vo(값 저장 클래스)와 service(동작?)
 
-**2) 문법을 적용하는 방법** : concrete, abstract, Interface 
+**2) 문법을 적용하는 방법** : concrete, abstract, Interface
 
 **concreate class : **객체를 생성할 수 있는 클래스를 의미.
 
 
 
-**PUBLIC ABSTRACT** 
+**PUBLIC ABSTRACT**
 
-: 상속만을 위한 클래스이다. 생성자가 private 로 되어있기 때문에( privae MyStatic () {} ) new keyword를 사용해 객체를 만드는 것은 불가능하다.  
+: 상속만을 위한 클래스이다. 생성자가 private 로 되어있기 때문에( privae MyStatic () {} ) new keyword를 사용해 객체를 만드는 것은 불가능하다.
 
 ex) 아래 캘린더 클래스는 오로지 상속을 위해 만들어졌다.
 
@@ -69,7 +76,7 @@ static 멤버변수, 멤버 메소드 앞에 붙일 수 있다. 지역변수앞�
 
 : static 하나만 있는게 별로 없다. static final보통 다 붙이고 이걸 대문자로.
 
-final :지역변수 멤버변수 멤버 메서드 앞에 붙일 수 있다. 
+final :지역변수 멤버변수 멤버 메서드 앞에 붙일 수 있다.
 
 
 
@@ -127,10 +134,3 @@ float(Float), double(Double)
 char(Character)
 
 boolean(Boolean), void(Void)
-
-
-
-
-
-
-

@@ -2,7 +2,7 @@
 layout: list
 title: Artificial Intelligence
 slug: ai
-menu: true
+sidebar: true
 order: 4
 description: >
 ---

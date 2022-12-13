@@ -1,7 +1,7 @@
 ---
 layout: page_noTitle
 slug: sys
-menu: true
+sidebar: true
 order: 3
 description: >
 
@@ -12,4 +12,3 @@ accent_image:
 ---
 
 <iframe src="sysnet.html"  width = "100%" height ="1000px"  frameborder="0"></iframe>
-

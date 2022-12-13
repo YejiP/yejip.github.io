@@ -1,57 +1,37 @@
 <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
 <ul>
-  {% if site.menu %}
-    {% for node in site.menu %}
-      {% assign url = node.url | default: node.href %}
-      {% comment %} page build시에 이 부분 코드가 실행된다. {% endcomment %}
+  {% assign nodes = site.html_pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+  {% assign tag_nodes = nodes | where: "type", "tag" %}
+  {% for node in nodes %}
+    {% unless node.redirect_to %}
+      {% if node.type != "tag" %}
+        {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
+        {% assign count = count | plus: 1 %}
+        <li>
+          {% if subnodes != empty %}
+            <input type="checkbox" id="folder-checkbox-{{ count }}" />
+          {% endif %}
+          <div class="list-wrapper">
+            <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+            {% if subnodes != empty %}
+              <button class="spread-btn" onclick="javascript:spread({{ count }})">
+                <label id="spread-icon-{{ count }}" class="material-icons">arrow_right</label>
+              </button>
+            {% endif %}
+          </div>
+          {% for subnode in subnodes %}
+            {% if forloop.first %}<ul class="list-body">{% endif %}
+                <li>
+                  <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+                </li>
+            {% if forloop.last %}</ul>{% endif %}
+          {% endfor %}
+        </li>
+      {% endif %}
+    {% else %}
       <li>
-        <a
-          {% if forloop.first %}id="_navigation"{% endif %}
-          href="{% include smart-url.txt url=url %}"
-          class="sidebar-nav-item{% if page.url contains url %} active{% endif %}"
-          {% if node.rel %}rel="{{ node.rel }}"{% endif %}
->
-          {{ node.name | default:node.title }}
-        </a>
-        {% comment %} node.name이 아니라, node.title이 사용됨! {% endcomment %}
-        {% if node.title == 'Sys Net' %}
-        <span>{{ site.categories['sys'] | size }}</span>
-        {% endif %}
-        {% if node.title == 'AWS(CDA)' %}
-        <span>{{ site.categories['aws'] | size }}</span>
-        {% endif %}
-        {% if node.title == 'Web Dev' %}
-        <span>{{ site.categories['web'] | size }}</span>
-        {% endif %}
-        {% if node.title == 'Algorithms' %}
-        <span>{{ site.categories['algo'] | size }}</span>
-        {% endif %}
-        {% if node.title == 'AI' %}
-        <span>{{ site.categories['ai'] | size }}</span>
-        {% endif %}
+        <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
       </li>
-    {% endfor %}
-  {% else %}
-    {% assign pages = site.pages | where: "menu", true %}
-    {% assign documents = site.documents | where: "menu", true %}
-    {% assign nodes = pages | concat: documents | sort: "order" %}
-
-    {% for node in nodes %}
-      {% unless node.redirect_to %}
-        <li>
-          <a
-            {% if forloop.first %}id="_navigation"{% endif %}
-            href="{{ node.url | relative_url }}"
-            class="sidebar-nav-item{% if page.url contains node.url %} active{% endif %}"
-            {% if node.rel %}rel="{{ node.rel }}"{% endif %}
-            >
-          </a>
-        </li>
-      {% else %}
-        <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external" >{{ node.title}}</a>
-        </li>
-      {% endunless %}
-    {% endfor %}
-  {% endif %}
+    {% endunless %}
+  {% endfor %}
 </ul>
