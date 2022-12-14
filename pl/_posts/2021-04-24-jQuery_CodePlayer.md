@@ -6,9 +6,9 @@ tags: js
 
 **◇ jQuery 실습 포스팅 시리즈 ◇**
 
-1. [이미지 한칸씩 앞당기기 실습](https://yejip.com/web/2020-12-12-jquery실습1/)
-2. [마우스 on/off 실습](https://yejip.com/web/2020-12-13-jquery실습3/)
-3. [야매 트위터 - 글자수 세기 실습](https://yejip.com/web/2020-12-13-jquery실습4/)
+1. [이미지 한칸씩 앞당기기 실습](https://yejip.com/pl/2020-12-12-jquery실습1/)
+2. [마우스 on/off 실습](https://yejip.com/pl/2020-12-13-jquery실습3/)
+3. [야매 트위터 - 글자수 세기 실습](https://yejip.com/pl/2020-12-13-jquery실습4/)
 4. *jQuery CodePlayer 실습 - 현재 글*
 
 - html , css, javascript 코드를 입력하면 output을 보여주는 페이지를 만들 것이다.
