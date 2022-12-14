@@ -1,8 +1,9 @@
 ---
 layout: page_noTitle
+title : Algorithms
 slug: algo
 sidebar: true
-order: 3
+order: 4
 description: >
 
 accent_color: rgb(38,139,210)

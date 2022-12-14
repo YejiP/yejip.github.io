@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # Spring Core
 
 ## IoC/DI 컨테이너
@@ -20,7 +25,7 @@ new - Maven Project - apache maven archetypes - quickstart 로 프로젝트 만�
   <properties>
       <spring.version>4.3.30.RELEASE</spring.version>
   </properties>
-  
+
   <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
   <dependency>
       <groupId>org.springframework</groupId>
@@ -33,7 +38,7 @@ new - Maven Project - apache maven archetypes - quickstart 로 프로젝트 만�
 
 # IoC/DI 실습
 
-- 보통 자바 코드를 짤 때 객체를 메모리에 올릴 때 다음과 같은 코드를 쓴다. 
+- 보통 자바 코드를 짤 때 객체를 메모리에 올릴 때 다음과 같은 코드를 쓴다.
 
 ```java
 Car car = new Car();
@@ -45,7 +50,7 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
 
 ## 1. xml파일을 이용한 설정 1
 
-- UserBean 을 xml을 통해 객체화 시키기. 
+- UserBean 을 xml을 통해 객체화 시키기.
 
   <img src= "https://user-images.githubusercontent.com/37058233/134593007-ca24aecb-cac8-40c0-878f-ccac8b47ebca.png" width= 300px;><img src="https://user-images.githubusercontent.com/37058233/134591753-90a896a5-638d-4158-b2bf-25fd228db979.png" width=250px>
 
@@ -88,9 +93,9 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
      <beans xmlns="http://www.springframework.org/schema/beans"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-                
+
          <bean id="userBean" class="kr.or.connect.diexam01.UserBean"></bean>
-             
+
      </beans>
      ```
 
@@ -118,17 +123,17 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
          public static void main(String[] args) {
              ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
              System.out.println("DONE!");
-     
+
              UserBean userBean = (UserBean)ac.getBean("userBean");
              userBean.setName("park");
              System.out.println(userBean.getName()); //park 출력
-     
+
              UserBean userBean2 = (UserBean)ac.getBean("userBean");
              if(userBean == userBean2) {
                  System.out.println("It is the same instance"); //출력됨.
              }
-     
-             userBean2.setName("asdf"); //getBean 명령어를 또 이용해 객체를 받음. 
+
+             userBean2.setName("asdf"); //getBean 명령어를 또 이용해 객체를 받음.
              System.out.println(userBean2.getName()) //asdf 출력
              System.out.println(userBean.getName()); //!!! 얘도 asdf출력
          }
@@ -139,7 +144,7 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
 
 1. Car.java , Engine.java 파일 먼저 만들기
 
-2. src/main/resources/applicationContext.xml 에 car, engine 알아서 메모리에 올리게 정보 입력해주고, 의존성도 입력해준다.  
+2. src/main/resources/applicationContext.xml 에 car, engine 알아서 메모리에 올리게 정보 입력해주고, 의존성도 입력해준다.
 
    ```xml
    <!--의존성 표현은 다음과같이 해준다. car 클래스 안에 e를 리퍼런스하는 engine 이라는 변수 생성.-->
@@ -156,7 +161,7 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
        <bean id="userBean" class="kr.or.connect.diexam01.UserBean"></bean>
-   
+
        <bean id="e" class="kr.or.connect.diexam01.Engine"></bean>
        <bean id="c" class="kr.or.connect.diexam01.Car">
            <property name="engine" ref="e"></property>
@@ -181,13 +186,13 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
    }
    ```
 
-## 3. Java Config를 이용한 설정 
+## 3. Java Config를 이용한 설정
 
-- 자바 파일 두개가 사용된다. (car, engine 제외하고) 
+- 자바 파일 두개가 사용된다. (car, engine 제외하고)
 
   1. **ApplicationConfig.java**
 
-     - @Configuration 클래스 위에 붙으면, config 파일. 
+     - @Configuration 클래스 위에 붙으면, config 파일.
      - @Bean 이 메소드 위에 붙으면, 자바 객체라는걸 알려줌
 
      ```java
@@ -201,7 +206,7 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
              Car c = new Car();
              return c;
          }
-     
+
          @Bean
          public Engine engine() {
              return new Engine();
@@ -240,7 +245,7 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
     	public Engine() {
     		System.out.println("Engine 생성자");
     	}
-    	
+
     	public void exec() {
     		System.out.println("엔진이 동작합니다.");
     	}
@@ -257,17 +262,17 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
     public class Car {
         @Autowired
         private Engine v8;
-        
+
         public Car() {
             System.out.println("Car 생성자");
         }
-    
+
         public void run() {
             System.out.println("엔진을 이용하여 달립니다.");
             v8.exec();
         }
     }
-    
+
     ```
 
   1. **ApplicationConfig02.java**
@@ -300,5 +305,3 @@ src main 안에 resource를 저장할 폴더를 만든다. 여기에, applicatio
          }
      }
      ```
-
-      

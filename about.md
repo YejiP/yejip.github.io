@@ -2,7 +2,7 @@
 layout: page
 title: About me
 slug: About me
-menu: true
+sidebar: true
 order: 1
 ---
 

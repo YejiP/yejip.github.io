@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # Spring과 Oracle DB 연결 - 구현
 
 ![dbCode](https://user-images.githubusercontent.com/37058233/99866789-61a43500-2bf7-11eb-9ac3-9695692e7178.PNG)
@@ -27,7 +32,7 @@ public class GuestBookVO {
 # guestbookDao.java - interface
 
 - src/main/java에 package sesco.intern.guestbook2.dao 폴더를 생성해 넣어준다.
-- interface에서는 함수명과 반환타입을 정해주지만 코드가 구현되어있지는 않다. (함수의 구현은 mapper 파일인 **guestbook.xml 에서 sql 언어로 구현**되었다.) 
+- interface에서는 함수명과 반환타입을 정해주지만 코드가 구현되어있지는 않다. (함수의 구현은 mapper 파일인 **guestbook.xml 에서 sql 언어로 구현**되었다.)
 
 ```java
 package sesoc.intern.guestbook2.dao;
@@ -37,7 +42,7 @@ import sesoc.intern.guestbook2.vo.GuestBookVO;
 public interface GuestbookDao {
 	public int insertGuest(GuestBookVO vo);
 	public List<GuestBookVO>  selectAll();
-	public int delete(Map<String,Object> map);	
+	public int delete(Map<String,Object> map);
 }
 ```
 
@@ -66,7 +71,7 @@ public interface GuestbookDao {
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- 자바 인터페이스 클래스 명을 namespace에 넣음 -->  
+<!-- 자바 인터페이스 클래스 명을 namespace에 넣음 -->
 <mapper namespace="sesoc.intern.guestbook2.dao.GuestbookDao">
     <insert id="insertGuest" parameterType="GuestBookVO">
         INSERT INTO GUESTBOOK
@@ -75,7 +80,7 @@ public interface GuestbookDao {
         (guestbook_seq.nextval, #{username}, #{password}, #{content})
     </insert>
     <select id ="selectAll" resultType = "GuestBookVO">
-        SELECT 
+        SELECT
         seqno,
         username,
         pwd as password,

@@ -3,9 +3,9 @@ layout: tag-list
 type: tag
 title: Java
 slug: java
-category: web
+category: pl
+order : 1
 sidebar: true
-order: 1
 description: >
    Java basics
 ---

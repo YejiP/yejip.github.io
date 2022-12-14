@@ -1,6 +1,11 @@
+---
+layout: post
+category: web
+tags: php
+---
 # PHP로 Weather Scraper 만들기
 
-- [https://www.weather-forecast.com/](https://www.weather-forecast.com/) 에서 정보를 가져오는 프로그램 만들기. 
+- [https://www.weather-forecast.com/](https://www.weather-forecast.com/) 에서 정보를 가져오는 프로그램 만들기.
 
 ![weather](https://user-images.githubusercontent.com/37058233/116795435-dc685a80-aa89-11eb-8097-9b6879ede7bb.gif)
 
@@ -17,9 +22,9 @@
 
 ## **1. bootstrap 사용해서 화면 구성**
 
-- 필요한 라이브러리 head에서 불러온다. 
+- 필요한 라이브러리 head에서 불러온다.
 
-- 여기선 bootstrap 4.0.0-alpha 버전을 사용했다. 
+- 여기선 bootstrap 4.0.0-alpha 버전을 사용했다.
 
   ```html
   <!-- Bootstrap CSS -->
@@ -71,7 +76,7 @@
 
 ## **3. 받아들인 input값으로 url만들기**
 
-- [www.weather-forecast.com](www.weather-forecast.com) 사이트 특징이 url에 도시이름이 개떡같이 들어가있어도 찰떡같이 알아서 바꿔준다. 
+- [www.weather-forecast.com](www.weather-forecast.com) 사이트 특징이 url에 도시이름이 개떡같이 들어가있어도 찰떡같이 알아서 바꿔준다.
 
   - https://www.weather-forecast.com/locations/**losangeles**/forecasts/latest
 
@@ -91,7 +96,7 @@
 
 ## **4. cURL 로 다른 페이지 정보 가져오기**
 
-- file_get_contents() , cURL 둘 다 다른 페이지  정보를 가져올 수 있다. 
+- file_get_contents() , cURL 둘 다 다른 페이지  정보를 가져올 수 있다.
 
 - file_get_contents()는 php.ini 파일에 다음과 같은 코드를 넣어줘야한다. 난 cURL로 했다. 다음에 file_get_contents로 하고 비교해보면 좋을 듯 싶다.
 
@@ -109,7 +114,7 @@ allow_url_fopen = 1 //0 for Off and 1 for On Flag
   curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); 
+  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
   $result = curl_exec($curl);
   ?>
   ```
@@ -126,7 +131,7 @@ allow_url_fopen = 1 //0 for Off and 1 for On Flag
 
   ![image](https://user-images.githubusercontent.com/37058233/116796393-d5911600-aa90-11eb-867a-008b116be0c4.png)
 
--  **php코드,** $resultData에 class 이름에 매치되는 컨텐츠 저장. 
+-  **php코드,** $resultData에 class 이름에 매치되는 컨텐츠 저장.
 
 ```php
 if(!empty($curl)) {
@@ -144,7 +149,7 @@ if(!empty($curl)) {
 }
 ```
 
-- **html코드,** resultData에 저장되어있는 변수 html에서 읽어들이기 
+- **html코드,** resultData에 저장되어있는 변수 html에서 읽어들이기
 
   ```html
   <div class="alert alert-success" id="info" role="alert"><?php echo $resultData; ?></div>
@@ -163,7 +168,7 @@ if($_GET["city"]){
  curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
  curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
- curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);  
+ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
  $result = curl_exec($curl);
 
 if(!empty($curl)) {

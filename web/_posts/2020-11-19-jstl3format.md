@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # JSTL format 문법
 
 - jsp 파일 머리부분에 다음과 같은 페이지 지시자를 써준다.

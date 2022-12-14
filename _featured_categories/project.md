@@ -2,7 +2,7 @@
 layout: page_noTitle
 slug: project
 sidebar: true
-order: 1
+order: 2
 
 accent_color: rgb(38,139,210)
 accent_image:

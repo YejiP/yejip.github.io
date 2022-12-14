@@ -1,6 +1,11 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # Spring과 Oracle DB 연결 - library 추가
 
-- 이 글에선 아래 빨간 박스안에 있는 파일들을 어떻게 설정하고 만드는지를 볼 것이다.설정을 먼저 할 것이다. 
+- 이 글에선 아래 빨간 박스안에 있는 파일들을 어떻게 설정하고 만드는지를 볼 것이다.설정을 먼저 할 것이다.
 
 ![flow](https://user-images.githubusercontent.com/37058233/99798001-95d61200-2b73-11eb-811d-e63f5b08efeb.PNG)
 
@@ -8,7 +13,7 @@
 
 # 1. sql테이블 - Oracle SQL
 
-- 방명록은 아래와 같은 구성을 가지고 있다. 
+- 방명록은 아래와 같은 구성을 가지고 있다.
 
   ![guestbook](https://user-images.githubusercontent.com/37058233/99865796-98764d00-2bef-11eb-81e7-f86060ccd86b.PNG)
 
@@ -31,10 +36,10 @@
 drop table guestbook;
 drop sequence guestbook_seq;
 
-create table guestbook 
+create table guestbook
 (
-	seqno number constraint guestbook_no_pk primary key, 
-	username varchar2(30) constraint guestbook_name_nn not null, 
+	seqno number constraint guestbook_no_pk primary key,
+	username varchar2(30) constraint guestbook_name_nn not null,
 	password varchar2(30),
 	"content" varchar2(3000),
 	regdate date default sysdate
@@ -64,7 +69,7 @@ rollback();
   driver=oracle.jdbc.driver.OracleDriver
   url=jdbc:oracle:thin:@localhost:1521:XE
   user=hr
-  password=hr 
+  password=hr
   ```
 
 - driver에는 자바에서 오라클에 접속하게 도와주는 클래스를 넣는다.
@@ -121,7 +126,7 @@ ojdbc6.jar, mybatis.jar(3.4.6), mabatis-spring.jar(1.3.2), spring-jdbc.jar (4.3.
 
 ## **mybatis-spring.jar(1.3.2) 추가**
 
-- 위와 마찬가지로 검색해 찾아서 pom.xml dependencies 안에 붙여넣는다. 
+- 위와 마찬가지로 검색해 찾아서 pom.xml dependencies 안에 붙여넣는다.
 
 ```xml
 <!-- mybatis-spring -->
@@ -150,14 +155,14 @@ ojdbc6.jar, mybatis.jar(3.4.6), mabatis-spring.jar(1.3.2), spring-jdbc.jar (4.3.
 # 4.세개의 xml 파일 만든다
 
 ```
-mybatis-config.xml : mybatis에게 guestbook.xml이 mapper라는 정보를 준다.  
+mybatis-config.xml : mybatis에게 guestbook.xml이 mapper라는 정보를 준다.
 root-context.xml : db.properties를 읽어 값 세팅,mybatis의 sqlsession 객체를 가져옴
 guestbook.xml : 쿼리문이 들어간 mapper 파일로서, java interface의 함수를 query문으로 구현한 느낌을 주는 파일이다.
 ```
 
 ## **mybatis-config.xml**
 
-- mybatis framework를 사용하기 위해 연동해준다. jdbc는 보안상 문제 때문에 mybatis 이용. 
+- mybatis framework를 사용하기 위해 연동해준다. jdbc는 보안상 문제 때문에 mybatis 이용.
   - **연동 준비** : pom.xml 에다가 dependencies 세개 추가하는거 (2번에서 함)
   - **실제 연동** : mybatis-config.xml 에서 해준다.(이제 함)
 - https://mybatis.org/mybatis-3/ko/getting-started.html
@@ -170,24 +175,24 @@ guestbook.xml : 쿼리문이 들어간 mapper 파일로서, java interface의 �
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <mappers>
-        <mapper resource="guestbook.xml"/> 
+        <mapper resource="guestbook.xml"/>
     </mappers>
 </configuration>
 ```
 
 ## **guestbook.xml**
 
-- 바로 위에서 mapper resource로 지목됐다. 
+- 바로 위에서 mapper resource로 지목됐다.
 - 실제 쿼리문이 들어가는 것이 매퍼이다. 이건 설정 파일이지 실제로 쿼리문이 실행되는 것이 아니다.
 - 일단 파일만 만들어 놓고, 내용은 다음 시간에 interface와 vo 클래스를 구현한 후에 넣기로 한다.
 
 ## **root-context.xml**
 
-<img width="176" alt="1116sp7-3" src="https://user-images.githubusercontent.com/37058233/99799864-b9e72280-2b76-11eb-8987-2fddcf71b224.PNG" style = "float : right"> 1 .  src main webapp web-inf spring 의 root-context.xml 
+<img width="176" alt="1116sp7-3" src="https://user-images.githubusercontent.com/37058233/99799864-b9e72280-2b76-11eb-8987-2fddcf71b224.PNG" style = "float : right"> 1 .  src main webapp web-inf spring 의 root-context.xml
 
- 
 
-2 . db.properties 파일을 읽어들여 값 세팅,mybatis의 sqlsession 객체를 가져옴 
+
+2 . db.properties 파일을 읽어들여 값 세팅,mybatis의 sqlsession 객체를 가져옴
 
 
 
@@ -200,7 +205,7 @@ guestbook.xml : 쿼리문이 들어간 mapper 파일로서, java interface의 �
 
 
 - mybatis를 사용하기 위한 기본적인 자바 인터페이스는 SqlSession이다. 이 인터페이스를 통해 명령어를 실행하고 매퍼를 얻으며 트랜잭션을 관리 할 수 있다
-- 
+-
 
 ```xml
 

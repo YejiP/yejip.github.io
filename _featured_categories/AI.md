@@ -3,7 +3,7 @@ layout: list
 title: Artificial Intelligence
 slug: ai
 sidebar: true
-order: 4
+order: 7
 description: >
 ---
 

@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # Spring과 Oracle DB 연결 - 흐름
 
 ```
@@ -55,7 +60,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 - **guestbookMapper.java** : @Repository 객체다. interface를 .class로 가져와 그것의 함수를 사용한다.
 
-- **guestbookController.java** : @Controller 객체다.  guestbookMapper를 객체로 만들어 이용한다. 
+- **guestbookController.java** : @Controller 객체다.  guestbookMapper를 객체로 만들어 이용한다.
 
 - **guestBookVO.java** : DB에 저장될 데이터를 value object로 표현한 것이다.
 
@@ -73,7 +78,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 - mybatis는 java 객체와 SQL 객체가 자동매핑할 수 있게 도와주는 프레임워크다.
 
-- 이때 **guestbookDao.java** 가 인터페이스로 중요한 역할을 한다. 
+- 이때 **guestbookDao.java** 가 인터페이스로 중요한 역할을 한다.
 
 - **guestbookDao.java** 파일의 함수가 호출되면 이 함수와 매치되는 **guestbook.xml**의 쿼리문이 실행되는 느낌이다. 따라서 SQL에 접근할 수 있게 된다.
 
@@ -83,7 +88,7 @@ Oracle db와 spring 을 연결하기 위해서는 여러 환경 설정과 다음
 
 ![javaflow](https://user-images.githubusercontent.com/37058233/99527958-eec17100-29e0-11eb-9698-9ff87f103993.PNG)
 
-- **guestbookMapper**인 repository 객체 에서 **guestbookDao** 인터페이스를 사용한 함수를 만들어 데이터를 전달한다. 
+- **guestbookMapper**인 repository 객체 에서 **guestbookDao** 인터페이스를 사용한 함수를 만들어 데이터를 전달한다.
 
   ```java
   @Autowired

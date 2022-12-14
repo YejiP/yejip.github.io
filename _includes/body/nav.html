@@ -12,7 +12,29 @@
             <input type="checkbox" id="folder-checkbox-{{ count }}" />
           {% endif %}
           <div class="list-wrapper">
-            <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
+            <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}
+        {% if node.title == 'System Network' %}
+        <span>{{ site.categories['sys'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'AWS CDA' %}
+        <span>{{ site.categories['aws'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'Web Dev' %}
+        <span>{{ site.categories['web'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'Algorithms' %}
+        <span>{{ site.categories['algo'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'Artificial Intelligence' %}
+        <span>{{ site.categories['ai'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'Programming' %}
+        <span>{{ site.categories['pl'] | size }}</span>
+        {% endif %}
+        {% if node.title == 'Project' %}
+        <span>9</span>
+        {% endif %}
+      </a>
             {% if subnodes != empty %}
               <button class="spread-btn" onclick="javascript:spread({{ count }})">
                 <label id="spread-icon-{{ count }}" class="material-icons">arrow_right</label>
@@ -22,7 +44,7 @@
           {% for subnode in subnodes %}
             {% if forloop.first %}<ul class="list-body">{% endif %}
                 <li>
-                  <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }}</a>
+                  <a class="sidebar-nav-subitem" href="{{ subnode.url | relative_url }}">{{ subnode.title }} ({{ site.tags[subnode.slug] | size}})</a>
                 </li>
             {% if forloop.last %}</ul>{% endif %}
           {% endfor %}

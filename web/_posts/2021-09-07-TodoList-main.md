@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # To Do List - main 페이지
 
 - 맨 처음에 뜨는 화면, DB에서 정보 가져와서 화면에 뿌려주기
@@ -6,7 +11,7 @@
 
   <img src="https://user-images.githubusercontent.com/37058233/132779290-b9a0a8b0-0ebb-4f2f-8819-be20d8fd9993.png" width="400">
 
-  - 첫번째 파라미터에 GET, POST, PUT,DELETE를 넣을 수 있다. 
+  - 첫번째 파라미터에 GET, POST, PUT,DELETE를 넣을 수 있다.
 
   - 두번째 파라미터에는 URL 을넣는다.
 
@@ -14,9 +19,9 @@
 
 ![image](https://user-images.githubusercontent.com/37058233/132779656-2ed626d6-9a3e-40bd-abaf-8ae65d50deab.png)
 
-2. XMLHttpRequest에 addEventListener 로 load가 되면, 함수가 실행되게. 
+2. XMLHttpRequest에 addEventListener 로 load가 되면, 함수가 실행되게.
 
-   - this.responseText에 open 메소드로 실행된 자바파일의 결과가 전달된다. 
+   - this.responseText에 open 메소드로 실행된 자바파일의 결과가 전달된다.
 
    - taskById.java파일에서, json String으로 전달된 결과가 this.responseText로 받아진다.
 
@@ -61,7 +66,7 @@ public class taskById extends HttpServlet {
         dao.taskUpdate(id,status);
         ArrayList<Task> all = dao.taskShow();
 
-        PrintWriter out = resp.getWriter();		
+        PrintWriter out = resp.getWriter();
         out.println("[");
         for(int i=0;i<all.size() ;i++) {
             ObjectMapper objectMapper =new ObjectMapper();
@@ -212,7 +217,7 @@ public ArrayList<Task> taskShowType(String t){
             </div>
         </div>
         <script>
-            window.addEventListener('load', init);	
+            window.addEventListener('load', init);
             function init(){
                 show();
             }
@@ -250,7 +255,7 @@ public ArrayList<Task> taskShowType(String t){
                             done +="<button  class='done' onclick='buttonClick(this)'  data-class='done' data-id = "+myArr[i]["bigint"]+"><img width='10px' src='https://toppng.com/uploads/preview/resolution-980980-up-right-arrow-icon-11553443930wzqvsrgc6t.png'></button></div>";
                             done +="<br>";
                         }
-                    }		
+                    }
                     document.getElementById("todo").innerHTML = todos;
                     document.getElementById("doing").innerHTML = doing;
                     document.getElementById("done").innerHTML = done;
@@ -280,4 +285,3 @@ public ArrayList<Task> taskShowType(String t){
     </body>
 </html>
 ```
-

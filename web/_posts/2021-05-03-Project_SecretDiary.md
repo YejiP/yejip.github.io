@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: php
+---
 # Secret Diary 프로젝트
 
 - 아래와 같이 동작하는 아주아주 간단한 다이어리를 php와 mySQL을 이용해 만들어 볼 것이다.
@@ -15,16 +20,16 @@
 
 - 아래 파란 글씨를 누르면 log in을 할지, signup을 할지 바뀐다.
 
--  파란색 글씨를 누를 때 파란 글씨 컨텐츠를 읽어서 모드를 바꿔주면 된다. 
+-  파란색 글씨를 누를 때 파란 글씨 컨텐츠를 읽어서 모드를 바꿔주면 된다.
 
-  - 파란색 log in 글씨를 누르면, 초록색 버튼에 log in 이 나오고 파란색 글씨는 sign up으로 바뀐다. 그리고 현재 내가 할 활동도 log in 이다. 
+  - 파란색 log in 글씨를 누르면, 초록색 버튼에 log in 이 나오고 파란색 글씨는 sign up으로 바뀐다. 그리고 현재 내가 할 활동도 log in 이다.
 
 - hidden input에 현재 상태가 signup 인지 login인지 표시해 버튼이 눌릴때 이 정보도 같이 php로 넘어가게 한다.
 
   **javascript 코드**
 
   - choice는 파란 글씨, go는 초록 버튼.
-  
+
   ```javascript
   $("#choice").click(function(){
       var temp=$("#go").text();
@@ -41,7 +46,7 @@
   ```
 
   **html 코드**
-  
+
   ```html
   <p><a class="btn btn-success btn-lg" id="go"  role="button">Sign Up!</a></p>
   <p><a class="btn btn-link btn-lg font-weight-bold" id="choice" href="#" role="button">Log In!</a></p>
@@ -64,13 +69,13 @@
   }
   ```
 
-## **3. PHP mySQL - Sign Up** 
+## **3. PHP mySQL - Sign Up**
 
 ### **Sign up시, DB에 레코드 저장하기**
 
 - password_hash를 통해 비밀번호를 강력하게 암호화해 저장한다.
 
-- 나중에 login 할 때, password_verify()라는 함수를 사용해 매치되는지 확인할 수 있다. 
+- 나중에 login 할 때, password_verify()라는 함수를 사용해 매치되는지 확인할 수 있다.
 
   **php 코드**
 
@@ -98,7 +103,7 @@
 
 - DB에 email과 pwd 조회해 인풋과 일치하면 writing.php로 보낸다.
 
-  - query 는 다음과 같다. 
+  - query 는 다음과 같다.
 
     ```php
     $query = sprintf("SELECT * FROM `diary`
@@ -109,7 +114,7 @@
   - select문은 mysqli 객체들이 return 된다. 그래서 mysqli_fetch_array함수를 사용해 php에서 사용할 수 있게 바꿔줘야한다.
 
     ```php
-    $result=mysqli_query($link,$query);    
+    $result=mysqli_query($link,$query);
     $ans = mysqli_fetch_array($result);
     ```
 
@@ -207,7 +212,7 @@
 
 ## 2. 로그아웃 하기
 
-- 로그아웃 버튼을 누르면 form이 보내진다. 
+- 로그아웃 버튼을 누르면 form이 보내진다.
 
 - 쿠키를 unset하기 위해서 과거의 시간으로 설정한다.
 
@@ -480,6 +485,3 @@ if(mysqli_connect_error()){
 </html>
 
 ```
-
-
-

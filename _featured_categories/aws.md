@@ -1,9 +1,9 @@
 ---
 layout: list
-title: AWS Certified Developer Associate
+title: AWS CDA
 slug: aws
 sidebar: true
-order: 2
+order: 5
 description: >
   with [udemy course by Stephane Maarek](https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/)
   This section is summarized in Korean

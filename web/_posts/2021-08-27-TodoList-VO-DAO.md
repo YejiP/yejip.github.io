@@ -1,3 +1,8 @@
+---
+layout: post
+category: web
+tags: spring
+---
 # MVC - VO,DAO 생성
 
 ## VO 생성
@@ -14,16 +19,16 @@ public class Task {
     String name;
     int sequence;
     String type;
-    String regdate;	
+    String regdate;
 }
 /*
-  CREATE TABLE todo ( 
-  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT, 
-  title VARCHAR(255) NOT NULL, 
-  name VARCHAR(100) NOT NULL, 
-  sequence INT(1) NOT NULL, 
+  CREATE TABLE todo (
+  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  sequence INT(1) NOT NULL,
   type VARCHAR(20) DEFAULT 'TODO',
-  regdate DATETIME DEFAULT NOW(), 
+  regdate DATETIME DEFAULT NOW(),
   PRIMARY KEY (id));
 */
 ```
@@ -60,7 +65,7 @@ public class TaskDao {
         Connection conn =null;
         PreparedStatement ps =null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");		
+            Class.forName("com.mysql.jdbc.Driver");
         }catch(ClassNotFoundException e){
             e.printStackTrace();
         }
@@ -177,7 +182,7 @@ public class TaskDao {
                 String type = rs.getString(5);
                 String regdate = rs.getString(6);
                 Task task = new Task(id,title, name,sequence,type,regdate);
-                tasks.add(task); 
+                tasks.add(task);
             }
         }catch(Exception e) {
             e.printStackTrace();
@@ -226,7 +231,7 @@ public class TaskDao {
                 sql="UPDATE `todo` "
                     + "SET `type`='done' where id= " +id;
             }else if(status.equals("done")){
-                //arc type - new 
+                //arc type - new
                 sql="UPDATE `todo` "
                     + "SET `type`='arc' where id= " +id;
             }
@@ -296,4 +301,3 @@ public class TaskDao {
 
 }
 ```
-

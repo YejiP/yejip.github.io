@@ -1,5 +1,6 @@
 ---
-layout: page_noTitle
+layout: list
+title : Web Dev
 slug: web
 sidebar : true
 order: 3
