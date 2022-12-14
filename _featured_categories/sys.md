@@ -3,7 +3,7 @@ layout: list
 title : System Network
 slug: sys
 sidebar: true
-order: 6
+order: 7
 description: >
 
 accent_color: rgb(38,139,210)

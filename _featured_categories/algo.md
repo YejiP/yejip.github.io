@@ -3,13 +3,10 @@ layout: page_noTitle
 title : Algorithms
 slug: algo
 sidebar: true
-order: 4
+order: 5
 description: >
-
-accent_color: rgb(38,139,210)
-accent_image:
-  background: rgb(247,202,201)
-  overlay:    false
+  I am currently on daily leetcode challenge!
+  [https://leetcode.com/YejiP/](https://leetcode.com/YejiP/)
 
 ---
 
