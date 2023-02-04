@@ -22,7 +22,7 @@ The king’s university ( Edmonton, Canada, Jan 2019 ~ Apr 2019)
 
 ## Skills
 
-Java, Python, HTML5, CSS3, JavaScript, Django, Flask, Spring , REST API, MVC, OOP, MySQL, PostgreSQL, RabbitMQ, Git
+C#, Java, Python, HTML5, CSS3, JavaScript, .NET Core, Spring, Django, Flask, REST API, MVC, OOP, MySQL, PostgreSQL, RabbitMQ, Kafka, Git
 
 ## Projects
 
