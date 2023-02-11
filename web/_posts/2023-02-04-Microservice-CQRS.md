@@ -2,20 +2,17 @@
 layout: post
 category: web
 tags: netcore
-title: Command and Query Responsibility Segregation 
+title: CQRS Social Media Project 분석
 description:  >
   Udemy 영상인 .NET Microservices: CQRS & Event Sourcing with Kafka를 정리한 포스트입니다. 작성 중 입니다. (2023/2/11)
 ---
 
 [CQRS란?](#cqrs란?)
-
 [Social Media CQRS 프로젝트와 폴더 구성](#project-description)
-
 [CQRS 흐름 정리](#cqrs-flow)
 
 ## CQRS란?
-
-- Command(Create, Update, and Delete) 와 Query(Read)를 분리해 처리해주는 것. 
+- Command and Query Responsibility Segregation, 즉 Command(Create, Update, and Delete) 와 Query(Read)를 분리해 처리해주는 것.
   - Create, Update, Delete 리퀘스트가 들어왔을 때, Aggregate의 상태가 변화하게된다. 상태 변화가 변화될 때, 이벤트를 발생시켜서 이를 EventStoreCollection DB에 저장하고, kafka에 이벤트를 발행시킨다. kafka에 발행된 Query쪽의 Consumer가 Query DB를 만들 때 사용된다.
   - Read 리퀘스트가 들어왔을 때, Query DB에서 읽어서 클라이언트에게 반환한다.
 
@@ -25,7 +22,7 @@ description:  >
 
   <img width="1243" alt="image" src="https://user-images.githubusercontent.com/37058233/218257962-0f166063-3327-42e8-a014-b1f638aedfae.png">
 
-- 폴더 스트럭쳐는 다음과 같다. 
+- 폴더 스트럭쳐는 다음과 같다.
 
   - CQRS-ES/CQRS.Core에는 Abstract클래스나 Interface가 있다. 이를 SM-POST에서 상속해서 사용한다.
   - SM-POST/Cmd는 CUD에 대한 요청을 처리해, Cmd DB에 정보를 저장하고, kafka에 event를 produce하게 한다.
@@ -37,29 +34,29 @@ description:  >
 
 **Create, Update, Delete에 대한 요청이 들어왔을 때**
 
-1. Controller에서 요청을 Dispatcher로 보낸다. 
+1. Controller에서 요청을 Dispatcher로 보낸다.
 2. Dispatcher에서 알맞은 handler에게 cmd를 보낸다.
-3. command handler에서 
+3. command handler에서
    1. post를 새로 생성하는 경우, PostAggregate객체를 생성한다.
    2. post를 수정하거나, 삭제하거나, 커멘트에 관한 cmd인 경우, EventSourcingHandler에서 getByIdAsync로 PostAggreate를 찾는다
-4. PostAggregate의 메소드가 실행되면, event raise가 일어난다. 
+4. PostAggregate의 메소드가 실행되면, event raise가 일어난다.
 5. PostAggregate를 ES Handler의 saveAsync 메소드의 아규먼트로 전달하면, EventStore에서 uncommited change들이
-   1. repository를 통해 Command DB에 save 
-   2. EventProducer가 kafka에 json형식으로 이벤트를 정보를 넘긴다. 
+   1. repository를 통해 Command DB에 save
+   2. EventProducer가 kafka에 json형식으로 이벤트를 정보를 넘긴다.
 
 **Kafka에 produce된 event를 Query DB에 저장하기**
 
-1. ConsumerHostedService를 통해 EventConsumer의 consume이 유발된다. 
-2. EventConsumer은 Kafka queue에 있는 Json데이터를 받아 deserialize해 event정보를 읽어 EventHandler에 넘겨준다. 
+1. ConsumerHostedService를 통해 EventConsumer의 consume이 유발된다.
+2. EventConsumer은 Kafka queue에 있는 Json데이터를 받아 deserialize해 event정보를 읽어 EventHandler에 넘겨준다.
 3. 이 이벤트 정보가 EventHandler에 등록이 돼있으면, event object를 생성해 handler method를 invoke한다.
-4. EventHandler에서 이벤트 정보를 받아서 comment, post repository를 통해 post와 comment가 query DB에 생성된다. 
+4. EventHandler에서 이벤트 정보를 받아서 comment, post repository를 통해 post와 comment가 query DB에 생성된다.
 
 **Read에대한 요청이 들어왔을 때**
 
 1. Controller에서 요청을 Dispatcher로 보낸다.
-2. Dispatcher에서 요청을 알맞은 QueryHandler로 보낸다. 
-3. QueryHanlder에서 post, comment repository가 호출돼, 요청된 정보를 PostEntity에 담아 리턴한다. 
-4. 반환된 PostEntity정보로 NormalResponse를 리턴한다. 컨트롤러에서 이를 클라이언트로 보낸다. 
+2. Dispatcher에서 요청을 알맞은 QueryHandler로 보낸다.
+3. QueryHanlder에서 post, comment repository가 호출돼, 요청된 정보를 PostEntity에 담아 리턴한다.
+4. 반환된 PostEntity정보로 NormalResponse를 리턴한다. 컨트롤러에서 이를 클라이언트로 보낸다.
 
 ## 깊게 알아보기 (추가 예정)
 
