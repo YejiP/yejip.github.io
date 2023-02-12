@@ -34,31 +34,61 @@ description:  >
 
 ## CQRS Flow
 
-**Create, Update, Delete에 대한 요청이 들어왔을 때**
+### **Create, Update, Delete에 대한 요청이 들어왔을 때**
 
-1. Controller에서 요청을 Dispatcher로 보낸다.
-2. Dispatcher에서 알맞은 handler에게 cmd를 보낸다.
-3. command handler에서
-   1. post를 새로 생성하는 경우, PostAggregate객체를 생성한다.
-   2. post를 수정하거나, 삭제하거나, 커멘트에 관한 cmd인 경우, EventSourcingHandler에서 getByIdAsync로 PostAggreate를 찾는다
-4. PostAggregate의 메소드가 실행되면, event raise가 일어난다.
-5. PostAggregate를 ES Handler의 saveAsync 메소드의 아규먼트로 전달하면, EventStore에서 uncommited change들이
-   1. repository를 통해 Command DB에 save
-   2. EventProducer가 kafka에 json형식으로 이벤트를 정보를 넘긴다.
+<img width="1485" alt="image" src="https://user-images.githubusercontent.com/37058233/218307521-7e784b9b-385a-4341-ae8f-e34e4c291d8b.png">
 
-**Kafka에 produce된 event를 Query DB에 저장하기**
+1. **@CommandController** 클라이언트에서 들어오는 들어오는 요청에 따라 NewPostCommand, EditMessageCommand, AddCommentCommand, EditCommentCommand, LikePostCommand, RemoveCommentCommand, DeletePostCommand의 커맨드 객체를 만든다.
 
-1. ConsumerHostedService를 통해 EventConsumer의 consume이 유발된다.
+2. **@CommandController** 요청에 따라 만들어진 커맨드 객체를 Dispatcher로 보낸다.
+
+3. **@CommandDispatcher** Handler Dictionary를 통해 커맨드를 CommandHandler의 아규먼트로 넘겨준다. 
+
+   1. 이 Handler Dictionary는 프로그램이 시작될 때, Command/Program.cs에서 Dispatcher의 RegisterHandler 메소드를 통해 key(커맨드 타입): value(commandHandler.HandleAsync 함수) 페어로 저장된다.
+   2. Dispatcher에 커맨드가 컨트롤러를 통해 넘어 올 경우, 커맨드가 commandHandler.HandleAsync의 아규먼트로 넘어간다.
+
+4. **@CommandHandler**
+
+   1. post를 새로 생성하는 경우에는, PostAggregate객체를 생성한다.
+   2. post를 수정하거나, 삭제하거나, 커멘트에 관한 커맨드인 경우, EventSourcingHandler에서 getByIdAsync로 PostAggreate를 불러온다
+
+5. **@CommandHandler** 4번에서 불러온 PostAggregate의 커맨드에 상응하는 메소드가 실행된다.
+
+   Ex1) EditMessageCommand일 경우, PostAggregate.EditMessage(message)가 실행된다. 
+
+   Ex2) CommentAddedEvent일 경우, PostAggregate.AddComment(comment, username)이 실행된다. 
+
+6. **@PostAggregate** 메소드가 실행될 때, 커맨드가 실행되었다는 알림 event가 생성되고 부모클래스인 AggregateRoot의 RaiseEvent의 아규먼트로 이벤트가 전달된다.
+
+7. **@PostAggregate** RaiseEvent에서 event를 아규먼트로 받아 ApplyChange 함수가 실행된다. 그러면 이벤트가 changes에 저장된다. 
+
+8. **@CommandHandler** PostAggregate의 함수가 실행된 후, PostAggregate를 Event Sourcing Handler의 saveAsync 메소드의 아규먼트로 전달한다. 
+
+9. **@EventSourcingHandler** EventStore의 SaveAsync가 실행된다. 
+
+   ​	여기서 중요한 일 두가지가 일어난다.
+
+   1. **@EventStore** repository를 통해 uncommited change들이 Event Store DB에 저장된다.
+   2. **@EventStore** EventProducer가 **kafka에 json형식으로 이벤트를 정보를 넘긴다.**
+
+10. 마지막으로 **@EventSourcingHandler**, aggregate.MarkChangesAsCommitted();로 change가 반영됐음을 표시해준다.
+
+### **앞서 Kafka에 produce된 event를 consumer를 이용해 Query DB에 저장하기**
+
+1. ConsumerHostedService를 통해 EventConsumer의 consume이 유발된다. => 이 부분 확실히는 모르겠다.
 2. EventConsumer은 Kafka queue에 있는 Json데이터를 받아 deserialize해 event정보를 읽어 EventHandler에 넘겨준다.
 3. 이 이벤트 정보가 EventHandler에 등록이 돼있으면, event object를 생성해 handler method를 invoke한다.
 4. EventHandler에서 이벤트 정보를 받아서 comment, post repository를 통해 post와 comment가 query DB에 생성된다.
 
-**Read에대한 요청이 들어왔을 때**
+### **Read에대한 요청이 들어왔을 때**
 
-1. Controller에서 요청을 Dispatcher로 보낸다.
-2. Dispatcher에서 요청을 알맞은 QueryHandler로 보낸다.
-3. QueryHanlder에서 post, comment repository가 호출돼, 요청된 정보를 PostEntity에 담아 리턴한다.
-4. 반환된 PostEntity정보로 NormalResponse를 리턴한다. 컨트롤러에서 이를 클라이언트로 보낸다.
+1. **@PostLookUpController** 클라이언트에서 들어오는 요청에 따라 FindAllPostsQuery, FindPostByIdQuery, FindPostsByAuthorQuery, FindPostsWithCommentsQuery, FindPostsWithLikesQuery 객체를 생성한다.  
+2. **@PostLookUpController** 요청에 따라 만들어진 커맨드 객체를 QueryDispatcher로 보낸다.
+3. **@QueryDispatcher** Handler Dictionary를 통해 커맨드를 QueryHanlder의 아규먼트로 넘겨준다. 
+   1. 이 Handler Dictionary는 프로그램이 시작될 때, Query/Program.cs에서 Dispatcher의 RegisterHandler 메소드를 통해 key(쿼리 타입): value(QueryHandler.HandleAsync 함수) 페어로 저장된다.
+   2. Dispatcher에 커맨드가 컨트롤러를 통해 넘어 올 경우, 쿼리가 QueryHandler.HandleAsync의 아규먼트로 넘어간다.
+4. **@QueryHanlder** post, comment repository가 DB에서 요청된 정보를 조회해 PostEntity에 담아 리턴해준다.(post와 comment repository는 query 쪽에서만 쓰인다. command쪽에서는 event store repository가 사용됨.)
+5. 반환된 PostEntity정보로 NormalResponse를 리턴한다. 컨트롤러에서 이를 클라이언트로 보낸다.
 
 ## 깊게 알아보기 (추가 예정)
 
