@@ -36,7 +36,7 @@ description:  >
 
 ### **Create, Update, Delete에 대한 요청이 들어왔을 때**
 
-<img width="1485" alt="image" src="https://user-images.githubusercontent.com/37058233/218307521-7e784b9b-385a-4341-ae8f-e34e4c291d8b.png">
+<img width="1482" alt="image" src="https://user-images.githubusercontent.com/37058233/218307673-1d8841c3-c3f9-4e48-b39c-3174c4442bb4.png">
 
 1. **@CommandController** 클라이언트에서 들어오는 들어오는 요청에 따라 NewPostCommand, EditMessageCommand, AddCommentCommand, EditCommentCommand, LikePostCommand, RemoveCommentCommand, DeletePostCommand의 커맨드 객체를 만든다.
 
