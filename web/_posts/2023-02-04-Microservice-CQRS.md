@@ -34,7 +34,7 @@ description:  >
 
 ## CQRS Flow
 
-### **Create, Update, Delete에 대한 요청이 들어왔을 때
+### Create, Update, Delete에 대한 요청이 들어왔을 때
 
 [CUD 요청 시 더 자세한 흐름 보기 - 클릭](https://yejip.com/web/2023-02-12-Microservice-CQRS-Command)
 
