@@ -8,6 +8,38 @@ order: 1
 
 *Aspiring software engineer passionate in learning and improving as a developer. Appreciates team collaboration and sharing knowledge. Built several personal projects and always looking to gain new skills. Please feel free to connect with me on <a href="https://kr.linkedin.com/in/yeji/en-us?trk=profile-badge">Linkedin</a>*
 
+## Experience
+
+- **Software Developer,** IRAS (Singapore)
+
+  Mar 2023 ~ Now
+
+- **System Administrator Internship,** Gravity Interactive, Inc. (CA, USA)
+
+  Mar 2021 - Feb 2022 (11 months)
+
+  ·    Assembled workstations and supporting users with hardware issue
+
+  ·    Installed operating system for workstations and other software
+
+  ·    Managed employee accounts using Active Directory
+
+  ·    Assisted in upgrading hardware for game servers during maintenance
+
+- **Full stack Coding Bootcamp,** KITA (Seoul, Korea) Jul 2020 ~ Jan 2021 (5 months)
+
+  ·    Learned developing website using Spring, JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
+
+- **Data Analyst Internship,** HEM Pharma (Gwanggyo, Korea)
+
+  Oct 2019 - Feb 2020 (5 months)
+
+  ·    Preprocessed raw csv data using Python, numpy, and sklearn libraries
+
+  ·    Used above data to create artificial neural network model using keras and tensorflow
+
+  ·    Visualized data with matplotlib for correlation analysis between diabetes and gut microbiome
+
 ## Education
 
 **Handong Global University**
@@ -26,7 +58,7 @@ C#, Java, Python, HTML5, CSS3, JavaScript, .NET Core, Spring, Django, Flask, RES
 
 ## Projects
 
-**Sticky Notes With Friends** - [Github](https://github.com/YejiP/letter_box/blob/heroku/readme.md), [Demo](https://stickies-box.herokuapp.com/)
+**Sticky Notes With Friends** - [Github](https://github.com/YejiP/letter_box/blob/heroku/readme.md)
 
 Django application using PostgreSQL, HTML, CSS, and JavaScript. Enables users to search and add friends. Users can send, receive, and store messages from friends in an online letter box.
 
@@ -34,11 +66,11 @@ Django application using PostgreSQL, HTML, CSS, and JavaScript. Enables users to
 
 Made human versus AI checkers game in Java using JFrame for GUI. Used minimax tree algorithm for AI decisions and alpha-beta pruning to reduce number of options involved in making decisions. [More](https://yejip.com/project/checkers.html)
 
-**Number recognition** [Demo](https://characterrecognition.herokuapp.com/)
+**Number recognition**
 
-Created Java web application using HTML/CSS/JavaScript for frontend, and Java servlet for backend. Implemented two-layered artificial neural network from scratch without using AI library. Identifies integers from 0 to 9 based on pixels drawn to canvas by user. [More]( [https://yejip.com/project/number-recognition.html])
+Created Java web application using HTML/CSS/JavaScript for frontend, and Java servlet for backend. Implemented two-layered artificial neural network from scratch without using AI library. Identifies integers from 0 to 9 based on pixels drawn to canvas by user. [More](https://yejip.com/project/number-recognition.html)
 
-**Task Manager** [Demo](https://task-manager-simple.herokuapp.com/)
+**Task Manager**
 
 Developed CRUD web application for task management using Java, Servlet, JSP, Maven, and MVC pattern. Built API backend with MYSQL database and frontend using HTML, CSS, JavaScript, Ajax, and Bootstrap. [More](https://yejip.com/project/task-manager.html)
 
