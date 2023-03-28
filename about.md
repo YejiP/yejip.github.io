@@ -48,34 +48,4 @@ Built scheduler inspired by personal interest in biology using Java and OOP. Tak
 
 **Please check [Projects](https://yejip.com/project/) page for more.**
 
-## Experience
-
-- **System Administrator Internship,** Gravity Interactive, Inc. (Buena Park, CA)
-
-  Mar 2021 - Feb 2022 (11 months)
-
-  ·    Assembled workstations and supporting users with hardware issue
-
-  ·    Installed operating system for workstations and other software
-
-  ·    Managed employee accounts using Active Directory
-
-  ·    Assisted in upgrading hardware for game servers during maintenance
-
-- **Full stack Coding Bootcamp,** KITA(Seoul, Korea) Jul 2020 ~ Jan 2021 (5 months)
-
-   ·    Learned developing website using Spring,  JAVA,ORACLE DB, Mybatis,HTML5/CSS3, Javascript, Spring, JQUERY,and Ajax
-
-   ·    US Internship related program
-
-- **Data Analyst Internship,** HEM Pharma (Gwanggyo, Korea)
-
-  Oct 2019 - Feb 2020 (5 months)
-
-  ·    Preprocessed raw csv data using Python, numpy, and sklearn libraries
-
-  ·    Used above data to create artificial neural network model using keras and tensorflow
-
-  ·    Visualized data with matplotlib for correlation analysis between diabetes and gut microbiome
-
 *[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
