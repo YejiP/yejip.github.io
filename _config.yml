@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:     https://yejip.github.io      
+url:     https://yejip.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -28,7 +28,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  Hard work pays off. We can do it!
+  Life by Choice
 
 # A list of keywords for your blog
 keywords:              []
@@ -144,7 +144,7 @@ google_ad_client: ca-pub-7734293170442731
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-#disqus:             
+#disqus:
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # tinyletter:            <tinyletter_username>
@@ -332,7 +332,7 @@ relative_links:
 titles_from_headings:
   strip_title:         true
   collections:         true
-  
+
 replace_img:
   re_img:              <img\s*(?<attrs>.*?)\s*/>
   re_ignore:           (re|data)-ignore
