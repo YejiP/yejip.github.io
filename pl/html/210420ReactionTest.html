@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test your Reaction!</title>
+    <style media="screen">
+      #shape{
+        width: 100px;
+        height : 100px;
+        margin-left: 30px;
+        margin-top:300px;
+        background-color: red;
+        position: relative;
+        top :100px;
+        left:30px;
+
+      }
+
+
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <div id = "display"></div>
+    <div id = "shape"></div>
+
+
+    <script type="text/javascript">
+var time1;var time2;
+
+
+
+function showShape(){
+
+
+  function color(){
+    var c = "#";
+    var hexa = ["a","b","c","d","e","f","0","1","2","3","4","5","6","7","8","9"]
+    for (i=0;i<6;i++){
+      ind = Math.round(Math.random()*16);
+      c+=hexa[ind]
+    }
+    return c;
+  }
+
+  time1=new Date().getMilliseconds()+ new Date().getSeconds()*1000;
+  var size=Math.round(Math.random()*10)+200+"px";
+
+  var color = color();
+
+  document.getElementById("shape").style.width =size;
+  document.getElementById("shape").style.height =size;
+  document.getElementById("shape").style.top =Math.round(Math.random()*100)+"px";
+  document.getElementById("shape").style.left =Math.round(Math.random()*500)+"px";
+  document.getElementById("shape").style.background =color;
+
+  if(Math.random()>0){
+    document.getElementById("shape").style.borderRadius ="50%";
+  }else{
+    document.getElementById("shape").style.borderRadius ="0%";
+  }
+  document.getElementById("shape").style.display = "block";
+
+  //document.getElementById("square").style.width = Math.random()*100; 색 어떻게 random으로 뽑는지?
+
+      document.getElementById("shape").onclick = function(){
+        this.style.display = "none";
+        time2=new Date().getMilliseconds() + new Date().getSeconds()*1000;
+        document.getElementById('display').innerHTML=(time2-time1)/1000 +" seconds";
+    }
+  }
+  setInterval(showShape,2000);
+    </script>
+  </body>
+</html>

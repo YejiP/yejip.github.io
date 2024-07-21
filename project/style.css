@@ -1,0 +1,33 @@
+body{
+  margin-left: 10%;
+  margin-right: 10%;
+     text-size-adjust: none;
+  font-family : 'Times New Roman' , 'serif';
+
+}
+img{
+  display: block; margin: 0px auto;
+}
+div{
+  margin : 0 auto;
+  min-width: 800px;
+
+}
+p.explanation{
+  min-width: 800px;
+  text-align: left;
+}
+div.explanation{
+  margin-left: 3%;
+  margin-right: 10%;
+}
+div.center{
+  min-width: 800px;
+  text-align: center;
+}
+.explanation::first-letter{
+  font-size : 1.5em;
+}
+h1,h2, #title{
+  text-align: center;
+  min-width: 800px;}

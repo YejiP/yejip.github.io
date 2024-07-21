@@ -1,0 +1,62 @@
+@charset "utf-8";
+.popup{
+  position : fixed;
+  top : 0;
+  left : 0;
+  right : 0;
+  bottom : 0;
+
+}
+.popup-wrap{
+  display: table;
+  text-align: center;
+  table-layout: fixed;/*성능에 좋다.*/
+  width: 100%;
+  height: 100%;
+}
+.popup-inner{
+  display : table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.popup-layout{
+  display: inline-block;
+  position: relative;
+  width: 500px;
+  height : 300px;
+  background-color : white;
+  z-index: 100;
+}
+
+.textarea{
+  margin: 40px;
+}
+.btnarea{
+  position: absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  height: 100px;
+}
+
+input{
+  width: 50%;
+  height: inherit;
+  float: left;
+  background-color: orange;
+}
+.no{
+  background-color: pink;
+
+}
+
+.popup-dimmed{
+  position: absolute;
+  height: 100%;
+  background: black;
+  top :0;
+  left :0;
+  bottom : 0;
+  right : 0;
+  opacity: 0.3;
+}

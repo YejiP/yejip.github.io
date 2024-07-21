@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    div#wrapper {
+       width : 800px;
+       height : 600px;
+       margin : 0 auto;
+       text-align: center;
+    }
+    </style>
+    <script>
+
+        window.onload = function(event){
+            document.getElementById("clickme").onclick = function(){
+              var userid = document.getElementById("userid").value;
+              var username = document.getElementById("username").value;
+              window.opener.document.getElementById("userid").value = userid;
+              window.opener.document.getElementById("username").value = username;
+              window.close();
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <h2>[ 새창으로 입력 ]</h2>
+        <div id="target">
+            <label for="userid">아이디 : </label><input type="text" id="userid"><br>
+            <label for="username">이 름 : </label><input type="text" id="username"><br><br>
+            <input type="button" id="clickme"  value="닫기">
+            <input  type="button" value="인쇄" onclick="window.print();">
+        </div>
+    </div>
+</body>
+</html>

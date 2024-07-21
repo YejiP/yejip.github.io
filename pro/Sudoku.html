@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <title>Sudoku Solver</title>
+  <link rel = "stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+  <div id = "title">
+  <br><br><br><br>
+  <img src ="img/me.png" alt ="" width = 100px><br><br>
+  <span style ="font-size: 0.8em ; font-weight:bold">Yeji Park</span><br>
+  <h1>Sudoku solver</h1><span style = " font-size:1.2em; font-weight:bold" >(using forward checking and back tracking)<br></span>
+  <h2><a href ="https://sudoku-backtracking.herokuapp.com/">Sudoku solver Demo</h2></a>
+  <a href = "https://github.com/YejiP/projects/tree/master/sudoku_assignment">Github repository</a><br><br>
+  <hr style="border: double 5px;"> </div>
+  <h2>Problem description</h2>
+  <div class="explanation">
+<fieldset style="text-align : center"><legend style="font-weight : bold">Sudoku Rules</legend>
+  1. Each line should contain 1 to 9 without repeating itself, vertically and horizontally. <br>
+  2. Each block which consists of 3*3 boxes should contain 1 to 9 without repeating itself.<br>
+  Each cell has its domain, which initially {1,2,3,4,5,6,7,8,9} then from the constrains, some elements can be ruled out.
+<br>
+</fieldset><br>
+<img src = "sudoku/img/domain.PNG" alt =""  width = 180px align = left><br><span style="margin-left : 5px"For example, cell A cannot have 1,3,4,7,8. There for the possible answers domain of cell A is  {2,5,6,9}.<br>
+<br>For the cell B, it cannot be 1,2,3,4,5,6,8,9. so the only one element in domain, {7}. Therefore, the cell B should be 7.<br>
+<br>The main point is that each cell has its domain, so 81 domains. By ruling out some impossible answers from domain of cells, we could find the answer for the cells.
+</div>
+<br><br><h2>The concept of forward checking</h2>
+<div class="explanation">
+Previously, we figured out the cell B is 7. We are solving sudoku with computer, so the domain of each cells can be stored in the memory and can be revised.
+<br> We will delete 7 in the domains of the cell which are in the same row, column, and the block. It is called "Domain revision".
+<div style="min-width :800px;margin-bottom:10px;  display: flex;  align-items: center;  justify-content: center;">
+<img src = "sudoku/img/7.PNG" alt =""  width =200px align = left> <img src = "sudoku/img/rev.PNG" alt =""  width = 200px></div>
+<br>Easy problem can be solved by only forward checking, but It is not enough to solve harder level of sudoku. Let's say, we finished all forward checking, but some cells are not decided yet.
+Then what should we do now?
+</div>
+<br><h2>Forward checking with back tracking</h2>
+  <div class="explanation">
+Here is a sudoku but could not be solved only by forward checking. so now, we need to try out some numbers and then if it can be possible or not.
+Let's focus on cell A, B and C.(Other cells are out of our focus for this explanation.) Each has the domain of {1,3,7,8}, {2,6} and {2,7}. All combination of (A,B,C) can be represented as a tree below.
+<div style="min-width :800px;margin-bottom:10px;  display: flex;  align-items: center;  justify-content: center;">
+<br><img src = "sudoku/img/br.PNG"  alt ="" width =200px align = 'left'><br>
+<img src = "sudoku/img/tree.PNG"  alt ="" width =600px height = 180px ></div>
+<br>
+
+Back tracking starts from assigning a possible value to the cell. Let's assume we assign 7 to cell A.
+Since the cell A and cell C interacts, cell C cannot be 7. As soon as A is assigned as 7, the forward checking algorithm checks the domain of other cells which interacts with cell A  and delete 7 from the domain.so regardless of value of cell B, C cannot have 7.(The first picture below)<br>
+Once 7 is removed from the domain, the part of tree can be pruned. In the second picture, When A is 7 and 2, there is no elements left in the domain of cell C, which means A=7 and B=2 together cannot be the answer.
+now, it checks another possible answer for cell B, but cell A is still 7. (The third and fourth pictures below.)<u> This process is called back tracking. </u>
+
+</div>
+<div style="min-width :800px;margin-bottom:10px;  display: flex;  align-items: center;  justify-content: center;">
+<img src = "sudoku/img/ac.PNG" alt =""  width = 170px  height = 150px align = left>
+<img src = "sudoku/img/2.PNG" alt =""  width = 170px   height = 150px align = left >
+<img src = "sudoku/img/3.PNG"  alt ="" width = 170px  height = 150px align = left >
+<img src = "sudoku/img/4.PNG"  alt ="" width = 170px  height = 150px  align = left>
+</div>
+<br><div style="align :center">The picture below is overall image of what we did before.</div>
+
+<br><img src = "sudoku/img/5.PNG" alt =""  width = 700px  ><br>
+If there is no possible combination when cell A is 7, then now the value of cell A is changed, also backtracking.
+</div>
+<img src = "sudoku/img/6.PNG"  alt ="" width = 700px ><br>
+
+</body>
+</html>

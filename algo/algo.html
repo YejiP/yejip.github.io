@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <base target="_parent">
+  <title>Algorithm</title>
+  <link rel="stylesheet" href="myStyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</head>
+<!--<![endif]-->
+
+<body class="no-color-transition" data-spy="scroll" data-target="#myNav" data-offset="0">
+  <article class="page" role="article">
+    <nav id="myNav" class="navbar navbar-expand-lg navbar-light bg-faded sticky-top">
+      <div>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span id="where" class="navbar-brand">Algorithm</span>
+        </button>
+      </div>
+
+      <div class="navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="#PatternAnalysis" target="_self">Pattern Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#Integer/String" target="_self">Integer/String</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="#Array" target="_self">Array/Matrix</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#Sorting" target="_self">Sorting/Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#LinkedList" target="_self">LinkedList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Tree" target="_self">Tree</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ETC" target="_self">ETC</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="subject" style="position: fixed; top : 5px;  opacity: 0.9;">&nbsp;&nbsp;All</div>
+    <hr>
+    </div>
+    <div class="wrapper">
+      <div class="leftCol" id="left">
+        <a>
+          <div class="title algos">Pattern Analysis</div>
+        </a>
+        <a>
+          <div class="title algos">Integer/String</div>
+        </a><a>
+          <div class="title algos">Array/Matrix</div>
+        </a><a>
+          <div class="title algos">Sorting/Search</div>
+        </a><a>
+          <div class="title algos">LinkedList</div>
+        </a><a>
+          <div class="title algos">Tree</div>
+        </a>
+        <a>
+          <div class="title algos">ETC</div>
+        </a>
+      </div>
+
+      <div id="rightCol">
+        <div>&nbsp;</div>
+        <!--this &nbsp; block keeps rightcol exist in the page. so it does count as right column from the beginning.-->
+      </div>
+
+      <div id="mobile">
+        <div class="contents" id="PatternAnalysis">
+          <p><b>Pattern Analysis</b>
+            <br>•<b><a href="2021-12-29-LeetcodeTreeTraversal/" class="heading flip-title">DFS Tree Traversal
+                Strategy</a></b>
+            <br>•<b><a href="2021-10-28-LeetcodeStr/" class="heading flip-title">String Strategy</a></b>
+          </p>
+        </div>
+        <div class="contents" id="Integer/String">
+          <p><b>INTEGER</b>
+            <br>•<a href="2021-04-13-LeetcodeInt9/" class="heading flip-title">Leetcode9) Palindrome
+              Number</a>
+            <br>• <a href="2021-04-13-LeetcodeInt50/" class="heading flip-title">Leetcode50) Power(x,n)</a>
+            <br>• <a href="2021-04-13-LeetcodeInt172/" class="heading flip-title">Leetcode172) Factorial Trailing
+              Zeros</a>
+            <br>• <a href="2021-04-13-LeetcodeInt412" class="heading flip-title">Leetcode412) FizzBuzz</a>
+          </p>
+          <p><b>STRING</b>
+            <br>•<a href="2021-04-21-LeetcodeStr3/" class="heading flip-title">Leetcode3) Longest Substring without
+              Repeating Characters</a>
+            <br>•<a href="2021-04-21-LeetcodeStr5/" class="heading flip-title">Leetcode5) Longest Palindromic
+              Substring</a>
+            <br>•<a href="2021-05-12-LeetcodeStr20/" class="heading flip-title">Leetcode20) Valid Parentheses</a>
+            <br>•<a href="2021-11-02-LeetcodeStr30/" class="heading flip-title">Leetcode 30) Substring with
+              Concatenation of All Words</a>
+            <br>•<a href="2021-11-01-LeetcodeStr76/" class="heading flip-title">Leetcode 76) Minimum Window
+              Substring</a>
+            <br>•<a href="2021-05-13-LeetcodeStr139/" class="heading flip-title">Leetcode139) Word Break</a>
+            <br>•<a href="2021-04-15-LeetcodeStr151/" class="heading flip-title">Leetcode151) Reverse Words in a
+              String</a>
+            <br>•<a href="2021-11-02-LeetcodeStr159/" class="heading flip-title">Leetcode 159) Longest Substring with At
+              Most Two Distinct Characters</a>
+            <br>•<a href="2021-08-19-Leetcode161/" class="heading flip-title">Leetcode 161) One Edit Distance</a>
+            <br>•<a href="2021-05-16-LeetcodeStr187/" class="heading flip-title">Leetcode187) Repeated DNA Sequences</a>
+            <br>•<a href="2021-05-14-LeetcodeStr242/" class="heading flip-title">Leetcode242) Valid Anagram</a>
+            <br>•<a href="2021-11-02-LeetcodeStr340/" class="heading flip-title">Leetcode 340) Longest Substring with At
+              Most K Distinct Characters</a>
+            <br>•<a href="2021-04-15-LeetcodeStr344/" class="heading flip-title">Leetcode344) Reverse String</a>
+            <br>•<a href="2021-05-12-LeetcodeStr394/" class="heading flip-title">Leetcode394) Decode String</a>
+            <br>•<a href="2021-10-28-LeetcodeStr424/" class="heading flip-title">Leetcode 424) Longest Repeating
+              Character Replacement</a>
+            <br>•<a href="2021-11-01-LeetcodeStr647/" class="heading flip-title">Leetcode 647) Palindromic
+              Substrings</a>
+          </p>
+        </div>
+
+        <div class="contents" id="Array">
+          <p><b>ARRAY</b>
+            <br>•<a href="2021-05-16-LeetcodeAry1/" class="heading flip-title">Leetcode1) Two Sum</a>
+            <br>•<a href="2021-06-04-LeetcodeAry4/" class="heading flip-title">Leetcode 4) Median of Two Sorted
+              Arrays</a>
+            <br>•<a href="2021-05-28-LeetcodeAry41/" class="heading flip-title">Leetcode 41) First Missing Positive</a>
+            <br>•<a href="2021-05-24-LeetcodeAry49/" class="heading flip-title">Leetcode 49) Group Anagrams</a>
+            <br>•<a href="2021-06-04-LeetcodeAry53/" class="heading flip-title">Leetcode 53) Maximum Subarray</a>
+            <br>•<a href="2021-05-25-LeetcodeAry55/" class="heading flip-title">Leetcode 55) Jump Game</a>
+            <br>•<a href="2021-05-17-LeetcodeAry58/" class="heading flip-title">Leetcode 58) Length of Last word</a>
+            <br>•<a href="2021-05-17-LeetcodeAry66/" class="heading flip-title">Leetcode 66) Plus One</a>
+            <br>•<a href="2021-12-03-LeetcodeA75/" class="heading flip-title">Leetcode 75) Sort Colors</a>
+            <br>•<a href="2021-05-21-LeetcodeAry80/" class="heading flip-title">Leetcode 80) Remove Duplicates from
+              Sorted Array II</a>
+            <br>•<a href="2021-11-26-LeetcodeA88/" class="heading flip-title">Leetcode 88) Merge Sorted Array</a>
+            <br>•<a href="2021-05-21-LeetcodeAry118/" class="heading flip-title">Leetcode 118) Pascal's Triangle</a>
+            <br>•<a href="2021-05-21-LeetcodeAry119/" class="heading flip-title">Leetcode 119) Pascal's Triangle II</a>
+            <br>•<a href="2021-05-20-LeetcodeAry122/" class="heading flip-title">Leetcode 122) Best Time to Buy and Sell
+              Stock </a>
+            <br>•<a href="2021-05-26-LeetcodeAry134/" class="heading flip-title">Leetcode 134) Gas Station</a>
+            <br>•<a href="2021-05-28-LeetcodeAry152/" class="heading flip-title">Leetcode 152) Maximum Product
+              Subarray</a>
+            <br>•<a href="2021-05-24-LeetcodeAry169/" class="heading flip-title">Leetcode 169) Majority Element</a>
+            <br>•<a href="2021-05-26-LeetcodeAry189/" class="heading flip-title">Leetcode 189) Rotate Array</a>
+            <br>•<a href="2021-06-02-LeetcodeAry198/" class="heading flip-title">Leetcode 198) House Robber</a>
+            <br>•<a href="2021-06-03-LeetcodeAry213/" class="heading flip-title">Leetcode 213) House Robber II</a>
+            <br>•<a href="2021-05-24-LeetcodeAry238/" class="heading flip-title">Leetcode 238) Product of Array Except
+              Self</a>
+            <br>•<a href="2021-05-27-LeetcodeAry239/" class="heading flip-title">Leetcode 239) Sliding Window
+              Maximum</a>
+            <br>•<a href="2021-12-03-LeetcodeA280/" class="heading flip-title">Leetcode 280) Wiggle Sort</a>
+            <br>•<a href="2021-05-17-LeetcodeAry283/" class="heading flip-title">Leetcode 283) Move Zeroes</a>
+            <br>•<a href="2021-05-20-LeetcodeAry442/" class="heading flip-title">Leetcode 442) Find All Duplicates in an
+              Array</a>
+            <br>•<a href="2021-05-20-LeetcodeAry448/" class="heading flip-title">Leetcode 448) Find All Numbers
+              Disappeared in an Array</a>
+            <br>•<a href="2021-05-24-LeetcodeAry532/" class="heading flip-title">Leetcode 532) K-diff Pairs in an
+              Array</a>
+            <br>•<a href="2021-10-28-LeetcodeAry561/" class="heading flip-title">Leetcode 561) Array Partition I</a>
+            <br>•<a href="2021-05-25-LeetcodeAry713/" class="heading flip-title">Leetcode 713) Subarray Product Less
+              Than K</a>
+            <br>•<a href="2021-05-19-LeetcodeAry735/" class="heading flip-title">Leetcode 735) Asteroid Collision</a>
+            <br>•<a href="2021-06-02-LeetcodeAry997/" class="heading flip-title">Leetcode 997) Find the Town Judge</a>
+            <br>•<a href="2021-05-29-LeetcodeAry1007/" class="heading flip-title">Leetcode 1007) Minimum Domino
+              Rotations For Equal Row</a>
+            <br>•<a href="2021-07-10-LeetcodeArray1089/" class="heading flip-title">Leetcode 1089) Duplicates Zeros</a>
+            <br>•<a href="2021-05-26-LeetcodeAry1291/" class="heading flip-title">Leetcode 1291) Sequential Digits</a>
+            <br>•<a href="2021-05-27-LeetcodeAry1306/" class="heading flip-title">Leetcode 1306) Jump Game III</a>
+            <br>•<a href="2021-05-20-LeetcodeAry1419/" class="heading flip-title">Leetcode 1419) Minimum Number of Frogs
+              Croaking</a>
+            <br>•<a href="2021-05-25-LeetcodeAry1431/" class="heading flip-title">Leetcode 1431) Kids With the Greatest
+              Number of Candies</a>
+            <br>•<a href="2021-05-21-LeetcodeAry1491/" class="heading flip-title">Leetcode 1491) Average Salary
+              Excluding the Minimum and Maximum Salary</a>
+          </p>
+
+          <p><b>MATRIX</b>
+            <br>•<a href="2021-06-05-LeetcodeMat48/" class="heading flip-title">Leetcode 48) Rotate Image</a>
+            <br>•<a href="2021-06-09-LeetcodeMat54/" class="heading flip-title">Leetcode 54) Spiral Matrix</a>
+            <br>•<a href="2021-06-05-LeetcodeMat56/" class="heading flip-title">Leetcode 56) Merge Intervals</a>
+            <br>•<a href="2021-06-09-LeetcodeMat74/" class="heading flip-title">Leetcode 74) Search a 2D Matrix</a>
+            <br>•<a href="2021-06-05-LeetcodeMat1288/" class="heading flip-title">Leetcode 1288) Remove Covered
+              Intervals</a>
+            <br>•<a href="2021-06-09-LeetcodeMat1572/" class="heading flip-title">Leetcode 1572) Matrix Diagonal Sum</a>
+          </p>
+
+        </div>
+
+
+        <div class="contents" id="Sorting">
+          <p><b>SORTING</b>
+            <br>•<a href="2021-01-15-1선택정렬/" class="heading flip-title">Concept) Selcection sort</a>
+            <br>• <a href="2021-01-16-2삽입정렬/" class="heading flip-title">Concept) Insertion sort</a>
+            <br>• <a href="2021-01-17-3합병정렬/" class="heading flip-title">Concept) Merge sort</a>
+            <br>• <a href="2021-01-18-4힙정렬/" class="heading flip-title">Concept) Heap sort</a>
+            <br>• <a href="2021-01-19-5퀵정렬/" class="heading flip-title">Concept) Quick sort</a>
+            <br>• <a href="2021-01-20-6계수정렬/" class="heading flip-title">Concept) Counting sort</a>
+            <br>• <a href="2021-01-20-7기수정렬/" class="heading flip-title">Concept) Radix sort</a>
+            <br>•<a href="2021-06-08-LeetcodeSort912/" class="heading flip-title">Leetcode 912) Merge Sort</a>
+
+          </p>
+          <p><b>BINARY SEARCH</b>
+            <br>•<a href="2021-09-24-LeetcodeBS11/" class="heading flip-title">Leetcode 11) Container With Most
+              Water</a>
+            <br>•<a href="2021-09-08-LeetcodeBS33/" class="heading flip-title">Leetcode 33) Search in Rotated Sorted
+              Array</a>
+            <br>•<a href="2021-09-16-LeetcodeBS34/" class="heading flip-title">Leetcode 34) Find First and Last Position
+              of Element in Sorted Array</a>
+            <br>•<a href="2021-09-07-LeetcodeBS69/" class="heading flip-title">Leetcode 69) Sqrt(x)</a>
+            <br>•<a href="2021-09-09-LeetcodeBS153/" class="heading flip-title">Leetcode 153) Final Minimum in Rotated
+              Sorted Array</a>
+            <br>•<a href="2021-09-17-LeetcodeBS154/" class="heading flip-title">Leetcode 154) Find Minimum in Rotated
+              Sorted Array2</a>
+            <br>•<a href="2021-09-09-LeetcodeBS162/" class="heading flip-title">Leetcode 162) Find Peak Element</a>
+            <br>•<a href="2021-09-17-LeetcodeBS270/" class="heading flip-title">Leetcode 270) Closest Binary Search Tree
+              Value</a>
+            <br>•<a href="2021-09-08-LeetcodeBS278/" class="heading flip-title">Leetcode 278) First Bad Version</a>
+            <br>•<a href="2021-09-20-LeetcodeBS287/" class="heading flip-title">Leetcode 287) Find the Duplicate
+              Number</a>
+            <br>•<a href="2021-09-17-LeetcodeBS367/" class="heading flip-title">Leetcode 367) Valid Perfect Square</a>
+            <br>•<a href="2021-09-07-LeetcodeBS374/" class="heading flip-title">Leetcode 374) Guess Number Higher or
+              Lower</a>
+            <br>•<a href="2021-09-17-LeetcodeBS658/" class="heading flip-title">Leetcode 658) Find K Closest
+              Elements</a>
+            <br>•<a href="2021-09-17-LeetcodeBS702/" class="heading flip-title">Leetcode 702) Search in a Sorted Array
+              of Unkown Size</a>
+            <br>•<a href="2021-09-07-LeetcodeBS704/" class="heading flip-title">Leetcode 704) Binary Search</a>
+            <br>•<a href="2021-09-09-BS정리/" class="heading flip-title">Leetcode BS 정리</a>
+          </p>
+
+
+        </div>
+
+        <div class="contents" id="LinkedList">
+          <p><b>LINKED LIST</b>
+            <br>•<a href="2021-07-10-LeetcodeLinkedList2/" class="heading flip-title">Leetcode 2) Add Two Numbers</a>
+            <br>•<a href="2021-06-15-LeetcodeLinked21/" class="heading flip-title">Leetcode 21) Merge Two Sorted
+              Lists</a>
+            <br>•<a href="2021-06-12-LeetcodeLinked24/" class="heading flip-title">Leetcode 24) Swap Nodes in Pairs</a>
+            <br>•<a href="2021-06-24-LeetcodeLinked25/" class="heading flip-title">Leetcode 25) Reverse Nodes in
+              k-Group</a>
+            <br>•<a href="2021-06-11-LeetcodeLinked61/" class="heading flip-title">Leetcode 61) Rotate List</a>
+            <br>•<a href="2021-07-31-LeetcodeLinkedList92/" class="heading flip-title">Leetcode 92) Reverse Linked List
+              II</a>
+            <br>•<a href="2021-06-10-LeetcodeLinked114/" class="heading flip-title">Leetcode 114) Flatten Binary Tree to
+              Linked List</a>
+            <br>•<a href="2021-06-12-LeetcodeLinked141/" class="heading flip-title">Leetcode 141) Linked List Cycle</a>
+            <br>•<a href="2021-06-12-LeetcodeLinked142/" class="heading flip-title">Leetcode 142) Linked List Cycle
+              II</a>
+            <br>•<a href="2021-06-25-LeetcodeLinked146/" class="heading flip-title">Leetcode 146) LRU Cache</a>
+            <br>•<a href="2021-06-16-LeetcodeLinked160/" class="heading flip-title">Leetcode 160) Intersection of Two
+              Linked Lists</a>
+            <br>•<a href="2021-07-12-LeetcodeLinkedList203/" class="heading flip-title">Leetcode 203) Remove Linked List
+              Elements</a>
+            <br>•<a href="2021-06-15-LeetcodeLinked206/" class="heading flip-title">Leetcode 206) Reverse Linked
+              List</a>
+            <br>•<a href="2021-06-16-LeetcodeLinked234/" class="heading flip-title">Leetcode 234) Palindrome Linked
+              List</a>
+            <br>•<a href="2021-07-31-LeetcodeLinkedList237/" class="heading flip-title">Leetcode 237) Delete Node in a
+              Linked List</a>
+            <br>•<a href="2021-06-10-LeetcodeLinked328/" class="heading flip-title">Leetcode 328) Odd Even Linked
+              List</a>
+            <br>•<a href="2021-07-20-LeetcodeLinkedList430/" class="heading flip-title">Leetcode 430) Numbers of
+              Islands</a>
+            <br>•<a href="2021-06-10-LeetcodeLinked445/" class="heading flip-title">Leetcode 445) Add Two Numbers II</a>
+            <br>•<a href="2021-06-25-LeetcodeLinked707/" class="heading flip-title">Leetcode 707) Design Linked List</a>
+            <br>•<a href="2021-07-20-LeetcodeLinkedList708/" class="heading flip-title">Leetcode 708) Insert into a
+              Sorted Circular Linked List</a>
+            <br>•<a href="2021-06-11-LeetcodeLinked 867/" class="heading flip-title">Leetcode 867) Middle of the Linked
+              List</a>
+            <br>•<a href="2021-07-31-LeetcodeLinkedList1721/" class="heading flip-title">Leetcode 1721) Swapping Nodes
+              in a Linked List</a>
+            <br>•<a href="2021-06-22-LeetcodeLinked오답/" class="heading flip-title">LinkedList - how to</a>
+        </div>
+
+        <div class="contents" id="Tree">
+          <p><b>Tree Traversal</b>
+            <br>•<a href="2021-06-29-LeetcodeTree94/" class="heading flip-title">Leetcode 94) Inorder Traversal</a>
+            <br>•<a href="2021-07-02-LeetcodeTree100/" class="heading flip-title">Leetcode 100) Same Tree</a>
+            <br>•<a href="2021-06-30-LeetcodeTree102/" class="heading flip-title">Leetcode 102) Binary Tree Level Order
+              Traversal</a>
+            <br>•<a href="2021-06-30-LeetcodeTree103/" class="heading flip-title">Leetcode 103) Binary Zigzag Level
+              Order Traversal</a>
+            <br>•<a href="2021-07-22-LeetcodeDFS107/" class="heading flip-title">Leetcode 107) Binary Tree Level Order
+              Traversal II</a>
+            <br>•<a href="2021-09-27-LeetcodeDFS112/" class="heading flip-title">Leetcode 112) Path Sum</a>
+            <br>•<a href="2021-09-28-LeetcodeDFS113/" class="heading flip-title">Leetcode 113) Path Sum II</a>
+            <br>•<a href="2021-08-06-LeetcodeBFS116/" class="heading flip-title">Leetcode 116) Populating Next Right
+              Pointers in Each Node</a>
+            <br>•<a href="2021-08-06-LeetcodeBFS117/" class="heading flip-title">Leetcode 117) Populating Next Right
+              Pointers in Each Node II</a>
+            <br>•<a href="2021-09-29-LeetcodeDFS129/" class="heading flip-title">Leetcode 129) Sum Root to Leaf
+              Numbers</a>
+            <br>•<a href="2021-06-29-LeetcodeTree144/" class="heading flip-title">Leetcode 144) Binary Tree Preorder
+              Traversal</a>
+            <br>•<a href="2021-06-29-LeetcodeTree145/" class="heading flip-title">Leetcode 145) Binary Tree Postorder
+              Traversal</a>
+            <br>•<a href="2021-08-06-LeetcodeBFS296/" class="heading flip-title">Leetcode 296) Best Meeting Point</a>
+            <br>•<a href="2021-08-05-LeetcodeBFS317/" class="heading flip-title">Leetcode 317) Shortes Distance from All
+              Buildings</a>
+            <br>•<a href="2021-08-05-LeetcodeBFS404/" class="heading flip-title">Leetcode 404) Sum of Left Leaves</a>
+            <br>•<a href="2021-08-06-LeetcodeBFS490/" class="heading flip-title">Leetcode 490) The Maze</a>
+            <br>•<a href="2021-08-05-LeetcodeBFS994/" class="heading flip-title">Leetcode 994) Rotting Oranges</a>
+            <br>•<a href="2021-08-06-LeetcodeBFS1162/" class="heading flip-title">Leetcode 1162) As Far from Land as
+              Possible</a>
+          </p>
+
+          <p><b>Binary Tree</b>
+            <br>•<a href="2021-07-06-LeetcodeTree110/" class="heading flip-title">Leetcode 110) Balanced Binary Tree</a>
+            <br>•<a href="2021-07-06-LeetcodeTree111/" class="heading flip-title">Leetcode 111) Minimum Depth of Binary
+              Tree</a>
+            <br>•<a href="2021-07-08-LeetcodeTree124/" class="heading flip-title">Leetcode 124) Binary Tree Maximum Path
+              Sum</a>
+            <br>•<a href="2021-07-02-LeetcodeTree543/" class="heading flip-title">Leetcode 543) Diameter of Binary
+              Tree</a>
+            <br>•<a href="2021-07-02-LeetcodeTree226/" class="heading flip-title">Leetcode 226) Invert Binary Tree</a>
+            <br>•<a href="2021-07-12-LeetcodeTree236/" class="heading flip-title">Leetcode 236) Lowest Common Ancestor
+              of a Binary Tree</a>
+
+            </b>
+          <p><b>Binary Search Tree</b>
+            <br>•<a href="2021-07-10-LeetcodeTree98/" class="heading flip-title">Leetcode 98) Validate Binary Search
+              Tree</a>
+            <br>•<a href="2021-07-06-LeetcodeTree104/" class="heading flip-title">Leetcode 104) Maximum Depth of Binary
+              Tree</a>
+            <br>•<a href="2021-06-30-LeetcodeTree108/" class="heading flip-title">Leetcode 108) Convert Sorted Array to
+              Binary Search Tree</a>
+            <br>•<a href="2021-06-30-LeetcodeTree1008/" class="heading flip-title">Leetcode 1008) Construct Binary
+              Search Tree from Preorder Traversal</a>
+            <br>•<a href="2021-07-06-LeetcodeTree701/" class="heading flip-title">Leetcode 701) Insert into a Binary
+              Search Tree</a>
+            <br>•<a href="2021-07-02-LeetcodeTree938/" class="heading flip-title">Leetcode 938) Range Sum of BST</a>
+          </p>
+          <p><b>Trie</b>
+            <br>•<a href="2021-07-10-LeetcodeTree208/" class="heading flip-title">Leetcode 208) Implement Trie (Prefix
+              Tree)</a>
+          </p>
+          <!--<br>
+  <br>•<a href="2021-07-31-LeetcodeDP518/" class="heading flip-title">Leetcode 518) Coin Change 2</a>
+  dfs, bfs
+-->
+
+        </div>
+
+        <div class="contents" id="ETC">
+          <p><b>Graph</b>
+            <br>•<a href="2021-07-15-LeetcodeGraph130/" class="heading flip-title">Leetcode 130) Surrounded Regions</a>
+            <br>•<a href="2021-07-20-LeetcodeGraph133/" class="heading flip-title">Leetcode 133) Clone Graph</a>
+            <br>•<a href="2021-07-13-LeetcodeGraph200/" class="heading flip-title">Leetcode 200) Numbers of Islands</a>
+            <br>•<a href="2021-10-20-LeetcodeG207/" class="heading flip-title">Leetcode 207) Course Schedule</a>
+            <br>•<a href="2021-10-13-LeetcodeG323/" class="heading flip-title">Leetcode 323) Number of Connected
+              Components in an Undirected Graph</a>
+            <br>•<a href="2021-10-21-LeetcodeG417/" class="heading flip-title">Leetcode 417) Pacific Atlantic Water
+              Flow</a>
+            <br>•<a href="2021-10-21-LeetcodeG694/" class="heading flip-title">Leetcode 694) Number of Distinct
+              Islands</a>
+            <br>•<a href="2021-10-26-LeetcodeG886/" class="heading flip-title">Leetcode 886) Possible Bipartition</a>
+          </p>
+
+          <p><b>Hash Table</b>
+            <br>•<a href="2021-11-10-LeetcodeHash/" class="heading flip-title">HashSet, HashMap usage</a>
+            <br>•<a href="2021-11-16-LeetcodePrefixSum/" class="heading flip-title">Strategy) Consecutive Sequence
+              Sum</a>
+            <br>•<a href="2021-11-09-LeetcodeH128/" class="heading flip-title">Leetcode 128) Longest Consecutive
+              Sequence</a>
+            <br>•<a href="2021-11-10-LeetcodeH136/" class="heading flip-title">Leetcode 136) Single Number</a>
+            <br>•<a href="2021-11-10-LeetcodeH217/" class="heading flip-title">Leetcode 217) Contains Duplicate</a>
+            <br>•<a href="2021-11-22-LeetcodeH219/" class="heading flip-title">Leetcode 219) Contains Duplicate II</a>
+            <br>•<a href="2021-11-22-LeetcodeH350/" class="heading flip-title">Leetcode 350) Intersection of Two Arrays
+              II</a>
+            <br>•<a href="2021-11-22-LeetcodeH359/" class="heading flip-title">Leetcode 359) Logger Rate Limiter</a>
+            <br>•<a href="2021-11-08-LeetcodeHT705/" class="heading flip-title">Leetcode 705) Design HashSet</a>
+            <br>•<a href="2021-11-08-LeetcodeHT706/" class="heading flip-title">Leetcode 706) Design HashMap</a>
+            <br>•<a href="2021-11-10-LeetcodeH771/" class="heading flip-title">Leetcode 771) Jewels and Stones</a>
+            <br>•<a href="2021-11-16-LeetcodeH974/" class="heading flip-title">Leetcode 974) Subarray Sums Divisible by
+              K</a>
+
+          </p>
+
+          <p><b>TWO POINTER</b>
+            <br>•<a href="2021-06-03-LeetcodeTptr15/" class="heading flip-title">Leetcode 15) 3 Sum</a>
+            <br>•<a href="2021-09-24-LeetcodeTP16/" class="heading flip-title">Leetcode 16) 3 Sum Closest</a>
+            <br>•<a href="2021-06-02-LeetcodeTptr26/" class="heading flip-title">Leetcode 26) Remove Duplicates from
+              Sorted Array</a>
+            <br>•<a href="2021-09-28-LeetcodeTP35/" class="heading flip-title">Leetcode 35) Search Insert Position</a>
+            <br>•<a href="2021-09-28-LeetcodeTP82/" class="heading flip-title">Leetcode 82) Remove Duplicates from
+              Sorted List II</a>
+            <br>•<a href="2021-09-27-LeetcodeTP86/" class="heading flip-title">Leetcode 86) Partition List</a>
+            <br>•<a href="2021-06-01-LeetcodeTptr125/" class="heading flip-title">Leetcode125) Valid Palindrome</a>
+            <br>•<a href="2021-09-29-LeetcodeTP209/" class="heading flip-title">Leetcode 209) Minimum Size Subarray
+              Sum</a>
+            <br>•<a href="2021-09-29-LeetcodeTP325/" class="heading flip-title">Leetcode 325) Maximum Size Subarray Sum
+              Equals k</a>
+            <br>•<a href="2021-09-19-LeetcodeTP349/" class="heading flip-title">Leetcode 349) Intersection of Two
+              Arrays</a>
+            <br>•<a href="2021-06-01-LeetcodeTptr392/" class="heading flip-title">Leetcode392) Is Subsequence</a>
+            <br>•<a href="2021-09-29-LeetcodeTP560/" class="heading flip-title">Leetcode 560) Subarray Sum Equals K</a>
+            <br>•<a href="2021-06-02-LeetcodeTptr977/" class="heading flip-title">Leetcode 977) Squares of a Sorted
+              Array</a>
+          </p>
+
+          <p><b>Dynamic Programming</b>
+            <br>•<a href="2021-08-20-LeetcodeDP10/" class="heading flip-title">Leetcode 10) Regular Expression
+              Matching</a>
+            <br>•<a href="2021-08-18-LeetcodeDP44/" class="heading flip-title">Leetcode 44) Wildcard Matching</a>
+            <br>•<a href="2021-08-20-LeetcodeDP45/" class="heading flip-title">Leetcode 45) Jump Game II</a>
+            <br>•<a href="2021-07-29-LeetcodeDP64/" class="heading flip-title">Leetcode 64) Minimum Path Sum</a>
+            <br>•<a href="2021-07-29-LeetcodeDP70/" class="heading flip-title">Leetcode 70) Climbing Stairs</a>
+            <br>•<a href="2021-08-19-LeetcodeDP72/" class="heading flip-title">Leetcode 72) Edit Distance</a>
+            <!--<br>•<a href="2021-07-29-LeetcodeDP188/" class="heading flip-title">Leetcode 188) Best Time to Buy and Sell Stock IV</a>-->
+            <br>•<a href="2021-07-30-LeetcodeDP279/" class="heading flip-title">Leetcode 279) Perfect Squares</a>
+            <br>•<a href="2021-07-30-LeetcodeDFS286/" class="heading flip-title">Leetcode 286) Walls and Gates</a>
+            <br>•<a href="2021-08-04-LeetcodeDP300/" class="heading flip-title">Leetcode 300) Longest Increasing
+              Subsequence</a>
+            <br>•<a href="2021-07-31-LeetcodeDP322/" class="heading flip-title">Leetcode 322) Coin Change</a>
+            <br>•<a href="2021-07-11-LeetcodeDP337/" class="heading flip-title">Leetcode 337) House Robber III</a>
+            <br>•<a href="2021-08-11-LeetcodeDP376/" class="heading flip-title">Leetcode 376) Wiggle Subsequence</a>
+            <br>•<a href="2021-08-09-LeetcodeDP377/" class="heading flip-title">Leetcode 377) Combination Sum IV</a>
+            <br>•<a href="2021-07-29-LeetcodeDP509/" class="heading flip-title">Leetcode 509) Fibonacci Number</a>
+            <br>•<a href="2021-08-12-LeetcodeDP646/" class="heading flip-title">Leetcode 646) Maximum Length of Pair
+              Chain</a>
+            <br>•<a href="2021-08-11-LeetcodeDP673/" class="heading flip-title">Leetcode 673) Number of Longest
+              Increasing Subsequence</a>
+            <br>•<a href="2021-09-13-LeetcodeDP740/" class="heading flip-title">Leetcode 740) Delete and Earn</a>
+            <br>•<a href="2021-09-13-LeetcodeDP746/" class="heading flip-title">Leetcode 746) Min Cost Climbing
+              Stairs</a>
+            <br>•<a href="2021-08-12-LeetcodeDP1143/" class="heading flip-title">Leetcode 1143) Longest Common
+              Subsequence</a>
+
+            <!--<br>•<a href="2021-09-10-LeetcodeDP42/" class="heading flip-title">Leetcode </a>-->
+
+          </p>
+
+          <p><b>Back Tracking</b>
+            <br>•<a href="2021-07-22-LeetcodeBT22/" class="heading flip-title">Leetcode 22) Generate Parentheses</a>
+            <br>•<a href="2021-07-29-LeetcodeBT39/" class="heading flip-title">Leetcode 39) Combination Sum</a>
+            <br>•<a href="2021-07-29-LeetcodeBT78/" class="heading flip-title">Leetcode 78) Subsets</a>
+            <br>•<a href="2021-07-29-LeetcodeBT216/" class="heading flip-title">Leetcode 216) Combination Sum III</a>
+          </p>
+        </div>
+
+      </div>
+
+
+
+  </article>
+  <script type="text/javascript">
+    var algolist;
+    algolist = document.getElementsByClassName("algos")
+
+    for (var j = 0; j < algolist.length; j++) {
+      var choice = algolist[j].innerHTML.replace(/&nbsp;/g, ' ');
+
+      //  document.getElementById("rightCol").innerHTML += document.getElementById(choice).innerHTML;
+    }
+
+
+    confirmEvent();
+
+    function confirmEvent() {
+      for (var j = 0; j < algolist.length; j++) {
+        algolist[j].onmouseover = function () {
+          //        var choice = this.innerHTML.replace(/&nbsp;/g,' ');
+          choice = this.innerHTML;
+
+          document.getElementById("subject").innerHTML = choice;
+          document.getElementById("rightCol").innerHTML = document.getElementById(choice).innerHTML;
+        }; //메뉴를 바꿨을 때 일어나는 이벤트
+      }
+    }
+    $(".nav-item").addClass("collapse");
+
+    var fromNav = false;
+
+    $(function () {
+      $(".nav-link").click(function () {
+        $("#where").text($(this).text());
+        $(".nav-item").addClass("collapse");
+        fromNav = true;
+      })
+
+
+      $(".navbar-toggler").click(function () {
+        $(".nav-item").removeClass("collapse");
+
+      })
+
+
+      $(window).on('scroll', function () {
+        if ($(".nav-link").hasClass("active") == true && !fromNav) {
+          $("#where").html(($(".active").html()));
+          <!--nav에서 클릭하는 경우에도, 이 함수도 실행돼서 결국엔 이름이 이상해진다. 위에 boolean 값으로 set해서 이름 넣어준다.-->
+        }
+        fromNav = false;
+
+      });
+    })
+
+  </script>
+
+
+</body>
+
+
+</html>

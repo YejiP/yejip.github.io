@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Player</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+    $(function(){
+      $("#CSS").css("display","none");
+      $("#JavaScript").css("display","none");
+
+
+      $("button").click(function(){
+        if($("#"+$(this).html()).css("display")=="none"){
+          $("#"+$(this).html()).css("display","table-cell");
+        }else{
+          $("#"+$(this).html()).css("display","none");
+        }
+      })
+
+      $("textarea").on('keyup',function(){
+        var content = $(this).val();
+        if($(this).parent().attr("id")=="HTML"){
+          $("iframe").contents().find("body").html(content)
+        }else if($(this).parent().attr("id")=="CSS"){
+          $("iframe").contents().find("head").append("<style>"+content+"</style>")
+
+        }else if($(this).parent().attr("id")=="JavaScript"){
+          $("iframe").contents().find("head").append("<script>"+content);
+        }
+      })
+    })
+    </script>
+
+    <style>
+    .container{
+      width: 100%;
+    }
+    table{
+      width: 100%;
+      height: 800px;
+      table-layout: fixed;
+
+    }
+    td textarea {
+      height :100%;
+      width:100%
+    }
+    td{
+      padding:20px;
+    }
+
+    .display{
+      background-color: pink;
+
+    }
+    nav > div{
+      display : inline-block;
+      margin: 0 auto;
+    }
+    ul > li{
+      display : inline-block;
+      margin: 0
+    }
+
+    iframe{
+      height: 100%;
+      width:100%;
+      background: white;
+    }
+    nav{
+      background-color: grey;
+    }
+    </style>
+
+  </head>
+  <body>
+<nav>
+<h1 style="display:inline ; padding :10px;">CodePlayer</h1>
+<div>
+  <ul>
+    <li><button>HTML</button></li>
+    <li><button>CSS</button></li>
+    <li><button>JavaScript</button></li>
+    <li><button>Output</button></li>
+  </ul>
+</div>
+</nav>
+
+<div class = "container"><table>
+  <tr>
+  <td class = "display" id="HTML">HTML<textarea></textarea></td>
+  <td class = "display" id="CSS">CSS<textarea></textarea></td>
+  <td class = "display" id="JavaScript">JavaScript<textarea></textarea></td>
+<td class = "display" id ="Output">Output<iframe id ="out"></iframe></td></tr>
+</table>
+</div>
+
+
+  </body>
+</html>

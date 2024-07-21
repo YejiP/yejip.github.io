@@ -1,0 +1,28 @@
+<main
+  id="_main"
+  class="content fade-in layout-{{ page.layout }}"
+  role="main"
+  data-color="{{ color | escape }}"
+  data-theme-color="{{ theme_color | escape }}"
+  {% unless image.background %}
+    data-image="{% if image == 'none' %}none{% else %}{% capture tmp %}{% include smart-url.txt url=image %}{% endcapture %}{{ tmp | escape }}{% endif %}"
+    {% if image != 'none' %}data-overlay{% endif %}
+  {% else %}
+    data-background="{{ image.background | escape }}"
+    {% if image.overlay %}data-overlay{% endif %}
+  {% endunless %}
+  >
+<!-- <div id="google_translate_element"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+      {pageLanguage: 'ko',includedLanguages: 'en,ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+      'google_translate_element'
+  );
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+  {{ content }}
+  {% include body/comments.html %}
+  {% include body/footer.html %}
+</main>

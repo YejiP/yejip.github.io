@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>homeWork</title>
+    <style media="screen">
+    h1{
+      text-align: center;
+    }
+    div.wrapper{
+      width: 1000px;
+      margin : 0 auto;
+      height : 400px;
+      border: thin solid black;
+    }
+    th{ text-align: right }
+    tr:last-child {
+      text-align: center;
+    }
+
+    #pic{
+      float: left;
+      width: 490px;
+      margin-left: 10px;
+      height: inherit;
+    }
+    div.inp{
+      float: left;
+      width: 500px;
+      height: inherit;
+      background-color: pink;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    input.cnt {width: 30px;}
+    #address{
+      width : 350px;
+    }
+
+    #tax, #tip, #sum{
+      text-align: right;
+    }
+
+    </style>
+    <script>
+    var menulist;
+    var menuqty;
+    window.onload = function(){
+      //하려고 해서 ()를 뺴야한다.
+      setInterval(changeTime,1000);//함수 이름만
+      setInterval(changePic,2000);
+
+      menulist = document.getElementsByClassName("menu")
+      menuqty = document.getElementsByClassName("cnt")
+      confirmEvent();
+
+      document.getElementById("done").onclick = confirmInput;//리턴타입을 받을게 아니라, 클릭하면 함수가 실행되게 하려고 하기 때
+
+      }
+      //
+      // var orderList = [];
+      // for (var count =0; count < menulist.length ; count ++){
+      //   if(menuqty[count].value !=0){
+      //     var orderList = menulist[count].value;
+      //     var orderCount = menuqty[count].value;
+      //     alert(orderList + "를" +orderCount +"인분 선택했음")
+      //   }
+      // }
+      //주문 완료 버튼을
+      function createOrder(){
+        var bill = '';
+        var orderList='';
+        var check = false;
+        var orderTime = document.getElementById("time").value;
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+        var tax = document.getElementById("tax").value;
+        var tip = document.getElementById("tip").value;
+        var total = document.getElementById("sum").value;
+        var menulist = document.getElementsByClassName("menu");
+        var menuqty = document.getElementsByClassName("cnt");
+        for(var j=0;j<menulist.length;j++){
+          if(menuqty[j].value !="" || menuqty[j].value !=0){
+            orderList += "\n"+menulist[j].value.split(" ")[0] + " cnt : " + menuqty[j].value ;
+            check = true;
+          }
+        }
+        bill +="* Order time :" + orderTime + "\n";
+        bill +="* Name :" + name + "\n";
+        bill +="* Menus :" + orderList + "\n";
+        bill +="* Phone :" + phone + "\n";
+        bill +="* Address :" + address + "\n";
+        bill +="* Tax :" + tax + "\n";
+        bill +="* Tip :" + tip + "\n";
+        bill +="* Total :" + total + "\n";
+
+
+        if(!check){
+          alert("주문한 내역이 없습니다")
+          return;
+        }
+        alert(bill);
+        document.getElementById("inputForm").reset();
+      }
+
+
+    function changeTime(){
+        var today= new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        var text = hr+":"+min +":" + sec;
+        var time = document.getElementById("time");
+        time.placeholder= text;
+    }
+    i=1;
+    function changePic(){
+      var pic = document.getElementById('pic')
+      var pics = ["돈가스.jpg","샐러드.jpg","빵.jpeg"]
+      pic.setAttribute("src",pics[i%3])
+      i++;
+    }
+
+    //메뉴를 변경하거나 수량을 벼경했을 때 계산할 수 있도록 이벤트 걸기
+    function confirmEvent(){
+      for(var j=0; j < menulist.length; j++){
+        menulist[j].onchange = calcPay; //메뉴를 바꿨을 때 일어나는 이벤트
+        menuqty[j].onkeyup = calcPay;
+      }
+
+    }
+
+    function calcPay(){
+      var totalPrice = 0;
+      var tax = document.getElementById("tax");
+      var tip = document.getElementById("tip");
+      var total = document.getElementById("sum");
+
+
+      for(var j=0; j<menulist.length;j++){
+        var price = menulist[j].value.split(" ")[1]; //value에서 금액만 가져옴
+        var ea = menuqty[j].value; //수량 가져오기
+        totalPrice += price*ea;
+      }
+      tax.value= totalPrice*0.1;
+      tip.value = totalPrice*0.2;
+      total.value = totalPrice + totalPrice*0.1 +totalPrice*0.2;
+    }
+
+    function confirmInput(){
+      var name = document.getElementById("name");
+      var phone=document.getElementById("phone");
+      var address =document.getElementById("address");
+
+      if(name.value.trim().length ==0){
+        alert("Check your name")
+          name.focus();
+          return;
+        }
+        if(phone.value.length == 0 || isNaN(phone.value) ){
+          alert("Check your phone number")
+          name.focus();
+          return;
+        }
+      if(address.value.trim().length ==0){
+        alert("Check the address")
+          name.focus();
+          return;
+        }
+        createOrder();
+      }
+
+    </script>
+  </head>
+
+  <body>
+<h1>[Let's Order Night Snack]</h1>
+<div class="wrapper">
+<img id= "pic" src = "돈가스.jpg">
+<div class="inp">
+  <form id ="inputForm" class="" action="" method="get" >
+  <table>
+<tr><th>
+  <label>Current time :</th><td><input id="time" type="text" placeholder="time" readonly></label></td></tr>
+  <tr><th><label>Name :</th><td><input id="name" type="text" value="" ></label></tr>
+  <tr><th rowspan="3">Night Snack :</th><td><select class = "menu">
+    <option value = 'Katsu 7' >Katsu $7</option>
+    <option value = 'Salad 5' >Salad $5</option>
+    <option value = 'Bread 3' >Bread $3</option></select>
+    <input type="number" class= "cnt" name="" value="">cnt
+  </td></tr><tr><td><select class="menu">
+    <option value = 'Salad 5' >Salad $5</option>
+    <option value = 'Katsu 7' >Katsu $7</option>
+    <option value = 'Bread 3' >Bread $3</option></select>&nbsp;<input class= "cnt" type="number" name="" value="">cnt
+  </td></tr><tr><td><select class="menu">
+    <option value = 'Bread 3' >Bread $3</option>
+    <option value = 'Katsu 7' >Katsu $7</option>
+    <option value = 'Salad 5' >Salad $5</option>
+    </select>&nbsp;<input class= "cnt" type="number" name="" value="">cnt</td>
+  </tr>
+
+  <tr><th><label>Address:</th><td><input id = "address" type="text" value="" ></label><br></tr>
+  <tr><th><label>Phone Number :</th><td><input type="text" id = "phone" value="" placeholder="01012345678"> </label><br></tr>
+  <tr><th><label>Tax : $</th><td><input id = "tax" type="number" value="0" disabled></label><br></tr>
+  <tr><th><label>Tip: $</th><td><input id="tip" type="number" value="0" disabled></label><br></tr>
+    <tr><th><label>Total: $</th><td><input id="sum" type="number" value="0" disabled></label><br></tr>
+    <tr><td colspan="2"><input type="button" id="done" name="" value="Submit">
+      <input type="button" name="" value="Cancel"><td></tr>
+</table>
+
+</form>
+</div>
+</div>
+  </body>
+</html>

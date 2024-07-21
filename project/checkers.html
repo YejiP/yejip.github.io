@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Modified Checkers AI</title>
+  <title>Sudoku Solver</title>
+  <link rel = "stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id = "title">
+  <br><br><br><br>
+  <img src ="img/me.png" alt ="" width = 100px><br><br>
+  <span style ="font-size: 0.8em ; font-weight:bold">Yeji Park</span><br>
+  <h1>Checkers AI</h1><span style = " font-size:1.2em; font-weight:bold" >(using mini max tree algorithm)<br></span>
+  <a href = "Checker/checkerAI_demo.html"><h2>Click to watch results</h2></a>
+  <a href = "https://github.com/YejiP/projects/tree/master/Checker_AI/src/checker_biii">Github repository</a><br><br>
+  <hr style="border: double 5px;"> </div>
+
+<h2>Problem description</h2>
+<div class="explanation">
+  This project focused on making AI which can play against human by using mini max tree algorithm. Checkers is used for demonstrating the algorithm. The following is the rules of modified Checkers. <br>
+<br>
+<img src = "Checker/r1.PNG" alt ="" width = 800px>
+
+To decide, an appropriate indicator is needed to show the status of winning and losing. Indicator here is a score. Score is represented as only one number, zero sum, if black is winning then positive number will be shown, if res, then negative number. if it is tie, then it will be 0.<br>
+In this algorithm, zero sum is used. Score is expressed in one score, if Black is winning then score gets positive value, if not, score gets negative one. If it is equals, then score is 0.
+(my method) If black pawn moves forward, then add 3. If red, subtract 3 from the total score. King worth 30 points. All pawns have a initial value of 10.<br>
+<img src = "Checker/scoring.PNG"  alt ="" width = 400px>
+<br>
+Let's elaborate the situation. Let's say the picture down below is current board, and now, red should make a decision. It has 7 different choice to make. Which choice is the best? Would it be all good choices?
+<br><img src = "Checker/e1.PNG" alt ="" >
+<br>As you can think, two movements which is marked as a black are bad decision to make. The reason why is that, as soon as you move this forward, the opponent will get your pawn and get points.
+
+<img src = "Checker/e2.PNG" alt =""  width =  "800px">
+<br><img src = "Checker/e3.PNG" alt =""  height = "300px" align = "left"> We can think of this as a tree form. Also, each situation is represented by the score.<br><br>depth 0 represents the current situation,<br><br><br><br><br><br> depth 1 represents one move forward from the current situation,<br><br><br><br><br>depth 2 represents two moves forward from the current situation.
+<br>
+  If we complete the tree, it will be like the tree down below.<br>
+  <img src = "Checker/gametree.PNG" alt =""  width =  "800px">
+<br>
+From here, we can think about a strategy that can lead us to make a good decision. Generate all the possible situation, and then evaluate. Let's say we consider the 2 moves forward from the current situation,2ply. (Usually even number ply is used because it considers the opponent's move). It is called "mini max tree"<br>
+<br><h2>* mini-max tree</h2>
+<br>Now, let's make a decision in real. we are team blue, and we will consider 2 moves forward. + score means blue is winning, - score means red is winning. We need to pick one that brings us the optimal score.
+<br><img src = "Checker/4ply1.PNG" alt =""  width = 600px>
+<br><br> First, pick a smaller node among sister nodes at the depth 4(leaf), because since it is red's turn, it will pick the smallest value. After that, replace its parent's value as the value we pick.
+<img src = "Checker/4ply2.PNG" alt =""  width = 900px>
+<br><br> Second, pick a bigger node among sister nodes at the depth 3(leaf), because since it is blue's turn, it will pick the biggest value. After that, replace its parent's value as the value we pick.
+<img src = "Checker/4ply3.PNG" alt =""  width = 900px>
+<br><br> Second, pick a bigger node among sister nodes at the depth 3(leaf), because since it is blue's turn, it will pick the biggest value. After that, replace its parent's value as the value we pick.
+<img src = "Checker/4ply4.PNG"  alt ="" width = 900px>
+<br><br> Repeaet this process until it gets the root.<br>
+<img src = "Checker/4ply5.PNG" alt ="" width = 600px>
+
+<br><br> Now, we can see which node we should pick to make optimal score. Two moves from now, the best score for us is -4.<br>
+
+<img src = "Checker/4ply6.PNG" alt =""  width = 600px><br><br>
+<h2>*alpha beta pruning*</h2>
+Generating all the possibilities causes time and memory inefficiency. To solve this problem, alpha beta pruning is used.
+<br><br>
+Firstly, pick the minimum value among sister nodes at depth 4, which is 3.
+<br><img src = "Checker/minmax1.PNG"  alt =""  width = 600px><br>
+The temporal max value is 3. Now, we need to pick the smallest nodes again at depth 4.
+<img src = "Checker/minmax2.PNG"  alt =""  width = 600px><br>
+However, -1 is less than temporal maximum,3. the sister node of 3 would be less than -1, since the smallest node will be picked.
+Therefore, we do not need to see other leaf nodes and can prune it.
+<img src = "Checker/minmax3.PNG"  alt =""  width = 600px><br>
+
+<img src = "Checker/minmax4.PNG"  alt =""  width = 800px><br>
+Now, pick the smallest one from the right side's leaf nodes. it is -4.<br>
+<img src = "Checker/minmax5.PNG"  alt =""  width = 400px><br><br>
+<img src = "Checker/minmax6.PNG" alt =""   width = 800px><br>
+Temporal minimum is -4 at the right side of tree, depth 2. However, 3 is going to be always bigger than -4. blue will pick the value 3, left side, regardless of the values of right side of tree. <br>
+<img src = "Checker/minmax7.PNG" alt =""   width = 500px><br>
+As a result, two points will be pruned.<br>
+<img src = "Checker/result.PNG"  alt =""  width = 600px><br>
+Therfore, alpha beta pruning can efficiently lessen the search space.<br>
+<img src = "Checker/result2.PNG"  alt =""  width = 400px><br>
+</div>
+</body>
+</html>
