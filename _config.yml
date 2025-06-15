@@ -53,8 +53,6 @@ menu:
     url:               /project/
   - title:             Sys Net
     url:               /sys/
-  - title:             AWS(CDA)
-    url:               /aws/
   - title:             Web Dev
     url:               /web/
   - title:             Algorithms
